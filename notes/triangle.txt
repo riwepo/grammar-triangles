@@ -1,0 +1,18 @@
+Equilateral triangle of side length a
+with origin at centre
+assume x y coords same as SVG
+centre triangle at 0,0
+corner coords are
+
+BL -a/2, (a * sqrt(3))/4
+T 0, -(a * sqrt(3))/4
+BR a/2, (a * sqrt(3))/4
+
+let  a = 100
+
+BL = -50, 43
+T = 0, -43
+BR = 50, 43
+
+for the circle markers, use a radius of 2
+move them in from the corners by 10 and 10 / sqrt(3) i.e. 10 and 6
