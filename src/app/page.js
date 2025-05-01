@@ -1,4 +1,5 @@
 import Triangle from "@/components/triangle";
+import Heart from "@/components/heart";
 
 export default function Home() {
   return (
