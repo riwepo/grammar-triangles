@@ -46,12 +46,22 @@ function Triangle() {
             stroke="black"
             fill="black"
           />
+          <path
+            id="heart"
+            d="M0,-30
+          C 35,-60 90,-20 0,80
+          C -90,-20 -35,-60 0,-30"
+            fill="red"
+            stroke="black"
+            strokeWidth="2"
+          />
         </defs>
         <use href="#triangle" x="0" y="0" />
         <use href="#bottom-left-mark" x="0" y="0" />
         <use href="#top-mark" x="0" y="0" />
         <use href="#bottom-right-mark" x="0" y="0" />
         <use href="#center-mark" x="0" y="0" />
+        <use href="#heart" transform="scale(0.1, 0.1)" x="0" y="0" />
       </svg>
     </div>
   );
