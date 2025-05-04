@@ -1,4 +1,4 @@
-function Triangle({ colour, verbForms }) {
+function VerbTriangle({ colour, verbForms }) {
   return (
     <div>
       <svg
@@ -93,4 +93,4 @@ function Triangle({ colour, verbForms }) {
   );
 }
 
-export default Triangle;
+export default VerbTriangle;
