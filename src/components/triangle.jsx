@@ -14,15 +14,7 @@ function Triangle({ colour, verbForms }) {
             fill="none"
             stroke={colour}
           />
-          <circle
-            id="bottom-left-mark"
-            cx="-40"
-            cy="37"
-            r="2"
-            stroke="black"
-            fill="black"
-          />
-          <g id="top-mark">
+          <g id="head">
             <circle cx="0" cy="-33" r="2" stroke="black" fill="black" />
             <text
               x="0"
@@ -35,15 +27,34 @@ function Triangle({ colour, verbForms }) {
               {verbForms.head}
             </text>
           </g>
-
-          <circle
-            id="bottom-right-mark"
-            cx="40"
-            cy="37"
-            r="2"
-            stroke="black"
-            fill="black"
-          />
+          <g id="preterite">
+            <circle cx="-40" cy="37" r="2" stroke="black" fill="black" />
+            <text
+              x="-50"
+              y="37"
+              fill="black"
+              stroke="black"
+              fontSize="10px"
+              textAnchor="end"
+              dominantBaseline="middle"
+            >
+              {verbForms.preterite}
+            </text>
+          </g>
+          <g id="past-participle">
+            <circle cx="40" cy="37" r="2" stroke="black" fill="black" />
+            <text
+              x="50"
+              y="37"
+              fill="black"
+              stroke="black"
+              fontSize="10px"
+              textAnchor="start"
+              dominantBaseline="middle"
+            >
+              {verbForms.pastParticiple}
+            </text>
+          </g>
           <circle
             id="center-mark"
             cx="0"
@@ -63,10 +74,9 @@ function Triangle({ colour, verbForms }) {
           />
         </defs>
         <use href="#triangle" x="0" y="0" />
-        <use href="#bottom-left-mark" x="0" y="0" />
-        <use href="#top-mark" x="0" y="0" />
-
-        <use href="#bottom-right-mark" x="0" y="0" />
+        <use href="#head" x="0" y="0" />
+        <use href="#preterite" x="0" y="0" />
+        <use href="#past-participle" x="0" y="0" />
         <use href="#center-mark" x="0" y="0" />
         <use href="#heart" transform="scale(0.1, 0.1)" x="0" y="0" />
       </svg>
