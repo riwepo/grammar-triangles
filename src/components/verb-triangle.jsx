@@ -1,9 +1,11 @@
+import { cn } from "@/lib/utils/css-class";
+
 function VerbTriangle({ colour, verbForms, className }) {
   return (
-    <div className={className}>
+    <div className={cn(className, "bg-amber-100")}>
       <svg
-        width="1000"
-        height="1000"
+        width="100%"
+        height="100%"
         viewBox="-100 -100 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
