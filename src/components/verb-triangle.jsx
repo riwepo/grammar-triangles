@@ -1,6 +1,6 @@
-function VerbTriangle({ colour, verbForms }) {
+function VerbTriangle({ colour, verbForms, className }) {
   return (
-    <div>
+    <div className={className}>
       <svg
         width="1000"
         height="1000"
