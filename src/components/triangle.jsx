@@ -1,4 +1,4 @@
-function Triangle() {
+function Triangle({ colour, verbForms }) {
   return (
     <div>
       <svg
@@ -12,7 +12,7 @@ function Triangle() {
             id="triangle"
             points="-50,43 0,-43 50,43"
             fill="none"
-            stroke="black"
+            stroke={colour}
           />
           <circle
             id="bottom-left-mark"
@@ -22,14 +22,20 @@ function Triangle() {
             stroke="black"
             fill="black"
           />
-          <circle
-            id="top-mark"
-            cx="0"
-            cy="-33"
-            r="2"
-            stroke="black"
-            fill="black"
-          />
+          <g id="top-mark">
+            <circle cx="0" cy="-33" r="2" stroke="black" fill="black" />
+            <text
+              x="0"
+              y="-45"
+              fill="black"
+              stroke="black"
+              fontSize="10px"
+              textAnchor="middle"
+            >
+              {verbForms.head}
+            </text>
+          </g>
+
           <circle
             id="bottom-right-mark"
             cx="40"
@@ -59,6 +65,7 @@ function Triangle() {
         <use href="#triangle" x="0" y="0" />
         <use href="#bottom-left-mark" x="0" y="0" />
         <use href="#top-mark" x="0" y="0" />
+
         <use href="#bottom-right-mark" x="0" y="0" />
         <use href="#center-mark" x="0" y="0" />
         <use href="#heart" transform="scale(0.1, 0.1)" x="0" y="0" />
