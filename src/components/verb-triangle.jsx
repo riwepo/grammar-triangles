@@ -1,22 +1,22 @@
 import { cn } from "@/lib/utils/css-class";
 
-function VerbTriangle({ colour, verbForms, className }) {
+function VerbTriangle({ uuid, colour, verbForms, className }) {
   return (
-    <div className={cn(className, "bg-amber-100")}>
+    <div className={cn(className)}>
       <svg
         width="100%"
         height="100%"
-        viewBox="-50 -75 150 150"
+        viewBox="-70 -75 150 150"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
           <polygon
-            id="triangle"
+            id={`${uuid}triangle`}
             points="-50,43 0,-43 50,43"
             fill="none"
             stroke={colour}
           />
-          <g id="head">
+          <g id={`${uuid}head`}>
             <circle cx="0" cy="-33" r="2" stroke="black" fill="black" />
             <text
               x="0"
@@ -30,7 +30,7 @@ function VerbTriangle({ colour, verbForms, className }) {
               {verbForms.head}
             </text>
           </g>
-          <g id="preterite">
+          <g id={`${uuid}preterite`}>
             <circle cx="-40" cy="37" r="2" stroke="black" fill="black" />
             <text
               x="-50"
@@ -45,7 +45,7 @@ function VerbTriangle({ colour, verbForms, className }) {
               {verbForms.preterite}
             </text>
           </g>
-          <g id="past-participle">
+          <g id={`${uuid}past-participle`}>
             <circle cx="40" cy="37" r="2" stroke="black" fill="black" />
             <text
               x="50"
@@ -60,7 +60,7 @@ function VerbTriangle({ colour, verbForms, className }) {
               {verbForms.pastParticiple}
             </text>
           </g>
-          <g id="present-participle">
+          <g id={`${uuid}present-participle`}>
             <path
               transform="scale(0.1, 0.1)"
               d="M0,-30
@@ -84,12 +84,11 @@ function VerbTriangle({ colour, verbForms, className }) {
             </text>
           </g>
         </defs>
-        <use href="#triangle" x="0" y="0" />
-        <use href="#head" x="0" y="0" />
-        <use href="#preterite" x="0" y="0" />
-        <use href="#past-participle" x="0" y="0" />
-        <use href="#present-participle" x="0" y="0" />
-        <use href="#heart" transform="scale(0.1, 0.1)" x="0" y="0" />
+        <use href={`#${uuid}triangle`} x="0" y="0" />
+        <use href={`#${uuid}head`} x="0" y="0" />
+        <use href={`#${uuid}preterite`} x="0" y="0" />
+        <use href={`#${uuid}past-participle`} x="0" y="0" />
+        <use href={`#${uuid}present-participle`} x="0" y="0" />
       </svg>
     </div>
   );
