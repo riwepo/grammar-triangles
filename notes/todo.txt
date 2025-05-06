@@ -1,0 +1,3 @@
+add the S from to the verb forms
+hide unused verb forms
+separate triangle for 'be'
