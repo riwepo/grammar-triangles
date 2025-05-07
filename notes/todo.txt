@@ -1,3 +1,4 @@
-add the S from to the verb forms
-hide unused verb forms
-separate triangle for 'be'
+
+implement triangle for 'be'
+implement modal verbs
+implement tenses blueprint
