@@ -4,7 +4,7 @@ import VERBS from "@/lib/utils/verb-data";
 import { nanoid } from "nanoid";
 
 export default function Home() {
-  return <VerbSkeleton bossVerb={VERBS.eat} />;
+  return <VerbSkeleton bossVerb={VERBS.speak} />;
   /* return (
     <VerbTriangle
       uid={nanoid()}
