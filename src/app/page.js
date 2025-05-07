@@ -1,11 +1,6 @@
 import VerbSkeleton from "@/components/verb-skeleton";
+import VERBS from "@/lib/utils/verb-data";
 
 export default function Home() {
-  const bossVerb = {
-    head: "eat",
-    preterite: "ate",
-    pastParticiple: "eaten",
-    presentParticiple: "eating",
-  };
-  return <VerbSkeleton bossVerb={bossVerb} />;
+  return <VerbSkeleton bossVerb={VERBS.eat} />;
 }

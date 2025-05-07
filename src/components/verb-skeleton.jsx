@@ -5,6 +5,8 @@ import { nanoid } from "nanoid";
 
 import VerbTriangle from "@/components/verb-triangle";
 
+import VERBS from "@/lib/utils/verb-data";
+
 function VerbSkeleton({ bossVerb }) {
   // generate unique ids for all the SVG triangle components
   // only run once when this component loads
@@ -16,20 +18,6 @@ function VerbSkeleton({ bossVerb }) {
     const ids = generateIds();
     setIds(ids);
   }, []);
-
-  const helperBe = {
-    head: "be",
-    preterite: "was",
-    pastParticiple: "been",
-    presentParticiple: "beeing",
-  };
-
-  const helperHave = {
-    head: "have",
-    preterite: "had",
-    pastParticiple: "had",
-    presentParticiple: "having",
-  };
 
   if (ids === null) {
     return <p>Loading...</p>; // Render a placeholder while waiting for the ID
@@ -46,7 +34,7 @@ function VerbSkeleton({ bossVerb }) {
       <VerbTriangle
         uuid={ids[1]}
         className="col-start-2 row-start-2  "
-        verbForms={helperBe}
+        verbForms={VERBS.be}
         colour="blue"
       />
       <VerbTriangle
@@ -58,7 +46,7 @@ function VerbSkeleton({ bossVerb }) {
       <VerbTriangle
         uuid={ids[3]}
         className="col-start-1 row-start-3  "
-        verbForms={helperHave}
+        verbForms={VERBS.have}
         colour="green"
       />
       <VerbTriangle
@@ -70,13 +58,13 @@ function VerbSkeleton({ bossVerb }) {
       <VerbTriangle
         uuid={ids[5]}
         className="col-start-1 row-start-4  "
-        verbForms={helperHave}
+        verbForms={VERBS.have}
         colour="green"
       />
       <VerbTriangle
         uuid={ids[6]}
         className="col-start-2 row-start-4  "
-        verbForms={helperBe}
+        verbForms={VERBS.be}
         colour="blue"
       />
       <VerbTriangle
