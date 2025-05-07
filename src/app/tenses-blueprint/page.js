@@ -1,7 +1,5 @@
-import VerbSkeleton from "@/components/tenses_blueprint";
-import VerbTriangle from "@/components/basic-triangle";
+import TensesBlueprint from "@/components/tenses_blueprint";
 import VERBS from "@/lib/utils/verb-data";
-import { nanoid } from "nanoid";
 
 export const metadata = {
   title: "Tenses Blueprint",
@@ -9,5 +7,5 @@ export const metadata = {
 };
 
 export default function TensesBlueprintPage() {
-  return <VerbSkeleton bossVerb={VERBS.choose} />;
+  return <TensesBlueprint bossVerb={VERBS.choose} />;
 }

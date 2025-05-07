@@ -1,7 +1,4 @@
-import VerbSkeleton from "@/components/tenses_blueprint";
-import VerbTriangle from "@/components/basic-triangle";
-import VERBS from "@/lib/utils/verb-data";
-import { nanoid } from "nanoid";
+import ToBeTriangle from "@/components/to-be-triangle";
 
 export const metadata = {
   title: "To Be Triangle",
@@ -10,10 +7,9 @@ export const metadata = {
 
 export default function ToBeTrianglePage() {
   return (
-    <VerbTriangle
+    <ToBeTriangle
       uid={nanoid()}
       colour="black"
-      verbForms={VERBS.eat}
       formVisibility={{
         head: true,
         preterite: true,

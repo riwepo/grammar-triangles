@@ -1,5 +1,4 @@
-import VerbSkeleton from "@/components/tenses_blueprint";
-import VerbTriangle from "@/components/basic-triangle";
+import BasicTriangle from "@/components/basic-triangle";
 import VERBS from "@/lib/utils/verb-data";
 import { nanoid } from "nanoid";
 
@@ -10,7 +9,7 @@ export const metadata = {
 
 export default function BasicTrianglePage() {
   return (
-    <VerbTriangle
+    <BasicTriangle
       uid={nanoid()}
       colour="black"
       verbForms={VERBS.eat}
