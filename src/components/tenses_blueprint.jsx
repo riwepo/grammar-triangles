@@ -24,63 +24,72 @@ function TensesBlueprint({ bossVerb }) {
   }
 
   return (
-    <div className="grid grid-cols-3 grid-rows-4 h-screen w-full border-2 border-black overflow-hidden">
-      {/* simple */}
+    <div className="grid grid-cols-[auto_1f_1f_1f] grid-rows-4 h-screen w-full border-2 border-black overflow-hidden">
+      <p className="col-start-1 row-start-1 content-center mx-auto">Simple</p>
       <BasicTriangle
         uuid={ids[0]}
-        className="col-start-3 row-start-1  "
+        className="col-start-4 row-start-1  "
         verbForms={bossVerb}
         formVisibility={{ head: true }}
         colour="black"
       />
-      {/* continuous */}
+
+      <p className="col-start-1 row-start-2 content-center mx-auto">
+        Continuous
+      </p>
       <BasicTriangle
         uuid={ids[1]}
-        className="col-start-2 row-start-2  "
+        className="col-start-3 row-start-2  "
         verbForms={VERBS.be}
         formVisibility={{ head: true }}
         colour="blue"
       />
       <BasicTriangle
         uuid={ids[2]}
-        className="col-start-3 row-start-2  "
+        className="col-start-4 row-start-2  "
         verbForms={bossVerb}
         formVisibility={{ presentParticiple: true }}
         colour="black"
       />
-      {/* perfect */}
+
+      <p className="col-start-1 row-start-3 content-center mx-auto">
+        Perfect Simple
+      </p>
       <BasicTriangle
         uuid={ids[3]}
-        className="col-start-1 row-start-3  "
+        className="col-start-2 row-start-3  "
         verbForms={VERBS.have}
         formVisibility={{ head: true }}
         colour="green"
       />
       <BasicTriangle
         uuid={ids[4]}
-        className="col-start-3 row-start-3  "
+        className="col-start-4 row-start-3  "
         verbForms={bossVerb}
         formVisibility={{ pastParticiple: true }}
         colour="black"
       />
-      {/* perfect continuous*/}
+
+      <p className="col-start-1 row-start-4 content-center mx-auto">
+        Perfect Continuous
+      </p>
       <BasicTriangle
         uuid={ids[5]}
-        className="col-start-1 row-start-4  "
+        className="col-start-2 row-start-4  "
         verbForms={VERBS.have}
         formVisibility={{ head: true }}
         colour="green"
       />
       <BasicTriangle
         uuid={ids[6]}
-        className="col-start-2 row-start-4  "
+        className="col-start-3 row-start-4  "
         verbForms={VERBS.be}
         formVisibility={{ pastParticiple: true }}
         colour="blue"
       />
       <BasicTriangle
         uuid={ids[7]}
-        className="col-start-3 row-start-4  "
+        className="col-start-4 row-start-4  "
         verbForms={bossVerb}
         formVisibility={{ presentParticiple: true }}
         colour="black"
