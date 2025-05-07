@@ -30,7 +30,7 @@ function VerbSkeleton({ bossVerb }) {
         uuid={ids[0]}
         className="col-start-3 row-start-1  "
         verbForms={bossVerb}
-        verbVisibility={{ head: true }}
+        formVisibility={{ thirdPersonSingular: true }}
         colour="black"
       />
       {/* continuous */}
@@ -38,14 +38,14 @@ function VerbSkeleton({ bossVerb }) {
         uuid={ids[1]}
         className="col-start-2 row-start-2  "
         verbForms={VERBS.be}
-        verbVisibility={{ head: true }}
+        formVisibility={{ head: true }}
         colour="blue"
       />
       <VerbTriangle
         uuid={ids[2]}
         className="col-start-3 row-start-2  "
         verbForms={bossVerb}
-        verbVisibility={{ presentParticiple: true }}
+        formVisibility={{ presentParticiple: true }}
         colour="black"
       />
       {/* perfect */}
@@ -53,14 +53,14 @@ function VerbSkeleton({ bossVerb }) {
         uuid={ids[3]}
         className="col-start-1 row-start-3  "
         verbForms={VERBS.have}
-        verbVisibility={{ head: true }}
+        formVisibility={{ head: true }}
         colour="green"
       />
       <VerbTriangle
         uuid={ids[4]}
         className="col-start-3 row-start-3  "
         verbForms={bossVerb}
-        verbVisibility={{ pastParticiple: true }}
+        formVisibility={{ pastParticiple: true }}
         colour="black"
       />
       {/* perfect continuous*/}
@@ -68,21 +68,21 @@ function VerbSkeleton({ bossVerb }) {
         uuid={ids[5]}
         className="col-start-1 row-start-4  "
         verbForms={VERBS.have}
-        verbVisibility={{ head: true }}
+        formVisibility={{ head: true }}
         colour="green"
       />
       <VerbTriangle
         uuid={ids[6]}
         className="col-start-2 row-start-4  "
         verbForms={VERBS.be}
-        verbVisibility={{ pastParticiple: true }}
+        formVisibility={{ pastParticiple: true }}
         colour="blue"
       />
       <VerbTriangle
         uuid={ids[7]}
         className="col-start-3 row-start-4  "
         verbForms={bossVerb}
-        verbVisibility={{ presentParticiple: true }}
+        formVisibility={{ presentParticiple: true }}
         colour="black"
       />
     </div>

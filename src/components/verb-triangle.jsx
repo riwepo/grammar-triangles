@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils/css-class";
 
-function VerbTriangle({ uuid, colour, verbForms, verbVisibility, className }) {
+function VerbTriangle({ uuid, colour, verbForms, formVisibility, className }) {
+  console.log(verbForms, formVisibility);
   return (
     <div className={cn(className)}>
       <svg
@@ -83,17 +84,35 @@ function VerbTriangle({ uuid, colour, verbForms, verbVisibility, className }) {
               {verbForms.presentParticiple}
             </text>
           </g>
+          <g id={`${uuid}third-person-singular`}>
+            <circle cx="10" cy="-33" r="2" stroke="black" fill="black" />
+            <text
+              x="15"
+              y="-33"
+              fill="black"
+              stroke="black"
+              strokeWidth="0.5"
+              fontSize="10px"
+              textAnchor="start"
+              dominantBaseline="middle"
+            >
+              {verbForms.thirdPersonSingular}
+            </text>
+          </g>
         </defs>
         <use href={`#${uuid}triangle`} x="0" y="0" />
-        {verbVisibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
-        {verbVisibility.preterite && (
+        {formVisibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
+        {formVisibility.preterite && (
           <use href={`#${uuid}preterite`} x="0" y="0" />
         )}
-        {verbVisibility.pastParticiple && (
+        {formVisibility.pastParticiple && (
           <use href={`#${uuid}past-participle`} x="0" y="0" />
         )}
-        {verbVisibility.presentParticiple && (
+        {formVisibility.presentParticiple && (
           <use href={`#${uuid}present-participle`} x="0" y="0" />
+        )}
+        {formVisibility.thirdPersonSingular && (
+          <use href={`#${uuid}third-person-singular`} x="0" y="0" />
         )}
       </svg>
     </div>
