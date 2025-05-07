@@ -1,3 +1,5 @@
+import { nanoid } from "nanoid";
+
 import ToBeTriangle from "@/components/to-be-triangle";
 
 export const metadata = {
