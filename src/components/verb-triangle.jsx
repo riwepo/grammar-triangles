@@ -64,7 +64,7 @@ function VerbTriangle({ uuid, colour, verbForms, verbVisibility, className }) {
             <path
               transform="scale(0.1, 0.1)"
               d="M0,-30
-          C 35,-60 90,-20 0,80
+          C 35,-60 90,-20 0,50
           C -90,-20 -35,-60 0,-30"
               fill="red"
               stroke="black"
@@ -72,7 +72,7 @@ function VerbTriangle({ uuid, colour, verbForms, verbVisibility, className }) {
             />
             <text
               x="0"
-              y="15"
+              y="12"
               fill="black"
               stroke="black"
               strokeWidth="0.5"
