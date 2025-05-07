@@ -1,11 +1,11 @@
-import TensesBlueprint from "@/components/tenses-blueprint";
+import ModalVerbs from "@/components/modal-verbs";
 import VERBS from "@/lib/utils/verb-data";
 
 export const metadata = {
-  title: "Tenses Blueprint",
-  description: "Tenses Blueprint",
+  title: "Modal Verbs",
+  description: "Modal Verbs",
 };
 
 export default function TensesBlueprintPage() {
-  return <TensesBlueprint bossVerb={VERBS.choose} />;
+  return <ModalVerbs bossVerb={VERBS.choose} />;
 }
