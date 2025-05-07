@@ -30,7 +30,7 @@ function TensesBlueprint({ bossVerb }) {
         uuid={ids[0]}
         className="col-start-3 row-start-1  "
         verbForms={bossVerb}
-        formVisibility={{ thirdPersonSingular: true }}
+        formVisibility={{ head: true }}
         colour="black"
       />
       {/* continuous */}
