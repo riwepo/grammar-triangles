@@ -24,8 +24,8 @@ function TensesBlueprint({ bossVerb }) {
   }
 
   return (
-    <div className="grid grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] h-screen w-full border-2 border-black overflow-hidden">
-      <p className="col-start-1 row-start-1 content-center mx-auto">Simple</p>
+    <div className="grid h-screen w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-hidden border-2 border-black">
+      <p className="col-start-1 row-start-1 mx-auto content-center">Simple</p>
       <BasicTriangle
         uuid={ids[0]}
         className="col-start-4 row-start-1"
@@ -34,9 +34,9 @@ function TensesBlueprint({ bossVerb }) {
         colour="black"
       />
 
-      <div className="col-start-1 row-start-2 col-span-4 bg-gray-200"></div>
+      <div className="col-span-4 col-start-1 row-start-2 bg-gray-200"></div>
 
-      <p className="col-start-1 row-start-3 content-center mx-auto">
+      <p className="col-start-1 row-start-3 mx-auto content-center">
         Continuous
       </p>
       <BasicTriangle
@@ -54,9 +54,9 @@ function TensesBlueprint({ bossVerb }) {
         colour="black"
       />
 
-      <div className="col-start-1 row-start-4 col-span-4 bg-gray-200"></div>
+      <div className="col-span-4 col-start-1 row-start-4 bg-gray-200"></div>
 
-      <p className="col-start-1 row-start-5 content-center mx-auto">
+      <p className="col-start-1 row-start-5 mx-auto content-center">
         Perfect Simple
       </p>
       <BasicTriangle
@@ -74,9 +74,9 @@ function TensesBlueprint({ bossVerb }) {
         colour="black"
       />
 
-      <div className="col-start-1 row-start-6 col-span-4 bg-gray-200"></div>
+      <div className="col-span-4 col-start-1 row-start-6 bg-gray-200"></div>
 
-      <p className="col-start-1 row-start-7 content-center mx-autov ">
+      <p className="mx-autov col-start-1 row-start-7 content-center">
         Perfect Continuous
       </p>
       <BasicTriangle
