@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 
 import { nanoid } from "nanoid";
 
-import VerbTriangle from "@/components/verb-triangle";
+import BasicTriangle from "@/components/basic-triangle";
 
 import VERBS from "@/lib/utils/verb-data";
 
-function VerbSkeleton({ bossVerb }) {
-  // generate unique ids for all the SVG triangle components
+function TensesBlueprint({ bossVerb }) {
+  // generate unique ids for all the basic triangle components
   // only run once when this component loads
   const [ids, setIds] = useState(null);
   useEffect(() => {
@@ -26,7 +26,7 @@ function VerbSkeleton({ bossVerb }) {
   return (
     <div className="grid grid-cols-3 grid-rows-4 h-screen w-full border-2 border-black overflow-hidden">
       {/* simple */}
-      <VerbTriangle
+      <BasicTriangle
         uuid={ids[0]}
         className="col-start-3 row-start-1  "
         verbForms={bossVerb}
@@ -34,14 +34,14 @@ function VerbSkeleton({ bossVerb }) {
         colour="black"
       />
       {/* continuous */}
-      <VerbTriangle
+      <BasicTriangle
         uuid={ids[1]}
         className="col-start-2 row-start-2  "
         verbForms={VERBS.be}
         formVisibility={{ head: true }}
         colour="blue"
       />
-      <VerbTriangle
+      <BasicTriangle
         uuid={ids[2]}
         className="col-start-3 row-start-2  "
         verbForms={bossVerb}
@@ -49,14 +49,14 @@ function VerbSkeleton({ bossVerb }) {
         colour="black"
       />
       {/* perfect */}
-      <VerbTriangle
+      <BasicTriangle
         uuid={ids[3]}
         className="col-start-1 row-start-3  "
         verbForms={VERBS.have}
         formVisibility={{ head: true }}
         colour="green"
       />
-      <VerbTriangle
+      <BasicTriangle
         uuid={ids[4]}
         className="col-start-3 row-start-3  "
         verbForms={bossVerb}
@@ -64,21 +64,21 @@ function VerbSkeleton({ bossVerb }) {
         colour="black"
       />
       {/* perfect continuous*/}
-      <VerbTriangle
+      <BasicTriangle
         uuid={ids[5]}
         className="col-start-1 row-start-4  "
         verbForms={VERBS.have}
         formVisibility={{ head: true }}
         colour="green"
       />
-      <VerbTriangle
+      <BasicTriangle
         uuid={ids[6]}
         className="col-start-2 row-start-4  "
         verbForms={VERBS.be}
         formVisibility={{ pastParticiple: true }}
         colour="blue"
       />
-      <VerbTriangle
+      <BasicTriangle
         uuid={ids[7]}
         className="col-start-3 row-start-4  "
         verbForms={bossVerb}
@@ -89,4 +89,4 @@ function VerbSkeleton({ bossVerb }) {
   );
 }
 
-export default VerbSkeleton;
+export default TensesBlueprint;

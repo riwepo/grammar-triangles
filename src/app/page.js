@@ -1,5 +1,5 @@
-import VerbSkeleton from "@/components/verb-skeleton";
-import VerbTriangle from "@/components/verb-triangle";
+import VerbSkeleton from "@/components/tenses_blueprint";
+import VerbTriangle from "@/components/basic-triangle";
 import VERBS from "@/lib/utils/verb-data";
 import { nanoid } from "nanoid";
 

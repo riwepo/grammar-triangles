@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/css-class";
 
-function VerbTriangle({ uuid, colour, verbForms, formVisibility, className }) {
+function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
   console.log(verbForms, formVisibility);
   return (
     <div className={cn(className)}>
@@ -119,4 +119,4 @@ function VerbTriangle({ uuid, colour, verbForms, formVisibility, className }) {
   );
 }
 
-export default VerbTriangle;
+export default BasicTriangle;

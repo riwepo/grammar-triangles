@@ -20,6 +20,7 @@ const VERBS = {
     presentParticiple: "having",
     thirdPersonSingular: "has",
   },
+  // put in play, write
 };
 
 export default VERBS;
