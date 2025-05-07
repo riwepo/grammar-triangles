@@ -20,7 +20,14 @@ const VERBS = {
     presentParticiple: "having",
     thirdPersonSingular: "has",
   },
-  // put in play, write
+  speak: {
+    head: "speak",
+    preterite: "spoke",
+    pastParticiple: "spoken",
+    presentParticiple: "speaking",
+    thirdPersonSingular: "speaks",
+  },
+  // put in play, write, speak
 };
 
 export default VERBS;
