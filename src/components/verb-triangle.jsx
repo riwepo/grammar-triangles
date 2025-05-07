@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/css-class";
 
-function VerbTriangle({ uuid, colour, verbForms, className }) {
+function VerbTriangle({ uuid, colour, verbForms, verbVisibility, className }) {
   return (
     <div className={cn(className)}>
       <svg
@@ -85,10 +85,16 @@ function VerbTriangle({ uuid, colour, verbForms, className }) {
           </g>
         </defs>
         <use href={`#${uuid}triangle`} x="0" y="0" />
-        <use href={`#${uuid}head`} x="0" y="0" />
-        <use href={`#${uuid}preterite`} x="0" y="0" />
-        <use href={`#${uuid}past-participle`} x="0" y="0" />
-        <use href={`#${uuid}present-participle`} x="0" y="0" />
+        {verbVisibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
+        {verbVisibility.preterite && (
+          <use href={`#${uuid}preterite`} x="0" y="0" />
+        )}
+        {verbVisibility.pastParticiple && (
+          <use href={`#${uuid}past-participle`} x="0" y="0" />
+        )}
+        {verbVisibility.presentParticiple && (
+          <use href={`#${uuid}present-participle`} x="0" y="0" />
+        )}
       </svg>
     </div>
   );

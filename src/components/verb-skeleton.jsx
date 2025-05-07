@@ -25,52 +25,64 @@ function VerbSkeleton({ bossVerb }) {
 
   return (
     <div className="grid grid-cols-3 grid-rows-4 h-screen w-full border-2 border-black overflow-hidden">
+      {/* simple */}
       <VerbTriangle
         uuid={ids[0]}
         className="col-start-3 row-start-1  "
         verbForms={bossVerb}
+        verbVisibility={{ head: true }}
         colour="black"
       />
+      {/* continuous */}
       <VerbTriangle
         uuid={ids[1]}
         className="col-start-2 row-start-2  "
         verbForms={VERBS.be}
+        verbVisibility={{ head: true }}
         colour="blue"
       />
       <VerbTriangle
         uuid={ids[2]}
         className="col-start-3 row-start-2  "
         verbForms={bossVerb}
+        verbVisibility={{ presentParticiple: true }}
         colour="black"
       />
+      {/* perfect */}
       <VerbTriangle
         uuid={ids[3]}
         className="col-start-1 row-start-3  "
         verbForms={VERBS.have}
+        verbVisibility={{ head: true }}
         colour="green"
       />
       <VerbTriangle
         uuid={ids[4]}
         className="col-start-3 row-start-3  "
         verbForms={bossVerb}
+        verbVisibility={{ pastParticiple: true }}
         colour="black"
-      />{" "}
+      />
+      {/* perfect continuous*/}
       <VerbTriangle
         uuid={ids[5]}
         className="col-start-1 row-start-4  "
         verbForms={VERBS.have}
+        verbVisibility={{ head: true }}
         colour="green"
       />
       <VerbTriangle
         uuid={ids[6]}
         className="col-start-2 row-start-4  "
         verbForms={VERBS.be}
+        verbVisibility={{ pastParticiple: true }}
         colour="blue"
       />
       <VerbTriangle
         uuid={ids[7]}
         className="col-start-3 row-start-4  "
         verbForms={bossVerb}
+        verbVisibility={{ presentParticiple: true }}
         colour="black"
       />
     </div>
