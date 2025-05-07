@@ -68,7 +68,7 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           C 35,-60 90,-20 0,50
           C -90,-20 -35,-60 0,-30"
               fill="red"
-              stroke="black"
+              stroke="red"
               strokeWidth="2"
             />
             <text
