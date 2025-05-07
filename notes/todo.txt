@@ -2,3 +2,8 @@
 implement triangle for 'be'
 implement modal verbs
 implement tenses blueprint
+
+create a menu
+create a footer
+
+check it all prints ok
