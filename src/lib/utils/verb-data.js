@@ -37,4 +37,30 @@ const VERBS = {
   // put in play, write, speak
 };
 
-export default VERBS;
+const MODAL_VERBS = [
+  "will",
+  "won't",
+  "would",
+  "wouldn't",
+  "can",
+  "can't",
+  "could",
+  "could't",
+  "may",
+  "may not",
+  "might",
+  "mightn't",
+  "must",
+  "mustn't",
+  "shall",
+  "shan't",
+  "should",
+  "shouldn't",
+  "ought to",
+  "oughtn't to",
+  "needn't",
+];
+
+//will won't would wouldn't can can't could could't may may not might mightn't must mustn't shall shant should shouldn't ought to oughtn't to needn't
+
+export { VERBS, MODAL_VERBS };
