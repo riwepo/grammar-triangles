@@ -9,17 +9,19 @@ export const metadata = {
 
 export default function BasicTrianglePage() {
   return (
-    <BasicTriangle
-      uid={nanoid()}
-      colour="black"
-      verbForms={VERBS.eat}
-      formVisibility={{
-        head: true,
-        preterite: true,
-        presentParticiple: true,
-        pastParticiple: true,
-        thirdPersonSingular: true,
-      }}
-    />
+    <div className="h-screen w-full overflow-hidden border-2 border-black">
+      <BasicTriangle
+        uid={nanoid()}
+        colour="black"
+        verbForms={VERBS.eat}
+        formVisibility={{
+          head: true,
+          preterite: true,
+          presentParticiple: true,
+          pastParticiple: true,
+          thirdPersonSingular: true,
+        }}
+      />
+    </div>
   );
 }
