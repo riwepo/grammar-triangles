@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 
 import BasicTriangle from "@/components/basic-triangle";
 
-import { VERBS } from "@/lib/utils/verb-data";
+import { VERBS, MODAL_VERBS } from "@/lib/utils/words";
 
 function ModalVerbs({ bossVerb }) {
   // generate unique ids for all the basic triangle components
@@ -26,7 +26,11 @@ function ModalVerbs({ bossVerb }) {
   return (
     <div className="grid h-screen w-full grid-cols-[0.2fr_0.2fr_0.6fr]">
       <div className="col-start-1 row-start-1 h-full"></div>
-      <div className="grid-rows-auto col-start-2 row-start-1 grid h-full"></div>
+      <div className="col-start-2 row-start-1 grid h-full auto-rows-auto py-2">
+        {MODAL_VERBS.map((mv) => (
+          <p key={mv}>{mv}</p>
+        ))}
+      </div>
       <div className="col-start-3 row-start-1 grid h-full grid-cols-[1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-auto">
         <BasicTriangle
           uuid={ids[0]}
