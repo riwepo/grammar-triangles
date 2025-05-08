@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 
 import BasicTriangle from "@/components/basic-triangle";
 
-import VERBS from "@/lib/utils/verb-data";
+import { VERBS } from "@/lib/utils/verb-data";
 
 function ModalVerbs({ bossVerb }) {
   // generate unique ids for all the basic triangle components
@@ -24,10 +24,10 @@ function ModalVerbs({ bossVerb }) {
   }
 
   return (
-    <div className="grid h-screen w-full grid-cols-[0.2fr_0.2fr_0.6fr] border-2 border-red-500">
-      <div className="col-start-1 row-start-1 h-full border border-green-500"></div>
-      <div className="col-start-2 row-start-1 h-full border border-green-500"></div>
-      <div className="col-start-3 row-start-1 grid h-full max-h-full grid-cols-[1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-auto">
+    <div className="grid h-screen w-full grid-cols-[0.2fr_0.2fr_0.6fr]">
+      <div className="col-start-1 row-start-1 h-full"></div>
+      <div className="grid-rows-auto col-start-2 row-start-1 grid h-full"></div>
+      <div className="col-start-3 row-start-1 grid h-full grid-cols-[1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-auto">
         <BasicTriangle
           uuid={ids[0]}
           className="col-start-3 row-start-1"

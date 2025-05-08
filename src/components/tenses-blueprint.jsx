@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 
 import BasicTriangle from "@/components/basic-triangle";
 
-import VERBS from "@/lib/utils/verb-data";
+import { VERBS } from "@/lib/utils/verb-data";
 
 function TensesBlueprint({ bossVerb }) {
   // generate unique ids for all the basic triangle components

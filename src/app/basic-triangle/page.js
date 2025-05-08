@@ -1,5 +1,5 @@
 import BasicTriangle from "@/components/basic-triangle";
-import VERBS from "@/lib/utils/verb-data";
+import { VERBS } from "@/lib/utils/verb-data";
 import { nanoid } from "nanoid";
 
 export const metadata = {
