@@ -34,10 +34,10 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}am`}>
-          <circle cx="10" cy="-33" r="2" stroke="black" fill="black" />
+          <circle cx="16" cy="-28" r="2" stroke="black" fill="black" />
           <text
-            x="15"
-            y="-33"
+            x="21"
+            y="-28"
             fill="black"
             stroke="black"
             strokeWidth="0.5"
@@ -49,10 +49,10 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}are`}>
-          <circle cx="16" cy="-24" r="2" stroke="black" fill="black" />
+          <circle cx="22" cy="-19" r="2" stroke="black" fill="black" />
           <text
-            x="21"
-            y="-24"
+            x="27"
+            y="-19"
             fill="black"
             stroke="black"
             strokeWidth="0.5"
@@ -64,10 +64,10 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}is`}>
-          <circle cx="22" cy="-15" r="2" stroke="black" fill="black" />
+          <circle cx="28" cy="-10" r="2" stroke="black" fill="black" />
           <text
-            x="27"
-            y="-15"
+            x="33"
+            y="-10"
             fill="black"
             stroke="black"
             strokeWidth="0.5"

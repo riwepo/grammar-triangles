@@ -30,7 +30,12 @@ function TensesBlueprint({ bossVerb }) {
         uuid={ids[0]}
         className="col-start-4 row-start-1"
         verbForms={bossVerb}
-        formVisibility={{ head: true, tenseLine: true }}
+        formVisibility={{
+          head: true,
+          thirdPersonSingular: true,
+          preterite: true,
+          tenseLine: true,
+        }}
         colour="black"
       />
 

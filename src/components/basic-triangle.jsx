@@ -83,10 +83,10 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}third-person-singular`}>
-          <circle cx="10" cy="-33" r="2" stroke="black" fill="black" />
+          <circle cx="16" cy="-28" r="2" stroke="black" fill="black" />
           <text
-            x="15"
-            y="-33"
+            x="21"
+            y="-28"
             fill="black"
             stroke="black"
             strokeWidth="0.5"
