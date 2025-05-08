@@ -34,6 +34,13 @@ const VERBS = {
     presentParticiple: "choosing",
     thirdPersonSingular: "chooses",
   },
+  sing: {
+    head: "sing",
+    preterite: "sang",
+    pastParticiple: "sung",
+    presentParticiple: "singing",
+    thirdPersonSingular: "sings",
+  },
   // put in play, write, speak
 };
 
