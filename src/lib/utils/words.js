@@ -61,6 +61,6 @@ const MODAL_VERBS = [
   "needn't",
 ];
 
-//will won't would wouldn't can can't could could't may may not might mightn't must mustn't shall shant should shouldn't ought to oughtn't to needn't
+const SUBJECT_PRONOUNS = ["I", "you", "he", "she", "it", "we", "they"];
 
-export { VERBS, MODAL_VERBS };
+export { VERBS, MODAL_VERBS, SUBJECT_PRONOUNS };
