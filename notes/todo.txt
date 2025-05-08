@@ -1,9 +1,5 @@
 
-implement triangle for 'be'
-implement modal verbs
-implement tenses blueprint
+put present / past line in
 
 create a menu
 create a footer
-
-check it all prints ok
