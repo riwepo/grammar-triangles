@@ -7,5 +7,5 @@ export const metadata = {
 };
 
 export default function TensesBlueprintPage() {
-  return <TensesBlueprint bossVerb={VERBS.choose} />;
+  return <TensesBlueprint bossVerb={VERBS.sing} />;
 }
