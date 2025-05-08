@@ -30,7 +30,7 @@ function TensesBlueprint({ bossVerb }) {
         uuid={ids[0]}
         className="col-start-4 row-start-1"
         verbForms={bossVerb}
-        formVisibility={{ head: true }}
+        formVisibility={{ head: true, tenseLine: true }}
         colour="black"
       />
 
@@ -43,7 +43,7 @@ function TensesBlueprint({ bossVerb }) {
         uuid={ids[1]}
         className="col-start-3 row-start-3"
         verbForms={VERBS.be}
-        formVisibility={{ head: true }}
+        formVisibility={{ head: true, tenseLine: true }}
         colour="blue"
       />
       <BasicTriangle
@@ -63,7 +63,7 @@ function TensesBlueprint({ bossVerb }) {
         uuid={ids[3]}
         className="col-start-2 row-start-5"
         verbForms={VERBS.have}
-        formVisibility={{ head: true }}
+        formVisibility={{ head: true, tenseLine: true }}
         colour="green"
       />
       <BasicTriangle
@@ -83,7 +83,7 @@ function TensesBlueprint({ bossVerb }) {
         uuid={ids[5]}
         className="col-start-2 row-start-7"
         verbForms={VERBS.have}
-        formVisibility={{ head: true }}
+        formVisibility={{ head: true, tenseLine: true }}
         colour="green"
       />
       <BasicTriangle

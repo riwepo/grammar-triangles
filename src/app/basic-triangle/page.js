@@ -20,6 +20,7 @@ export default function BasicTrianglePage() {
           presentParticiple: true,
           pastParticiple: true,
           thirdPersonSingular: true,
+          tenseLine: true,
         }}
       />
     </div>

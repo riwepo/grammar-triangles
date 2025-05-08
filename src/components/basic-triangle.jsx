@@ -97,6 +97,15 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
             {verbForms.thirdPersonSingular}
           </text>
         </g>
+        <line
+          id={`${uuid}tense-line`}
+          x1="-100"
+          y1="0"
+          x2="25"
+          y2="0"
+          stroke="red"
+          strokeWidth="1"
+        ></line>
       </defs>
       <use href={`#${uuid}triangle`} x="0" y="0" />
       {formVisibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
@@ -111,6 +120,9 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
       )}
       {formVisibility.thirdPersonSingular && (
         <use href={`#${uuid}third-person-singular`} x="0" y="0" />
+      )}
+      {formVisibility.tenseLine && (
+        <use href={`#${uuid}tense-line`} x="0" y="0" />
       )}
     </svg>
   );
