@@ -9,16 +9,23 @@ export const metadata = {
 
 export default function ToBeTrianglePage() {
   return (
-    <ToBeTriangle
-      uid={nanoid()}
-      colour="black"
-      formVisibility={{
-        head: true,
-        preterite: true,
-        presentParticiple: true,
-        pastParticiple: true,
-        thirdPersonSingular: true,
-      }}
-    />
+    <div className="h-screen w-full overflow-hidden border-2 border-black">
+      <ToBeTriangle
+        uid={nanoid()}
+        colour="black"
+        formVisibility={{
+          head: true,
+          am: true,
+          are: true,
+          is: true,
+          preterite: true,
+          was: true,
+          were: true,
+          presentParticiple: true,
+          pastParticiple: true,
+          thirdPersonSingular: true,
+        }}
+      />{" "}
+    </div>
   );
 }
