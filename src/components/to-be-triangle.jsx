@@ -81,14 +81,13 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
         <g id={`${uuid}preterite`}>
           <circle cx="-40" cy="37" r="2" stroke="black" fill="black" />
           <text
-            x="-50"
-            y="37"
+            x="-40"
+            y="52"
             fill="black"
             stroke="black"
             strokeWidth="0.5"
             fontSize="10px"
-            textAnchor="end"
-            dominantBaseline="middle"
+            textAnchor="middle"
           >
             was
           </text>
@@ -126,14 +125,13 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
         <g id={`${uuid}past-participle`}>
           <circle cx="40" cy="37" r="2" stroke="black" fill="black" />
           <text
-            x="50"
-            y="37"
+            x="40"
+            y="52"
             fill="black"
             stroke="black"
             strokeWidth="0.5"
             fontSize="10px"
-            textAnchor="start"
-            dominantBaseline="middle"
+            textAnchor="middle"
           >
             been
           </text>
