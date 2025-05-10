@@ -16,7 +16,7 @@ function InflectedTensesNot({ bossVerb }) {
   const [ids, setIds] = useState(null);
   useEffect(() => {
     const generateIds = () => {
-      return "01234567890123".split("").map((n) => nanoid());
+      return "0123456789ABCDEF".split("").map((n) => nanoid());
     };
     const ids = generateIds();
     setIds(ids);
@@ -67,7 +67,7 @@ function InflectedTensesNot({ bossVerb }) {
         colour="black"
       />
       {/*  <NormalVerbTriangle
-        uuid={ids[2]}
+        uuid={ids[3]}
         className="col-start-6 row-start-1"
         verbForms={bossVerb}
         visibility={{
@@ -79,7 +79,7 @@ function InflectedTensesNot({ bossVerb }) {
         colour="black"
       />
       <NormalPronounTriangle
-        uuid={ids[3]}
+        uuid={ids[4]}
         className="col-start-6 row-start-1"
         verbForms={bossVerb}
         visibility={{
@@ -99,7 +99,7 @@ function InflectedTensesNot({ bossVerb }) {
       </div>
 
       <ToBeVerbTriangle
-        uuid={ids[4]}
+        uuid={ids[5]}
         className="col-start-4 row-start-3"
         visibility={{
           am: true,
@@ -112,7 +112,7 @@ function InflectedTensesNot({ bossVerb }) {
         colour="blue"
       />
       <ToBePronounTriangle
-        uuid={ids[5]}
+        uuid={ids[6]}
         className="col-start-4 row-start-3"
         visibility={{
           amPronouns: true,
@@ -127,7 +127,7 @@ function InflectedTensesNot({ bossVerb }) {
         not
       </p>
       <NormalVerbTriangle
-        uuid={ids[6]}
+        uuid={ids[7]}
         className="col-start-6 row-start-3"
         verbForms={bossVerb}
         visibility={{ presentParticiple: true }}
@@ -137,13 +137,13 @@ function InflectedTensesNot({ bossVerb }) {
       <div className="col-span-6 col-start-1 row-start-4 bg-gray-200"></div>
 
       <div className="col-start-1 row-start-5 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
-        <p className="row-start-2">Present Perfect</p>
+        <p className="row-start-2">Present Perfect Simple</p>
         <div className="row-start-3 h-full border-b-2 border-red-500"></div>
-        <p className="row-start-5">Past Perfect</p>
+        <p className="row-start-5">Past Perfect Simple</p>
       </div>
 
       <NormalVerbTriangle
-        uuid={ids[7]}
+        uuid={ids[8]}
         className="col-start-2 row-start-5"
         verbForms={VERBS.have}
         visibility={{
@@ -155,7 +155,7 @@ function InflectedTensesNot({ bossVerb }) {
         colour="green"
       />
       <NormalPronounTriangle
-        uuid={ids[8]}
+        uuid={ids[9]}
         className="col-start-2 row-start-5"
         verbForms={bossVerb}
         visibility={{
@@ -169,7 +169,7 @@ function InflectedTensesNot({ bossVerb }) {
         not
       </p>
       <NormalVerbTriangle
-        uuid={ids[9]}
+        uuid={ids[10]}
         className="col-start-6 row-start-5"
         verbForms={bossVerb}
         visibility={{ pastParticiple: true }}
@@ -185,7 +185,7 @@ function InflectedTensesNot({ bossVerb }) {
       </div>
 
       <NormalVerbTriangle
-        uuid={ids[10]}
+        uuid={ids[11]}
         className="col-start-2 row-start-7"
         verbForms={VERBS.have}
         visibility={{
@@ -197,7 +197,7 @@ function InflectedTensesNot({ bossVerb }) {
         colour="green"
       />
       <NormalPronounTriangle
-        uuid={ids[11]}
+        uuid={ids[12]}
         className="col-start-2 row-start-7"
         verbForms={bossVerb}
         visibility={{
@@ -211,14 +211,14 @@ function InflectedTensesNot({ bossVerb }) {
         not
       </p>
       <NormalVerbTriangle
-        uuid={ids[12]}
+        uuid={ids[13]}
         className="col-start-4 row-start-7"
         verbForms={VERBS.be}
         visibility={{ pastParticiple: true }}
         colour="blue"
       />
       <NormalVerbTriangle
-        uuid={ids[13]}
+        uuid={ids[14]}
         className="col-start-6 row-start-7"
         verbForms={bossVerb}
         visibility={{ presentParticiple: true }}
