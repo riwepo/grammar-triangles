@@ -42,6 +42,7 @@ function BasicPronounTriangles() {
         }}
         className="col-start-1"
       />
+
       <ToBePronounTriangle
         uuid={ids[1]}
         colour="black"
