@@ -15,12 +15,13 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           points="-50,43 0,-43 50,43"
           fill="none"
           stroke={colour}
+          strokeWidth="2"
         />
         <g id={`${uuid}head`}>
-          <circle cx="0" cy="-33" r="4" stroke="black" fill="black" />
+          <circle cx="0" cy="-32" r="4" stroke="black" fill="black" />
           <text
             x="0"
-            y="-33"
+            y="-32"
             stroke="white"
             fontSize="6px"
             strokeWidth="0.5px"
@@ -126,10 +127,10 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}third-person-singular`}>
-          <circle cx="16" cy="-28" r="4" stroke="black" fill="black" />
+          <circle cx="18" cy="-26" r="4" stroke="black" fill="black" />
           <text
-            x="16"
-            y="-28"
+            x="18"
+            y="-26"
             stroke="white"
             fontSize="6px"
             strokeWidth="0.5px"
@@ -139,8 +140,8 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
             5
           </text>
           <text
-            x="21"
-            y="-28"
+            x="24"
+            y="-26"
             fill="black"
             stroke="black"
             strokeWidth="0.5"
