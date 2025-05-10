@@ -37,6 +37,7 @@ function BasicTriangles() {
           pastParticiple: true,
           presentParticiple: true,
           thirdPersonSingular: true,
+          numbers: true,
         }}
         className="col-start-1"
       />
