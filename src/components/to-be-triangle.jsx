@@ -182,6 +182,15 @@ function ToBeTriangle({ uuid, colour, visibility, className }) {
             4
           </text>
         </g>
+        <line
+          id={`${uuid}tense-line`}
+          x1="-100"
+          y1="0"
+          x2="25"
+          y2="0"
+          stroke="red"
+          strokeWidth="2"
+        ></line>
       </defs>
       <use href={`#${uuid}triangle`} x="0" y="0" />
       {visibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
@@ -196,7 +205,8 @@ function ToBeTriangle({ uuid, colour, visibility, className }) {
       {visibility.presentParticiple && (
         <use href={`#${uuid}present-participle`} x="0" y="0" />
       )}
-      {visibility.numbers && <use href={`#${uuid}numbers`} x="0" y="0" />}
+      {visibility.numbers && <use href={`#${uuid}numbers`} x="0" y="0" />}{" "}
+      {visibility.tenseLine && <use href={`#${uuid}tense-line`} x="0" y="0" />}
     </svg>
   );
 }
