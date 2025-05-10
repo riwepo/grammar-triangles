@@ -1,9 +1,7 @@
 
-put present / past line in
-on basic triangle page put to be as well, in tabs
-add basic tenses blueprint
+
 add inflected tenses
-squish blueprint page up to triangles are closer
+squish blueprint page up so triangles are closer
 
 create a menu
 create a footer
