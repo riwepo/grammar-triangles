@@ -41,6 +41,13 @@ const VERBS = {
     presentParticiple: "singing",
     thirdPersonSingular: "sings",
   },
+  do: {
+    head: "do",
+    preterite: "did",
+    pastParticiple: "done",
+    presentParticiple: "doing",
+    thirdPersonSingular: "does",
+  },
   // put in play, write, speak
 };
 
