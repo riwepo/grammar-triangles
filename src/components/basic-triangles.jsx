@@ -46,15 +46,14 @@ function BasicTriangles() {
         colour="black"
         formVisibility={{
           head: true,
-          preterite: true,
           pastParticiple: true,
           presentParticiple: true,
-          thirdPersonSingular: true,
           am: true,
           is: true,
           are: true,
           was: true,
           were: true,
+          numbers: true,
         }}
         className="col-start-2"
       />
