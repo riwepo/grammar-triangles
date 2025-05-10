@@ -12,7 +12,7 @@ function NormalPronounTriangle({
       className={cn(className)}
       width="100%"
       height="100%"
-      viewBox="-90 -75 150 150"
+      viewBox="-140 -100 200 200"
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>

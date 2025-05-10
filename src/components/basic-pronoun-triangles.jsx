@@ -45,15 +45,16 @@ function BasicPronounTriangles() {
         uuid={ids[1]}
         colour="black"
         visibility={{
-          head: true,
-          pastParticiple: true,
-          presentParticiple: true,
           am: true,
-          is: true,
+          amPronouns: true,
           are: true,
+          arePronouns: true,
+          is: true,
+          isPronouns: true,
           was: true,
+          wasPronouns: true,
           were: true,
-          numbers: true,
+          werePronouns: true,
         }}
         className="col-start-2"
       />
