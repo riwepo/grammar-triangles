@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import { nanoid } from "nanoid";
 
-import BasicTriangle from "@/components/basic-triangle";
+import NormalVerbTriangle from "@/components/normal-verb-triangle";
 import ToBeTriangle from "@/components/to-be-triangle";
 
 import { VERBS } from "@/lib/utils/words";
@@ -27,7 +27,7 @@ function BasicTriangles() {
 
   return (
     <div className="grid h-screen w-full grid-cols-2 overflow-hidden border-2 border-black">
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[0]}
         colour="black"
         verbForms={VERBS.eat}

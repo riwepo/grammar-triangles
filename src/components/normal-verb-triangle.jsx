@@ -1,6 +1,12 @@
 import { cn } from "@/lib/utils/css-class";
 
-function BasicTriangle({ uuid, colour, verbForms, visibility, className }) {
+function NormalVerbTriangle({
+  uuid,
+  colour,
+  verbForms,
+  visibility,
+  className,
+}) {
   return (
     <svg
       className={cn(className)}
@@ -182,4 +188,4 @@ function BasicTriangle({ uuid, colour, verbForms, visibility, className }) {
   );
 }
 
-export default BasicTriangle;
+export default NormalVerbTriangle;

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { nanoid } from "nanoid";
 
-import BasicTriangle from "@/components/basic-triangle";
+import NormalVerbTriangle from "@/components/normal-verb-triangle";
 import ToBeTriangle from "@/components/to-be-triangle";
 
 import { VERBS } from "@/lib/utils/words";
@@ -32,7 +32,7 @@ function TensesBlueprint({ bossVerb }) {
         <p className="row-start-5">Past Simple</p>
       </div>
 
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[0]}
         className="col-start-4 row-start-1"
         verbForms={bossVerb}
@@ -67,7 +67,7 @@ function TensesBlueprint({ bossVerb }) {
         }}
         colour="blue"
       />
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[2]}
         className="col-start-4 row-start-3"
         verbForms={bossVerb}
@@ -83,7 +83,7 @@ function TensesBlueprint({ bossVerb }) {
         <p className="row-start-5">Past Perfect</p>
       </div>
 
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[3]}
         className="col-start-2 row-start-5"
         verbForms={VERBS.have}
@@ -95,7 +95,7 @@ function TensesBlueprint({ bossVerb }) {
         }}
         colour="green"
       />
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[4]}
         className="col-start-4 row-start-5"
         verbForms={bossVerb}
@@ -111,7 +111,7 @@ function TensesBlueprint({ bossVerb }) {
         <p className="row-start-5">Past Perfect Continuous</p>
       </div>
 
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[5]}
         className="col-start-2 row-start-7"
         verbForms={VERBS.have}
@@ -123,14 +123,14 @@ function TensesBlueprint({ bossVerb }) {
         }}
         colour="green"
       />
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[6]}
         className="col-start-3 row-start-7"
         verbForms={VERBS.be}
         visibility={{ pastParticiple: true }}
         colour="blue"
       />
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[7]}
         className="col-start-4 row-start-7"
         verbForms={bossVerb}

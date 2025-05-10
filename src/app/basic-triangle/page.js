@@ -1,4 +1,4 @@
-import BasicTriangle from "@/components/basic-triangle";
+import NormalVerbTriangle from "@/components/normal-verb-triangle";
 import { VERBS } from "@/lib/utils/words";
 import { nanoid } from "nanoid";
 
@@ -10,7 +10,7 @@ export const metadata = {
 export default function BasicTrianglePage() {
   return (
     <div className="h-screen w-full overflow-hidden border-2 border-black">
-      <BasicTriangle
+      <NormalVerbTriangle
         uid={nanoid()}
         colour="black"
         verbForms={VERBS.eat}

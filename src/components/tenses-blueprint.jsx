@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { nanoid } from "nanoid";
 
-import BasicTriangle from "@/components/basic-triangle";
+import NormalVerbTriangle from "@/components/normal-verb-triangle";
 
 import { VERBS } from "@/lib/utils/words";
 
@@ -26,7 +26,7 @@ function TensesBlueprint({ bossVerb }) {
   return (
     <div className="grid h-screen w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-hidden border-2 border-black">
       <p className="col-start-1 row-start-1 mx-auto content-center">Simple</p>
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[0]}
         className="col-start-4 row-start-1"
         verbForms={bossVerb}
@@ -39,14 +39,14 @@ function TensesBlueprint({ bossVerb }) {
       <p className="col-start-1 row-start-3 mx-auto content-center">
         Continuous
       </p>
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[1]}
         className="col-start-3 row-start-3"
         verbForms={VERBS.be}
         visibility={{ head: true }}
         colour="blue"
       />
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[2]}
         className="col-start-4 row-start-3"
         verbForms={bossVerb}
@@ -59,14 +59,14 @@ function TensesBlueprint({ bossVerb }) {
       <p className="col-start-1 row-start-5 mx-auto content-center">
         Perfect Simple
       </p>
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[3]}
         className="col-start-2 row-start-5"
         verbForms={VERBS.have}
         visibility={{ head: true }}
         colour="green"
       />
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[4]}
         className="col-start-4 row-start-5"
         verbForms={bossVerb}
@@ -79,21 +79,21 @@ function TensesBlueprint({ bossVerb }) {
       <p className="mx-autov col-start-1 row-start-7 content-center">
         Perfect Continuous
       </p>
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[5]}
         className="col-start-2 row-start-7"
         verbForms={VERBS.have}
         visibility={{ head: true }}
         colour="green"
       />
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[6]}
         className="col-start-3 row-start-7"
         verbForms={VERBS.be}
         visibility={{ pastParticiple: true }}
         colour="blue"
       />
-      <BasicTriangle
+      <NormalVerbTriangle
         uuid={ids[7]}
         className="col-start-4 row-start-7"
         verbForms={bossVerb}
