@@ -21,17 +21,6 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           <circle cx="0" cy="-32" r="4" stroke="black" fill="black" />
           <text
             x="0"
-            y="-32"
-            stroke="white"
-            fontSize="6px"
-            strokeWidth="0.5px"
-            textAnchor="middle"
-            dominantBaseline="middle"
-          >
-            1
-          </text>
-          <text
-            x="0"
             y="-45"
             fill="black"
             stroke="black"
@@ -46,17 +35,6 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           <circle cx="-40" cy="37" r="4" stroke="black" fill="black" />
           <text
             x="-40"
-            y="37"
-            stroke="white"
-            fontSize="6px"
-            strokeWidth="0.5px"
-            textAnchor="middle"
-            dominantBaseline="middle"
-          >
-            2
-          </text>
-          <text
-            x="-40"
             y="52"
             fill="black"
             stroke="black"
@@ -69,17 +47,6 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
         </g>
         <g id={`${uuid}past-participle`}>
           <circle cx="40" cy="37" r="4" stroke="black" fill="black" />
-          <text
-            x="40"
-            y="37"
-            stroke="white"
-            fontSize="6px"
-            strokeWidth="0.5px"
-            textAnchor="middle"
-            dominantBaseline="middle"
-          >
-            3
-          </text>
           <text
             x="40"
             y="52"
@@ -104,17 +71,6 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           />
           <text
             x="0"
-            y="1"
-            stroke="white"
-            fontSize="6px"
-            strokeWidth="0.5px"
-            textAnchor="middle"
-            dominantBaseline="middle"
-          >
-            4
-          </text>
-          <text
-            x="0"
             y="12"
             fill="black"
             stroke="black"
@@ -129,17 +85,6 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
         <g id={`${uuid}third-person-singular`}>
           <circle cx="18" cy="-26" r="4" stroke="black" fill="black" />
           <text
-            x="18"
-            y="-26"
-            stroke="white"
-            fontSize="6px"
-            strokeWidth="0.5px"
-            textAnchor="middle"
-            dominantBaseline="middle"
-          >
-            5
-          </text>
-          <text
             x="24"
             y="-26"
             fill="black"
@@ -150,6 +95,63 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
             dominantBaseline="middle"
           >
             {verbForms.thirdPersonSingular}
+          </text>
+        </g>
+        <g id={`${uuid}numbers`}>
+          <text
+            x="0"
+            y="-32"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            1
+          </text>
+          <text
+            x="-40"
+            y="37"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            2
+          </text>
+          <text
+            x="40"
+            y="37"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            3
+          </text>
+          <text
+            x="0"
+            y="1"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            4
+          </text>
+          <text
+            x="18"
+            y="-26"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            5
           </text>
         </g>
         <line
@@ -176,6 +178,7 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
       {formVisibility.thirdPersonSingular && (
         <use href={`#${uuid}third-person-singular`} x="0" y="0" />
       )}
+      {formVisibility.numbers && <use href={`#${uuid}numbers`} x="0" y="0" />}
       {formVisibility.tenseLine && (
         <use href={`#${uuid}tense-line`} x="0" y="0" />
       )}
