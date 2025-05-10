@@ -107,7 +107,7 @@ function NormalPronounTriangle({
           he, she, it
         </text>
       </defs>
-      <use href={`#${uuid}triangle`} x="0" y="0" />
+      {visibility.triangle && <use href={`#${uuid}triangle`} x="0" y="0" />}
       {visibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
       {visibility.headPronouns && (
         <use href={`#${uuid}head-pronouns`} x="0" y="0" />

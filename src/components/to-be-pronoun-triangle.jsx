@@ -172,7 +172,7 @@ function ToBePronounTriangle({ uuid, colour, visibility, className }) {
           we, you, they
         </text>
       </defs>
-      <use href={`#${uuid}triangle`} x="0" y="0" />
+      {visibility.triangle && <use href={`#${uuid}triangle`} x="0" y="0" />}
       {visibility.am && <use href={`#${uuid}am`} x="0" y="0" />}
       {visibility.amPronouns && (
         <use href={`#${uuid}am-pronouns`} x="0" y="0" />
