@@ -9,7 +9,7 @@ import ToBeTriangle from "@/components/to-be-triangle";
 
 import { VERBS } from "@/lib/utils/words";
 
-function BasicTriangles() {
+function BasicVerbTriangles() {
   // generate unique ids for all the basic triangle components
   // only run once when this component loads
   const [ids, setIds] = useState(null);
@@ -61,4 +61,4 @@ function BasicTriangles() {
   );
 }
 
-export default BasicTriangles;
+export default BasicVerbTriangles;
