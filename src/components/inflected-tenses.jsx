@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 
 import BasicTriangle from "@/components/basic-triangle";
+import ToBeTriangle from "@/components/to-be-triangle";
 
 import { VERBS } from "@/lib/utils/words";
 
@@ -52,11 +53,18 @@ function TensesBlueprint({ bossVerb }) {
         <p className="row-start-5">Past Continuous</p>
       </div>
 
-      <BasicTriangle
+      <ToBeTriangle
         uuid={ids[1]}
         className="col-start-3 row-start-3"
         verbForms={VERBS.be}
-        visibility={{ head: true, tenseLine: true }}
+        visibility={{
+          am: true,
+          are: true,
+          is: true,
+          was: true,
+          were: true,
+          tenseLine: true,
+        }}
         colour="blue"
       />
       <BasicTriangle
@@ -79,7 +87,12 @@ function TensesBlueprint({ bossVerb }) {
         uuid={ids[3]}
         className="col-start-2 row-start-5"
         verbForms={VERBS.have}
-        visibility={{ head: true, tenseLine: true }}
+        visibility={{
+          head: true,
+          preterite: true,
+          thirdPersonSingular: true,
+          tenseLine: true,
+        }}
         colour="green"
       />
       <BasicTriangle
@@ -102,7 +115,12 @@ function TensesBlueprint({ bossVerb }) {
         uuid={ids[5]}
         className="col-start-2 row-start-7"
         verbForms={VERBS.have}
-        visibility={{ head: true, tenseLine: true }}
+        visibility={{
+          head: true,
+          preterite: true,
+          thirdPersonSingular: true,
+          tenseLine: true,
+        }}
         colour="green"
       />
       <BasicTriangle
