@@ -8,19 +8,5 @@ export const metadata = {
 };
 
 export default function BasicTrianglesPage() {
-  return (
-    <BasicTriangles
-      uid={nanoid()}
-      colour="black"
-      verbForms={VERBS.eat}
-      formVisibility={{
-        head: true,
-        preterite: true,
-        presentParticiple: true,
-        pastParticiple: true,
-        thirdPersonSingular: true,
-        tenseLine: true,
-      }}
-    />
-  );
+  return <BasicTriangles />;
 }
