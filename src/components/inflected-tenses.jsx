@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 
 import NormalVerbTriangle from "@/components/normal-verb-triangle";
+import NormalPronounTriangle from "@/components/normal-pronoun-triangle";
 import ToBeVerbTriangle from "@/components/to-be-verb-triangle";
 
 import { VERBS } from "@/lib/utils/words";
@@ -14,7 +15,7 @@ function TensesBlueprint({ bossVerb }) {
   const [ids, setIds] = useState(null);
   useEffect(() => {
     const generateIds = () => {
-      return "01234567".split("").map((n) => nanoid());
+      return "012345678".split("").map((n) => nanoid());
     };
     const ids = generateIds();
     setIds(ids);
@@ -41,6 +42,17 @@ function TensesBlueprint({ bossVerb }) {
           thirdPersonSingular: true,
           preterite: true,
           tenseLine: true,
+        }}
+        colour="black"
+      />
+      <NormalPronounTriangle
+        uuid={ids[0]}
+        className="col-start-4 row-start-1"
+        verbForms={bossVerb}
+        visibility={{
+          headPronouns: true,
+          thirdPersonSingularPronouns: true,
+          preteritePronouns: true,
         }}
         colour="black"
       />
