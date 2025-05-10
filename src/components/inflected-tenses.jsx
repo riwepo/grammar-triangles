@@ -16,7 +16,7 @@ function TensesBlueprint({ bossVerb }) {
   const [ids, setIds] = useState(null);
   useEffect(() => {
     const generateIds = () => {
-      return "0123456789".split("").map((n) => nanoid());
+      return "012345678901".split("").map((n) => nanoid());
     };
     const ids = generateIds();
     setIds(ids);
@@ -47,7 +47,7 @@ function TensesBlueprint({ bossVerb }) {
         colour="black"
       />
       <NormalPronounTriangle
-        uuid={ids[0]}
+        uuid={ids[1]}
         className="col-start-4 row-start-1"
         verbForms={bossVerb}
         visibility={{
@@ -67,7 +67,7 @@ function TensesBlueprint({ bossVerb }) {
       </div>
 
       <ToBeVerbTriangle
-        uuid={ids[1]}
+        uuid={ids[2]}
         className="col-start-3 row-start-3"
         visibility={{
           am: true,
@@ -80,7 +80,7 @@ function TensesBlueprint({ bossVerb }) {
         colour="blue"
       />
       <ToBePronounTriangle
-        uuid={ids[9]}
+        uuid={ids[3]}
         className="col-start-3 row-start-3"
         visibility={{
           amPronouns: true,
@@ -93,7 +93,7 @@ function TensesBlueprint({ bossVerb }) {
       />
 
       <NormalVerbTriangle
-        uuid={ids[2]}
+        uuid={ids[4]}
         className="col-start-4 row-start-3"
         verbForms={bossVerb}
         visibility={{ presentParticiple: true }}
@@ -109,7 +109,7 @@ function TensesBlueprint({ bossVerb }) {
       </div>
 
       <NormalVerbTriangle
-        uuid={ids[3]}
+        uuid={ids[5]}
         className="col-start-2 row-start-5"
         verbForms={VERBS.have}
         visibility={{
@@ -120,8 +120,19 @@ function TensesBlueprint({ bossVerb }) {
         }}
         colour="green"
       />
+      <NormalPronounTriangle
+        uuid={ids[6]}
+        className="col-start-2 row-start-5"
+        verbForms={bossVerb}
+        visibility={{
+          headPronouns: true,
+          thirdPersonSingularPronouns: true,
+          preteritePronouns: true,
+        }}
+        colour="green"
+      />
       <NormalVerbTriangle
-        uuid={ids[4]}
+        uuid={ids[7]}
         className="col-start-4 row-start-5"
         verbForms={bossVerb}
         visibility={{ pastParticiple: true }}
@@ -137,7 +148,7 @@ function TensesBlueprint({ bossVerb }) {
       </div>
 
       <NormalVerbTriangle
-        uuid={ids[5]}
+        uuid={ids[8]}
         className="col-start-2 row-start-7"
         verbForms={VERBS.have}
         visibility={{
@@ -148,15 +159,26 @@ function TensesBlueprint({ bossVerb }) {
         }}
         colour="green"
       />
+      <NormalPronounTriangle
+        uuid={ids[9]}
+        className="col-start-2 row-start-7"
+        verbForms={bossVerb}
+        visibility={{
+          headPronouns: true,
+          thirdPersonSingularPronouns: true,
+          preteritePronouns: true,
+        }}
+        colour="green"
+      />
       <NormalVerbTriangle
-        uuid={ids[6]}
+        uuid={ids[10]}
         className="col-start-3 row-start-7"
         verbForms={VERBS.be}
         visibility={{ pastParticiple: true }}
         colour="blue"
       />
       <NormalVerbTriangle
-        uuid={ids[7]}
+        uuid={ids[11]}
         className="col-start-4 row-start-7"
         verbForms={bossVerb}
         visibility={{ presentParticiple: true }}
