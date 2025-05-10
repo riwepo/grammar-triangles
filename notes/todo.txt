@@ -7,3 +7,5 @@ squish blueprint page up to triangles are closer
 
 create a menu
 create a footer
+
+add explanations to basic triangles page
