@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils/css-class";
 
 function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
-  console.log(verbForms, formVisibility);
   return (
     <svg
       className={cn(className)}
@@ -18,7 +17,17 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           stroke={colour}
         />
         <g id={`${uuid}head`}>
-          <circle cx="0" cy="-33" r="2" stroke="black" fill="black" />
+          <circle cx="0" cy="-33" r="4" stroke="black" fill="black" />
+          <text
+            x="0"
+            y="-33"
+            stroke="white"
+            fontSize="8px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            1
+          </text>
           <text
             x="0"
             y="-45"
@@ -32,7 +41,17 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}preterite`}>
-          <circle cx="-40" cy="37" r="2" stroke="black" fill="black" />
+          <circle cx="-40" cy="37" r="4" stroke="black" fill="black" />
+          <text
+            x="-40"
+            y="37"
+            stroke="white"
+            fontSize="8px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            2
+          </text>
           <text
             x="-40"
             y="52"
@@ -46,7 +65,17 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}past-participle`}>
-          <circle cx="40" cy="37" r="2" stroke="black" fill="black" />
+          <circle cx="40" cy="37" r="4" stroke="black" fill="black" />
+          <text
+            x="40"
+            y="37"
+            stroke="white"
+            fontSize="8px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            3
+          </text>
           <text
             x="40"
             y="52"
@@ -61,7 +90,7 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
         </g>
         <g id={`${uuid}present-participle`}>
           <path
-            transform="scale(0.1, 0.1)"
+            transform="scale(0.15, 0.15)"
             d="M0,-30
           C 35,-60 90,-20 0,50
           C -90,-20 -35,-60 0,-30"
@@ -69,6 +98,16 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
             stroke="red"
             strokeWidth="2"
           />
+          <text
+            x="0"
+            y="1"
+            stroke="white"
+            fontSize="8px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            4
+          </text>
           <text
             x="0"
             y="12"
@@ -83,7 +122,17 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}third-person-singular`}>
-          <circle cx="16" cy="-28" r="2" stroke="black" fill="black" />
+          <circle cx="16" cy="-28" r="4" stroke="black" fill="black" />
+          <text
+            x="16"
+            y="-28"
+            stroke="white"
+            fontSize="8px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            5
+          </text>
           <text
             x="21"
             y="-28"
