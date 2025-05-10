@@ -32,6 +32,7 @@ function BasicPronounTriangles() {
         colour="black"
         verbForms={VERBS.eat}
         visibility={{
+          triangle: true,
           head: true,
           headPronouns: true,
           preterite: true,
@@ -45,6 +46,7 @@ function BasicPronounTriangles() {
         uuid={ids[1]}
         colour="black"
         visibility={{
+          triangle: true,
           am: true,
           amPronouns: true,
           are: true,
