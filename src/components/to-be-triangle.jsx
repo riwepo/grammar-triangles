@@ -24,17 +24,6 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           <circle cx="0" cy="-32" r="4" stroke="black" fill="black" />
           <text
             x="0"
-            y="-32"
-            stroke="white"
-            fontSize="6px"
-            strokeWidth="0.5px"
-            textAnchor="middle"
-            dominantBaseline="middle"
-          >
-            1
-          </text>
-          <text
-            x="0"
             y="-45"
             fill="black"
             stroke="black"
@@ -124,17 +113,6 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           <circle cx="40" cy="37" r="4" stroke="black" fill="black" />
           <text
             x="40"
-            y="37"
-            stroke="white"
-            fontSize="6px"
-            strokeWidth="0.5px"
-            textAnchor="middle"
-            dominantBaseline="middle"
-          >
-            3
-          </text>
-          <text
-            x="40"
             y="52"
             fill="black"
             stroke="black"
@@ -157,17 +135,6 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           />
           <text
             x="0"
-            y="1"
-            stroke="white"
-            fontSize="6px"
-            strokeWidth="0.5px"
-            textAnchor="middle"
-            dominantBaseline="middle"
-          >
-            4
-          </text>
-          <text
-            x="0"
             y="12"
             fill="black"
             stroke="black"
@@ -177,6 +144,42 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
             dominantBaseline="middle"
           >
             {toBeVerb.presentParticiple}
+          </text>
+        </g>
+        <g id={`${uuid}numbers`}>
+          <text
+            x="0"
+            y="-32"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            1
+          </text>
+
+          <text
+            x="40"
+            y="37"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            3
+          </text>
+          <text
+            x="0"
+            y="1"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            4
           </text>
         </g>
       </defs>
@@ -193,6 +196,7 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
       {formVisibility.presentParticiple && (
         <use href={`#${uuid}present-participle`} x="0" y="0" />
       )}
+      {formVisibility.numbers && <use href={`#${uuid}numbers`} x="0" y="0" />}
     </svg>
   );
 }
