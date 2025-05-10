@@ -103,9 +103,9 @@ function InflectedTenses({ bossVerb }) {
       <div className="col-span-4 col-start-1 row-start-4 bg-gray-200"></div>
 
       <div className="col-start-1 row-start-5 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
-        <p className="row-start-2">Present Perfect</p>
+        <p className="row-start-2">Present Perfect Simple</p>
         <div className="row-start-3 h-full border-b-2 border-red-500"></div>
-        <p className="row-start-5">Past Perfect</p>
+        <p className="row-start-5">Past Perfect Simple</p>
       </div>
 
       <NormalVerbTriangle
