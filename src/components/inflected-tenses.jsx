@@ -10,7 +10,7 @@ import ToBePronounTriangle from "@/components/to-be-pronoun-triangle";
 
 import { VERBS } from "@/lib/utils/words";
 
-function TensesBlueprint({ bossVerb }) {
+function InflectedTenses({ bossVerb }) {
   // generate unique ids for all the basic triangle components
   // only run once when this component loads
   const [ids, setIds] = useState(null);
@@ -188,4 +188,4 @@ function TensesBlueprint({ bossVerb }) {
   );
 }
 
-export default TensesBlueprint;
+export default InflectedTenses;
