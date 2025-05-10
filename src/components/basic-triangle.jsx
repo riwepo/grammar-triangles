@@ -161,7 +161,7 @@ function BasicTriangle({ uuid, colour, verbForms, visibility, className }) {
           x2="25"
           y2="0"
           stroke="red"
-          strokeWidth="1"
+          strokeWidth="2"
         ></line>
       </defs>
       <use href={`#${uuid}triangle`} x="0" y="0" />
