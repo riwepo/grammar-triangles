@@ -24,8 +24,13 @@ function TensesBlueprint({ bossVerb }) {
   }
 
   return (
-    <div className="grid h-screen w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-hidden border-2 border-black">
-      <p className="col-start-1 row-start-1 mx-auto content-center">Simple</p>
+    <div className="grid h-screen w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-hidden border-2 border-black px-4">
+      <div className="col-start-1 row-start-1 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
+        <p className="row-start-2">Present Simple</p>
+        <div className="row-start-3 h-full border-b-2 border-red-500"></div>
+        <p className="row-start-5">Past Simple</p>
+      </div>
+
       <BasicTriangle
         uuid={ids[0]}
         className="col-start-4 row-start-1"
@@ -41,9 +46,12 @@ function TensesBlueprint({ bossVerb }) {
 
       <div className="col-span-4 col-start-1 row-start-2 bg-gray-200"></div>
 
-      <p className="col-start-1 row-start-3 mx-auto content-center">
-        Continuous
-      </p>
+      <div className="col-start-1 row-start-3 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
+        <p className="row-start-2">Present Continuous</p>
+        <div className="row-start-3 h-full border-b-2 border-red-500"></div>
+        <p className="row-start-5">Past Continuous</p>
+      </div>
+
       <BasicTriangle
         uuid={ids[1]}
         className="col-start-3 row-start-3"
@@ -61,9 +69,12 @@ function TensesBlueprint({ bossVerb }) {
 
       <div className="col-span-4 col-start-1 row-start-4 bg-gray-200"></div>
 
-      <p className="col-start-1 row-start-5 mx-auto content-center">
-        Perfect Simple
-      </p>
+      <div className="col-start-1 row-start-5 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
+        <p className="row-start-2">Present Perfect</p>
+        <div className="row-start-3 h-full border-b-2 border-red-500"></div>
+        <p className="row-start-5">Past Perfect</p>
+      </div>
+
       <BasicTriangle
         uuid={ids[3]}
         className="col-start-2 row-start-5"
@@ -81,9 +92,12 @@ function TensesBlueprint({ bossVerb }) {
 
       <div className="col-span-4 col-start-1 row-start-6 bg-gray-200"></div>
 
-      <p className="mx-autov col-start-1 row-start-7 content-center">
-        Perfect Continuous
-      </p>
+      <div className="col-start-1 row-start-7 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
+        <p className="row-start-2">Present Perfect Continuous</p>
+        <div className="row-start-3 h-full border-b-2 border-red-500"></div>
+        <p className="row-start-5">Past Perfect Continuous</p>
+      </div>
+
       <BasicTriangle
         uuid={ids[5]}
         className="col-start-2 row-start-7"
