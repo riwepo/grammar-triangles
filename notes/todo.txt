@@ -1,7 +1,7 @@
 
+add switch to toggle not / affirmative
+add select verb
 
-add inflected tenses
-squish blueprint page up so triangles are closer
 
 create a menu
 create a footer
