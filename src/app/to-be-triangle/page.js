@@ -13,7 +13,7 @@ export default function ToBeTrianglePage() {
       <ToBeTriangle
         uid={nanoid()}
         colour="black"
-        formVisibility={{
+        visibility={{
           head: true,
           am: true,
           are: true,

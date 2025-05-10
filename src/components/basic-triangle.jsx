@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/css-class";
 
-function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
+function BasicTriangle({ uuid, colour, verbForms, visibility, className }) {
   return (
     <svg
       className={cn(className)}
@@ -165,23 +165,19 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
         ></line>
       </defs>
       <use href={`#${uuid}triangle`} x="0" y="0" />
-      {formVisibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
-      {formVisibility.preterite && (
-        <use href={`#${uuid}preterite`} x="0" y="0" />
-      )}
-      {formVisibility.pastParticiple && (
+      {visibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
+      {visibility.preterite && <use href={`#${uuid}preterite`} x="0" y="0" />}
+      {visibility.pastParticiple && (
         <use href={`#${uuid}past-participle`} x="0" y="0" />
       )}
-      {formVisibility.presentParticiple && (
+      {visibility.presentParticiple && (
         <use href={`#${uuid}present-participle`} x="0" y="0" />
       )}
-      {formVisibility.thirdPersonSingular && (
+      {visibility.thirdPersonSingular && (
         <use href={`#${uuid}third-person-singular`} x="0" y="0" />
       )}
-      {formVisibility.numbers && <use href={`#${uuid}numbers`} x="0" y="0" />}
-      {formVisibility.tenseLine && (
-        <use href={`#${uuid}tense-line`} x="0" y="0" />
-      )}
+      {visibility.numbers && <use href={`#${uuid}numbers`} x="0" y="0" />}
+      {visibility.tenseLine && <use href={`#${uuid}tense-line`} x="0" y="0" />}
     </svg>
   );
 }

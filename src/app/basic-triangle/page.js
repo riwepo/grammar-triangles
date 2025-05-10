@@ -14,7 +14,7 @@ export default function BasicTrianglePage() {
         uid={nanoid()}
         colour="black"
         verbForms={VERBS.eat}
-        formVisibility={{
+        visibility={{
           head: true,
           preterite: true,
           presentParticiple: true,

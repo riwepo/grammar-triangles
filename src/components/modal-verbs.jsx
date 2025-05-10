@@ -48,7 +48,7 @@ function ModalVerbs({ bossVerb }) {
           uuid={ids[0]}
           className="col-start-3 row-start-1"
           verbForms={bossVerb}
-          formVisibility={{ head: true }}
+          visibility={{ head: true }}
           colour="black"
         />
 
@@ -58,14 +58,14 @@ function ModalVerbs({ bossVerb }) {
           uuid={ids[1]}
           className="col-start-2 row-start-3"
           verbForms={VERBS.be}
-          formVisibility={{ head: true }}
+          visibility={{ head: true }}
           colour="blue"
         />
         <BasicTriangle
           uuid={ids[2]}
           className="col-start-3 row-start-3"
           verbForms={bossVerb}
-          formVisibility={{ presentParticiple: true }}
+          visibility={{ presentParticiple: true }}
           colour="black"
         />
 
@@ -75,14 +75,14 @@ function ModalVerbs({ bossVerb }) {
           uuid={ids[3]}
           className="col-start-1 row-start-5"
           verbForms={VERBS.have}
-          formVisibility={{ head: true }}
+          visibility={{ head: true }}
           colour="green"
         />
         <BasicTriangle
           uuid={ids[4]}
           className="col-start-3 row-start-5"
           verbForms={bossVerb}
-          formVisibility={{ pastParticiple: true }}
+          visibility={{ pastParticiple: true }}
           colour="black"
         />
 
@@ -92,21 +92,21 @@ function ModalVerbs({ bossVerb }) {
           uuid={ids[5]}
           className="col-start-1 row-start-7"
           verbForms={VERBS.have}
-          formVisibility={{ head: true }}
+          visibility={{ head: true }}
           colour="green"
         />
         <BasicTriangle
           uuid={ids[6]}
           className="col-start-2 row-start-7"
           verbForms={VERBS.be}
-          formVisibility={{ pastParticiple: true }}
+          visibility={{ pastParticiple: true }}
           colour="blue"
         />
         <BasicTriangle
           uuid={ids[7]}
           className="col-start-3 row-start-7"
           verbForms={bossVerb}
-          formVisibility={{ presentParticiple: true }}
+          visibility={{ presentParticiple: true }}
           colour="black"
         />
       </div>

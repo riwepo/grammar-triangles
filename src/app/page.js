@@ -10,7 +10,7 @@ export default function Home() {
       uid={nanoid()}
       colour="black"
       verbForms={VERBS.eat}
-      formVisibility={{
+      visibility={{
         head: true,
         preterite: true,
         presentParticiple: true,

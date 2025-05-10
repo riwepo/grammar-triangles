@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils/css-class";
 
 import { VERBS } from "@/lib/utils/words";
 
-function ToBeTriangle({ uuid, colour, formVisibility, className }) {
+function ToBeTriangle({ uuid, colour, visibility, className }) {
   const toBeVerb = VERBS.be;
   return (
     <svg
@@ -184,19 +184,19 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
         </g>
       </defs>
       <use href={`#${uuid}triangle`} x="0" y="0" />
-      {formVisibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
-      {formVisibility.am && <use href={`#${uuid}am`} x="0" y="0" />}
-      {formVisibility.are && <use href={`#${uuid}are`} x="0" y="0" />}
-      {formVisibility.is && <use href={`#${uuid}is`} x="0" y="0" />}
-      {formVisibility.was && <use href={`#${uuid}was`} x="0" y="0" />}
-      {formVisibility.were && <use href={`#${uuid}were`} x="0" y="0" />}
-      {formVisibility.pastParticiple && (
+      {visibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
+      {visibility.am && <use href={`#${uuid}am`} x="0" y="0" />}
+      {visibility.are && <use href={`#${uuid}are`} x="0" y="0" />}
+      {visibility.is && <use href={`#${uuid}is`} x="0" y="0" />}
+      {visibility.was && <use href={`#${uuid}was`} x="0" y="0" />}
+      {visibility.were && <use href={`#${uuid}were`} x="0" y="0" />}
+      {visibility.pastParticiple && (
         <use href={`#${uuid}past-participle`} x="0" y="0" />
       )}
-      {formVisibility.presentParticiple && (
+      {visibility.presentParticiple && (
         <use href={`#${uuid}present-participle`} x="0" y="0" />
       )}
-      {formVisibility.numbers && <use href={`#${uuid}numbers`} x="0" y="0" />}
+      {visibility.numbers && <use href={`#${uuid}numbers`} x="0" y="0" />}
     </svg>
   );
 }

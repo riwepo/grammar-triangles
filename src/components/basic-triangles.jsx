@@ -31,7 +31,7 @@ function BasicTriangles() {
         uuid={ids[0]}
         colour="black"
         verbForms={VERBS.eat}
-        formVisibility={{
+        visibility={{
           head: true,
           preterite: true,
           pastParticiple: true,
@@ -44,7 +44,7 @@ function BasicTriangles() {
       <ToBeTriangle
         uuid={ids[1]}
         colour="black"
-        formVisibility={{
+        visibility={{
           head: true,
           pastParticiple: true,
           presentParticiple: true,
