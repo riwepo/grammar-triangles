@@ -1,4 +1,4 @@
-import BasicTriangles from "@/components/basic-triangles/basic-triangles";
+import BasicTriangles from "@/components/basic-triangles";
 import { VERBS } from "@/lib/utils/words";
 import { nanoid } from "nanoid";
 
