@@ -22,7 +22,8 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
             x="0"
             y="-33"
             stroke="white"
-            fontSize="8px"
+            fontSize="6px"
+            strokeWidth="0.5px"
             textAnchor="middle"
             dominantBaseline="middle"
           >
@@ -46,7 +47,8 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
             x="-40"
             y="37"
             stroke="white"
-            fontSize="8px"
+            fontSize="6px"
+            strokeWidth="0.5px"
             textAnchor="middle"
             dominantBaseline="middle"
           >
@@ -70,7 +72,8 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
             x="40"
             y="37"
             stroke="white"
-            fontSize="8px"
+            fontSize="6px"
+            strokeWidth="0.5px"
             textAnchor="middle"
             dominantBaseline="middle"
           >
@@ -90,7 +93,7 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
         </g>
         <g id={`${uuid}present-participle`}>
           <path
-            transform="scale(0.15, 0.15)"
+            transform="scale(0.12, 0.12)"
             d="M0,-30
           C 35,-60 90,-20 0,50
           C -90,-20 -35,-60 0,-30"
@@ -102,7 +105,8 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
             x="0"
             y="1"
             stroke="white"
-            fontSize="8px"
+            fontSize="6px"
+            strokeWidth="0.5px"
             textAnchor="middle"
             dominantBaseline="middle"
           >
@@ -127,7 +131,8 @@ function BasicTriangle({ uuid, colour, verbForms, formVisibility, className }) {
             x="16"
             y="-28"
             stroke="white"
-            fontSize="8px"
+            fontSize="6px"
+            strokeWidth="0.5px"
             textAnchor="middle"
             dominantBaseline="middle"
           >

@@ -8,7 +8,7 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
     <svg
       width="100%"
       height="100%"
-      viewBox="-70 -75 150 150"
+      viewBox="-72 -75 150 150"
       xmlns="http://www.w3.org/2000/svg"
       className={cn(className)}
     >
@@ -20,7 +20,18 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           stroke={colour}
         />
         <g id={`${uuid}head`}>
-          <circle cx="0" cy="-33" r="2" stroke="black" fill="black" />
+          <circle cx="0" cy="-33" r="4" stroke="black" fill="black" />
+          <text
+            x="0"
+            y="-33"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            1
+          </text>
           <text
             x="0"
             y="-45"
@@ -34,9 +45,9 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}am`}>
-          <circle cx="16" cy="-28" r="2" stroke="black" fill="black" />
+          <circle cx="16" cy="-28" r="4" stroke="black" fill="black" />
           <text
-            x="21"
+            x="22"
             y="-28"
             fill="black"
             stroke="black"
@@ -49,9 +60,9 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}are`}>
-          <circle cx="22" cy="-19" r="2" stroke="black" fill="black" />
+          <circle cx="22" cy="-19" r="4" stroke="black" fill="black" />
           <text
-            x="27"
+            x="28"
             y="-19"
             fill="black"
             stroke="black"
@@ -64,9 +75,9 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}is`}>
-          <circle cx="28" cy="-10" r="2" stroke="black" fill="black" />
+          <circle cx="28" cy="-10" r="4" stroke="black" fill="black" />
           <text
-            x="33"
+            x="34"
             y="-10"
             fill="black"
             stroke="black"
@@ -78,24 +89,10 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
             is
           </text>
         </g>
-        <g id={`${uuid}preterite`}>
-          <circle cx="-40" cy="37" r="2" stroke="black" fill="black" />
-          <text
-            x="-40"
-            y="52"
-            fill="black"
-            stroke="black"
-            strokeWidth="0.5"
-            fontSize="10px"
-            textAnchor="middle"
-          >
-            was
-          </text>
-        </g>
         <g id={`${uuid}was`}>
-          <circle cx="-46" cy="28" r="2" stroke="black" fill="black" />
+          <circle cx="-48" cy="28" r="4" stroke="black" fill="black" />
           <text
-            x="-50"
+            x="-54"
             y="28"
             fill="black"
             stroke="black"
@@ -108,9 +105,9 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}were`}>
-          <circle cx="-52" cy="37" r="2" stroke="black" fill="black" />
+          <circle cx="-54" cy="37" r="4" stroke="black" fill="black" />
           <text
-            x="-56"
+            x="-60"
             y="37"
             fill="black"
             stroke="black"
@@ -123,7 +120,18 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
           </text>
         </g>
         <g id={`${uuid}past-participle`}>
-          <circle cx="40" cy="37" r="2" stroke="black" fill="black" />
+          <circle cx="40" cy="37" r="4" stroke="black" fill="black" />
+          <text
+            x="40"
+            y="37"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            3
+          </text>
           <text
             x="40"
             y="52"
@@ -138,7 +146,7 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
         </g>
         <g id={`${uuid}present-participle`}>
           <path
-            transform="scale(0.1, 0.1)"
+            transform="scale(0.12, 0.12)"
             d="M0,-30
           C 35,-60 90,-20 0,50
           C -90,-20 -35,-60 0,-30"
@@ -146,6 +154,17 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
             stroke="red"
             strokeWidth="2"
           />
+          <text
+            x="0"
+            y="1"
+            stroke="white"
+            fontSize="6px"
+            strokeWidth="0.5px"
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            4
+          </text>
           <text
             x="0"
             y="12"
@@ -165,9 +184,6 @@ function ToBeTriangle({ uuid, colour, formVisibility, className }) {
       {formVisibility.am && <use href={`#${uuid}am`} x="0" y="0" />}
       {formVisibility.are && <use href={`#${uuid}are`} x="0" y="0" />}
       {formVisibility.is && <use href={`#${uuid}is`} x="0" y="0" />}
-      {formVisibility.preterite && (
-        <use href={`#${uuid}preterite`} x="0" y="0" />
-      )}
       {formVisibility.was && <use href={`#${uuid}was`} x="0" y="0" />}
       {formVisibility.were && <use href={`#${uuid}were`} x="0" y="0" />}
       {formVisibility.pastParticiple && (
