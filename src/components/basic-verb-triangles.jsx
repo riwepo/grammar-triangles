@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 
 import NormalVerbTriangle from "@/components/normal-verb-triangle";
-import ToBeTriangle from "@/components/to-be-triangle";
+import ToBeVerbTriangle from "@/components/to-be-verb-triangle";
 
 import { VERBS } from "@/lib/utils/words";
 
@@ -41,7 +41,7 @@ function BasicVerbTriangles() {
         }}
         className="col-start-1"
       />
-      <ToBeTriangle
+      <ToBeVerbTriangle
         uuid={ids[1]}
         colour="black"
         visibility={{

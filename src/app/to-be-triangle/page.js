@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 
-import ToBeTriangle from "@/components/to-be-triangle";
+import ToBeVerbTriangle from "@/components/to-be-verb-triangle";
 
 export const metadata = {
   title: "To Be Triangle",
@@ -10,7 +10,7 @@ export const metadata = {
 export default function ToBeTrianglePage() {
   return (
     <div className="h-screen w-full overflow-hidden border-2 border-black">
-      <ToBeTriangle
+      <ToBeVerbTriangle
         uid={nanoid()}
         colour="black"
         visibility={{

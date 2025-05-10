@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils/css-class";
 
 import { VERBS } from "@/lib/utils/words";
 
-function ToBeTriangle({ uuid, colour, visibility, className }) {
+function ToBeVerbTriangle({ uuid, colour, visibility, className }) {
   const toBeVerb = VERBS.be;
   return (
     <svg
@@ -211,4 +211,4 @@ function ToBeTriangle({ uuid, colour, visibility, className }) {
   );
 }
 
-export default ToBeTriangle;
+export default ToBeVerbTriangle;

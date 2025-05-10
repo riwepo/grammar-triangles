@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 
 import NormalVerbTriangle from "@/components/normal-verb-triangle";
-import ToBeTriangle from "@/components/to-be-triangle";
+import ToBeVerbTriangle from "@/components/to-be-verb-triangle";
 
 import { VERBS } from "@/lib/utils/words";
 
@@ -53,7 +53,7 @@ function TensesBlueprint({ bossVerb }) {
         <p className="row-start-5">Past Continuous</p>
       </div>
 
-      <ToBeTriangle
+      <ToBeVerbTriangle
         uuid={ids[1]}
         className="col-start-3 row-start-3"
         verbForms={VERBS.be}
