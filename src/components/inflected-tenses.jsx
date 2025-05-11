@@ -37,7 +37,7 @@ function InflectedTenses({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[0]}
         className="col-start-4 row-start-1"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{
           head: true,
           thirdPersonSingular: true,
@@ -49,7 +49,7 @@ function InflectedTenses({ bossVerb }) {
       <NormalPronounTriangle
         uuid={ids[1]}
         className="col-start-4 row-start-1"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{
           headPronouns: true,
           thirdPersonSingularPronouns: true,
@@ -95,7 +95,7 @@ function InflectedTenses({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[4]}
         className="col-start-4 row-start-3"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{ presentParticiple: true }}
         colour="black"
       />
@@ -111,7 +111,7 @@ function InflectedTenses({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[5]}
         className="col-start-2 row-start-5"
-        verbForms={VERBS.have}
+        verb={VERBS.have}
         visibility={{
           head: true,
           preterite: true,
@@ -123,7 +123,7 @@ function InflectedTenses({ bossVerb }) {
       <NormalPronounTriangle
         uuid={ids[6]}
         className="col-start-2 row-start-5"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{
           headPronouns: true,
           thirdPersonSingularPronouns: true,
@@ -134,7 +134,7 @@ function InflectedTenses({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[7]}
         className="col-start-4 row-start-5"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{ pastParticiple: true }}
         colour="black"
       />
@@ -150,7 +150,7 @@ function InflectedTenses({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[8]}
         className="col-start-2 row-start-7"
-        verbForms={VERBS.have}
+        verb={VERBS.have}
         visibility={{
           head: true,
           preterite: true,
@@ -162,7 +162,7 @@ function InflectedTenses({ bossVerb }) {
       <NormalPronounTriangle
         uuid={ids[9]}
         className="col-start-2 row-start-7"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{
           headPronouns: true,
           thirdPersonSingularPronouns: true,
@@ -173,14 +173,14 @@ function InflectedTenses({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[10]}
         className="col-start-3 row-start-7"
-        verbForms={VERBS.be}
+        verb={VERBS.be}
         visibility={{ pastParticiple: true }}
         colour="blue"
       />
       <NormalVerbTriangle
         uuid={ids[11]}
         className="col-start-4 row-start-7"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{ presentParticiple: true }}
         colour="black"
       />

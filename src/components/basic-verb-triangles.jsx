@@ -50,7 +50,7 @@ function BasicVerbTriangles() {
       <NormalVerbTriangle
         uuid={svgUseIds[0]}
         colour="black"
-        verbForms={selectedVerb}
+        verb={selectedVerb}
         visibility={{
           head: true,
           preterite: true,

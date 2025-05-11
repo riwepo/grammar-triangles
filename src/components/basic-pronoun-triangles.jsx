@@ -30,7 +30,7 @@ function BasicPronounTriangles() {
       <NormalPronounTriangle
         uuid={ids[0]}
         colour="black"
-        verbForms={VERBS.eat}
+        verb={VERBS.eat}
         visibility={{
           triangle: true,
           head: true,

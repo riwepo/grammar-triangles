@@ -1,12 +1,6 @@
 import { cn } from "@/lib/utils/css-class";
 
-function NormalVerbTriangle({
-  uuid,
-  colour,
-  verbForms,
-  visibility,
-  className,
-}) {
+function NormalVerbTriangle({ uuid, colour, verb, visibility, className }) {
   return (
     <svg
       className={cn(className)}
@@ -35,7 +29,7 @@ function NormalVerbTriangle({
             fontSize="10px"
             textAnchor="middle"
           >
-            {verbForms.head}
+            {verb.head}
           </text>
         </g>
         <g id={`${uuid}preterite`}>
@@ -49,7 +43,7 @@ function NormalVerbTriangle({
             fontSize="10px"
             textAnchor="middle"
           >
-            {verbForms.preterite}
+            {verb.preterite}
           </text>
         </g>
         <g id={`${uuid}past-participle`}>
@@ -63,7 +57,7 @@ function NormalVerbTriangle({
             fontSize="10px"
             textAnchor="middle"
           >
-            {verbForms.pastParticiple}
+            {verb.pastParticiple}
           </text>
         </g>
         <g id={`${uuid}present-participle`}>
@@ -86,7 +80,7 @@ function NormalVerbTriangle({
             textAnchor="middle"
             dominantBaseline="middle"
           >
-            {verbForms.presentParticiple}
+            {verb.presentParticiple}
           </text>
         </g>
         <g id={`${uuid}third-person-singular`}>
@@ -101,7 +95,7 @@ function NormalVerbTriangle({
             textAnchor="start"
             dominantBaseline="middle"
           >
-            {verbForms.thirdPersonSingular}
+            {verb.thirdPersonSingular}
           </text>
         </g>
         <g id={`${uuid}numbers`}>

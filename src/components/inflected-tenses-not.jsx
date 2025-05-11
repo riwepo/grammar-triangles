@@ -36,7 +36,7 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[0]}
         className="col-start-4 row-start-1"
-        verbForms={VERBS.do}
+        verb={VERBS.do}
         visibility={{
           head: true,
           thirdPersonSingular: true,
@@ -48,7 +48,7 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalPronounTriangle
         uuid={ids[1]}
         className="col-start-4 row-start-1"
-        verbForms={VERBS.do}
+        verb={VERBS.do}
         visibility={{
           headPronouns: true,
           thirdPersonSingularPronouns: true,
@@ -62,14 +62,14 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[2]}
         className="col-start-6 row-start-1"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{ head: true }}
         colour="black"
       />
       {/*  <NormalVerbTriangle
         uuid={ids[3]}
         className="col-start-6 row-start-1"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{
           head: true,
           thirdPersonSingular: true,
@@ -81,7 +81,7 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalPronounTriangle
         uuid={ids[4]}
         className="col-start-6 row-start-1"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{
           headPronouns: true,
           thirdPersonSingularPronouns: true,
@@ -129,7 +129,7 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[7]}
         className="col-start-6 row-start-3"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{ presentParticiple: true }}
         colour="black"
       />
@@ -145,7 +145,7 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[8]}
         className="col-start-2 row-start-5"
-        verbForms={VERBS.have}
+        verb={VERBS.have}
         visibility={{
           head: true,
           preterite: true,
@@ -157,7 +157,7 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalPronounTriangle
         uuid={ids[9]}
         className="col-start-2 row-start-5"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{
           headPronouns: true,
           thirdPersonSingularPronouns: true,
@@ -171,7 +171,7 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[10]}
         className="col-start-6 row-start-5"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{ pastParticiple: true }}
         colour="black"
       />
@@ -187,7 +187,7 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[11]}
         className="col-start-2 row-start-7"
-        verbForms={VERBS.have}
+        verb={VERBS.have}
         visibility={{
           head: true,
           preterite: true,
@@ -199,7 +199,7 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalPronounTriangle
         uuid={ids[12]}
         className="col-start-2 row-start-7"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{
           headPronouns: true,
           thirdPersonSingularPronouns: true,
@@ -213,14 +213,14 @@ function InflectedTensesNot({ bossVerb }) {
       <NormalVerbTriangle
         uuid={ids[13]}
         className="col-start-4 row-start-7"
-        verbForms={VERBS.be}
+        verb={VERBS.be}
         visibility={{ pastParticiple: true }}
         colour="blue"
       />
       <NormalVerbTriangle
         uuid={ids[14]}
         className="col-start-6 row-start-7"
-        verbForms={bossVerb}
+        verb={bossVerb}
         visibility={{ presentParticiple: true }}
         colour="black"
       />

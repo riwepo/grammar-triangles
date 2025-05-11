@@ -47,7 +47,7 @@ function ModalVerbs({ bossVerb }) {
         <NormalVerbTriangle
           uuid={ids[0]}
           className="col-start-3 row-start-1"
-          verbForms={bossVerb}
+          verb={bossVerb}
           visibility={{ head: true }}
           colour="black"
         />
@@ -57,14 +57,14 @@ function ModalVerbs({ bossVerb }) {
         <NormalVerbTriangle
           uuid={ids[1]}
           className="col-start-2 row-start-3"
-          verbForms={VERBS.be}
+          verb={VERBS.be}
           visibility={{ head: true }}
           colour="blue"
         />
         <NormalVerbTriangle
           uuid={ids[2]}
           className="col-start-3 row-start-3"
-          verbForms={bossVerb}
+          verb={bossVerb}
           visibility={{ presentParticiple: true }}
           colour="black"
         />
@@ -74,14 +74,14 @@ function ModalVerbs({ bossVerb }) {
         <NormalVerbTriangle
           uuid={ids[3]}
           className="col-start-1 row-start-5"
-          verbForms={VERBS.have}
+          verb={VERBS.have}
           visibility={{ head: true }}
           colour="green"
         />
         <NormalVerbTriangle
           uuid={ids[4]}
           className="col-start-3 row-start-5"
-          verbForms={bossVerb}
+          verb={bossVerb}
           visibility={{ pastParticiple: true }}
           colour="black"
         />
@@ -91,21 +91,21 @@ function ModalVerbs({ bossVerb }) {
         <NormalVerbTriangle
           uuid={ids[5]}
           className="col-start-1 row-start-7"
-          verbForms={VERBS.have}
+          verb={VERBS.have}
           visibility={{ head: true }}
           colour="green"
         />
         <NormalVerbTriangle
           uuid={ids[6]}
           className="col-start-2 row-start-7"
-          verbForms={VERBS.be}
+          verb={VERBS.be}
           visibility={{ pastParticiple: true }}
           colour="blue"
         />
         <NormalVerbTriangle
           uuid={ids[7]}
           className="col-start-3 row-start-7"
-          verbForms={bossVerb}
+          verb={bossVerb}
           visibility={{ presentParticiple: true }}
           colour="black"
         />

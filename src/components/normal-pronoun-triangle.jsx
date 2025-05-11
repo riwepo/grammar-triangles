@@ -1,12 +1,6 @@
 import { cn } from "@/lib/utils/css-class";
 
-function NormalPronounTriangle({
-  uuid,
-  colour,
-  verbForms,
-  visibility,
-  className,
-}) {
+function NormalPronounTriangle({ uuid, colour, verb, visibility, className }) {
   return (
     <svg
       className={cn(className)}
@@ -35,7 +29,7 @@ function NormalPronounTriangle({
             fontSize="10px"
             textAnchor="middle"
           >
-            {verbForms.head}
+            {verb.head}
           </text>
         </g>
         <text
@@ -62,7 +56,7 @@ function NormalPronounTriangle({
             fontSize="10px"
             textAnchor="middle"
           >
-            {verbForms.preterite}
+            {verb.preterite}
           </text>
         </g>
         <text
@@ -91,7 +85,7 @@ function NormalPronounTriangle({
             textAnchor="start"
             dominantBaseline="middle"
           >
-            {verbForms.thirdPersonSingular}
+            {verb.thirdPersonSingular}
           </text>
         </g>
         <text
