@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 
-import ToBeVerbTriangle from "@/components/to-be-verb-triangle";
+import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
 
 export const metadata = {
   title: "To Be Triangle",

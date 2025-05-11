@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 
 import { nanoid } from "nanoid";
 
-import NormalVerbTriangle from "@/components/normal-verb-triangle";
-import NormalPronounTriangle from "@/components/normal-pronoun-triangle";
-import ToBeVerbTriangle from "@/components/to-be-verb-triangle";
-import ToBePronounTriangle from "@/components/to-be-pronoun-triangle";
+import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
+import NormalPronounTriangle from "@/components/basic-triangles/pronouns/normal-pronoun-triangle";
+import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
+import ToBePronounTriangle from "@/components/basic-triangles/pronouns/to-be-pronoun-triangle";
 
 import { VERBS } from "@/lib/utils/words";
 

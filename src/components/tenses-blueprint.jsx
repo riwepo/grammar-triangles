@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { nanoid } from "nanoid";
 
-import NormalVerbTriangle from "@/components/normal-verb-triangle";
+import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
 
 import { VERBS } from "@/lib/utils/words";
 

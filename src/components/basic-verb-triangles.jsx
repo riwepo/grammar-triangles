@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 
 import { nanoid } from "nanoid";
 
-import NormalVerbTriangle from "@/components/normal-verb-triangle";
-import ToBeVerbTriangle from "@/components/to-be-verb-triangle";
+import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
+import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
 import SelectDropdown from "@/components/select-dropdown";
 
 import { VERBS } from "@/lib/utils/words";

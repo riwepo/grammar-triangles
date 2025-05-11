@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 
 import { nanoid } from "nanoid";
 
-import NormalPronounTriangle from "@/components/normal-pronoun-triangle";
-import ToBePronounTriangle from "@/components/to-be-pronoun-triangle";
+import NormalPronounTriangle from "@/components/basic-triangles/pronouns/normal-pronoun-triangle";
+import ToBePronounTriangle from "@/components/basic-triangles/pronouns/to-be-pronoun-triangle";
 import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/utils/words";
