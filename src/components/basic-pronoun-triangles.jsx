@@ -6,6 +6,7 @@ import { nanoid } from "nanoid";
 
 import NormalPronounTriangle from "@/components/normal-pronoun-triangle";
 import ToBePronounTriangle from "@/components/to-be-pronoun-triangle";
+import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/utils/words";
 
@@ -26,41 +27,44 @@ function BasicPronounTriangles() {
   }
 
   return (
-    <div className="grid h-screen w-full grid-cols-2 overflow-hidden border-2 border-black">
-      <NormalPronounTriangle
-        uuid={ids[0]}
-        colour="black"
-        verb={VERBS.eat}
-        visibility={{
-          triangle: true,
-          head: true,
-          headPronouns: true,
-          preterite: true,
-          preteritePronouns: true,
-          thirdPersonSingular: true,
-          thirdPersonSingularPronouns: true,
-        }}
-        className="col-start-1"
-      />
-
-      <ToBePronounTriangle
-        uuid={ids[1]}
-        colour="black"
-        visibility={{
-          triangle: true,
-          am: true,
-          amPronouns: true,
-          are: true,
-          arePronouns: true,
-          is: true,
-          isPronouns: true,
-          was: true,
-          wasPronouns: true,
-          were: true,
-          werePronouns: true,
-        }}
-        className="col-start-2"
-      />
+    <div className="grid h-screen w-full grid-cols-2 overflow-hidden border-2 border-black bg-gray-300">
+      <Card className="bg-white">
+        <NormalPronounTriangle
+          uuid={ids[0]}
+          colour="black"
+          verb={VERBS.eat}
+          visibility={{
+            triangle: true,
+            head: true,
+            headPronouns: true,
+            preterite: true,
+            preteritePronouns: true,
+            thirdPersonSingular: true,
+            thirdPersonSingularPronouns: true,
+          }}
+          className="col-start-1"
+        />
+      </Card>
+      <Card className="bg-white">
+        <ToBePronounTriangle
+          uuid={ids[1]}
+          colour="black"
+          visibility={{
+            triangle: true,
+            am: true,
+            amPronouns: true,
+            are: true,
+            arePronouns: true,
+            is: true,
+            isPronouns: true,
+            was: true,
+            wasPronouns: true,
+            were: true,
+            werePronouns: true,
+          }}
+          className="col-start-2"
+        />
+      </Card>
     </div>
   );
 }
