@@ -27,8 +27,8 @@ function BasicPronounTriangles() {
   }
 
   return (
-    <div className="grid h-screen w-full grid-cols-2 overflow-hidden border-2 border-black bg-gray-300">
-      <Card className="bg-white">
+    <div className="grid h-screen w-full grid-cols-2 overflow-hidden border-2 border-red-500 bg-gray-300">
+      <Card className="col-start-1 bg-white">
         <NormalPronounTriangle
           uuid={ids[0]}
           colour="black"
@@ -42,10 +42,9 @@ function BasicPronounTriangles() {
             thirdPersonSingular: true,
             thirdPersonSingularPronouns: true,
           }}
-          className="col-start-1"
         />
       </Card>
-      <Card className="bg-white">
+      <Card className="col-start-2 bg-white">
         <ToBePronounTriangle
           uuid={ids[1]}
           colour="black"
@@ -62,7 +61,6 @@ function BasicPronounTriangles() {
             were: true,
             werePronouns: true,
           }}
-          className="col-start-2"
         />
       </Card>
     </div>
