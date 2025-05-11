@@ -7,6 +7,7 @@ import { nanoid } from "nanoid";
 import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
 import SelectDropdown from "@/components/ui/select-dropdown";
+import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/utils/words";
 
@@ -45,38 +46,40 @@ function BasicVerbTriangles() {
   }
 
   return (
-    <div className="grid h-screen w-full grid-cols-2 grid-rows-[auto_1fr] border-2 border-black **:overflow-hidden">
-      <SelectDropdown options={verbOptions} onSelect={handleVerbSelect} />
-      <NormalVerbTriangle
-        uuid={svgUseIds[0]}
-        colour="black"
-        verb={selectedVerb}
-        visibility={{
-          head: true,
-          preterite: true,
-          pastParticiple: true,
-          presentParticiple: true,
-          thirdPersonSingular: true,
-          numbers: true,
-        }}
-        className="col-start-1 row-start-2"
-      />
-      <ToBeVerbTriangle
-        uuid={svgUseIds[1]}
-        colour="black"
-        visibility={{
-          head: true,
-          pastParticiple: true,
-          presentParticiple: true,
-          am: true,
-          is: true,
-          are: true,
-          was: true,
-          were: true,
-          numbers: true,
-        }}
-        className="col-start-2 row-start-2"
-      />
+    <div className="border-red grid h-screen w-full grid-cols-2 overflow-hidden border-2 bg-gray-300">
+      <Card className="col-start-1 h-full bg-white">
+        <SelectDropdown options={verbOptions} onSelect={handleVerbSelect} />
+        <NormalVerbTriangle
+          uuid={svgUseIds[0]}
+          colour="black"
+          verb={selectedVerb}
+          visibility={{
+            head: true,
+            preterite: true,
+            pastParticiple: true,
+            presentParticiple: true,
+            thirdPersonSingular: true,
+            numbers: true,
+          }}
+        />
+      </Card>
+      <Card className="col-start-2 h-full bg-white">
+        <ToBeVerbTriangle
+          uuid={svgUseIds[1]}
+          colour="black"
+          visibility={{
+            head: true,
+            pastParticiple: true,
+            presentParticiple: true,
+            am: true,
+            is: true,
+            are: true,
+            was: true,
+            were: true,
+            numbers: true,
+          }}
+        />
+      </Card>
     </div>
   );
 }
