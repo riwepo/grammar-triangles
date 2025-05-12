@@ -24,7 +24,7 @@ function TensesBlueprint({ bossVerb }) {
   }
 
   return (
-    <div className="grid h-screen w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-hidden border-2 border-black">
+    <div className="border-red grid h-screen w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-hidden border-2">
       <p className="col-start-1 row-start-1 mx-auto content-center">Simple</p>
       <NormalVerbTriangle
         uuid={ids[0]}
