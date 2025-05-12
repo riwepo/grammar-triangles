@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import BossVerbContainer from "@/components/boss-verb-container";
+import GrammarContainer from "@/components/grammar-container";
 import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
 import Card from "@/components/ui/card";
@@ -15,11 +15,11 @@ function BasicVerbTriangles() {
     VERBS[Object.keys(VERBS)[0]],
   );
   let svgUseIds = ["0", "1"];
-  const handleBossVerbLoaded = (mySvgUseIds) => {
+  const handleContainerLoaded = (mySvgUseIds) => {
     svgUseIds = mySvgUseIds;
   };
 
-  const handleBossVerbSelected = (key) => {
+  const handleVerbSelected = (key) => {
     setSelectedVerb(VERBS[key]);
   };
 
@@ -28,10 +28,10 @@ function BasicVerbTriangles() {
   }
 
   return (
-    <BossVerbContainer
+    <GrammarContainer
       svgUseIdSeed="01"
-      onVerbSelected={handleBossVerbSelected}
-      onLoaded={handleBossVerbLoaded}
+      onVerbSelected={handleVerbSelected}
+      onLoaded={handleContainerLoaded}
     >
       <Card className="col-start-1 h-full bg-white">
         <NormalVerbTriangle
@@ -65,7 +65,7 @@ function BasicVerbTriangles() {
           }}
         />
       </Card>
-    </BossVerbContainer>
+    </GrammarContainer>
   );
 }
 

@@ -8,7 +8,15 @@ import SelectDropdown from "@/components/ui/select-dropdown";
 
 import { VERBS } from "@/lib/utils/words";
 
-function BossVerbContainer({
+/**
+ * this container does 3 things
+ * it generates unique ids for SVG use references
+ * it allows selection of the boss verb
+ * it shows the grammar diagram to the size of the window, for printing
+ * @param {*} param0
+ * @returns
+ */
+function GrammarContainer({
   svgUseIdSeed,
   children,
   onVerbSelected,
@@ -62,4 +70,4 @@ function BossVerbContainer({
   );
 }
 
-export default BossVerbContainer;
+export default GrammarContainer;
