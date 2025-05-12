@@ -27,7 +27,7 @@ function InflectedTenses({ bossVerb }) {
   }
 
   return (
-    <div className="grid h-screen w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-hidden border-2 border-black px-4">
+    <div className="border-red grid h-screen w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-hidden border-2 px-4">
       <div className="col-start-1 row-start-1 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
         <p className="row-start-2">Present Simple</p>
         <div className="row-start-3 h-full border-b-2 border-red-500"></div>
