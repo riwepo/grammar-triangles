@@ -9,8 +9,8 @@ function ToBeVerbTriangle({ uuid, colour, visibility, className }) {
       width="100%"
       height="100%"
       viewBox="-150 -55 220 110"
-      // preserveAspectRatio="xMidyMid meet"
-      preserveAspectRatio="none"
+      preserveAspectRatio="xMidyMid meet"
+      //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
       className={cn(className)}
     >
