@@ -49,6 +49,7 @@ function BasicPronounTriangles() {
     <div>
       <div className="flex h-auto flex-row items-center border-t-1 border-black">
         <SelectDropdown
+          title="Boss Verb:"
           options={verbOptions}
           onSelect={handleVerbSelect}
           className="mx-auto py-2"

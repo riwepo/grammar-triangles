@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { cn } from "@/lib/utils/css-class";
 
-function SelectDropdown({ options, onSelect, className }) {
+function SelectDropdown({ title, options, onSelect, className }) {
   const [selected, setSelected] = useState(options[0]);
 
   const handleChange = (event) => {
@@ -15,7 +15,7 @@ function SelectDropdown({ options, onSelect, className }) {
 
   return (
     <div className={cn(className, "flex flex-row items-center gap-2")}>
-      <label htmlFor="dropdown">Boss Verb: </label>
+      <label htmlFor="dropdown">{title}</label>
       <select
         id="dropdown"
         value={selected}
