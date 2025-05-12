@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import GrammerContainer from "@/components/grammar-container";
+import GrammarContainer from "@/components/grammar-container";
 import NormalPronounTriangle from "@/components/basic-triangles/pronouns/normal-pronoun-triangle";
 import ToBePronounTriangle from "@/components/basic-triangles/pronouns/to-be-pronoun-triangle";
 import Card from "@/components/ui/card";
@@ -24,7 +24,7 @@ function BasicPronounTriangles() {
   };
 
   return (
-    <GrammerContainer
+    <GrammarContainer
       svgUseIdSeed="01"
       onVerbSelected={handleVerbSelected}
       onLoaded={handleContainerLoaded}
@@ -64,7 +64,7 @@ function BasicPronounTriangles() {
           }}
         />
       </Card>
-    </GrammerContainer>
+    </GrammarContainer>
   );
 }
 
