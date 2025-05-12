@@ -46,40 +46,48 @@ function BasicVerbTriangles() {
   }
 
   return (
-    <div className="border-red grid h-screen w-full grid-cols-2 overflow-hidden border-2 bg-gray-300">
-      <Card className="col-start-1 h-full bg-white">
-        <SelectDropdown options={verbOptions} onSelect={handleVerbSelect} />
-        <NormalVerbTriangle
-          uuid={svgUseIds[0]}
-          colour="black"
-          verb={selectedVerb}
-          visibility={{
-            head: true,
-            preterite: true,
-            pastParticiple: true,
-            presentParticiple: true,
-            thirdPersonSingular: true,
-            numbers: true,
-          }}
+    <div>
+      <div className="flex h-auto flex-row items-center border-t-1 border-black">
+        <SelectDropdown
+          options={verbOptions}
+          onSelect={handleVerbSelect}
+          className="mx-auto py-2"
         />
-      </Card>
-      <Card className="col-start-2 h-full bg-white">
-        <ToBeVerbTriangle
-          uuid={svgUseIds[1]}
-          colour="black"
-          visibility={{
-            head: true,
-            pastParticiple: true,
-            presentParticiple: true,
-            am: true,
-            is: true,
-            are: true,
-            was: true,
-            were: true,
-            numbers: true,
-          }}
-        />
-      </Card>
+      </div>
+      <div className="border-red grid h-screen w-full grid-cols-2 overflow-hidden border-2 border-red-500 bg-gray-300">
+        <Card className="col-start-1 h-full bg-white">
+          <NormalVerbTriangle
+            uuid={svgUseIds[0]}
+            colour="black"
+            verb={selectedVerb}
+            visibility={{
+              head: true,
+              preterite: true,
+              pastParticiple: true,
+              presentParticiple: true,
+              thirdPersonSingular: true,
+              numbers: true,
+            }}
+          />
+        </Card>
+        <Card className="col-start-2 h-full bg-white">
+          <ToBeVerbTriangle
+            uuid={svgUseIds[1]}
+            colour="black"
+            visibility={{
+              head: true,
+              pastParticiple: true,
+              presentParticiple: true,
+              am: true,
+              is: true,
+              are: true,
+              was: true,
+              were: true,
+              numbers: true,
+            }}
+          />
+        </Card>
+      </div>
     </div>
   );
 }
