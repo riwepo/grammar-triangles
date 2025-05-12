@@ -1,106 +1,112 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import { nanoid } from "nanoid";
-
+import GrammarContainer from "@/components/grammar-container";
 import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
+import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/utils/words";
 
 function TensesBlueprint({ bossVerb }) {
-  // generate unique ids for all the basic triangle components
-  // only run once when this component loads
-  const [ids, setIds] = useState(null);
-  useEffect(() => {
-    const generateIds = () => {
-      return "01234567".split("").map((n) => nanoid());
-    };
-    const ids = generateIds();
-    setIds(ids);
-  }, []);
+  // the selected verb
+  const [selectedVerb, setSelectedVerb] = useState(
+    VERBS[Object.keys(VERBS)[0]],
+  );
+  let svgUseIds = ["0", "1", "2", "3", "4", "5", "6", "7"];
+  const handleContainerLoaded = (mySvgUseIds) => {
+    svgUseIds = mySvgUseIds;
+  };
 
-  if (ids === null) {
-    return <p>Loading...</p>; // Render a placeholder while waiting for the ID
-  }
+  const handleVerbSelected = (key) => {
+    setSelectedVerb(VERBS[key]);
+  };
 
   return (
-    <div className="border-red grid h-screen w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-hidden border-2 border-red-500">
-      <p className="col-start-1 row-start-1 mx-auto content-center">Simple</p>
-      <NormalVerbTriangle
-        uuid={ids[0]}
-        className="col-start-4 row-start-1"
-        verb={bossVerb}
-        visibility={{ head: true }}
-        colour="black"
-      />
+    <GrammarContainer
+      svgUseIdSeed="01234567"
+      onVerbSelected={handleVerbSelected}
+      onLoaded={handleContainerLoaded}
+    >
+      {/* <Card className="bg-white"> */}
+      <div className="grid h-full max-h-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)]">
+        <p className="col-start-1 row-start-1 mx-auto content-center">Simple</p>
+        <NormalVerbTriangle
+          uuid={svgUseIds[0]}
+          className="col-start-4 row-start-1"
+          verb={selectedVerb}
+          visibility={{ head: true }}
+          colour="black"
+        />
 
-      <div className="col-span-4 col-start-1 row-start-2 bg-gray-200"></div>
+        <div className="col-span-4 col-start-1 row-start-2 bg-gray-200"></div>
 
-      <p className="col-start-1 row-start-3 mx-auto content-center">
-        Continuous
-      </p>
-      <NormalVerbTriangle
-        uuid={ids[1]}
-        className="col-start-3 row-start-3"
-        verb={VERBS.be}
-        visibility={{ head: true }}
-        colour="blue"
-      />
-      <NormalVerbTriangle
-        uuid={ids[2]}
-        className="col-start-4 row-start-3"
-        verb={bossVerb}
-        visibility={{ presentParticiple: true }}
-        colour="black"
-      />
+        <p className="col-start-1 row-start-3 mx-auto content-center">
+          Continuous
+        </p>
+        <NormalVerbTriangle
+          uuid={svgUseIds[1]}
+          className="col-start-3 row-start-3"
+          verb={VERBS.be}
+          visibility={{ head: true }}
+          colour="blue"
+        />
+        <NormalVerbTriangle
+          uuid={svgUseIds[2]}
+          className="col-start-4 row-start-3"
+          verb={selectedVerb}
+          visibility={{ presentParticiple: true }}
+          colour="black"
+        />
 
-      <div className="col-span-4 col-start-1 row-start-4 bg-gray-200"></div>
+        <div className="col-span-4 col-start-1 row-start-4 bg-gray-200"></div>
 
-      <p className="col-start-1 row-start-5 mx-auto content-center">
-        Perfect Simple
-      </p>
-      <NormalVerbTriangle
-        uuid={ids[3]}
-        className="col-start-2 row-start-5"
-        verb={VERBS.have}
-        visibility={{ head: true }}
-        colour="green"
-      />
-      <NormalVerbTriangle
-        uuid={ids[4]}
-        className="col-start-4 row-start-5"
-        verb={bossVerb}
-        visibility={{ pastParticiple: true }}
-        colour="black"
-      />
+        <p className="col-start-1 row-start-5 mx-auto content-center">
+          Perfect Simple
+        </p>
+        <NormalVerbTriangle
+          uuid={svgUseIds[3]}
+          className="col-start-2 row-start-5"
+          verb={VERBS.have}
+          visibility={{ head: true }}
+          colour="green"
+        />
+        <NormalVerbTriangle
+          uuid={svgUseIds[4]}
+          className="col-start-4 row-start-5"
+          verb={selectedVerb}
+          visibility={{ pastParticiple: true }}
+          colour="black"
+        />
 
-      <div className="col-span-4 col-start-1 row-start-6 bg-gray-200"></div>
+        <div className="col-span-4 col-start-1 row-start-6 bg-gray-200"></div>
 
-      <p className="mx-autov col-start-1 row-start-7 content-center">
-        Perfect Continuous
-      </p>
-      <NormalVerbTriangle
-        uuid={ids[5]}
-        className="col-start-2 row-start-7"
-        verb={VERBS.have}
-        visibility={{ head: true }}
-        colour="green"
-      />
-      <NormalVerbTriangle
-        uuid={ids[6]}
-        className="col-start-3 row-start-7"
-        verb={VERBS.be}
-        visibility={{ pastParticiple: true }}
-        colour="blue"
-      />
-      <NormalVerbTriangle
-        uuid={ids[7]}
-        className="col-start-4 row-start-7"
-        verb={bossVerb}
-        visibility={{ presentParticiple: true }}
-        colour="black"
-      />
-    </div>
+        <p className="mx-autov col-start-1 row-start-7 content-center">
+          Perfect Continuous
+        </p>
+        <NormalVerbTriangle
+          uuid={svgUseIds[5]}
+          className="col-start-2 row-start-7"
+          verb={VERBS.have}
+          visibility={{ head: true }}
+          colour="green"
+        />
+        <NormalVerbTriangle
+          uuid={svgUseIds[6]}
+          className="col-start-3 row-start-7"
+          verb={VERBS.be}
+          visibility={{ pastParticiple: true }}
+          colour="blue"
+        />
+        <NormalVerbTriangle
+          uuid={svgUseIds[7]}
+          className="col-start-4 row-start-7"
+          verb={selectedVerb}
+          visibility={{ presentParticiple: true }}
+          colour="black"
+        />
+      </div>
+      {/* </Card> */}
+    </GrammarContainer>
   );
 }
 
