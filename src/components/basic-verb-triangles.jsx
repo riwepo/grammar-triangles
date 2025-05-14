@@ -33,38 +33,40 @@ function BasicVerbTriangles() {
       onVerbSelected={handleVerbSelected}
       onLoaded={handleContainerLoaded}
     >
-      <Card className="col-start-1 h-full bg-white">
-        <NormalVerbTriangle
-          uuid={svgUseIds[0]}
-          colour="black"
-          verb={selectedVerb}
-          visibility={{
-            head: true,
-            preterite: true,
-            pastParticiple: true,
-            presentParticiple: true,
-            thirdPersonSingular: true,
-            numbers: true,
-          }}
-        />
-      </Card>
-      <Card className="col-start-2 h-full bg-white">
-        <ToBeVerbTriangle
-          uuid={svgUseIds[1]}
-          colour="black"
-          visibility={{
-            head: true,
-            pastParticiple: true,
-            presentParticiple: true,
-            am: true,
-            is: true,
-            are: true,
-            was: true,
-            were: true,
-            numbers: true,
-          }}
-        />
-      </Card>
+      <div className="grid grid-cols-2">
+        <Card className="col-start-1 bg-white">
+          <NormalVerbTriangle
+            uuid={svgUseIds[0]}
+            colour="black"
+            verb={selectedVerb}
+            visibility={{
+              head: true,
+              preterite: true,
+              pastParticiple: true,
+              presentParticiple: true,
+              thirdPersonSingular: true,
+              numbers: true,
+            }}
+          />
+        </Card>
+        <Card className="col-start-2 bg-white">
+          <ToBeVerbTriangle
+            uuid={svgUseIds[1]}
+            colour="black"
+            visibility={{
+              head: true,
+              pastParticiple: true,
+              presentParticiple: true,
+              am: true,
+              is: true,
+              are: true,
+              was: true,
+              were: true,
+              numbers: true,
+            }}
+          />
+        </Card>
+      </div>
     </GrammarContainer>
   );
 }
