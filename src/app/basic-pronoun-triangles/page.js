@@ -5,6 +5,6 @@ export const metadata = {
   description: "Basic Pronoun Triangles",
 };
 
-export default function BasicVPronounTrianglesPage() {
+export default function BasicPronounTrianglesPage() {
   return <BasicPronounTriangles />;
 }
