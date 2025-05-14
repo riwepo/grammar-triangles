@@ -27,8 +27,7 @@ function TensesBlueprint({ bossVerb }) {
       onVerbSelected={handleVerbSelected}
       onLoaded={handleContainerLoaded}
     >
-      {/* <Card className="bg-white"> */}
-      <div className="grid h-full max-h-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)]">
+      <div className="grid h-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] bg-white">
         <p className="col-start-1 row-start-1 mx-auto content-center">Simple</p>
         <NormalVerbTriangle
           uuid={svgUseIds[0]}
@@ -105,7 +104,6 @@ function TensesBlueprint({ bossVerb }) {
           colour="black"
         />
       </div>
-      {/* </Card> */}
     </GrammarContainer>
   );
 }
