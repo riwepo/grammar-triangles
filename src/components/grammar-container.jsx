@@ -54,7 +54,7 @@ function GrammarContainer({
   }
 
   return (
-    <div>
+    <>
       <div className="flex h-auto flex-row items-center border-t-1 border-black">
         <SelectDropdown
           title="Boss Verb:"
@@ -63,10 +63,10 @@ function GrammarContainer({
           className="mx-auto py-2"
         />
       </div>
-      <div className="grid h-screen w-full grid-cols-2 overflow-hidden border-2 border-red-500 bg-gray-300">
+      <div className="flex h-screen w-full flex-col overflow-visible border-2 border-red-500 bg-gray-300">
         {children}
       </div>
-    </div>
+    </>
   );
 }
 
