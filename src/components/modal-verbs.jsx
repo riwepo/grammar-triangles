@@ -27,7 +27,7 @@ function ModalVerbs() {
       onVerbSelected={handleVerbSelected}
       onLoaded={handleContainerLoaded}
     >
-      <div className="grid h-screen w-full grid-cols-[0.1fr_2px_0.2fr_2px_0.7fr] bg-white">
+      <div className="grid h-full w-full grid-cols-[0.1fr_2px_0.2fr_2px_0.7fr] bg-white">
         <div className="col-start-1 row-start-1 grid h-full auto-rows-auto place-items-center py-2">
           {SUBJECT_PRONOUNS.map((sp) => (
             <p key={sp}>{sp}</p>

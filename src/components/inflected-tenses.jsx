@@ -42,7 +42,7 @@ function InflectedTenses() {
       onVerbSelected={handleVerbSelected}
       onLoaded={handleContainerLoaded}
     >
-      <div className="grid h-screen w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] bg-white">
+      <div className="grid h-full w-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] bg-white">
         <div className="col-start-1 row-start-1 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
           <p className="row-start-2">Present Simple</p>
           <div className="row-start-3 h-full border-b-2 border-red-500"></div>
