@@ -29,8 +29,11 @@ function BasicPronounTriangles() {
       onVerbSelected={handleVerbSelected}
       onLoaded={handleContainerLoaded}
     >
-      <div className="grid grid-cols-2">
-        <Card className="col-start-1 bg-white">
+      <div className="grid grid-cols-2 grid-rows-[auto_1fr] gap-y-2">
+        <p className="col-span-2 col-start-1 row-start-1 mx-auto pt-2 text-2xl font-bold">
+          Basic Pronoun Triangles
+        </p>
+        <Card className="col-start-1 row-start-2 bg-white">
           <div className="flex flex-col items-center gap-4">
             <p className="text-2xl font-bold">All Verbs Except 'To Be'</p>
             <NormalPronounTriangle
@@ -49,7 +52,7 @@ function BasicPronounTriangles() {
             />
           </div>
         </Card>
-        <Card className="col-start-2 bg-white">
+        <Card className="col-start-2 row-start-2 bg-white">
           <div className="flex flex-col items-center gap-4">
             <p className="text-2xl font-bold">The Verb 'To Be'</p>
             <ToBePronounTriangle
