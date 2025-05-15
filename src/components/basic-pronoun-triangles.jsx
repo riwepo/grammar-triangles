@@ -31,39 +31,45 @@ function BasicPronounTriangles() {
     >
       <div className="grid grid-cols-2">
         <Card className="col-start-1 bg-white">
-          <NormalPronounTriangle
-            uuid={svgUseIds[0]}
-            colour="black"
-            verb={selectedVerb}
-            visibility={{
-              triangle: true,
-              head: true,
-              headPronouns: true,
-              preterite: true,
-              preteritePronouns: true,
-              thirdPersonSingular: true,
-              thirdPersonSingularPronouns: true,
-            }}
-          />
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-2xl font-bold">All Verbs Except 'To Be'</p>
+            <NormalPronounTriangle
+              uuid={svgUseIds[0]}
+              colour="black"
+              verb={selectedVerb}
+              visibility={{
+                triangle: true,
+                head: true,
+                headPronouns: true,
+                preterite: true,
+                preteritePronouns: true,
+                thirdPersonSingular: true,
+                thirdPersonSingularPronouns: true,
+              }}
+            />
+          </div>
         </Card>
         <Card className="col-start-2 bg-white">
-          <ToBePronounTriangle
-            uuid={svgUseIds[1]}
-            colour="black"
-            visibility={{
-              triangle: true,
-              am: true,
-              amPronouns: true,
-              are: true,
-              arePronouns: true,
-              is: true,
-              isPronouns: true,
-              was: true,
-              wasPronouns: true,
-              were: true,
-              werePronouns: true,
-            }}
-          />
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-2xl font-bold">The Verb 'To Be'</p>
+            <ToBePronounTriangle
+              uuid={svgUseIds[1]}
+              colour="black"
+              visibility={{
+                triangle: true,
+                am: true,
+                amPronouns: true,
+                are: true,
+                arePronouns: true,
+                is: true,
+                isPronouns: true,
+                was: true,
+                wasPronouns: true,
+                were: true,
+                werePronouns: true,
+              }}
+            />
+          </div>
         </Card>
       </div>
     </GrammarContainer>

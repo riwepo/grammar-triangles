@@ -35,36 +35,42 @@ function BasicVerbTriangles() {
     >
       <div className="grid grid-cols-2">
         <Card className="col-start-1 bg-white">
-          <NormalVerbTriangle
-            uuid={svgUseIds[0]}
-            colour="black"
-            verb={selectedVerb}
-            visibility={{
-              head: true,
-              preterite: true,
-              pastParticiple: true,
-              presentParticiple: true,
-              thirdPersonSingular: true,
-              numbers: true,
-            }}
-          />
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-2xl font-bold">All Verbs Except 'To Be'</p>
+            <NormalVerbTriangle
+              uuid={svgUseIds[0]}
+              colour="black"
+              verb={selectedVerb}
+              visibility={{
+                head: true,
+                preterite: true,
+                pastParticiple: true,
+                presentParticiple: true,
+                thirdPersonSingular: true,
+                numbers: true,
+              }}
+            />
+          </div>
         </Card>
         <Card className="col-start-2 bg-white">
-          <ToBeVerbTriangle
-            uuid={svgUseIds[1]}
-            colour="black"
-            visibility={{
-              head: true,
-              pastParticiple: true,
-              presentParticiple: true,
-              am: true,
-              is: true,
-              are: true,
-              was: true,
-              were: true,
-              numbers: true,
-            }}
-          />
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-2xl font-bold">The Verb 'To Be'</p>
+            <ToBeVerbTriangle
+              uuid={svgUseIds[1]}
+              colour="black"
+              visibility={{
+                head: true,
+                pastParticiple: true,
+                presentParticiple: true,
+                am: true,
+                is: true,
+                are: true,
+                was: true,
+                were: true,
+                numbers: true,
+              }}
+            />
+          </div>
         </Card>
       </div>
     </GrammarContainer>
