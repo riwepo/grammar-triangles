@@ -63,7 +63,7 @@ function GrammarContainer({
           className="mx-auto py-2"
         />
       </div>
-      <div className="flex h-screen w-full flex-col overflow-visible border-2 border-red-500 bg-gray-300">
+      <div className="relative flex h-screen w-full flex-col overflow-visible border-2 border-red-500 bg-gray-300">
         {children}
       </div>
     </>
