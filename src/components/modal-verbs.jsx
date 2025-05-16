@@ -27,6 +27,10 @@ function ModalVerbs() {
     setSentenceType(key);
   };
 
+  const subjectPronounCol =
+    selectedSentenceType === "Statement" ? "col-start-1" : "col-start-3";
+  const modalVerbCol =
+    selectedSentenceType === "Statement" ? "col-start-3" : "col-start-1";
   return (
     <GrammarContainer
       svgUseIdSeed="01234567"
@@ -41,7 +45,9 @@ function ModalVerbs() {
         </p>
         <Card className="absolute top-0 right-0 bottom-0 left-0 row-start-2 m-4 bg-white">
           <div className="grid h-full grid-cols-[0.1fr_2px_0.2fr_2px_0.7fr]">
-            <div className="col-start-1 row-start-1 grid h-full auto-rows-auto place-items-center py-2">
+            <div
+              className={`${subjectPronounCol} row-start-1 grid h-full auto-rows-auto place-items-center py-2`}
+            >
               {SUBJECT_PRONOUNS.map((sp) => (
                 <p key={sp}>{sp}</p>
               ))}
@@ -49,7 +55,9 @@ function ModalVerbs() {
 
             <div className="col-start-2 bg-gray-200"></div>
 
-            <div className="col-start-3 row-start-1 grid h-full auto-rows-auto place-items-center py-2">
+            <div
+              className={`${modalVerbCol} row-start-1 grid h-full auto-rows-auto place-items-center py-2`}
+            >
               {MODAL_VERBS.map((mv) => (
                 <p key={mv} className="text-yellow-500">
                   {mv}
