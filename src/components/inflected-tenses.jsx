@@ -31,6 +31,9 @@ function InflectedTenses() {
     "9",
     "10",
     "11",
+    "12",
+    "13",
+    "14",
   ];
   const handleContainerLoaded = (mySvgUseIds) => {
     svgUseIds = mySvgUseIds;
@@ -54,7 +57,7 @@ function InflectedTenses() {
 
   return (
     <GrammarContainer
-      svgUseIdSeed="012345678901"
+      svgUseIdSeed="012345678901234"
       sentenceTypes={[
         SENTENCE_TYPES.statement,
         SENTENCE_TYPES.question,
@@ -77,6 +80,34 @@ function InflectedTenses() {
             </div>
             <NormalVerbTriangle
               uuid={svgUseIds[0]}
+              className={`${notOpacity} col-start-4 row-start-1`}
+              verb={VERBS.do}
+              visibility={{
+                head: true,
+                thirdPersonSingular: true,
+                preterite: true,
+                tenseLine: true,
+              }}
+              colour="red"
+            />
+            <NormalPronounTriangle
+              uuid={svgUseIds[1]}
+              className={`${notOpacity} col-start-4 row-start-1`}
+              verb={VERBS.do}
+              visibility={{
+                headPronouns: true,
+                thirdPersonSingularPronouns: true,
+                preteritePronouns: true,
+              }}
+              colour="red"
+            />
+            <p
+              className={`${notOpacity} col-start-5 row-start-1 m-auto text-2xl font-bold text-red-500`}
+            >
+              not
+            </p>
+            <NormalVerbTriangle
+              uuid={svgUseIds[2]}
               className="col-start-6 row-start-1"
               verb={selectedVerb}
               visibility={{
@@ -88,7 +119,7 @@ function InflectedTenses() {
               colour="black"
             />
             <NormalPronounTriangle
-              uuid={svgUseIds[1]}
+              uuid={svgUseIds[3]}
               className="col-start-6 row-start-1"
               verb={selectedVerb}
               visibility={{
@@ -105,7 +136,7 @@ function InflectedTenses() {
               <p className="row-start-3">Past Continuous</p>
             </div>
             <ToBeVerbTriangle
-              uuid={svgUseIds[2]}
+              uuid={svgUseIds[4]}
               className="col-start-4 row-start-3"
               visibility={{
                 am: true,
@@ -118,7 +149,7 @@ function InflectedTenses() {
               colour="blue"
             />
             <ToBePronounTriangle
-              uuid={svgUseIds[3]}
+              uuid={svgUseIds[5]}
               className="col-start-4 row-start-3"
               visibility={{
                 amPronouns: true,
@@ -129,15 +160,13 @@ function InflectedTenses() {
               }}
               colour="black"
             />
-
             <p
               className={`${notOpacity} col-start-5 row-start-3 m-auto text-2xl font-bold text-red-500`}
             >
               not
             </p>
-
             <NormalVerbTriangle
-              uuid={svgUseIds[4]}
+              uuid={svgUseIds[6]}
               className="col-start-6 row-start-3"
               verb={selectedVerb}
               visibility={{ presentParticiple: true }}
@@ -150,7 +179,7 @@ function InflectedTenses() {
               <p className="row-start-3">Past Perfect Simple</p>
             </div>
             <NormalVerbTriangle
-              uuid={svgUseIds[5]}
+              uuid={svgUseIds[7]}
               className="col-start-2 row-start-5"
               verb={VERBS.have}
               visibility={{
@@ -162,7 +191,7 @@ function InflectedTenses() {
               colour="green"
             />
             <NormalPronounTriangle
-              uuid={svgUseIds[6]}
+              uuid={svgUseIds[8]}
               className="col-start-2 row-start-5"
               verb={selectedVerb}
               visibility={{
@@ -172,15 +201,13 @@ function InflectedTenses() {
               }}
               colour="green"
             />
-
             <p
               className={`${notOpacity} col-start-3 row-start-5 m-auto text-2xl font-bold text-red-500`}
             >
               not
             </p>
-
             <NormalVerbTriangle
-              uuid={svgUseIds[7]}
+              uuid={svgUseIds[9]}
               className="col-start-6 row-start-5"
               verb={selectedVerb}
               visibility={{ pastParticiple: true }}
@@ -193,7 +220,7 @@ function InflectedTenses() {
               <p className="row-start-3">Past Perfect Continuous</p>
             </div>
             <NormalVerbTriangle
-              uuid={svgUseIds[8]}
+              uuid={svgUseIds[10]}
               className="col-start-2 row-start-7"
               verb={VERBS.have}
               visibility={{
@@ -205,7 +232,7 @@ function InflectedTenses() {
               colour="green"
             />
             <NormalPronounTriangle
-              uuid={svgUseIds[9]}
+              uuid={svgUseIds[11]}
               className="col-start-2 row-start-7"
               verb={selectedVerb}
               visibility={{
@@ -215,22 +242,20 @@ function InflectedTenses() {
               }}
               colour="green"
             />
-
             <p
               className={`${notOpacity} col-start-3 row-start-7 m-auto text-2xl font-bold text-red-500`}
             >
               not
             </p>
-
             <NormalVerbTriangle
-              uuid={svgUseIds[10]}
+              uuid={svgUseIds[12]}
               className="col-start-4 row-start-7"
               verb={VERBS.be}
               visibility={{ pastParticiple: true }}
               colour="blue"
             />
             <NormalVerbTriangle
-              uuid={svgUseIds[11]}
+              uuid={svgUseIds[13]}
               className="col-start-6 row-start-7"
               verb={selectedVerb}
               visibility={{ presentParticiple: true }}
