@@ -18,6 +18,13 @@ function InflectedTenses() {
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
   );
+  const [bossVerbVisibility, setBossVerbVisibility] = useState({
+    head: "opacity-100",
+    thirdPersonSingular: true,
+    preterite: true,
+    tenseLine: true,
+  });
+
   let svgUseIds = [
     "0",
     "1",
@@ -44,6 +51,17 @@ function InflectedTenses() {
   };
   const handleSentenceTypeSelected = (key) => {
     setSentenceType(key);
+    // todo fix this
+    const myNegative = key === SENTENCE_TYPES.negative;
+    const myVisibleForNot = myNegative
+      ? "opacity-100 transition-opacity duration-2000 ease-in-out"
+      : "opacity-0 transition-opacity duration-2000 ease-in-out";
+    setBossVerbVisibility({
+      head: { myVisibleForNot },
+      thirdPersonSingular: true,
+      preterite: true,
+      tenseLine: true,
+    });
   };
 
   const statement = selectedSentenceType === SENTENCE_TYPES.statement;
@@ -112,12 +130,7 @@ function InflectedTenses() {
               uuid={svgUseIds[2]}
               className="col-start-6 row-start-1"
               verb={selectedVerb}
-              visibility={{
-                head: { visibleForNot },
-                thirdPersonSingular: true,
-                preterite: true,
-                tenseLine: true,
-              }}
+              visibility={bossVerbVisibility}
               colour="black"
             />
             <NormalPronounTriangle
