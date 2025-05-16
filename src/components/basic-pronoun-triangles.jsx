@@ -25,7 +25,6 @@ function BasicPronounTriangles() {
 
   return (
     <GrammarContainer
-      svgUseIdSeed="01"
       onVerbSelected={handleVerbSelected}
       onLoaded={handleContainerLoaded}
     >

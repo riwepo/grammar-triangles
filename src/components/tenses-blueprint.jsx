@@ -23,7 +23,6 @@ function TensesBlueprint({ bossVerb }) {
 
   return (
     <GrammarContainer
-      svgUseIdSeed="01234567"
       onVerbSelected={handleVerbSelected}
       onLoaded={handleContainerLoaded}
     >

@@ -43,7 +43,6 @@ function ModalVerbs() {
 
   return (
     <GrammarContainer
-      svgUseIdSeed="01234567"
       sentenceTypes={[SENTENCE_TYPES.statement, SENTENCE_TYPES.question]}
       onVerbSelected={handleVerbSelected}
       onSentenceTypeSelected={handleSentenceTypeSelected}

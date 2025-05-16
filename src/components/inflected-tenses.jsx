@@ -77,7 +77,6 @@ function InflectedTenses() {
 
   return (
     <GrammarContainer
-      svgUseIdSeed="012345678901234"
       sentenceTypes={[
         SENTENCE_TYPES.statement,
         SENTENCE_TYPES.question,

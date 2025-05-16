@@ -17,7 +17,6 @@ import { VERBS } from "@/lib/grammar-data";
  * @returns
  */
 function GrammarContainer({
-  svgUseIdSeed,
   sentenceTypes,
   children,
   onVerbSelected,
@@ -36,9 +35,13 @@ function GrammarContainer({
   // only run once when this component loads
   useEffect(() => {
     // generate unique ids for the SVG use commands
+    // we will genrate 20 keys which is more than enough
     const generateSvgUseIds = () => {
-      return svgUseIdSeed.split("").map((n) => nanoid());
+      const seeds = [...Array(20).keys()];
+      const uids = seeds.map((n) => nanoid());
+      return uids;
     };
+
     const ids = generateSvgUseIds();
     setSvgUseIds(ids);
 
