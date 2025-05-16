@@ -6,10 +6,17 @@ import GrammarContainer from "@/components/grammar-container";
 import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import Card from "@/components/ui/card";
 
-import { VERBS, MODAL_VERBS, SUBJECT_PRONOUNS } from "@/lib/grammar-data";
+import {
+  VERBS,
+  MODAL_VERBS,
+  SUBJECT_PRONOUNS,
+  SENTENCE_TYPES,
+} from "@/lib/grammar-data";
 
 function ModalVerbs() {
-  const [selectedSentenceType, setSentenceType] = useState("Statement");
+  const [selectedSentenceType, setSentenceType] = useState(
+    SENTENCE_TYPES.statement,
+  );
 
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
@@ -27,22 +34,17 @@ function ModalVerbs() {
     setSentenceType(key);
   };
 
-  const statement = selectedSentenceType === "Statement";
-  const question = selectedSentenceType === "Question";
+  const statement = selectedSentenceType === SENTENCE_TYPES.statement;
+  const question = selectedSentenceType === SENTENCE_TYPES.question;
 
   const gridTemplateCols = statement
     ? "grid-cols-[0.1fr_2px_0.2fr_2px_0.7fr]"
     : "grid-cols-[0.2fr_2px_0.1fr_2px_0.7fr]";
 
-  const col1Display = "Statement" ? "grid" : "hidden";
-  const col2Display = "Statement" ? "hidden" : "grid";
-  const col4Display = "Statement" ? "hidden" : "grid";
-  const col5Display = "Statement" ? "grid" : "hidden";
-
   return (
     <GrammarContainer
       svgUseIdSeed="01234567"
-      sentenceTypes={["Statement", "Question"]}
+      sentenceTypes={[SENTENCE_TYPES.statement, SENTENCE_TYPES.question]}
       onVerbSelected={handleVerbSelected}
       onSentenceTypeSelected={handleSentenceTypeSelected}
       onLoaded={handleContainerLoaded}
