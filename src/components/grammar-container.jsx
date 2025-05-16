@@ -18,7 +18,7 @@ import { VERBS } from "@/lib/grammar-data";
  */
 
 const SVG_USE_ID_COUNT = 20;
-export const SVG_USE_ID_PLACEHOLDERS = [...Array(SVG_USE_ID_COUNT)];
+export const SVG_USE_ID_PLACEHOLDERS = [...Array(SVG_USE_ID_COUNT).keys()];
 
 function GrammarContainer({
   sentenceTypes,
@@ -41,8 +41,7 @@ function GrammarContainer({
     // generate unique ids for the SVG use commands
     // we will genrate 20 keys which is more than enough
     const generateSvgUseIds = () => {
-      const seeds = [...Array(20).keys()];
-      const uids = seeds.map((n) => nanoid());
+      const uids = SVG_USE_ID_PLACEHOLDERS.map((n) => nanoid());
       return uids;
     };
 

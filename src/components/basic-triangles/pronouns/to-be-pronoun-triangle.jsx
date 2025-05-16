@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils/css-class";
 
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 
-function ToBePronounTriangle({ uuid, colour, visibility, className }) {
+function ToBePronounTriangle({ uuid, colour, visibility, classNames }) {
   return (
     <svg
       width="100%"
@@ -11,7 +11,7 @@ function ToBePronounTriangle({ uuid, colour, visibility, className }) {
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn(className)}
+      className={cn(classNames.svg)}
     >
       <defs>
         <polygon

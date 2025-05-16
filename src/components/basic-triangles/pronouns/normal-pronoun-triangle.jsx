@@ -2,16 +2,16 @@ import { cn } from "@/lib/utils/css-class";
 
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 
-function NormalPronounTriangle({ uuid, colour, verb, visibility, className }) {
+function NormalPronounTriangle({ uuid, colour, verb, visibility, classNames }) {
   return (
     <svg
-      className={cn(className)}
       width="100%"
       height="100%"
       viewBox={BASIC_TRIANGLE_VIEWBOX}
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={cn(classNames.svg)}
     >
       <defs>
         <polygon

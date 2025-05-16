@@ -85,7 +85,6 @@ function InflectedTenses() {
             </div>
             <NormalVerbTriangle
               uuid={svgUseIds[0]}
-              className={`${visibleForNot} col-start-4 row-start-1`}
               verb={VERBS.do}
               visibility={{
                 head: true,
@@ -94,10 +93,10 @@ function InflectedTenses() {
                 tenseLine: true,
               }}
               colour="red"
+              classNames={{ svg: `${visibleForNot} col-start-4 row-start-1` }}
             />
             <NormalPronounTriangle
               uuid={svgUseIds[1]}
-              className={`${visibleForNot} col-start-4 row-start-1`}
               verb={VERBS.do}
               visibility={{
                 headPronouns: true,
@@ -105,6 +104,7 @@ function InflectedTenses() {
                 preteritePronouns: true,
               }}
               colour="red"
+              classNames={{ svg: `${visibleForNot} col-start-4 row-start-1` }}
             />
             <p
               className={`${visibleForNot} col-start-5 row-start-1 m-auto text-2xl font-bold text-red-500`}
@@ -113,14 +113,13 @@ function InflectedTenses() {
             </p>
             <NormalVerbTriangle
               uuid={svgUseIds[2]}
-              className="col-start-6 row-start-1"
               verb={selectedVerb}
               visibility={bossVerbVisibility}
               colour="black"
+              classNames={{ svg: "col-start-6 row-start-1" }}
             />
             <NormalPronounTriangle
               uuid={svgUseIds[3]}
-              className={`${hiddenForNot} col-start-6 row-start-1`}
               verb={selectedVerb}
               visibility={{
                 headPronouns: true,
@@ -128,6 +127,7 @@ function InflectedTenses() {
                 preteritePronouns: true,
               }}
               colour="black"
+              classNames={{ svg: `${hiddenForNot} col-start-6 row-start-1` }}
             />
             <div className="col-span-6 col-start-1 row-start-2 bg-gray-200"></div>
             <div className="col-start-1 row-start-3 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
@@ -137,7 +137,6 @@ function InflectedTenses() {
             </div>
             <ToBeVerbTriangle
               uuid={svgUseIds[4]}
-              className="col-start-4 row-start-3"
               visibility={{
                 am: true,
                 are: true,
@@ -147,10 +146,10 @@ function InflectedTenses() {
                 tenseLine: true,
               }}
               colour="blue"
+              classNames={{ svg: "col-start-4 row-start-3" }}
             />
             <ToBePronounTriangle
               uuid={svgUseIds[5]}
-              className="col-start-4 row-start-3"
               visibility={{
                 amPronouns: true,
                 arePronouns: true,
@@ -159,6 +158,7 @@ function InflectedTenses() {
                 werePronouns: true,
               }}
               colour="black"
+              classNames={{ svg: "col-start-4 row-start-3" }}
             />
             <p
               className={`${visibleForNot} col-start-5 row-start-3 m-auto text-2xl font-bold text-red-500`}
@@ -167,10 +167,10 @@ function InflectedTenses() {
             </p>
             <NormalVerbTriangle
               uuid={svgUseIds[6]}
-              className="col-start-6 row-start-3"
               verb={selectedVerb}
               visibility={{ presentParticiple: true }}
               colour="black"
+              classNames={{ svg: "col-start-6 row-start-3" }}
             />
             <div className="col-span-6 col-start-1 row-start-4 bg-gray-200"></div>
             <div className="col-start-1 row-start-5 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
@@ -180,7 +180,6 @@ function InflectedTenses() {
             </div>
             <NormalVerbTriangle
               uuid={svgUseIds[7]}
-              className="col-start-2 row-start-5"
               verb={VERBS.have}
               visibility={{
                 head: true,
@@ -189,10 +188,10 @@ function InflectedTenses() {
                 tenseLine: true,
               }}
               colour="green"
+              classNames={{ svg: "col-start-2 row-start-5" }}
             />
             <NormalPronounTriangle
               uuid={svgUseIds[8]}
-              className="col-start-2 row-start-5"
               verb={selectedVerb}
               visibility={{
                 headPronouns: true,
@@ -200,6 +199,7 @@ function InflectedTenses() {
                 preteritePronouns: true,
               }}
               colour="green"
+              classNames={{ svg: "col-start-2 row-start-5" }}
             />
             <p
               className={`${visibleForNot} col-start-3 row-start-5 m-auto text-2xl font-bold text-red-500`}
@@ -208,10 +208,10 @@ function InflectedTenses() {
             </p>
             <NormalVerbTriangle
               uuid={svgUseIds[9]}
-              className="col-start-6 row-start-5"
               verb={selectedVerb}
               visibility={{ pastParticiple: true }}
               colour="black"
+              classNames={{ svg: "col-start-6 row-start-5" }}
             />
             <div className="col-span-6 col-start-1 row-start-6 bg-gray-200"></div>
             <div className="col-start-1 row-start-7 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
@@ -221,7 +221,6 @@ function InflectedTenses() {
             </div>
             <NormalVerbTriangle
               uuid={svgUseIds[10]}
-              className="col-start-2 row-start-7"
               verb={VERBS.have}
               visibility={{
                 head: true,
@@ -230,10 +229,10 @@ function InflectedTenses() {
                 tenseLine: true,
               }}
               colour="green"
+              classNames={{ svg: "col-start-2 row-start-7" }}
             />
             <NormalPronounTriangle
               uuid={svgUseIds[11]}
-              className="col-start-2 row-start-7"
               verb={selectedVerb}
               visibility={{
                 headPronouns: true,
@@ -241,6 +240,7 @@ function InflectedTenses() {
                 preteritePronouns: true,
               }}
               colour="green"
+              classNames={{ svg: "col-start-2 row-start-7" }}
             />
             <p
               className={`${visibleForNot} col-start-3 row-start-7 m-auto text-2xl font-bold text-red-500`}
@@ -249,17 +249,17 @@ function InflectedTenses() {
             </p>
             <NormalVerbTriangle
               uuid={svgUseIds[12]}
-              className="col-start-4 row-start-7"
               verb={VERBS.be}
               visibility={{ pastParticiple: true }}
               colour="blue"
+              classNames={{ svg: "col-start-4 row-start-7" }}
             />
             <NormalVerbTriangle
               uuid={svgUseIds[13]}
-              className="col-start-6 row-start-7"
               verb={selectedVerb}
               visibility={{ presentParticiple: true }}
               colour="black"
+              classNames={{ svg: "col-start-6 row-start-7" }}
             />
           </div>
         </Card>

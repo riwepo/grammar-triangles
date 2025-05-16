@@ -50,6 +50,7 @@ function BasicPronounTriangles() {
                 thirdPersonSingular: true,
                 thirdPersonSingularPronouns: true,
               }}
+              classNames={{ svg: "" }}
             />
           </div>
         </Card>
@@ -72,6 +73,7 @@ function BasicPronounTriangles() {
                 were: true,
                 werePronouns: true,
               }}
+              classNames={{ svg: "" }}
             />
           </div>
         </Card>

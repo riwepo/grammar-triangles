@@ -39,10 +39,10 @@ function TensesBlueprint({ bossVerb }) {
             </p>
             <NormalVerbTriangle
               uuid={svgUseIds[0]}
-              className="col-start-4 row-start-1"
               verb={selectedVerb}
               visibility={{ head: true }}
               colour="black"
+              classNames={{ svg: "col-start-4 row-start-1" }}
             />
 
             <div className="col-span-4 col-start-1 row-start-2 bg-gray-200"></div>
@@ -52,17 +52,17 @@ function TensesBlueprint({ bossVerb }) {
             </p>
             <NormalVerbTriangle
               uuid={svgUseIds[1]}
-              className="col-start-3 row-start-3"
               verb={VERBS.be}
               visibility={{ head: true }}
               colour="blue"
+              classNames={{ svg: "col-start-3 row-start-3" }}
             />
             <NormalVerbTriangle
               uuid={svgUseIds[2]}
-              className="col-start-4 row-start-3"
               verb={selectedVerb}
               visibility={{ presentParticiple: true }}
               colour="black"
+              classNames={{ svg: "col-start-4 row-start-3" }}
             />
 
             <div className="col-span-4 col-start-1 row-start-4 bg-gray-200"></div>
@@ -72,17 +72,17 @@ function TensesBlueprint({ bossVerb }) {
             </p>
             <NormalVerbTriangle
               uuid={svgUseIds[3]}
-              className="col-start-2 row-start-5"
               verb={VERBS.have}
               visibility={{ head: true }}
               colour="green"
+              classNames={{ svg: "col-start-2 row-start-5" }}
             />
             <NormalVerbTriangle
               uuid={svgUseIds[4]}
-              className="col-start-4 row-start-5"
               verb={selectedVerb}
               visibility={{ pastParticiple: true }}
               colour="black"
+              classNames={{ svg: "col-start-4 row-start-5" }}
             />
 
             <div className="col-span-4 col-start-1 row-start-6 bg-gray-200"></div>
@@ -92,24 +92,24 @@ function TensesBlueprint({ bossVerb }) {
             </p>
             <NormalVerbTriangle
               uuid={svgUseIds[5]}
-              className="col-start-2 row-start-7"
               verb={VERBS.have}
               visibility={{ head: true }}
               colour="green"
+              classNames={{ svg: "col-start-2 row-start-7" }}
             />
             <NormalVerbTriangle
               uuid={svgUseIds[6]}
-              className="col-start-3 row-start-7"
               verb={VERBS.be}
               visibility={{ pastParticiple: true }}
               colour="blue"
+              classNames={{ svg: "col-start-3 row-start-7" }}
             />
             <NormalVerbTriangle
               uuid={svgUseIds[7]}
-              className="col-start-4 row-start-7"
               verb={selectedVerb}
               visibility={{ presentParticiple: true }}
               colour="black"
+              classNames={{ svg: "col-start-4 row-start-7" }}
             />
           </div>
         </Card>

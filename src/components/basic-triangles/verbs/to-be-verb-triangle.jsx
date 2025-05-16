@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils/css-class";
 import { VERBS } from "@/lib/grammar-data";
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 
-function ToBeVerbTriangle({ uuid, colour, visibility, className }) {
+function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
   const toBeVerb = VERBS.be;
   return (
     <svg
@@ -13,7 +13,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, className }) {
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn(className)}
+      className={cn(classNames.svg)}
     >
       <defs>
         <polygon

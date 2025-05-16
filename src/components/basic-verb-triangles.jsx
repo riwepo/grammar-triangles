@@ -12,7 +12,6 @@ import Card from "@/components/ui/card";
 import { VERBS } from "@/lib/grammar-data";
 
 function BasicVerbTriangles() {
-  // the selected verb
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
   );
@@ -53,6 +52,7 @@ function BasicVerbTriangles() {
                 thirdPersonSingular: true,
                 numbers: true,
               }}
+              classNames={{ svg: "" }}
             />
           </div>
         </Card>
@@ -73,6 +73,7 @@ function BasicVerbTriangles() {
                 were: true,
                 numbers: true,
               }}
+              classNames={{ svg: "" }}
             />
           </div>
         </Card>
