@@ -48,13 +48,12 @@ function InflectedTenses() {
           Inflected Tenses
         </p>
         <Card className="absolute top-0 right-0 bottom-0 left-0 row-start-2 m-4 bg-white">
-          <div className="grid h-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr]">
-            {/* <div className="col-start-1 row-start-1 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
-            <p className="row-start-2">Present Continuous</p>
-            <div className="row-start-3 h-full border-b-2 border-red-500"></div>
-            <p className="row-start-5">Past Continuous</p>
-          </div> */}
-
+          <div className="grid h-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] gap-y-1">
+            <div className="col-start-1 row-start-1 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
+              <p className="row-start-1">Present Simple</p>
+              <div className="row-start-2 h-full bg-red-500"></div>
+              <p className="row-start-3">Past Simple</p>
+            </div>
             <NormalVerbTriangle
               uuid={svgUseIds[0]}
               className="col-start-4 row-start-1"
@@ -78,15 +77,12 @@ function InflectedTenses() {
               }}
               colour="black"
             />
-
             <div className="col-span-4 col-start-1 row-start-2 bg-gray-200"></div>
-
-            {/* <div className="col-start-1 row-start-3 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
-            <p className="row-start-2">Present Continuous</p>
-            <div className="row-start-3 h-full border-b-2 border-red-500"></div>
-            <p className="row-start-5">Past Continuous</p>
-          </div> */}
-
+            <div className="col-start-1 row-start-3 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
+              <p className="row-start-1">Present Continuous</p>
+              <div className="row-start-2 h-full bg-red-500"></div>
+              <p className="row-start-3">Past Continuous</p>
+            </div>
             <ToBeVerbTriangle
               uuid={svgUseIds[2]}
               className="col-start-3 row-start-3"
@@ -112,7 +108,6 @@ function InflectedTenses() {
               }}
               colour="black"
             />
-
             <NormalVerbTriangle
               uuid={svgUseIds[4]}
               className="col-start-4 row-start-3"
@@ -120,14 +115,12 @@ function InflectedTenses() {
               visibility={{ presentParticiple: true }}
               colour="black"
             />
-
             <div className="col-span-4 col-start-1 row-start-4 bg-gray-200"></div>
-
-            {/* <div className="col-start-1 row-start-5 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
-            <p className="row-start-2">Present Perfect Simple</p>
-            <div className="row-start-3 h-full border-b-2 border-red-500"></div>
-            <p className="row-start-5">Past Perfect Simple</p>
-          </div> */}
+            <div className="col-start-1 row-start-5 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
+              <p className="row-start-1">Present Perfect Simple</p>
+              <div className="row-start-2 h-full bg-red-500"></div>
+              <p className="row-start-3">Past Perfect Simple</p>
+            </div>
 
             <NormalVerbTriangle
               uuid={svgUseIds[5]}
@@ -159,14 +152,12 @@ function InflectedTenses() {
               visibility={{ pastParticiple: true }}
               colour="black"
             />
-
             <div className="col-span-4 col-start-1 row-start-6 bg-gray-200"></div>
-
-            {/*  <div className="col-start-1 row-start-7 m-0 mx-auto grid grid-rows-6 items-center justify-center p-0">
-            <p className="row-start-2">Present Perfect Continuous</p>
-            <div className="row-start-3 h-full border-b-2 border-red-500"></div>
-            <p className="row-start-5">Past Perfect Continuous</p>
-          </div> */}
+            <div className="col-start-1 row-start-7 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
+              <p className="row-start-1">Present Perfect Continuous</p>
+              <div className="row-start-2 h-full bg-red-500"></div>
+              <p className="row-start-3">Past Perfect Continuous</p>
+            </div>
 
             <NormalVerbTriangle
               uuid={svgUseIds[8]}
