@@ -16,6 +16,10 @@ import { VERBS } from "@/lib/grammar-data";
  * @param {*} param0
  * @returns
  */
+
+const SVG_USE_ID_COUNT = 20;
+export const SVG_USE_ID_PLACEHOLDERS = [...Array(SVG_USE_ID_COUNT)];
+
 function GrammarContainer({
   sentenceTypes,
   children,

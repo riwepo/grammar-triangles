@@ -2,20 +2,21 @@
 
 import { useState } from "react";
 
-import GrammarContainer from "@/components/grammar-container";
+import GrammarContainer, {
+  SVG_USE_ID_PLACEHOLDERS,
+} from "@/components/grammar-container";
 import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
 import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/grammar-data";
-import { SVG_USE_ID_COUNT } from "@/lib/constants";
 
 function BasicVerbTriangles() {
   // the selected verb
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
   );
-  let svgUseIds = [...Array(SVG_USE_ID_COUNT)];
+  let svgUseIds = SVG_USE_ID_PLACEHOLDERS;
   const handleContainerLoaded = (mySvgUseIds) => {
     svgUseIds = mySvgUseIds;
   };
