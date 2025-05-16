@@ -1,5 +1,5 @@
 import TensesBlueprint from "@/components/tenses-blueprint";
-import { VERBS } from "@/lib/utils/words";
+import { VERBS } from "@/lib/utils/grammar-data";
 
 export const metadata = {
   title: "Tenses Blueprint",

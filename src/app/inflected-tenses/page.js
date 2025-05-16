@@ -1,5 +1,5 @@
 import InflectedTenses from "@/components/inflected-tenses";
-import { VERBS } from "@/lib/utils/words";
+import { VERBS } from "@/lib/utils/grammar-data";
 
 export const metadata = {
   title: "Inflected Tenses",

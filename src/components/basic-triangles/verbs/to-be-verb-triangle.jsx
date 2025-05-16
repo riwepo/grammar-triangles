@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/css-class";
 
-import { VERBS } from "@/lib/utils/words";
+import { VERBS } from "@/lib/utils/grammar-data";
 
 function ToBeVerbTriangle({ uuid, colour, visibility, className }) {
   const toBeVerb = VERBS.be;

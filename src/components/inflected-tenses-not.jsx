@@ -8,7 +8,7 @@ import NormalPronounTriangle from "@/components/basic-triangles/pronouns/normal-
 import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
 import ToBePronounTriangle from "@/components/basic-triangles/pronouns/to-be-pronoun-triangle";
 
-import { VERBS } from "@/lib/utils/words";
+import { VERBS } from "@/lib/utils/grammar-data";
 
 function InflectedTensesNot({ bossVerb }) {
   // generate unique ids for all the basic triangle components

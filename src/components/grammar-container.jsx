@@ -6,7 +6,7 @@ import { nanoid } from "nanoid";
 
 import SelectDropdown from "@/components/ui/select-dropdown";
 
-import { VERBS } from "@/lib/utils/words";
+import { VERBS } from "@/lib/utils/grammar-data";
 
 /**
  * this container does 3 things

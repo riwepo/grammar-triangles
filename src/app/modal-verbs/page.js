@@ -1,5 +1,5 @@
 import ModalVerbs from "@/components/modal-verbs";
-import { VERBS } from "@/lib/utils/words";
+import { VERBS } from "@/lib/utils/grammar-data";
 
 export const metadata = {
   title: "Modal Verbs",

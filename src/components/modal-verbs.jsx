@@ -6,7 +6,7 @@ import GrammarContainer from "@/components/grammar-container";
 import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import Card from "@/components/ui/card";
 
-import { VERBS, MODAL_VERBS, SUBJECT_PRONOUNS } from "@/lib/utils/words";
+import { VERBS, MODAL_VERBS, SUBJECT_PRONOUNS } from "@/lib/utils/grammar-data";
 
 function ModalVerbs() {
   // the selected verb
@@ -52,7 +52,7 @@ function ModalVerbs() {
 
             <div className="col-start-4 bg-gray-200"></div>
 
-            <div className="col-start-5 row-start-1 grid h-full grid-cols-[1fr_1fr_1fr] grid-rows-[minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)_minmax(0,0.02fr)_minmax(0,1fr)] overflow-auto">
+            <div className="col-start-5 row-start-1 grid h-full grid-cols-[1fr_1fr_1fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] gap-y-1 overflow-auto">
               <NormalVerbTriangle
                 uuid={svgUseIds[0]}
                 className="col-start-3 row-start-1"

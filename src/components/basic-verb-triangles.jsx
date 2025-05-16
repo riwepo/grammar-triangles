@@ -7,7 +7,7 @@ import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-t
 import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
 import Card from "@/components/ui/card";
 
-import { VERBS } from "@/lib/utils/words";
+import { VERBS } from "@/lib/utils/grammar-data";
 
 function BasicVerbTriangles() {
   // the selected verb
