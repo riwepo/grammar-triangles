@@ -50,10 +50,12 @@ function InflectedTenses() {
   const question = selectedSentenceType === SENTENCE_TYPES.question;
 
   const negative = selectedSentenceType === SENTENCE_TYPES.negative;
-  const notOpacity = negative
+  const visibleForNot = negative
     ? "opacity-100 transition-opacity duration-2000 ease-in-out"
     : "opacity-0 transition-opacity duration-2000 ease-in-out";
-  console.log("notOpacity", notOpacity);
+  const hiddenForNot = negative
+    ? "opacity-0 transition-opacity duration-2000 ease-in-out"
+    : "opacity-100 transition-opacity duration-2000 ease-in-out";
 
   return (
     <GrammarContainer
@@ -80,7 +82,7 @@ function InflectedTenses() {
             </div>
             <NormalVerbTriangle
               uuid={svgUseIds[0]}
-              className={`${notOpacity} col-start-4 row-start-1`}
+              className={`${visibleForNot} col-start-4 row-start-1`}
               verb={VERBS.do}
               visibility={{
                 head: true,
@@ -92,7 +94,7 @@ function InflectedTenses() {
             />
             <NormalPronounTriangle
               uuid={svgUseIds[1]}
-              className={`${notOpacity} col-start-4 row-start-1`}
+              className={`${visibleForNot} col-start-4 row-start-1`}
               verb={VERBS.do}
               visibility={{
                 headPronouns: true,
@@ -102,7 +104,7 @@ function InflectedTenses() {
               colour="red"
             />
             <p
-              className={`${notOpacity} col-start-5 row-start-1 m-auto text-2xl font-bold text-red-500`}
+              className={`${visibleForNot} col-start-5 row-start-1 m-auto text-2xl font-bold text-red-500`}
             >
               not
             </p>
@@ -111,7 +113,7 @@ function InflectedTenses() {
               className="col-start-6 row-start-1"
               verb={selectedVerb}
               visibility={{
-                head: true,
+                head: { visibleForNot },
                 thirdPersonSingular: true,
                 preterite: true,
                 tenseLine: true,
@@ -120,7 +122,7 @@ function InflectedTenses() {
             />
             <NormalPronounTriangle
               uuid={svgUseIds[3]}
-              className="col-start-6 row-start-1"
+              className={`${hiddenForNot} col-start-6 row-start-1`}
               verb={selectedVerb}
               visibility={{
                 headPronouns: true,
@@ -161,7 +163,7 @@ function InflectedTenses() {
               colour="black"
             />
             <p
-              className={`${notOpacity} col-start-5 row-start-3 m-auto text-2xl font-bold text-red-500`}
+              className={`${visibleForNot} col-start-5 row-start-3 m-auto text-2xl font-bold text-red-500`}
             >
               not
             </p>
@@ -202,7 +204,7 @@ function InflectedTenses() {
               colour="green"
             />
             <p
-              className={`${notOpacity} col-start-3 row-start-5 m-auto text-2xl font-bold text-red-500`}
+              className={`${visibleForNot} col-start-3 row-start-5 m-auto text-2xl font-bold text-red-500`}
             >
               not
             </p>
@@ -243,7 +245,7 @@ function InflectedTenses() {
               colour="green"
             />
             <p
-              className={`${notOpacity} col-start-3 row-start-7 m-auto text-2xl font-bold text-red-500`}
+              className={`${visibleForNot} col-start-3 row-start-7 m-auto text-2xl font-bold text-red-500`}
             >
               not
             </p>
