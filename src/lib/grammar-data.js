@@ -23,7 +23,7 @@ const MODAL_VERBS = [
 ];
 
 const SUBJECT_PRONOUNS = ["I", "you", "he", "she", "it", "we", "they"];
-const SENTENCE_TYPES = ["Statement", "Question", "Negative"];
+const SENTENCE_TYPES = {statement:"Statement", question:"Question", negative:"Negative"};
 
 const VERBS = {
   accept: {
