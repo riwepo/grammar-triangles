@@ -21,7 +21,7 @@ function NormalVerbTriangle({ uuid, colour, verb, visibility, className }) {
           stroke={colour}
           strokeWidth="2"
         />
-        <g id={`${uuid}head`}>
+        <g id={`${uuid}head`} className={visibility.head}>
           <circle cx="0" cy="-32" r="4" stroke="black" fill="black" />
           <text
             x="0"
@@ -169,7 +169,8 @@ function NormalVerbTriangle({ uuid, colour, verb, visibility, className }) {
         ></line>
       </defs>
       <use href={`#${uuid}triangle`} x="0" y="0" />
-      {visibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
+      {/* {visibility.head && <use href={`#${uuid}head`} x="0" y="0" />} */}
+      <use href={`#${uuid}head`} x="0" y="0" />
       {visibility.preterite && <use href={`#${uuid}preterite`} x="0" y="0" />}
       {visibility.pastParticiple && (
         <use href={`#${uuid}past-participle`} x="0" y="0" />
