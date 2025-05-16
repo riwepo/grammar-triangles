@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils/css-class";
 
-import { VERBS } from "@/lib/utils/grammar-data";
+import { VERBS } from "@/lib/grammar-data";
+import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 
 function ToBeVerbTriangle({ uuid, colour, visibility, className }) {
   const toBeVerb = VERBS.be;
@@ -8,7 +9,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, className }) {
     <svg
       width="100%"
       height="100%"
-      viewBox="-150 -55 220 110"
+      viewBox={BASIC_TRIANGLE_VIEWBOX}
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"

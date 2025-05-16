@@ -6,7 +6,7 @@ import GrammarContainer from "@/components/grammar-container";
 import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import Card from "@/components/ui/card";
 
-import { VERBS, MODAL_VERBS, SUBJECT_PRONOUNS } from "@/lib/utils/grammar-data";
+import { VERBS, MODAL_VERBS, SUBJECT_PRONOUNS } from "@/lib/grammar-data";
 
 function ModalVerbs() {
   const [selectedSentenceType, setSentenceType] = useState("Statement");

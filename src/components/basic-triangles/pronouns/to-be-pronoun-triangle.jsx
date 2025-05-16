@@ -1,11 +1,13 @@
 import { cn } from "@/lib/utils/css-class";
 
+import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
+
 function ToBePronounTriangle({ uuid, colour, visibility, className }) {
   return (
     <svg
       width="100%"
       height="100%"
-      viewBox="-150 -55 220 110"
+      viewBox={BASIC_TRIANGLE_VIEWBOX}
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"

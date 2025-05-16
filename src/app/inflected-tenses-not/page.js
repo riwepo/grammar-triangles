@@ -1,5 +1,5 @@
 import InflectedTensesNot from "@/components/inflected-tenses-not";
-import { VERBS } from "@/lib/utils/grammar-data";
+import { VERBS } from "@/lib/grammar-data";
 
 export const metadata = {
   title: "Inflected Tenses Not",

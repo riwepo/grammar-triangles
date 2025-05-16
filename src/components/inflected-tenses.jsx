@@ -8,7 +8,7 @@ import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-tria
 import ToBePronounTriangle from "@/components/basic-triangles/pronouns/to-be-pronoun-triangle";
 import Card from "@/components/ui/card";
 
-import { VERBS } from "@/lib/utils/grammar-data";
+import { VERBS } from "@/lib/grammar-data";
 
 function InflectedTenses() {
   // the selected verb

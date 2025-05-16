@@ -5,7 +5,7 @@ import GrammarContainer from "@/components/grammar-container";
 import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import Card from "@/components/ui/card";
 
-import { VERBS } from "@/lib/utils/grammar-data";
+import { VERBS } from "@/lib/grammar-data";
 
 function TensesBlueprint({ bossVerb }) {
   // the selected verb

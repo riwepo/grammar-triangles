@@ -6,7 +6,7 @@ import { nanoid } from "nanoid";
 
 import SelectDropdown from "@/components/ui/select-dropdown";
 
-import { VERBS } from "@/lib/utils/grammar-data";
+import { VERBS } from "@/lib/grammar-data";
 
 /**
  * this container does 3 things
@@ -52,10 +52,10 @@ function GrammarContainer({
   }, []);
 
   const handleVerbSelect = (key) => {
-    onVerbSelected(key);
+    if (onVerbSelected) onVerbSelected(key);
   };
   const handleSentenceTypeSelect = (key) => {
-    onSentenceTypeSelected(key);
+    if (onSentenceTypeSelected) onSentenceTypeSelected(key);
   };
 
   if (svgUseIds === null) {
@@ -65,12 +65,14 @@ function GrammarContainer({
   return (
     <>
       <div className="grid h-auto grid-cols-[1fr_auto_auto_1fr] items-center gap-4 border-t-1 border-black">
-        <SelectDropdown
-          title="Sentence Type:"
-          options={sentenceTypeOptions}
-          onSelect={handleSentenceTypeSelect}
-          className="col-start-2 py-2"
-        />
+        {sentenceTypeOptions && (
+          <SelectDropdown
+            title="Sentence Type:"
+            options={sentenceTypeOptions}
+            onSelect={handleSentenceTypeSelect}
+            className="col-start-2 py-2"
+          />
+        )}
         <SelectDropdown
           title="Boss Verb:"
           options={verbOptions}

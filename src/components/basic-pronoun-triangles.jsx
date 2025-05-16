@@ -7,7 +7,7 @@ import NormalPronounTriangle from "@/components/basic-triangles/pronouns/normal-
 import ToBePronounTriangle from "@/components/basic-triangles/pronouns/to-be-pronoun-triangle";
 import Card from "@/components/ui/card";
 
-import { VERBS } from "@/lib/utils/grammar-data";
+import { VERBS } from "@/lib/grammar-data";
 
 function BasicPronounTriangles() {
   // the selected verb
