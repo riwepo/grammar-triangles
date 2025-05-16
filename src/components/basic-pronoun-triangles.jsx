@@ -8,13 +8,14 @@ import ToBePronounTriangle from "@/components/basic-triangles/pronouns/to-be-pro
 import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/grammar-data";
+import { SVG_USE_ID_COUNT } from "@/lib/constants";
 
 function BasicPronounTriangles() {
   // the selected verb
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
   );
-  let svgUseIds = ["0", "1"];
+  let svgUseIds = [...Array(SVG_USE_ID_COUNT)];
   const handleContainerLoaded = (mySvgUseIds) => {
     svgUseIds = mySvgUseIds;
   };

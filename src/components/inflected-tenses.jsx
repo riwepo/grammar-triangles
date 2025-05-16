@@ -9,6 +9,7 @@ import ToBePronounTriangle from "@/components/basic-triangles/pronouns/to-be-pro
 import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
+import { SVG_USE_ID_COUNT } from "@/lib/constants";
 
 function InflectedTenses() {
   const [selectedSentenceType, setSentenceType] = useState(
@@ -25,23 +26,7 @@ function InflectedTenses() {
     tenseLine: true,
   });
 
-  let svgUseIds = [
-    "0",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-  ];
+  let svgUseIds = [...Array(SVG_USE_ID_COUNT)];
   const handleContainerLoaded = (mySvgUseIds) => {
     svgUseIds = mySvgUseIds;
   };

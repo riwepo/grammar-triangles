@@ -12,6 +12,7 @@ import {
   SUBJECT_PRONOUNS,
   SENTENCE_TYPES,
 } from "@/lib/grammar-data";
+import { SVG_USE_ID_COUNT } from "@/lib/constants";
 
 function ModalVerbs() {
   const [selectedSentenceType, setSentenceType] = useState(
@@ -21,7 +22,7 @@ function ModalVerbs() {
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
   );
-  let svgUseIds = ["0", "1", "2", "3", "4", "5", "6", "7"];
+  let svgUseIds = [...Array(SVG_USE_ID_COUNT)];
   const handleContainerLoaded = (mySvgUseIds) => {
     svgUseIds = mySvgUseIds;
   };
