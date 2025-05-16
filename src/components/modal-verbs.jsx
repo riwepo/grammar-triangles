@@ -9,7 +9,8 @@ import Card from "@/components/ui/card";
 import { VERBS, MODAL_VERBS, SUBJECT_PRONOUNS } from "@/lib/utils/grammar-data";
 
 function ModalVerbs() {
-  // the selected verb
+  const [selectedSentenceType, setSentenceType] = useState("Statement");
+
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
   );
@@ -22,10 +23,16 @@ function ModalVerbs() {
     setSelectedVerb(VERBS[key]);
   };
 
+  const handleSentenceTypeSelected = (key) => {
+    setSentenceType(key);
+  };
+
   return (
     <GrammarContainer
       svgUseIdSeed="01234567"
+      sentenceTypes={["Statement", "Question"]}
       onVerbSelected={handleVerbSelected}
+      onSentenceTypeSelected={handleSentenceTypeSelected}
       onLoaded={handleContainerLoaded}
     >
       <div className="absolute top-0 right-0 bottom-0 left-0 grid grid-rows-[auto_1fr] gap-y-2">

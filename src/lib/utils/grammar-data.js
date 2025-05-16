@@ -76,5 +76,6 @@ const MODAL_VERBS = [
 ];
 
 const SUBJECT_PRONOUNS = ["I", "you", "he", "she", "it", "we", "they"];
+const SENTENCE_TYPES = ["Statement", "Question", "Negative"];
 
-export { VERBS, MODAL_VERBS, SUBJECT_PRONOUNS };
+export { VERBS, MODAL_VERBS, SUBJECT_PRONOUNS, SENTENCE_TYPES };
