@@ -5,7 +5,9 @@ import { useState } from "react";
 import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
-import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
+import NormalVerbTriangle, {
+  DEFAULT_CLASS_NAMES,
+} from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import Card from "@/components/ui/card";
 
 import {
@@ -110,9 +112,12 @@ function ModalVerbs() {
               <NormalVerbTriangle
                 uuid={svgUseIds[0]}
                 verb={selectedVerb}
-                visibility={{ head: true }}
                 colour="black"
-                classNames={{ svg: "col-start-3 row-start-1" }}
+                classNames={{
+                  ...DEFAULT_CLASS_NAMES,
+                  svg: "col-start-3 row-start-1",
+                  head: "visible",
+                }}
               />
 
               <div className="col-span-3 col-start-1 row-start-2 bg-gray-200"></div>
@@ -120,16 +125,22 @@ function ModalVerbs() {
               <NormalVerbTriangle
                 uuid={svgUseIds[1]}
                 verb={VERBS.be}
-                visibility={{ head: true }}
                 colour="blue"
-                classNames={{ svg: "col-start-2 row-start-3" }}
+                classNames={{
+                  ...DEFAULT_CLASS_NAMES,
+                  svg: "col-start-2 row-start-3",
+                  head: "visible",
+                }}
               />
               <NormalVerbTriangle
                 uuid={svgUseIds[2]}
                 verb={selectedVerb}
-                visibility={{ presentParticiple: true }}
                 colour="black"
-                classNames={{ svg: "col-start-3 row-start-3" }}
+                classNames={{
+                  ...DEFAULT_CLASS_NAMES,
+                  svg: "col-start-3 row-start-3",
+                  presentParticiple: "visible",
+                }}
               />
 
               <div className="col-span-3 col-start-1 row-start-4 bg-gray-200"></div>
@@ -137,17 +148,23 @@ function ModalVerbs() {
               <NormalVerbTriangle
                 uuid={svgUseIds[3]}
                 verb={VERBS.have}
-                visibility={{ head: true }}
                 colour="green"
-                classNames={{ svg: "col-start-1 row-start-5" }}
+                classNames={{
+                  ...DEFAULT_CLASS_NAMES,
+                  svg: "col-start-1 row-start-5",
+                  head: "visible",
+                }}
               />
               <NormalVerbTriangle
                 uuid={svgUseIds[4]}
                 className=""
                 verb={selectedVerb}
-                visibility={{ pastParticiple: true }}
                 colour="black"
-                classNames={{ svg: "col-start-3 row-start-5" }}
+                classNames={{
+                  ...DEFAULT_CLASS_NAMES,
+                  svg: "col-start-3 row-start-5",
+                  pastParticiple: "visible",
+                }}
               />
 
               <div className="col-span-3 col-start-1 row-start-6 bg-gray-200"></div>
@@ -155,23 +172,32 @@ function ModalVerbs() {
               <NormalVerbTriangle
                 uuid={svgUseIds[5]}
                 verb={VERBS.have}
-                visibility={{ head: true }}
                 colour="green"
-                classNames={{ svg: "col-start-1 row-start-7" }}
+                classNames={{
+                  ...DEFAULT_CLASS_NAMES,
+                  svg: "col-start-1 row-start-7",
+                  head: "visible",
+                }}
               />
               <NormalVerbTriangle
                 uuid={svgUseIds[6]}
                 verb={VERBS.be}
-                visibility={{ pastParticiple: true }}
                 colour="blue"
-                classNames={{ svg: "col-start-2 row-start-7" }}
+                classNames={{
+                  ...DEFAULT_CLASS_NAMES,
+                  svg: "col-start-2 row-start-7",
+                  pastParticiple: "visible",
+                }}
               />
               <NormalVerbTriangle
                 uuid={svgUseIds[7]}
                 verb={selectedVerb}
-                visibility={{ presentParticiple: true }}
                 colour="black"
-                classNames={{ svg: "col-start-3 row-start-7" }}
+                classNames={{
+                  ...DEFAULT_CLASS_NAMES,
+                  svg: "col-start-3 row-start-7",
+                  presentParticiple: "visible",
+                }}
               />
             </div>
           </div>
