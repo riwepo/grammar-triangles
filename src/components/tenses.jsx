@@ -20,7 +20,7 @@ import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
 
-function InflectedTenses() {
+function Tenses() {
   const [selectedSentenceType, setSentenceType] = useState(
     SENTENCE_TYPES.statement,
   );
@@ -361,4 +361,4 @@ function InflectedTenses() {
   );
 }
 
-export default InflectedTenses;
+export default Tenses;
