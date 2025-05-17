@@ -1,6 +1,12 @@
 
-svg use ids - just generate the most we would ever need
-get triangle component visibility working applying tailwind class to groups
-
 
 add explanations to basic triangles page
+
+basic triangles - put in tabs so not distracting
+put pronouns on same screen with a checkbox
+
+page names
+'the triangle'
+'the pattern'
+'modal verbs'
+'tenses'
