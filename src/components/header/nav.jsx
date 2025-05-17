@@ -33,11 +33,6 @@ function Nav() {
       href: `/inflected-tenses`,
       name: "Inflected Tenses",
     },
-    {
-      key: 7,
-      href: `/inflected-tenses-not`,
-      name: "Inflected Tenses Negative",
-    },
   ];
 
   // this is used as a signal to close the mobile navigation
