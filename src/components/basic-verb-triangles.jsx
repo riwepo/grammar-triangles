@@ -5,7 +5,9 @@ import { useState } from "react";
 import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
-import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
+import NormalVerbTriangle, {
+  DEFAULT_CLASS_NAMES,
+} from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
 import Card from "@/components/ui/card";
 
@@ -52,7 +54,15 @@ function BasicVerbTriangles() {
                 thirdPersonSingular: true,
                 numbers: true,
               }}
-              classNames={{ svg: "" }}
+              classNames={{
+                ...DEFAULT_CLASS_NAMES,
+                head: "visible",
+                preterite: "visible",
+                pastParticiple: "visible",
+                presentParticiple: "visible",
+                thirdPersonSingular: "visible",
+                numbers: "visible",
+              }}
             />
           </div>
         </Card>
@@ -73,7 +83,18 @@ function BasicVerbTriangles() {
                 were: true,
                 numbers: true,
               }}
-              classNames={{ svg: "" }}
+              classNames={{
+                ...DEFAULT_CLASS_NAMES,
+                head: "visible",
+                pastParticiple: "visible",
+                presentParticiple: "visible",
+                am: "visible",
+                is: "visible",
+                are: "visible",
+                was: "visible",
+                were: "visible",
+                numbers: "visible",
+              }}
             />
           </div>
         </Card>

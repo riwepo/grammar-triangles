@@ -2,7 +2,24 @@ import { cn } from "@/lib/utils/css-class";
 
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 
-function NormalVerbTriangle({ uuid, colour, verb, visibility, classNames }) {
+export const DEFAULT_CLASS_NAMES = {
+  svg: "",
+  head: "invisible",
+  preterite: "invisible",
+  pastParticiple: "invisible",
+  presentParticiple: "invisible",
+  thirdPersonSingular: "invisible",
+  numbers: "invisible",
+  tenseLine: "invisible",
+};
+
+function NormalVerbTriangle({
+  uuid,
+  colour,
+  verb,
+  visibility,
+  classNames = DEFAULT_CLASS_NAMES,
+}) {
   return (
     <svg
       width="100%"
@@ -11,7 +28,7 @@ function NormalVerbTriangle({ uuid, colour, verb, visibility, classNames }) {
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn(classNames.svg)}
+      className={classNames.svg}
     >
       <defs>
         <polygon
@@ -21,7 +38,7 @@ function NormalVerbTriangle({ uuid, colour, verb, visibility, classNames }) {
           stroke={colour}
           strokeWidth="2"
         />
-        <g id={`${uuid}head`}>
+        <g id={`${uuid}head`} className={classNames.head}>
           <circle cx="0" cy="-32" r="4" stroke="black" fill="black" />
           <text
             x="0"
@@ -35,7 +52,7 @@ function NormalVerbTriangle({ uuid, colour, verb, visibility, classNames }) {
             {verb.head}
           </text>
         </g>
-        <g id={`${uuid}preterite`}>
+        <g id={`${uuid}preterite`} className={classNames.preterite}>
           <circle cx="-40" cy="37" r="4" stroke="black" fill="black" />
           <text
             x="-40"
@@ -49,7 +66,7 @@ function NormalVerbTriangle({ uuid, colour, verb, visibility, classNames }) {
             {verb.preterite}
           </text>
         </g>
-        <g id={`${uuid}past-participle`}>
+        <g id={`${uuid}past-participle`} className={classNames.pastParticiple}>
           <circle cx="40" cy="37" r="4" stroke="black" fill="black" />
           <text
             x="40"
@@ -63,7 +80,10 @@ function NormalVerbTriangle({ uuid, colour, verb, visibility, classNames }) {
             {verb.pastParticiple}
           </text>
         </g>
-        <g id={`${uuid}present-participle`}>
+        <g
+          id={`${uuid}present-participle`}
+          className={classNames.presentParticiple}
+        >
           <path
             transform="scale(0.12, 0.12)"
             d="M0,-30
@@ -86,7 +106,10 @@ function NormalVerbTriangle({ uuid, colour, verb, visibility, classNames }) {
             {verb.presentParticiple}
           </text>
         </g>
-        <g id={`${uuid}third-person-singular`}>
+        <g
+          id={`${uuid}third-person-singular`}
+          className={classNames.thirdPersonSingular}
+        >
           <circle cx="18" cy="-26" r="4" stroke="black" fill="black" />
           <text
             x="24"
@@ -101,7 +124,7 @@ function NormalVerbTriangle({ uuid, colour, verb, visibility, classNames }) {
             {verb.thirdPersonSingular}
           </text>
         </g>
-        <g id={`${uuid}numbers`}>
+        <g id={`${uuid}numbers`} className={classNames.numbers}>
           <text
             x="0"
             y="-32"
@@ -166,22 +189,17 @@ function NormalVerbTriangle({ uuid, colour, verb, visibility, classNames }) {
           y2="0"
           stroke="red"
           strokeWidth="2"
+          className={classNames.tenseLine}
         ></line>
       </defs>
       <use href={`#${uuid}triangle`} x="0" y="0" />
-      {visibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
-      {visibility.preterite && <use href={`#${uuid}preterite`} x="0" y="0" />}
-      {visibility.pastParticiple && (
-        <use href={`#${uuid}past-participle`} x="0" y="0" />
-      )}
-      {visibility.presentParticiple && (
-        <use href={`#${uuid}present-participle`} x="0" y="0" />
-      )}
-      {visibility.thirdPersonSingular && (
-        <use href={`#${uuid}third-person-singular`} x="0" y="0" />
-      )}
-      {visibility.numbers && <use href={`#${uuid}numbers`} x="0" y="0" />}
-      {visibility.tenseLine && <use href={`#${uuid}tense-line`} x="0" y="0" />}
+      <use href={`#${uuid}head`} x="0" y="0" />
+      <use href={`#${uuid}preterite`} x="0" y="0" />
+      <use href={`#${uuid}past-participle`} x="0" y="0" />
+      <use href={`#${uuid}present-participle`} x="0" y="0" />
+      <use href={`#${uuid}third-person-singular`} x="0" y="0" />
+      <use href={`#${uuid}numbers`} x="0" y="0" />
+      <use href={`#${uuid}tense-line`} x="0" y="0" />
     </svg>
   );
 }

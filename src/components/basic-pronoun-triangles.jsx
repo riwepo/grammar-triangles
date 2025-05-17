@@ -5,7 +5,9 @@ import { useState } from "react";
 import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
-import NormalPronounTriangle from "@/components/basic-triangles/pronouns/normal-pronoun-triangle";
+import NormalPronounTriangle, {
+  DEFAULT_CLASS_NAMES,
+} from "@/components/basic-triangles/pronouns/normal-pronoun-triangle";
 import ToBePronounTriangle from "@/components/basic-triangles/pronouns/to-be-pronoun-triangle";
 import Card from "@/components/ui/card";
 
@@ -41,16 +43,15 @@ function BasicPronounTriangles() {
               uuid={svgUseIds[0]}
               colour="black"
               verb={selectedVerb}
-              visibility={{
-                triangle: true,
-                head: true,
-                headPronouns: true,
-                preterite: true,
-                preteritePronouns: true,
-                thirdPersonSingular: true,
-                thirdPersonSingularPronouns: true,
+              classNames={{
+                ...DEFAULT_CLASS_NAMES,
+                head: "visible",
+                headPronouns: "visible",
+                preterite: "visible",
+                preteritePronouns: "visible",
+                thirdPersonSingular: "visible",
+                thirdPersonSingularPronouns: "visible",
               }}
-              classNames={{ svg: "" }}
             />
           </div>
         </Card>
@@ -60,20 +61,19 @@ function BasicPronounTriangles() {
             <ToBePronounTriangle
               uuid={svgUseIds[1]}
               colour="black"
-              visibility={{
-                triangle: true,
-                am: true,
-                amPronouns: true,
-                are: true,
-                arePronouns: true,
-                is: true,
-                isPronouns: true,
-                was: true,
-                wasPronouns: true,
-                were: true,
-                werePronouns: true,
+              classNames={{
+                ...DEFAULT_CLASS_NAMES,
+                am: "visible",
+                amPronouns: "visible",
+                are: "visible",
+                arePronouns: "visible",
+                is: "visible",
+                isPronouns: "visible",
+                was: "visible",
+                wasPronouns: "visible",
+                were: "visible",
+                werePronouns: "visible",
               }}
-              classNames={{ svg: "" }}
             />
           </div>
         </Card>

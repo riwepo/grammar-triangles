@@ -2,8 +2,26 @@ import { cn } from "@/lib/utils/css-class";
 
 import { VERBS } from "@/lib/grammar-data";
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
+export const DEFAULT_CLASS_NAMES = {
+  svg: "",
+  head: "invisible",
+  am: "invisible",
+  are: "invisible",
+  is: "invisible",
+  was: "invisible",
+  were: "invisible",
+  pastParticiple: "invisible",
+  presentParticiple: "invisible",
+  numbers: "invisible",
+  tenseLine: "invisible",
+};
 
-function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
+function ToBeVerbTriangle({
+  uuid,
+  colour,
+  visibility,
+  classNames = DEFAULT_CLASS_NAMES,
+}) {
   const toBeVerb = VERBS.be;
   return (
     <svg
@@ -13,7 +31,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn(classNames.svg)}
+      className={classNames.svg}
     >
       <defs>
         <polygon
@@ -23,7 +41,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
           stroke={colour}
           strokeWidth="2"
         />
-        <g id={`${uuid}head`}>
+        <g id={`${uuid}head`} className={classNames.head}>
           <circle cx="0" cy="-32" r="4" stroke="black" fill="black" />
           <text
             x="0"
@@ -37,7 +55,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
             be
           </text>
         </g>
-        <g id={`${uuid}am`}>
+        <g id={`${uuid}am`} className={classNames.am}>
           <circle cx="18" cy="-26" r="4" stroke="black" fill="black" />
           <text
             x="24"
@@ -52,7 +70,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
             am
           </text>
         </g>
-        <g id={`${uuid}are`}>
+        <g id={`${uuid}are`} className={classNames.are}>
           <circle cx="24" cy="-16" r="4" stroke="black" fill="black" />
           <text
             x="30"
@@ -67,7 +85,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
             are
           </text>
         </g>
-        <g id={`${uuid}is`}>
+        <g id={`${uuid}is`} className={classNames.is}>
           <circle cx="30" cy="-6" r="4" stroke="black" fill="black" />
           <text
             x="36"
@@ -82,7 +100,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
             is
           </text>
         </g>
-        <g id={`${uuid}was`}>
+        <g id={`${uuid}was`} className={classNames.was}>
           <circle cx="-48" cy="28" r="4" stroke="black" fill="black" />
           <text
             x="-54"
@@ -97,7 +115,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
             was
           </text>
         </g>
-        <g id={`${uuid}were`}>
+        <g id={`${uuid}were`} className={classNames.were}>
           <circle cx="-54" cy="37" r="4" stroke="black" fill="black" />
           <text
             x="-60"
@@ -112,7 +130,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
             were
           </text>
         </g>
-        <g id={`${uuid}past-participle`}>
+        <g id={`${uuid}past-participle`} className={classNames.pastParticiple}>
           <circle cx="40" cy="37" r="4" stroke="black" fill="black" />
           <text
             x="40"
@@ -126,7 +144,10 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
             been
           </text>
         </g>
-        <g id={`${uuid}present-participle`}>
+        <g
+          id={`${uuid}present-participle`}
+          className={classNames.presentParticiple}
+        >
           <path
             transform="scale(0.12, 0.12)"
             d="M0,-30
@@ -149,7 +170,7 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
             {toBeVerb.presentParticiple}
           </text>
         </g>
-        <g id={`${uuid}numbers`}>
+        <g id={`${uuid}numbers`} className={classNames.numbers}>
           <text
             x="0"
             y="-32"
@@ -193,23 +214,20 @@ function ToBeVerbTriangle({ uuid, colour, visibility, classNames }) {
           y2="0"
           stroke="red"
           strokeWidth="2"
+          className={classNames.tenseLine}
         ></line>
       </defs>
       <use href={`#${uuid}triangle`} x="0" y="0" />
-      {visibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
-      {visibility.am && <use href={`#${uuid}am`} x="0" y="0" />}
-      {visibility.are && <use href={`#${uuid}are`} x="0" y="0" />}
-      {visibility.is && <use href={`#${uuid}is`} x="0" y="0" />}
-      {visibility.was && <use href={`#${uuid}was`} x="0" y="0" />}
-      {visibility.were && <use href={`#${uuid}were`} x="0" y="0" />}
-      {visibility.pastParticiple && (
-        <use href={`#${uuid}past-participle`} x="0" y="0" />
-      )}
-      {visibility.presentParticiple && (
-        <use href={`#${uuid}present-participle`} x="0" y="0" />
-      )}
-      {visibility.numbers && <use href={`#${uuid}numbers`} x="0" y="0" />}{" "}
-      {visibility.tenseLine && <use href={`#${uuid}tense-line`} x="0" y="0" />}
+      <use href={`#${uuid}head`} x="0" y="0" />
+      <use href={`#${uuid}am`} x="0" y="0" />
+      <use href={`#${uuid}are`} x="0" y="0" />
+      <use href={`#${uuid}is`} x="0" y="0" />
+      <use href={`#${uuid}was`} x="0" y="0" />
+      <use href={`#${uuid}were`} x="0" y="0" />
+      <use href={`#${uuid}past-participle`} x="0" y="0" />
+      <use href={`#${uuid}present-participle`} x="0" y="0" />
+      <use href={`#${uuid}numbers`} x="0" y="0" />
+      <use href={`#${uuid}tense-line`} x="0" y="0" />
     </svg>
   );
 }

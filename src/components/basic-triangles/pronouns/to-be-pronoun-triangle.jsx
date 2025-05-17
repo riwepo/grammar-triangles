@@ -1,8 +1,26 @@
 import { cn } from "@/lib/utils/css-class";
 
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
+export const DEFAULT_CLASS_NAMES = {
+  svg: "",
+  am: "invisible",
+  amPronouns: "invisible",
+  are: "invisible",
+  arePronouns: "invisible",
+  is: "invisible",
+  isPronouns: "invisible",
+  was: "invisible",
+  wasPronouns: "invisible",
+  were: "invisible",
+  werePronouns: "invisible",
+};
 
-function ToBePronounTriangle({ uuid, colour, visibility, classNames }) {
+function ToBePronounTriangle({
+  uuid,
+  colour,
+  visibility,
+  classNames = DEFAULT_CLASS_NAMES,
+}) {
   return (
     <svg
       width="100%"
@@ -176,27 +194,17 @@ function ToBePronounTriangle({ uuid, colour, visibility, classNames }) {
           we, you, they
         </text>
       </defs>
-      {visibility.triangle && <use href={`#${uuid}triangle`} x="0" y="0" />}
-      {visibility.am && <use href={`#${uuid}am`} x="0" y="0" />}
-      {visibility.amPronouns && (
-        <use href={`#${uuid}am-pronouns`} x="0" y="0" />
-      )}
-      {visibility.are && <use href={`#${uuid}are`} x="0" y="0" />}
-      {visibility.arePronouns && (
-        <use href={`#${uuid}are-pronouns`} x="0" y="0" />
-      )}
-      {visibility.is && <use href={`#${uuid}is`} x="0" y="0" />}
-      {visibility.isPronouns && (
-        <use href={`#${uuid}is-pronouns`} x="0" y="0" />
-      )}
-      {visibility.was && <use href={`#${uuid}was`} x="0" y="0" />}{" "}
-      {visibility.wasPronouns && (
-        <use href={`#${uuid}was-pronouns`} x="0" y="0" />
-      )}
-      {visibility.were && <use href={`#${uuid}were`} x="0" y="0" />}
-      {visibility.werePronouns && (
-        <use href={`#${uuid}were-pronouns`} x="0" y="0" />
-      )}
+      <use href={`#${uuid}triangle`} x="0" y="0" />
+      <use href={`#${uuid}am`} x="0" y="0" />
+      <use href={`#${uuid}am-pronouns`} x="0" y="0" />
+      <use href={`#${uuid}are`} x="0" y="0" />
+      <use href={`#${uuid}are-pronouns`} x="0" y="0" />
+      <use href={`#${uuid}is`} x="0" y="0" />
+      <use href={`#${uuid}is-pronouns`} x="0" y="0" />
+      <use href={`#${uuid}was`} x="0" y="0" />
+      <use href={`#${uuid}was-pronouns`} x="0" y="0" />
+      <use href={`#${uuid}were`} x="0" y="0" />
+      <use href={`#${uuid}were-pronouns`} x="0" y="0" />
     </svg>
   );
 }

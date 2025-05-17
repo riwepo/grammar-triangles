@@ -1,8 +1,23 @@
 import { cn } from "@/lib/utils/css-class";
 
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
+export const DEFAULT_CLASS_NAMES = {
+  svg: "",
+  head: "invisible",
+  headPronouns: "invisible",
+  preterite: "invisible",
+  preteritePronouns: "invisible",
+  thirdPersonSingular: "invisible",
+  thirdPersonSingularPronouns: "invisible",
+};
 
-function NormalPronounTriangle({ uuid, colour, verb, visibility, classNames }) {
+function NormalPronounTriangle({
+  uuid,
+  colour,
+  verb,
+  visibility,
+  classNames = DEFAULT_CLASS_NAMES,
+}) {
   return (
     <svg
       width="100%"
@@ -11,7 +26,7 @@ function NormalPronounTriangle({ uuid, colour, verb, visibility, classNames }) {
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn(classNames.svg)}
+      className={classNames.svg}
     >
       <defs>
         <polygon
@@ -21,7 +36,7 @@ function NormalPronounTriangle({ uuid, colour, verb, visibility, classNames }) {
           stroke={colour}
           strokeWidth="2"
         />
-        <g id={`${uuid}head`}>
+        <g id={`${uuid}head`} className={classNames.head}>
           <circle cx="0" cy="-32" r="4" stroke="black" fill="black" />
           <text
             x="0"
@@ -44,11 +59,12 @@ function NormalPronounTriangle({ uuid, colour, verb, visibility, classNames }) {
           strokeWidth="0.5"
           fontSize="10px"
           textAnchor="end"
+          className={classNames.headPronouns}
         >
           I, you, we, they
         </text>
 
-        <g id={`${uuid}preterite`}>
+        <g id={`${uuid}preterite`} className={classNames.preterite}>
           <circle cx="-40" cy="37" r="4" stroke="black" fill="black" />
           <text
             x="-40"
@@ -72,6 +88,7 @@ function NormalPronounTriangle({ uuid, colour, verb, visibility, classNames }) {
           fontSize="10px"
           textAnchor="end"
           dominantBaseline="middle"
+          className={classNames.preteritePronouns}
         >
           everybody
         </text>
@@ -101,25 +118,18 @@ function NormalPronounTriangle({ uuid, colour, verb, visibility, classNames }) {
           fontSize="10px"
           textAnchor="end"
           dominantBaseline="middle"
+          className={classNames.thirdPersonSingularPronouns}
         >
           he, she, it
         </text>
       </defs>
-      {visibility.triangle && <use href={`#${uuid}triangle`} x="0" y="0" />}
-      {visibility.head && <use href={`#${uuid}head`} x="0" y="0" />}
-      {visibility.headPronouns && (
-        <use href={`#${uuid}head-pronouns`} x="0" y="0" />
-      )}
-      {visibility.preterite && <use href={`#${uuid}preterite`} x="0" y="0" />}
-      {visibility.preteritePronouns && (
-        <use href={`#${uuid}preterite-pronouns`} x="0" y="0" />
-      )}
-      {visibility.thirdPersonSingular && (
-        <use href={`#${uuid}third-person-singular`} x="0" y="0" />
-      )}{" "}
-      {visibility.thirdPersonSingularPronouns && (
-        <use href={`#${uuid}third-person-singular-pronouns`} x="0" y="0" />
-      )}
+      <use href={`#${uuid}triangle`} x="0" y="0" />
+      <use href={`#${uuid}head`} x="0" y="0" />
+      <use href={`#${uuid}head-pronouns`} x="0" y="0" />
+      <use href={`#${uuid}preterite`} x="0" y="0" />
+      <use href={`#${uuid}preterite-pronouns`} x="0" y="0" />
+      <use href={`#${uuid}third-person-singular`} x="0" y="0" />
+      <use href={`#${uuid}third-person-singular-pronouns`} x="0" y="0" />
     </svg>
   );
 }
