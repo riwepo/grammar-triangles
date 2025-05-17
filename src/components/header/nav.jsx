@@ -30,8 +30,8 @@ function Nav() {
     },
     {
       key: 6,
-      href: `/inflected-tenses`,
-      name: "Inflected Tenses",
+      href: `/tenses`,
+      name: "Tenses",
     },
   ];
 
