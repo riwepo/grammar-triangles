@@ -93,7 +93,10 @@ function NormalPronounTriangle({
           everybody
         </text>
 
-        <g id={`${uuid}third-person-singular`}>
+        <g
+          id={`${uuid}third-person-singular`}
+          className={classNames.thirdPersonSingular}
+        >
           <circle cx="18" cy="-26" r="4" stroke="black" fill="black" />
           <text
             x="24"
