@@ -36,7 +36,7 @@ function NormalPronounTriangle({
           stroke={colour}
           strokeWidth="2"
         />
-        <g id={`${uuid}head`} className={classNames.head}>
+        <g id={`${uuid}head`}>
           <circle cx="0" cy="-32" r="4" stroke="black" fill="black" />
           <text
             x="0"
@@ -59,12 +59,11 @@ function NormalPronounTriangle({
           strokeWidth="0.5"
           fontSize="10px"
           textAnchor="end"
-          className={classNames.headPronouns}
         >
           I, you, we, they
         </text>
 
-        <g id={`${uuid}preterite`} className={classNames.preterite}>
+        <g id={`${uuid}preterite`}>
           <circle cx="-40" cy="37" r="4" stroke="black" fill="black" />
           <text
             x="-40"
@@ -88,15 +87,11 @@ function NormalPronounTriangle({
           fontSize="10px"
           textAnchor="end"
           dominantBaseline="middle"
-          className={classNames.preteritePronouns}
         >
           everybody
         </text>
 
-        <g
-          id={`${uuid}third-person-singular`}
-          className={classNames.thirdPersonSingular}
-        >
+        <g id={`${uuid}third-person-singular`}>
           <circle cx="18" cy="-26" r="4" stroke="black" fill="black" />
           <text
             x="24"
@@ -121,18 +116,42 @@ function NormalPronounTriangle({
           fontSize="10px"
           textAnchor="end"
           dominantBaseline="middle"
-          className={classNames.thirdPersonSingularPronouns}
         >
           he, she, it
         </text>
       </defs>
       <use href={`#${uuid}triangle`} x="0" y="0" />
-      <use href={`#${uuid}head`} x="0" y="0" />
-      <use href={`#${uuid}head-pronouns`} x="0" y="0" />
-      <use href={`#${uuid}preterite`} x="0" y="0" />
-      <use href={`#${uuid}preterite-pronouns`} x="0" y="0" />
-      <use href={`#${uuid}third-person-singular`} x="0" y="0" />
-      <use href={`#${uuid}third-person-singular-pronouns`} x="0" y="0" />
+      <use href={`#${uuid}head`} x="0" y="0" className={classNames.head} />
+      <use
+        href={`#${uuid}head-pronouns`}
+        x="0"
+        y="0"
+        className={classNames.headPronouns}
+      />
+      <use
+        href={`#${uuid}preterite`}
+        x="0"
+        y="0"
+        className={classNames.preterite}
+      />
+      <use
+        href={`#${uuid}preterite-pronouns`}
+        x="0"
+        y="0"
+        className={classNames.preteritePronouns}
+      />
+      <use
+        href={`#${uuid}third-person-singular`}
+        x="0"
+        y="0"
+        className={classNames.thirdPersonSingular}
+      />
+      <use
+        href={`#${uuid}third-person-singular-pronouns`}
+        x="0"
+        y="0"
+        className={classNames.thirdPersonSingularPronouns}
+      />
     </svg>
   );
 }
