@@ -38,7 +38,7 @@ function NormalVerbTriangle({
           stroke={colour}
           strokeWidth="2"
         />
-        <g id={`${uuid}head`} className={classNames.head}>
+        <g id={`${uuid}head`}>
           <circle cx="0" cy="-32" r="4" stroke="black" fill="black" />
           <text
             x="0"
@@ -52,7 +52,7 @@ function NormalVerbTriangle({
             {verb.head}
           </text>
         </g>
-        <g id={`${uuid}preterite`} className={classNames.preterite}>
+        <g id={`${uuid}preterite`}>
           <circle cx="-40" cy="37" r="4" stroke="black" fill="black" />
           <text
             x="-40"
@@ -66,7 +66,7 @@ function NormalVerbTriangle({
             {verb.preterite}
           </text>
         </g>
-        <g id={`${uuid}past-participle`} className={classNames.pastParticiple}>
+        <g id={`${uuid}past-participle`}>
           <circle cx="40" cy="37" r="4" stroke="black" fill="black" />
           <text
             x="40"
@@ -80,10 +80,7 @@ function NormalVerbTriangle({
             {verb.pastParticiple}
           </text>
         </g>
-        <g
-          id={`${uuid}present-participle`}
-          className={classNames.presentParticiple}
-        >
+        <g id={`${uuid}present-participle`}>
           <path
             transform="scale(0.12, 0.12)"
             d="M0,-30
@@ -106,10 +103,7 @@ function NormalVerbTriangle({
             {verb.presentParticiple}
           </text>
         </g>
-        <g
-          id={`${uuid}third-person-singular`}
-          className={classNames.thirdPersonSingular}
-        >
+        <g id={`${uuid}third-person-singular`}>
           <circle cx="18" cy="-26" r="4" stroke="black" fill="black" />
           <text
             x="24"
@@ -124,7 +118,7 @@ function NormalVerbTriangle({
             {verb.thirdPersonSingular}
           </text>
         </g>
-        <g id={`${uuid}numbers`} className={classNames.numbers}>
+        <g id={`${uuid}numbers`}>
           <text
             x="0"
             y="-32"
@@ -189,17 +183,51 @@ function NormalVerbTriangle({
           y2="0"
           stroke="red"
           strokeWidth="2"
-          className={classNames.tenseLine}
         ></line>
       </defs>
-      <use href={`#${uuid}triangle`} x="0" y="0" />
-      <use href={`#${uuid}head`} x="0" y="0" />
-      <use href={`#${uuid}preterite`} x="0" y="0" />
-      <use href={`#${uuid}past-participle`} x="0" y="0" />
-      <use href={`#${uuid}present-participle`} x="0" y="0" />
-      <use href={`#${uuid}third-person-singular`} x="0" y="0" />
-      <use href={`#${uuid}numbers`} x="0" y="0" />
-      <use href={`#${uuid}tense-line`} x="0" y="0" />
+      <use
+        href={`#${uuid}triangle`}
+        x="0"
+        y="0"
+        className={classNames.triangle}
+      />
+      <use href={`#${uuid}head`} x="0" y="0" className={classNames.head} />
+      <use
+        href={`#${uuid}preterite`}
+        x="0"
+        y="0"
+        className={classNames.preterite}
+      />
+      <use
+        href={`#${uuid}past-participle`}
+        x="0"
+        y="0"
+        className={classNames.pastParticiple}
+      />
+      <use
+        href={`#${uuid}present-participle`}
+        x="0"
+        y="0"
+        className={classNames.presentParticiple}
+      />
+      <use
+        href={`#${uuid}third-person-singular`}
+        x="0"
+        y="0"
+        className={classNames.thirdPersonSingular}
+      />
+      <use
+        href={`#${uuid}numbers`}
+        x="0"
+        y="0"
+        className={classNames.numbers}
+      />
+      <use
+        href={`#${uuid}tense-line`}
+        x="0"
+        y="0"
+        className={classNames.tenseLine}
+      />
     </svg>
   );
 }
