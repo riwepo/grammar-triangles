@@ -35,13 +35,29 @@ function Tenses() {
       preterite: easeInVisible,
       tenseLine: easeInVisible,
     },
-    question: {
+    negative: {
       ...DEFAULT_VERB_CLASS_NAMES,
       svg: "col-start-6 row-start-1",
       head: "visible",
       thirdPersonSingular: easeOutInvisible,
       preterite: easeOutInvisible,
       tenseLine: easeOutInvisible,
+    },
+  };
+  const presentSimpleBossVerbPronounsClassNamesDict = {
+    statement: {
+      ...DEFAULT_VERB_CLASS_NAMES,
+      svg: "col-start-6 row-start-1",
+      headPronouns: easeInVisible,
+      thirdPersonSingularPronouns: easeInVisible,
+      preteritePronouns: easeInVisible,
+    },
+    negative: {
+      ...DEFAULT_VERB_CLASS_NAMES,
+      svg: "col-start-6 row-start-1",
+      headPronouns: easeOutInvisible,
+      thirdPersonSingularPronouns: easeOutInvisible,
+      preteritePronouns: easeOutInvisible,
     },
   };
   const [selectedSentenceType, setSentenceType] = useState(
@@ -53,6 +69,10 @@ function Tenses() {
   );
   const [presentSimpleBossVerbClassNames, setPresentSimpleBossVerbClassNames] =
     useState(presentSimpleBossVerbClassNamesDict.statement);
+  const [
+    presentSimpleBossVerbPronounsClassNames,
+    setPresentSimpleBossVerbPronounsClassNames,
+  ] = useState(presentSimpleBossVerbPronounsClassNamesDict.statement);
 
   let svgUseIds = SVG_USE_ID_PLACEHOLDERS;
   const handleContainerLoaded = (mySvgUseIds) => {
@@ -79,9 +99,15 @@ function Tenses() {
       setPresentSimpleBossVerbClassNames(
         presentSimpleBossVerbClassNamesDict.statement,
       );
+      setPresentSimpleBossVerbPronounsClassNames(
+        presentSimpleBossVerbPronounsClassNamesDict.statement,
+      );
     } else if (key === SENTENCE_TYPES.negative) {
       setPresentSimpleBossVerbClassNames(
-        presentSimpleBossVerbClassNamesDict.question,
+        presentSimpleBossVerbClassNamesDict.negative,
+      );
+      setPresentSimpleBossVerbPronounsClassNames(
+        presentSimpleBossVerbPronounsClassNamesDict.negative,
       );
     }
   };
@@ -168,19 +194,13 @@ function Tenses() {
             <NormalPronounTriangle
               uuid={svgUseIds[3]}
               verb={selectedVerb}
-              visibility={{
+              /*            visibility={{
                 headPronouns: true,
                 thirdPersonSingularPronouns: true,
                 preteritePronouns: true,
-              }}
+              }} */
               colour="black"
-              classNames={{
-                ...DEFAULT_PRONOUN_CLASS_NAMES,
-                svg: `${hiddenForNot} col-start-6 row-start-1`,
-                headPronouns: "visible",
-                thirdPersonSingularPronouns: "visible",
-                preteritePronouns: "visible",
-              }}
+              classNames={presentSimpleBossVerbPronounsClassNames}
             />
             <div className="col-span-6 col-start-1 row-start-2 bg-gray-200"></div>
             <div className="col-start-1 row-start-3 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
