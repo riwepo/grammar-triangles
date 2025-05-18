@@ -194,17 +194,47 @@ function ToBePronounTriangle({
           we, you, they
         </text>
       </defs>
-      <use href={`#${uuid}triangle`} x="0" y="0" />
-      <use href={`#${uuid}am`} x="0" y="0" />
-      <use href={`#${uuid}am-pronouns`} x="0" y="0" />
-      <use href={`#${uuid}are`} x="0" y="0" />
-      <use href={`#${uuid}are-pronouns`} x="0" y="0" />
-      <use href={`#${uuid}is`} x="0" y="0" />
-      <use href={`#${uuid}is-pronouns`} x="0" y="0" />
-      <use href={`#${uuid}was`} x="0" y="0" />
-      <use href={`#${uuid}was-pronouns`} x="0" y="0" />
-      <use href={`#${uuid}were`} x="0" y="0" />
-      <use href={`#${uuid}were-pronouns`} x="0" y="0" />
+      <use
+        href={`#${uuid}triangle`}
+        x="0"
+        y="0"
+        className={classNames.triangle}
+      />
+      <use href={`#${uuid}am`} x="0" y="0" className={classNames.amPronouns} />
+      <use
+        href={`#${uuid}am-pronouns`}
+        x="0"
+        y="0"
+        className={classNames.amPronouns}
+      />
+      <use href={`#${uuid}are`} x="0" y="0" className={classNames.are} />
+      <use
+        href={`#${uuid}are-pronouns`}
+        x="0"
+        y="0"
+        className={classNames.arePronouns}
+      />
+      <use href={`#${uuid}is`} x="0" y="0" className={classNames.is} />
+      <use
+        href={`#${uuid}is-pronouns`}
+        x="0"
+        y="0"
+        className={classNames.isPronouns}
+      />
+      <use href={`#${uuid}was`} x="0" y="0" className={classNames.was} />
+      <use
+        href={`#${uuid}was-pronouns`}
+        x="0"
+        y="0"
+        className={classNames.wasPronouns}
+      />
+      <use href={`#${uuid}were`} x="0" y="0" className={classNames.were} />
+      <use
+        href={`#${uuid}were-pronouns`}
+        x="0"
+        y="0"
+        className={classNames.werePronouns}
+      />
     </svg>
   );
 }
