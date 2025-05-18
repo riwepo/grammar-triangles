@@ -21,6 +21,29 @@ import Card from "@/components/ui/card";
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
 
 function Tenses() {
+  const easeInVisible =
+    "opacity-100 transition-opacity duration-2000 ease-in-out";
+  const easeOutInvisible =
+    "opacity-0 transition-opacity duration-2000 ease-in-out";
+
+  const presentSimpleBossVerbClassNamesDict = {
+    statement: {
+      ...DEFAULT_VERB_CLASS_NAMES,
+      svg: "col-start-6 row-start-1",
+      head: "visible",
+      thirdPersonSingular: easeInVisible,
+      preterite: easeInVisible,
+      tenseLine: easeInVisible,
+    },
+    question: {
+      ...DEFAULT_VERB_CLASS_NAMES,
+      svg: "col-start-6 row-start-1",
+      head: "visible",
+      thirdPersonSingular: easeOutInvisible,
+      preterite: easeOutInvisible,
+      tenseLine: easeOutInvisible,
+    },
+  };
   const [selectedSentenceType, setSentenceType] = useState(
     SENTENCE_TYPES.statement,
   );
@@ -28,12 +51,8 @@ function Tenses() {
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
   );
-  const [bossVerbClassNames, setBossVerbClassNames] = useState({
-    head: "visible",
-    thirdPersonSingular: "visible",
-    preterite: "visible",
-    tenseLine: "visible",
-  });
+  const [presentSimpleBossVerbClassNames, setPresentSimpleBossVerbClassNames] =
+    useState(presentSimpleBossVerbClassNamesDict.statement);
 
   let svgUseIds = SVG_USE_ID_PLACEHOLDERS;
   const handleContainerLoaded = (mySvgUseIds) => {
@@ -45,7 +64,7 @@ function Tenses() {
   };
   const handleSentenceTypeSelected = (key) => {
     setSentenceType(key);
-    // todo fix this
+    /*  // todo fix this
     const myNegative = key === SENTENCE_TYPES.negative;
     const myVisibleForNot = myNegative
       ? "opacity-100 transition-opacity duration-2000 ease-in-out"
@@ -55,7 +74,16 @@ function Tenses() {
       thirdPersonSingular: { myVisibleForNot },
       preterite: { myVisibleForNot },
       tenseLine: { myVisibleForNot },
-    });
+    }); */
+    if (key === SENTENCE_TYPES.statement) {
+      setPresentSimpleBossVerbClassNames(
+        presentSimpleBossVerbClassNamesDict.statement,
+      );
+    } else if (key === SENTENCE_TYPES.negative) {
+      setPresentSimpleBossVerbClassNames(
+        presentSimpleBossVerbClassNamesDict.question,
+      );
+    }
   };
 
   const statement = selectedSentenceType === SENTENCE_TYPES.statement;
@@ -105,7 +133,7 @@ function Tenses() {
                 head: "visible",
                 thirdPersonSingular: "visible",
                 preterite: "visible",
-                tenseLine: "viaible",
+                tenseLine: "visible",
               }}
             />
             <NormalPronounTriangle
@@ -135,14 +163,7 @@ function Tenses() {
               verb={selectedVerb}
               // visibility={bossVerbVisibility}
               colour="black"
-              classNames={{
-                ...DEFAULT_VERB_CLASS_NAMES,
-                svg: "col-start-6 row-start-1",
-                head: "visible",
-                thirdPersonSingular: "visible",
-                preterite: "visible",
-                tenseLine: "visible",
-              }}
+              classNames={presentSimpleBossVerbClassNames}
             />
             <NormalPronounTriangle
               uuid={svgUseIds[3]}
