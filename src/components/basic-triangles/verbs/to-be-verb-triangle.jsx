@@ -4,6 +4,7 @@ import { VERBS } from "@/lib/grammar-data";
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 export const DEFAULT_CLASS_NAMES = {
   svg: "",
+  triangle: "invisible",
   head: "invisible",
   am: "invisible",
   are: "invisible",
@@ -16,12 +17,7 @@ export const DEFAULT_CLASS_NAMES = {
   tenseLine: "invisible",
 };
 
-function ToBeVerbTriangle({
-  uuid,
-  colour,
-  visibility,
-  classNames = DEFAULT_CLASS_NAMES,
-}) {
+function ToBeVerbTriangle({ uuid, classNames = DEFAULT_CLASS_NAMES }) {
   const toBeVerb = VERBS.be;
   return (
     <svg
@@ -37,8 +33,6 @@ function ToBeVerbTriangle({
         <polygon
           id={`${uuid}triangle`}
           points="-50,43 0,-43 50,43"
-          fill="none"
-          stroke={colour}
           strokeWidth="2"
         />
         <g id={`${uuid}head`}>

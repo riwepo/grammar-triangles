@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils/css-class";
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 export const DEFAULT_CLASS_NAMES = {
   svg: "",
+  triangle: "invisible",
   am: "invisible",
   amPronouns: "invisible",
   are: "invisible",
@@ -15,12 +16,7 @@ export const DEFAULT_CLASS_NAMES = {
   werePronouns: "invisible",
 };
 
-function ToBePronounTriangle({
-  uuid,
-  colour,
-  visibility,
-  classNames = DEFAULT_CLASS_NAMES,
-}) {
+function ToBePronounTriangle({ uuid, classNames = DEFAULT_CLASS_NAMES }) {
   return (
     <svg
       width="100%"
@@ -35,8 +31,6 @@ function ToBePronounTriangle({
         <polygon
           id={`${uuid}triangle`}
           points="-50,43 0,-43 50,43"
-          fill="none"
-          stroke={colour}
           strokeWidth="2"
         />
         <g id={`${uuid}head`}>

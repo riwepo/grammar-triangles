@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils/css-class";
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 export const DEFAULT_CLASS_NAMES = {
   svg: "",
+  triangle: "invisible",
   head: "invisible",
   headPronouns: "invisible",
   preterite: "invisible",
@@ -13,9 +14,7 @@ export const DEFAULT_CLASS_NAMES = {
 
 function NormalPronounTriangle({
   uuid,
-  colour,
   verb,
-  visibility,
   classNames = DEFAULT_CLASS_NAMES,
 }) {
   return (
@@ -32,8 +31,6 @@ function NormalPronounTriangle({
         <polygon
           id={`${uuid}triangle`}
           points="-50,43 0,-43 50,43"
-          fill="none"
-          stroke={colour}
           strokeWidth="2"
         />
         <g id={`${uuid}head`}>
@@ -120,7 +117,12 @@ function NormalPronounTriangle({
           he, she, it
         </text>
       </defs>
-      <use href={`#${uuid}triangle`} x="0" y="0" />
+      <use
+        href={`#${uuid}triangle`}
+        x="0"
+        y="0"
+        className={classNames.triangle}
+      />
       <use href={`#${uuid}head`} x="0" y="0" className={classNames.head} />
       <use
         href={`#${uuid}head-pronouns`}

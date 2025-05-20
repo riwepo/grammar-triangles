@@ -45,6 +45,7 @@ function BasicPronounTriangles() {
               verb={selectedVerb}
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
+                triangle: "visible stroke-black fill-none",
                 head: "visible",
                 headPronouns: "visible",
                 preterite: "visible",
@@ -63,6 +64,7 @@ function BasicPronounTriangles() {
               colour="black"
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
+                triangle: "visible stroke-black fill-none",
                 am: "visible",
                 amPronouns: "visible",
                 are: "visible",

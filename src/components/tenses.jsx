@@ -6,6 +6,9 @@ import GrammarContainer, {
 } from "@/components/grammar-container";
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_VERB_CLASS_NAMES,
+  BOSS_VERB_TRIANGLE_CLASS,
+  HELPER_BE_VERB_TRIANGLE_CLASS,
+  HELPER_HAVE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import NormalPronounTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_PRONOUN_CLASS_NAMES,
@@ -30,6 +33,7 @@ function Tenses() {
     statement: {
       ...DEFAULT_VERB_CLASS_NAMES,
       svg: "col-start-6 row-start-1",
+      triangle: BOSS_VERB_TRIANGLE_CLASS,
       head: "visible",
       thirdPersonSingular: easeInVisible,
       preterite: easeInVisible,
@@ -38,6 +42,7 @@ function Tenses() {
     negative: {
       ...DEFAULT_VERB_CLASS_NAMES,
       svg: "col-start-6 row-start-1",
+      triangle: BOSS_VERB_TRIANGLE_CLASS,
       head: "visible",
       thirdPersonSingular: easeOutInvisible,
       preterite: easeOutInvisible,
@@ -46,14 +51,14 @@ function Tenses() {
   };
   const presentSimpleBossVerbPronounsClassNamesDict = {
     statement: {
-      ...DEFAULT_VERB_CLASS_NAMES,
-      svg: "col-start-6 row-start-1",
+      ...DEFAULT_PRONOUN_CLASS_NAMES,
+      svg: "col-start-6 row-start-1 invisible",
       headPronouns: easeInVisible,
       thirdPersonSingularPronouns: easeInVisible,
       preteritePronouns: easeInVisible,
     },
     negative: {
-      ...DEFAULT_VERB_CLASS_NAMES,
+      ...DEFAULT_PRONOUN_CLASS_NAMES,
       svg: "col-start-6 row-start-1",
       headPronouns: easeOutInvisible,
       thirdPersonSingularPronouns: easeOutInvisible,
@@ -84,17 +89,6 @@ function Tenses() {
   };
   const handleSentenceTypeSelected = (key) => {
     setSentenceType(key);
-    /*  // todo fix this
-    const myNegative = key === SENTENCE_TYPES.negative;
-    const myVisibleForNot = myNegative
-      ? "opacity-100 transition-opacity duration-2000 ease-in-out"
-      : "opacity-0 transition-opacity duration-2000 ease-in-out";
-    setBossVerbClassNames({
-      head: { myVisibleForNot },
-      thirdPersonSingular: { myVisibleForNot },
-      preterite: { myVisibleForNot },
-      tenseLine: { myVisibleForNot },
-    }); */
     if (key === SENTENCE_TYPES.statement) {
       setPresentSimpleBossVerbClassNames(
         presentSimpleBossVerbClassNamesDict.statement,
@@ -112,16 +106,10 @@ function Tenses() {
     }
   };
 
-  const statement = selectedSentenceType === SENTENCE_TYPES.statement;
-  const question = selectedSentenceType === SENTENCE_TYPES.question;
-
   const negative = selectedSentenceType === SENTENCE_TYPES.negative;
   const visibleForNot = negative
     ? "opacity-100 transition-opacity duration-2000 ease-in-out"
     : "opacity-0 transition-opacity duration-2000 ease-in-out";
-  const hiddenForNot = negative
-    ? "opacity-0 transition-opacity duration-2000 ease-in-out"
-    : "opacity-100 transition-opacity duration-2000 ease-in-out";
 
   return (
     <GrammarContainer
@@ -218,10 +206,10 @@ function Tenses() {
                 were: true,
                 tenseLine: true,
               }} */
-              colour="blue"
               classNames={{
                 ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
                 svg: "col-start-4 row-start-3",
+                triangle: HELPER_BE_VERB_TRIANGLE_CLASS,
                 am: "visible",
                 are: "visible",
                 is: "visible",
@@ -259,10 +247,10 @@ function Tenses() {
               uuid={svgUseIds[6]}
               verb={selectedVerb}
               // visibility={{ presentParticiple: true }}
-              colour="black"
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: "col-start-6 row-start-3",
+                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 presentParticiple: "visible",
               }}
             />
@@ -281,10 +269,10 @@ function Tenses() {
                 thirdPersonSingular: true,
                 tenseLine: true,
               }} */
-              colour="green"
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: "col-start-2 row-start-5",
+                triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                 head: "visible",
                 preterite: "visible",
                 thirdPersonSingular: "visible",
@@ -299,7 +287,6 @@ function Tenses() {
                 thirdPersonSingularPronouns: true,
                 preteritePronouns: true,
               }} */
-              colour="green"
               classNames={{
                 ...DEFAULT_PRONOUN_CLASS_NAMES,
                 svg: "col-start-2 row-start-5",
@@ -317,10 +304,10 @@ function Tenses() {
               uuid={svgUseIds[9]}
               verb={selectedVerb}
               visibility={{ pastParticiple: true }}
-              colour="black"
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: "col-start-6 row-start-5",
+                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 pastParticiple: "visible",
               }}
             />
@@ -343,6 +330,7 @@ function Tenses() {
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: "col-start-2 row-start-7",
+                triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                 head: "visible",
                 preterite: "visible",
                 thirdPersonSingular: "visible",
@@ -361,6 +349,7 @@ function Tenses() {
               classNames={{
                 ...DEFAULT_PRONOUN_CLASS_NAMES,
                 svg: "col-start-2 row-start-7",
+                triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                 headPronouns: "visible",
                 thirdPersonSingularPronouns: "visible",
                 preteritePronouns: "visible",
@@ -375,9 +364,9 @@ function Tenses() {
               uuid={svgUseIds[12]}
               verb={VERBS.be}
               // visibility={{ pastParticiple: true }}
-              colour="blue"
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
+                triangle: HELPER_BE_VERB_TRIANGLE_CLASS,
                 svg: "col-start-4 row-start-7",
                 pastParticiple: "visible",
               }}
@@ -386,10 +375,10 @@ function Tenses() {
               uuid={svgUseIds[13]}
               verb={selectedVerb}
               // visibility={{ presentParticiple: true }}
-              colour="black"
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: "col-start-6 row-start-7",
+                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 presentParticiple: "visible",
               }}
             />

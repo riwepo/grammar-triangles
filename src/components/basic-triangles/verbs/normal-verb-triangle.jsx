@@ -3,7 +3,8 @@ import { cn } from "@/lib/utils/css-class";
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 
 export const DEFAULT_CLASS_NAMES = {
-  svg: "",
+  svg: "invisible",
+  triangle: "invisible",
   head: "invisible",
   preterite: "invisible",
   pastParticiple: "invisible",
@@ -13,13 +14,12 @@ export const DEFAULT_CLASS_NAMES = {
   tenseLine: "invisible",
 };
 
-function NormalVerbTriangle({
-  uuid,
-  colour,
-  verb,
-  visibility,
-  classNames = DEFAULT_CLASS_NAMES,
-}) {
+export const BOSS_VERB_TRIANGLE_CLASS = "stroke-black fill-none";
+export const HELPER_BE_VERB_TRIANGLE_CLASS = "stroke-blue-500 fill-blue-500/10";
+export const HELPER_HAVE_VERB_TRIANGLE_CLASS =
+  "stroke-green-500 fill-green-500/10";
+
+function NormalVerbTriangle({ uuid, verb, classNames = DEFAULT_CLASS_NAMES }) {
   return (
     <svg
       width="100%"
@@ -34,8 +34,6 @@ function NormalVerbTriangle({
         <polygon
           id={`${uuid}triangle`}
           points="-50,43 0,-43 50,43"
-          fill="none"
-          stroke={colour}
           strokeWidth="2"
         />
         <g id={`${uuid}head`}>

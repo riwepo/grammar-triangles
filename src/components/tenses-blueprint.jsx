@@ -6,6 +6,9 @@ import GrammarContainer, {
 } from "@/components/grammar-container";
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES,
+  BOSS_VERB_TRIANGLE_CLASS,
+  HELPER_BE_VERB_TRIANGLE_CLASS,
+  HELPER_HAVE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import Card from "@/components/ui/card";
 
@@ -46,6 +49,7 @@ function TensesBlueprint({ bossVerb }) {
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-1",
+                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 head: "visible",
               }}
             />
@@ -62,6 +66,7 @@ function TensesBlueprint({ bossVerb }) {
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-3 row-start-3",
+                triangle: HELPER_BE_VERB_TRIANGLE_CLASS,
                 head: "visible",
               }}
             />
@@ -72,6 +77,7 @@ function TensesBlueprint({ bossVerb }) {
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-3",
+                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 presentParticiple: "visible",
               }}
             />
@@ -87,6 +93,7 @@ function TensesBlueprint({ bossVerb }) {
               colour="green"
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
+                triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                 svg: "col-start-2 row-start-5",
                 head: "visible",
               }}
@@ -98,6 +105,7 @@ function TensesBlueprint({ bossVerb }) {
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-5",
+                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 pastParticiple: "visible",
               }}
             />
@@ -114,6 +122,7 @@ function TensesBlueprint({ bossVerb }) {
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-2 row-start-7",
+                triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                 head: "VISIBLE",
               }}
             />
@@ -124,6 +133,7 @@ function TensesBlueprint({ bossVerb }) {
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-3 row-start-7",
+                triangle: HELPER_BE_VERB_TRIANGLE_CLASS,
                 pastParticiple: "visible",
               }}
             />
@@ -134,6 +144,7 @@ function TensesBlueprint({ bossVerb }) {
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-7",
+                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 presentParticiple: "VISIBLE",
               }}
             />

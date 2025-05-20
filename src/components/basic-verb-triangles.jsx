@@ -46,16 +46,18 @@ function BasicVerbTriangles() {
               uuid={svgUseIds[0]}
               colour="black"
               verb={selectedVerb}
-              visibility={{
+              /*  visibility={{
+                triangle: true,
                 head: true,
                 preterite: true,
                 pastParticiple: true,
                 presentParticiple: true,
                 thirdPersonSingular: true,
                 numbers: true,
-              }}
+              }} */
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
+                triangle: "visible stroke-black fill-none",
                 head: "visible",
                 preterite: "visible",
                 pastParticiple: "visible",
@@ -71,8 +73,7 @@ function BasicVerbTriangles() {
             <p className="text-2xl font-bold">The Verb 'To Be'</p>
             <ToBeVerbTriangle
               uuid={svgUseIds[1]}
-              colour="black"
-              visibility={{
+              /* visibility={{
                 head: true,
                 pastParticiple: true,
                 presentParticiple: true,
@@ -82,9 +83,10 @@ function BasicVerbTriangles() {
                 was: true,
                 were: true,
                 numbers: true,
-              }}
+              }} */
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
+                triangle: "visible stroke-black fill-none",
                 head: "visible",
                 pastParticiple: "visible",
                 presentParticiple: "visible",
