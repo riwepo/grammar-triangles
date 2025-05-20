@@ -10,3 +10,6 @@ page names
 'the pattern'
 'modal verbs'
 'tenses'
+
+create components for boss, have and be helper verbs
+add property to determine if conjugated
