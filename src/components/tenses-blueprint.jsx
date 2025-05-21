@@ -4,13 +4,14 @@ import { useState } from "react";
 import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
-import { DEFAULT_CLASS_NAMES } from "@/components/basic-triangles/verbs/normal-verb-triangle";
+import { DEFAULT_CLASS_NAMES } from "@/components/triangles/basic/verbs/normal-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
+import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
+import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
+
 import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/grammar-data";
-import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
-import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 
 function TensesBlueprint() {
   // the selected verb

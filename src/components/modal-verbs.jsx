@@ -7,8 +7,10 @@ import GrammarContainer, {
 } from "@/components/grammar-container";
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES,
-} from "@/components/basic-triangles/verbs/normal-verb-triangle";
+} from "@/components/triangles/basic/verbs/normal-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
+import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
+import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 
 import Card from "@/components/ui/card";
 
@@ -18,8 +20,6 @@ import {
   SUBJECT_PRONOUNS,
   SENTENCE_TYPES,
 } from "@/lib/grammar-data";
-import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
-import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 
 function ModalVerbs() {
   const [selectedSentenceType, setSentenceType] = useState(

@@ -6,22 +6,22 @@ import GrammarContainer, {
 } from "@/components/grammar-container";
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_VERB_CLASS_NAMES,
-} from "@/components/basic-triangles/verbs/normal-verb-triangle";
+} from "@/components/triangles/basic/verbs/normal-verb-triangle";
 import NormalPronounTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_PRONOUN_CLASS_NAMES,
-} from "@/components/basic-triangles/pronouns/normal-pronoun-triangle";
+} from "@/components/triangles/basic/pronouns/normal-pronoun-triangle";
 import ToBeVerbTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_TO_BE_VERB_CLASS_NAMES,
-} from "@/components/basic-triangles/verbs/to-be-verb-triangle";
+} from "@/components/triangles/basic/verbs/to-be-verb-triangle";
 import ToBePronounTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_TO_BE_PRONOUN_CLASS_NAMES,
-} from "@/components/basic-triangles/pronouns/to-be-pronoun-triangle";
+} from "@/components/triangles/basic/pronouns/to-be-pronoun-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
+import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
+import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
-import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
-import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 
 function Tenses() {
   const easeInVisible =
