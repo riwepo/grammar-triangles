@@ -10,6 +10,7 @@ import NormalVerbTriangle, {
   HELPER_BE_VERB_TRIANGLE_CLASS,
   HELPER_HAVE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
+import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/grammar-data";
@@ -42,14 +43,12 @@ function TensesBlueprint({ bossVerb }) {
             <p className="col-start-1 row-start-1 mx-auto content-center">
               Simple
             </p>
-            <NormalVerbTriangle
+            <BossVerbTriangle
               uuid={svgUseIds[0]}
               verb={selectedVerb}
-              colour="black"
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-1",
-                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 head: "visible",
               }}
             />
@@ -70,14 +69,12 @@ function TensesBlueprint({ bossVerb }) {
                 head: "visible",
               }}
             />
-            <NormalVerbTriangle
+            <BossVerbTriangle
               uuid={svgUseIds[2]}
               verb={selectedVerb}
-              colour="black"
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-3",
-                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 presentParticiple: "visible",
               }}
             />
@@ -98,14 +95,12 @@ function TensesBlueprint({ bossVerb }) {
                 head: "visible",
               }}
             />
-            <NormalVerbTriangle
+            <BossVerbTriangle
               uuid={svgUseIds[4]}
               verb={selectedVerb}
-              colour="black"
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-5",
-                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 pastParticiple: "visible",
               }}
             />
@@ -137,14 +132,12 @@ function TensesBlueprint({ bossVerb }) {
                 pastParticiple: "visible",
               }}
             />
-            <NormalVerbTriangle
+            <BossVerbTriangle
               uuid={svgUseIds[7]}
               verb={selectedVerb}
-              colour="black"
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-7",
-                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 presentParticiple: "VISIBLE",
               }}
             />

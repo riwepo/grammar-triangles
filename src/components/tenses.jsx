@@ -6,7 +6,6 @@ import GrammarContainer, {
 } from "@/components/grammar-container";
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_VERB_CLASS_NAMES,
-  BOSS_VERB_TRIANGLE_CLASS,
   HELPER_BE_VERB_TRIANGLE_CLASS,
   HELPER_HAVE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
@@ -19,6 +18,7 @@ import ToBeVerbTriangle, {
 import ToBePronounTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_TO_BE_PRONOUN_CLASS_NAMES,
 } from "@/components/basic-triangles/pronouns/to-be-pronoun-triangle";
+import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
@@ -33,7 +33,6 @@ function Tenses() {
     statement: {
       ...DEFAULT_VERB_CLASS_NAMES,
       svg: "col-start-6 row-start-1",
-      triangle: BOSS_VERB_TRIANGLE_CLASS,
       head: "visible",
       thirdPersonSingular: easeInVisible,
       preterite: easeInVisible,
@@ -42,7 +41,6 @@ function Tenses() {
     negative: {
       ...DEFAULT_VERB_CLASS_NAMES,
       svg: "col-start-6 row-start-1",
-      triangle: BOSS_VERB_TRIANGLE_CLASS,
       head: "visible",
       thirdPersonSingular: easeOutInvisible,
       preterite: easeOutInvisible,
@@ -172,11 +170,9 @@ function Tenses() {
             >
               not
             </p>
-            <NormalVerbTriangle
+            <BossVerbTriangle
               uuid={svgUseIds[2]}
               verb={selectedVerb}
-              // visibility={bossVerbVisibility}
-              colour="black"
               classNames={presentSimpleBossVerbClassNames}
             />
             <NormalPronounTriangle
@@ -243,14 +239,13 @@ function Tenses() {
             >
               not
             </p>
-            <NormalVerbTriangle
+            <BossVerbTriangle
               uuid={svgUseIds[6]}
               verb={selectedVerb}
               // visibility={{ presentParticiple: true }}
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: "col-start-6 row-start-3",
-                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 presentParticiple: "visible",
               }}
             />
@@ -300,14 +295,13 @@ function Tenses() {
             >
               not
             </p>
-            <NormalVerbTriangle
+            <BossVerbTriangle
               uuid={svgUseIds[9]}
               verb={selectedVerb}
               visibility={{ pastParticiple: true }}
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: "col-start-6 row-start-5",
-                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 pastParticiple: "visible",
               }}
             />
@@ -371,14 +365,13 @@ function Tenses() {
                 pastParticiple: "visible",
               }}
             />
-            <NormalVerbTriangle
+            <BossVerbTriangle
               uuid={svgUseIds[13]}
               verb={selectedVerb}
               // visibility={{ presentParticiple: true }}
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: "col-start-6 row-start-7",
-                triangle: BOSS_VERB_TRIANGLE_CLASS,
                 presentParticiple: "visible",
               }}
             />

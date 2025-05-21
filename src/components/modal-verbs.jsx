@@ -7,10 +7,10 @@ import GrammarContainer, {
 } from "@/components/grammar-container";
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES,
-  BOSS_VERB_TRIANGLE_CLASS,
   HELPER_BE_VERB_TRIANGLE_CLASS,
   HELPER_HAVE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
+import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import Card from "@/components/ui/card";
 
 import {
@@ -112,13 +112,12 @@ function ModalVerbs() {
             <div className="col-start-4 bg-gray-200"></div>
 
             <div className="col-start-5 row-start-1 grid h-full grid-cols-[1fr_1fr_1fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] gap-y-1 overflow-auto">
-              <NormalVerbTriangle
+              <BossVerbTriangle
                 uuid={svgUseIds[0]}
                 verb={selectedVerb}
                 classNames={{
                   ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-3 row-start-1",
-                  triangle: BOSS_VERB_TRIANGLE_CLASS,
                   head: "visible",
                 }}
               />
@@ -135,13 +134,12 @@ function ModalVerbs() {
                   head: "visible",
                 }}
               />
-              <NormalVerbTriangle
+              <BossVerbTriangle
                 uuid={svgUseIds[2]}
                 verb={selectedVerb}
                 classNames={{
                   ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-3 row-start-3",
-                  triangle: BOSS_VERB_TRIANGLE_CLASS,
                   presentParticiple: "visible",
                 }}
               />
@@ -158,14 +156,13 @@ function ModalVerbs() {
                   head: "visible",
                 }}
               />
-              <NormalVerbTriangle
+              <BossVerbTriangle
                 uuid={svgUseIds[4]}
                 className=""
                 verb={selectedVerb}
                 classNames={{
                   ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-3 row-start-5",
-                  triangle: BOSS_VERB_TRIANGLE_CLASS,
                   pastParticiple: "visible",
                 }}
               />
@@ -192,13 +189,12 @@ function ModalVerbs() {
                   pastParticiple: "visible",
                 }}
               />
-              <NormalVerbTriangle
+              <BossVerbTriangle
                 uuid={svgUseIds[7]}
                 verb={selectedVerb}
                 classNames={{
                   ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-3 row-start-7",
-                  triangle: BOSS_VERB_TRIANGLE_CLASS,
                   presentParticiple: "visible",
                 }}
               />

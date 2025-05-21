@@ -5,11 +5,10 @@ import { useState } from "react";
 import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
-import NormalVerbTriangle, {
-  DEFAULT_CLASS_NAMES,
-} from "@/components/basic-triangles/verbs/normal-verb-triangle";
-import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
 import Card from "@/components/ui/card";
+import { DEFAULT_CLASS_NAMES } from "./basic-triangles/verbs/normal-verb-triangle";
+import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
+import ToBeBossVerbTriangle from "@/components/triangles/to-be-boss-verb-triangle";
 
 import { VERBS } from "@/lib/grammar-data";
 
@@ -42,22 +41,11 @@ function BasicVerbTriangles() {
         <Card className="col-start-1 row-start-2 bg-white">
           <div className="flex flex-col items-center gap-4">
             <p className="text-2xl font-bold">All Verbs Except 'To Be'</p>
-            <NormalVerbTriangle
+            <BossVerbTriangle
               uuid={svgUseIds[0]}
-              colour="black"
               verb={selectedVerb}
-              /*  visibility={{
-                triangle: true,
-                head: true,
-                preterite: true,
-                pastParticiple: true,
-                presentParticiple: true,
-                thirdPersonSingular: true,
-                numbers: true,
-              }} */
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
-                triangle: "visible stroke-black fill-none",
                 head: "visible",
                 preterite: "visible",
                 pastParticiple: "visible",
@@ -71,22 +59,10 @@ function BasicVerbTriangles() {
         <Card className="col-start-2 row-start-2 bg-white">
           <div className="flex flex-col items-center gap-4">
             <p className="text-2xl font-bold">The Verb 'To Be'</p>
-            <ToBeVerbTriangle
+            <ToBeBossVerbTriangle
               uuid={svgUseIds[1]}
-              /* visibility={{
-                head: true,
-                pastParticiple: true,
-                presentParticiple: true,
-                am: true,
-                is: true,
-                are: true,
-                was: true,
-                were: true,
-                numbers: true,
-              }} */
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
-                triangle: "visible stroke-black fill-none",
                 head: "visible",
                 pastParticiple: "visible",
                 presentParticiple: "visible",
