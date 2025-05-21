@@ -15,8 +15,8 @@ function Nav() {
     },
     {
       key: 3,
-      href: `/tenses-blueprint`,
-      name: "Tenses Blueprint",
+      href: `/the-pattern`,
+      name: "The Pattern",
     },
     {
       key: 4,
