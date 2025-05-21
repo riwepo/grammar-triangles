@@ -4,9 +4,7 @@ import { useState } from "react";
 import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
-import NormalVerbTriangle, {
-  DEFAULT_CLASS_NAMES,
-} from "@/components/basic-triangles/verbs/normal-verb-triangle";
+import { DEFAULT_CLASS_NAMES } from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import Card from "@/components/ui/card";
 

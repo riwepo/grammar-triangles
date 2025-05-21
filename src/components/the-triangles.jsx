@@ -6,13 +6,13 @@ import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
 import Card from "@/components/ui/card";
-import { DEFAULT_CLASS_NAMES } from "./basic-triangles/verbs/normal-verb-triangle";
+import { DEFAULT_CLASS_NAMES } from "@/components/triangles/basic/verbs/normal-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import ToBeBossVerbTriangle from "@/components/triangles/to-be-boss-verb-triangle";
+import NormalPronounTriangle from "@/components/triangles/basic/pronouns/normal-pronoun-triangle";
+import ToBePronounTriangle from "@/components/triangles/basic/pronouns/to-be-pronoun-triangle";
 
 import { VERBS } from "@/lib/grammar-data";
-import NormalPronounTriangle from "@/components/basic-triangles/pronouns/normal-pronoun-triangle";
-import ToBePronounTriangle from "@/components/basic-triangles/pronouns/to-be-pronoun-triangle";
 
 function TheTriangles() {
   const [selectedVerb, setSelectedVerb] = useState(

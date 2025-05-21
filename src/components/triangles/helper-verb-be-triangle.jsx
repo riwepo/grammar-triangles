@@ -1,4 +1,4 @@
-import ToBeVerbTriangle from "@/components/basic-triangles/verbs/to-be-verb-triangle";
+import ToBeVerbTriangle from "@/components/triangles/basic/verbs/to-be-verb-triangle";
 
 import { cn } from "@/lib/utils/css-class";
 

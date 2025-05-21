@@ -1,4 +1,4 @@
-import NormalVerbTriangle from "@/components/basic-triangles/verbs/normal-verb-triangle";
+import NormalVerbTriangle from "@/components/triangles/basic/verbs/normal-verb-triangle";
 
 import { cn } from "@/lib/utils/css-class";
 
