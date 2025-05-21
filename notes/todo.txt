@@ -2,9 +2,12 @@
 
 finish tenses page
 
+indicate which verbs are regular
+add 'be' to list of verbs
+
 add explanations to basic triangles page
 
 basic triangles - put in tabs so not distracting
 
 
-add property to determine if conjugated
+add passive option
