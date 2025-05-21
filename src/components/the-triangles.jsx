@@ -12,7 +12,7 @@ import ToBeBossVerbTriangle from "@/components/triangles/to-be-boss-verb-triangl
 
 import { VERBS } from "@/lib/grammar-data";
 
-function BasicVerbTriangles() {
+function TheTriangles() {
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
   );
@@ -36,7 +36,7 @@ function BasicVerbTriangles() {
     >
       <div className="grid grid-cols-2 grid-rows-[auto_1fr] gap-y-2">
         <p className="col-span-2 col-start-1 row-start-1 mx-auto pt-2 text-2xl font-bold">
-          Basic Verb Triangles
+          The Triangles
         </p>
         <Card className="col-start-1 row-start-2 bg-white">
           <div className="flex flex-col items-center gap-4">
@@ -81,4 +81,4 @@ function BasicVerbTriangles() {
   );
 }
 
-export default BasicVerbTriangles;
+export default TheTriangles;

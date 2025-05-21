@@ -10,8 +10,8 @@ function Nav() {
 
     {
       key: 2,
-      href: `/basic-verb-triangles`,
-      name: "Basic Verb Triangles",
+      href: `/the-triangles`,
+      name: "The Triangles",
     },
     {
       key: 3,
