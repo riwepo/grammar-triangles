@@ -7,7 +7,6 @@ import GrammarContainer, {
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_VERB_CLASS_NAMES,
   HELPER_BE_VERB_TRIANGLE_CLASS,
-  HELPER_HAVE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import NormalPronounTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_PRONOUN_CLASS_NAMES,
@@ -22,6 +21,7 @@ import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
+import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
 
 function Tenses() {
   const easeInVisible =
@@ -138,7 +138,6 @@ function Tenses() {
                 preterite: true,
                 tenseLine: true,
               }} */
-              colour="red"
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: `${visibleForNot} col-start-4 row-start-1`,
@@ -156,7 +155,6 @@ function Tenses() {
                 thirdPersonSingularPronouns: true,
                 preteritePronouns: true,
               }} */
-              colour="red"
               classNames={{
                 ...DEFAULT_PRONOUN_CLASS_NAMES,
                 svg: `${visibleForNot} col-start-4 row-start-1`,
@@ -183,7 +181,6 @@ function Tenses() {
                 thirdPersonSingularPronouns: true,
                 preteritePronouns: true,
               }} */
-              colour="black"
               classNames={presentSimpleBossVerbPronounsClassNames}
             />
             <div className="col-span-6 col-start-1 row-start-2 bg-gray-200"></div>
@@ -223,7 +220,6 @@ function Tenses() {
                 wasPronouns: true,
                 werePronouns: true,
               }} */
-              colour="black"
               classNames={{
                 ...DEFAULT_TO_BE_PRONOUN_CLASS_NAMES,
                 svg: "col-start-4 row-start-3",
@@ -255,19 +251,11 @@ function Tenses() {
               <div className="row-start-2 h-full bg-red-500"></div>
               <p className="row-start-3">Past Perfect Simple</p>
             </div>
-            <NormalVerbTriangle
+            <HelperVerbHaveTriangle
               uuid={svgUseIds[7]}
-              verb={VERBS.have}
-              /* visibility={{
-                head: true,
-                preterite: true,
-                thirdPersonSingular: true,
-                tenseLine: true,
-              }} */
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: "col-start-2 row-start-5",
-                triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                 head: "visible",
                 preterite: "visible",
                 thirdPersonSingular: "visible",
@@ -311,20 +299,11 @@ function Tenses() {
               <div className="row-start-2 h-full bg-red-500"></div>
               <p className="row-start-3">Past Perfect Continuous</p>
             </div>
-            <NormalVerbTriangle
+            <HelperVerbHaveTriangle
               uuid={svgUseIds[10]}
-              verb={VERBS.have}
-              /* visibility={{
-                head: true,
-                preterite: true,
-                thirdPersonSingular: true,
-                tenseLine: true,
-              }} */
-              colour="green"
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
                 svg: "col-start-2 row-start-7",
-                triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                 head: "visible",
                 preterite: "visible",
                 thirdPersonSingular: "visible",
@@ -339,11 +318,9 @@ function Tenses() {
                 thirdPersonSingularPronouns: true,
                 preteritePronouns: true,
               }} */
-              colour="green"
               classNames={{
                 ...DEFAULT_PRONOUN_CLASS_NAMES,
                 svg: "col-start-2 row-start-7",
-                triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                 headPronouns: "visible",
                 thirdPersonSingularPronouns: "visible",
                 preteritePronouns: "visible",

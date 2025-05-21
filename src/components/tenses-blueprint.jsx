@@ -6,14 +6,13 @@ import GrammarContainer, {
 } from "@/components/grammar-container";
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES,
-  BOSS_VERB_TRIANGLE_CLASS,
   HELPER_BE_VERB_TRIANGLE_CLASS,
-  HELPER_HAVE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/grammar-data";
+import HelperVerbHaveTriangle from "./triangles/helper-verb-have-triangle";
 
 function TensesBlueprint({ bossVerb }) {
   // the selected verb
@@ -84,13 +83,10 @@ function TensesBlueprint({ bossVerb }) {
             <p className="col-start-1 row-start-5 mx-auto content-center">
               Perfect Simple
             </p>
-            <NormalVerbTriangle
+            <HelperVerbHaveTriangle
               uuid={svgUseIds[3]}
-              verb={VERBS.have}
-              colour="green"
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
-                triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                 svg: "col-start-2 row-start-5",
                 head: "visible",
               }}
@@ -110,14 +106,11 @@ function TensesBlueprint({ bossVerb }) {
             <p className="mx-autov col-start-1 row-start-7 content-center">
               Perfect Continuous
             </p>
-            <NormalVerbTriangle
+            <HelperVerbHaveTriangle
               uuid={svgUseIds[5]}
-              verb={VERBS.have}
-              colour="green"
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-2 row-start-7",
-                triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                 head: "VISIBLE",
               }}
             />

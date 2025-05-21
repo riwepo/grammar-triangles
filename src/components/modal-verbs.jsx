@@ -8,7 +8,6 @@ import GrammarContainer, {
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES,
   HELPER_BE_VERB_TRIANGLE_CLASS,
-  HELPER_HAVE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import Card from "@/components/ui/card";
@@ -19,6 +18,7 @@ import {
   SUBJECT_PRONOUNS,
   SENTENCE_TYPES,
 } from "@/lib/grammar-data";
+import HelperVerbHaveTriangle from "./triangles/helper-verb-have-triangle";
 
 function ModalVerbs() {
   const [selectedSentenceType, setSentenceType] = useState(
@@ -146,13 +146,11 @@ function ModalVerbs() {
 
               <div className="col-span-3 col-start-1 row-start-4 bg-gray-200"></div>
 
-              <NormalVerbTriangle
+              <HelperVerbHaveTriangle
                 uuid={svgUseIds[3]}
-                verb={VERBS.have}
                 classNames={{
                   ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-1 row-start-5",
-                  triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                   head: "visible",
                 }}
               />
@@ -169,13 +167,11 @@ function ModalVerbs() {
 
               <div className="col-span-3 col-start-1 row-start-6 bg-gray-200"></div>
 
-              <NormalVerbTriangle
+              <HelperVerbHaveTriangle
                 uuid={svgUseIds[5]}
-                verb={VERBS.have}
                 classNames={{
                   ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-1 row-start-7",
-                  triangle: HELPER_HAVE_VERB_TRIANGLE_CLASS,
                   head: "visible",
                 }}
               />
