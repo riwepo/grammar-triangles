@@ -15,21 +15,16 @@ function Nav() {
     },
     {
       key: 3,
-      href: `/basic-pronoun-triangles`,
-      name: "Basic Pronoun Triangles",
-    },
-    {
-      key: 4,
       href: `/tenses-blueprint`,
       name: "Tenses Blueprint",
     },
     {
-      key: 5,
+      key: 4,
       href: `/modal-verbs`,
       name: "Modal Verbs",
     },
     {
-      key: 6,
+      key: 5,
       href: `/tenses`,
       name: "Tenses",
     },
