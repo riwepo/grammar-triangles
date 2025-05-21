@@ -1,12 +1,15 @@
 
+move menus to middle of page
+add do helper verb
+finish tenses page
 
 add explanations to basic triangles page
 
 basic triangles - put in tabs so not distracting
-put pronouns on same screen with a checkbox
+
 
 page names
-'the triangle'
+'the triangles'
 'the pattern'
 'modal verbs'
 'tenses'
