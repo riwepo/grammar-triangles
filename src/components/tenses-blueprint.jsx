@@ -6,15 +6,15 @@ import GrammarContainer, {
 } from "@/components/grammar-container";
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES,
-  HELPER_BE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/grammar-data";
-import HelperVerbHaveTriangle from "./triangles/helper-verb-have-triangle";
+import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
+import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 
-function TensesBlueprint({ bossVerb }) {
+function TensesBlueprint() {
   // the selected verb
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
@@ -57,14 +57,11 @@ function TensesBlueprint({ bossVerb }) {
             <p className="col-start-1 row-start-3 mx-auto content-center">
               Continuous
             </p>
-            <NormalVerbTriangle
+            <HelperVerbBeTriangle
               uuid={svgUseIds[1]}
-              verb={VERBS.be}
-              colour="blue"
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-3 row-start-3",
-                triangle: HELPER_BE_VERB_TRIANGLE_CLASS,
                 head: "visible",
               }}
             />
@@ -114,14 +111,11 @@ function TensesBlueprint({ bossVerb }) {
                 head: "VISIBLE",
               }}
             />
-            <NormalVerbTriangle
+            <HelperVerbBeTriangle
               uuid={svgUseIds[6]}
-              verb={VERBS.be}
-              colour="blue"
               classNames={{
                 ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-3 row-start-7",
-                triangle: HELPER_BE_VERB_TRIANGLE_CLASS,
                 pastParticiple: "visible",
               }}
             />

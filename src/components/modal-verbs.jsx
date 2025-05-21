@@ -7,9 +7,9 @@ import GrammarContainer, {
 } from "@/components/grammar-container";
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES,
-  HELPER_BE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
+
 import Card from "@/components/ui/card";
 
 import {
@@ -18,7 +18,8 @@ import {
   SUBJECT_PRONOUNS,
   SENTENCE_TYPES,
 } from "@/lib/grammar-data";
-import HelperVerbHaveTriangle from "./triangles/helper-verb-have-triangle";
+import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
+import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 
 function ModalVerbs() {
   const [selectedSentenceType, setSentenceType] = useState(
@@ -124,13 +125,11 @@ function ModalVerbs() {
 
               <div className="col-span-3 col-start-1 row-start-2 bg-gray-200"></div>
 
-              <NormalVerbTriangle
+              <HelperVerbBeTriangle
                 uuid={svgUseIds[1]}
-                verb={VERBS.be}
                 classNames={{
                   ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-2 row-start-3",
-                  triangle: HELPER_BE_VERB_TRIANGLE_CLASS,
                   head: "visible",
                 }}
               />
@@ -175,13 +174,11 @@ function ModalVerbs() {
                   head: "visible",
                 }}
               />
-              <NormalVerbTriangle
+              <HelperVerbBeTriangle
                 uuid={svgUseIds[6]}
-                verb={VERBS.be}
                 classNames={{
                   ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-2 row-start-7",
-                  triangle: HELPER_BE_VERB_TRIANGLE_CLASS,
                   pastParticiple: "visible",
                 }}
               />

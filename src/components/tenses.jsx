@@ -6,7 +6,6 @@ import GrammarContainer, {
 } from "@/components/grammar-container";
 import NormalVerbTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_VERB_CLASS_NAMES,
-  HELPER_BE_VERB_TRIANGLE_CLASS,
 } from "@/components/basic-triangles/verbs/normal-verb-triangle";
 import NormalPronounTriangle, {
   DEFAULT_CLASS_NAMES as DEFAULT_PRONOUN_CLASS_NAMES,
@@ -22,6 +21,7 @@ import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
 import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
+import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 
 function Tenses() {
   const easeInVisible =
@@ -189,7 +189,7 @@ function Tenses() {
               <div className="row-start-2 h-full bg-red-500"></div>
               <p className="row-start-3">Past Continuous</p>
             </div>
-            <ToBeVerbTriangle
+            <HelperVerbBeTriangle
               uuid={svgUseIds[4]}
               /* visibility={{
                 am: true,
@@ -202,7 +202,6 @@ function Tenses() {
               classNames={{
                 ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
                 svg: "col-start-4 row-start-3",
-                triangle: HELPER_BE_VERB_TRIANGLE_CLASS,
                 am: "visible",
                 are: "visible",
                 is: "visible",
@@ -331,13 +330,10 @@ function Tenses() {
             >
               not
             </p>
-            <NormalVerbTriangle
+            <HelperVerbBeTriangle
               uuid={svgUseIds[12]}
-              verb={VERBS.be}
-              // visibility={{ pastParticiple: true }}
               classNames={{
                 ...DEFAULT_VERB_CLASS_NAMES,
-                triangle: HELPER_BE_VERB_TRIANGLE_CLASS,
                 svg: "col-start-4 row-start-7",
                 pastParticiple: "visible",
               }}

@@ -1,5 +1,3 @@
-import { cn } from "@/lib/utils/css-class";
-
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 
 export const DEFAULT_CLASS_NAMES = {
@@ -13,11 +11,6 @@ export const DEFAULT_CLASS_NAMES = {
   numbers: "invisible",
   tenseLine: "invisible",
 };
-
-export const BOSS_VERB_TRIANGLE_CLASS = "stroke-black fill-none";
-export const HELPER_BE_VERB_TRIANGLE_CLASS = "stroke-blue-500 fill-blue-500/10";
-export const HELPER_HAVE_VERB_TRIANGLE_CLASS =
-  "stroke-green-500 fill-green-500/10";
 
 function NormalVerbTriangle({ uuid, verb, classNames = DEFAULT_CLASS_NAMES }) {
   return (
