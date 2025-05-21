@@ -1,6 +1,5 @@
 
-move menus to middle of page
-add do helper verb
+
 finish tenses page
 
 add explanations to basic triangles page
@@ -8,11 +7,4 @@ add explanations to basic triangles page
 basic triangles - put in tabs so not distracting
 
 
-page names
-'the triangles'
-'the pattern'
-'modal verbs'
-'tenses'
-
-create components for boss, have and be helper verbs
 add property to determine if conjugated
