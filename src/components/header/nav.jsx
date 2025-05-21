@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-function Nav() {
+import { cn } from "@/lib/utils/css-class";
+
+function Nav({ className }) {
   const router = useRouter();
   const navLinkData = [
     { key: 1, href: `/`, name: "Home" },
@@ -36,13 +38,13 @@ function Nav() {
   };
 
   return (
-    <nav className="absolute top-0 left-0 flex h-[100vh] w-full items-center justify-center bg-[rgba(255,255,255,0.5)] backdrop-blur transition-all duration-500 md:pointer-events-auto md:relative md:block md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:backdrop-blur-none">
-      <ul className="flex list-none flex-col items-center gap-8 md:flex-row xl:gap-12">
+    <nav className={cn(className, "items-center justify-center")}>
+      <ul className="flex list-none flex-row items-center gap-8">
         {navLinkData.map((link) => {
           return (
             <li key={link.key}>
               <Link
-                className="hover:text-burnt-orange-200 active:text-burnt-orange-200 text-3xl font-medium focus:shadow-[0_0_0_0.5rem_rgba(230,125,34,0.5)] focus:outline-none md:text-lg"
+                className="hover:text-burnt-orange-200 active:text-burnt-orange-200 text-xl font-medium focus:shadow-[0_0_0_0.5rem_rgba(230,125,34,0.5)] focus:outline-none"
                 href={link.href}
                 onClick={handleClick}
                 prefetch={false}

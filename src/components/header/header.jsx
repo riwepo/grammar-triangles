@@ -8,17 +8,15 @@ import logo from "@/public/logo.png";
 
 function Header() {
   return (
-    <header className="z-40 flex h-32 flex-row items-center justify-between px-8 py-0">
-      <Link href="/" prefetch={false}>
+    <header className="flex h-16 flex-row items-center justify-between gap-4 px-8 py-0">
+      <Link href="/" prefetch={false} className="">
         <Image
           alt="Grammmar Triangles logo"
           src={logo}
-          className="h-32 w-auto"
+          className="h-16 w-auto"
         />
       </Link>
-      <div className="flex flex-row items-center gap-8">
-        <Nav />
-      </div>
+      <Nav className="mx-auto" />
     </header>
   );
 }
