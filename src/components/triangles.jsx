@@ -14,7 +14,7 @@ import ToBePronounTriangle from "@/components/triangles/basic/pronouns/to-be-pro
 
 import { VERBS } from "@/lib/grammar-data";
 
-function TheTriangles() {
+function Triangles() {
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
   );
@@ -45,7 +45,7 @@ function TheTriangles() {
     >
       <div className="grid grid-cols-2 grid-rows-[auto_1fr] gap-y-2">
         <p className="col-span-2 col-start-1 row-start-1 mx-auto pt-2 text-2xl font-bold">
-          The Triangles
+          Triangles
         </p>
         <Card className="col-start-1 row-start-2 bg-white">
           <div className="grid grid-cols-1 grid-rows-[auto_1fr] items-center gap-4">
@@ -124,4 +124,4 @@ function TheTriangles() {
   );
 }
 
-export default TheTriangles;
+export default Triangles;

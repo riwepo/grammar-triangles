@@ -12,8 +12,8 @@ function Nav({ className }) {
 
     {
       key: 2,
-      href: `/the-triangles`,
-      name: "The Triangles",
+      href: `/triangles`,
+      name: "Triangles",
     },
     {
       key: 3,
