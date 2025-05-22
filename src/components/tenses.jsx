@@ -62,9 +62,19 @@ function Tenses() {
         },
       },
       continuous: {
+        helperVerbBeQuestion: {
+          ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
+          svg: `${easeOutInvisible} col-start-3 row-start-3`,
+          am: "visible",
+          are: "visible",
+          is: "visible",
+          was: "visible",
+          were: "visible",
+          tenseLine: "visible",
+        },
         helperVerbBe: {
           ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
-          svg: "col-start-5 row-start-3",
+          svg: `${easeInVisible} col-start-5 row-start-3`,
           am: "visible",
           are: "visible",
           is: "visible",
@@ -191,9 +201,19 @@ function Tenses() {
         },
       },
       continuous: {
+        helperVerbBeQuestion: {
+          ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
+          svg: `${easeOutInvisible} col-start-3 row-start-3`,
+          am: "visible",
+          are: "visible",
+          is: "visible",
+          was: "visible",
+          were: "visible",
+          tenseLine: "visible",
+        },
         helperVerbBe: {
           ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
-          svg: "col-start-5 row-start-3",
+          svg: `${easeInVisible} col-start-5 row-start-3`,
           am: "visible",
           are: "visible",
           is: "visible",
@@ -289,7 +309,7 @@ function Tenses() {
       simple: {
         helperVerbDo: {
           ...DEFAULT_VERB_CLASS_NAMES,
-          svg: `${easeOutInvisible} col-start-5 row-start-1`,
+          svg: `${easeInVisible} col-start-5 row-start-1`,
           head: "visible",
           thirdPersonSingular: "visible",
           preterite: "visible",
@@ -307,9 +327,9 @@ function Tenses() {
           ...DEFAULT_VERB_CLASS_NAMES,
           svg: "col-start-7 row-start-1",
           head: "visible",
-          thirdPersonSingular: easeInVisible,
-          preterite: easeInVisible,
-          tenseLine: easeInVisible,
+          thirdPersonSingular: easeOutInvisible,
+          preterite: easeOutInvisible,
+          tenseLine: easeOutInvisible,
         },
         bossVerbPronouns: {
           ...DEFAULT_PRONOUN_CLASS_NAMES,
@@ -320,9 +340,19 @@ function Tenses() {
         },
       },
       continuous: {
+        helperVerbBeQuestion: {
+          ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
+          svg: `${easeInVisible} col-start-3 row-start-3`,
+          am: "visible",
+          are: "visible",
+          is: "visible",
+          was: "visible",
+          were: "visible",
+          tenseLine: "visible",
+        },
         helperVerbBe: {
           ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
-          svg: "col-start-5 row-start-3",
+          svg: `${easeOutInvisible} col-start-5 row-start-3`,
           am: "visible",
           are: "visible",
           is: "visible",
@@ -492,15 +522,19 @@ function Tenses() {
             </div>
             <HelperVerbBeTriangle
               uuid={svgUseIds[4]}
+              classNames={classNames.continuous.helperVerbBeQuestion}
+            />
+            <HelperVerbBeTriangle
+              uuid={svgUseIds[5]}
               classNames={classNames.continuous.helperVerbBe}
             />
             <ToBePronounTriangle
-              uuid={svgUseIds[5]}
+              uuid={svgUseIds[6]}
               classNames={classNames.continuous.helperVerbBePronouns}
             />
             <p className={classNames.continuous.not}>not</p>
             <BossVerbTriangle
-              uuid={svgUseIds[6]}
+              uuid={svgUseIds[7]}
               verb={selectedVerb}
               classNames={classNames.continuous.bossVerb}
             />
@@ -511,21 +545,21 @@ function Tenses() {
               <p className="row-start-3">Past Perfect Simple</p>
             </div>
             <HelperVerbHaveTriangle
-              uuid={svgUseIds[7]}
+              uuid={svgUseIds[8]}
               classNames={classNames.perfect.helperVerbHaveQuestion}
             />
             <HelperVerbHaveTriangle
-              uuid={svgUseIds[8]}
+              uuid={svgUseIds[9]}
               classNames={classNames.perfect.helperVerbHave}
             />
             <NormalPronounTriangle
-              uuid={svgUseIds[9]}
+              uuid={svgUseIds[10]}
               verb={selectedVerb}
               classNames={classNames.perfect.helperVerbHavePronouns}
             />
             <p className={classNames.perfect.not}>not</p>
             <BossVerbTriangle
-              uuid={svgUseIds[10]}
+              uuid={svgUseIds[11]}
               verb={selectedVerb}
               classNames={classNames.perfect.bossVerb}
             />
@@ -536,25 +570,25 @@ function Tenses() {
               <p className="row-start-3">Past Perfect Continuous</p>
             </div>
             <HelperVerbHaveTriangle
-              uuid={svgUseIds[11]}
+              uuid={svgUseIds[12]}
               classNames={classNames.perfectContinuous.helperVerbHaveQuestion}
             />
             <HelperVerbHaveTriangle
-              uuid={svgUseIds[12]}
+              uuid={svgUseIds[13]}
               classNames={classNames.perfectContinuous.helperVerbHave}
             />
             <NormalPronounTriangle
-              uuid={svgUseIds[13]}
+              uuid={svgUseIds[14]}
               verb={selectedVerb}
               classNames={classNames.perfectContinuous.helperVerbHavePronouns}
             />
             <p className={classNames.perfectContinuous.not}>not</p>
             <HelperVerbBeTriangle
-              uuid={svgUseIds[14]}
+              uuid={svgUseIds[15]}
               classNames={classNames.perfectContinuous.helperVerbBe}
             />
             <BossVerbTriangle
-              uuid={svgUseIds[15]}
+              uuid={svgUseIds[16]}
               verb={selectedVerb}
               classNames={classNames.perfectContinuous.bossVerb}
             />
