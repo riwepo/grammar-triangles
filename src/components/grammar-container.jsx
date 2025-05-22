@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 
 import SelectDropdown from "@/components/ui/select-dropdown";
+import SelectDropdownVerb from "@/components/ui/select-dropdown-verb";
 
 import { VERBS } from "@/lib/grammar-data";
 
@@ -52,9 +53,24 @@ function GrammarContainer({
 
     setSentenceTypeOptions(sentenceTypes);
 
-    // we want the head form of all verbs, except 'be'
-    const verbOptions = Object.keys(VERBS).filter((k) => k !== "be");
-    setVerbOptions(verbOptions);
+    function capitalizeFirstLetter(val) {
+      return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+    }
+
+    // we want all verbs except 'be'
+    // regular verbs will be green
+    // irregular verbs will be blue
+    const allExceptBe = Object.keys(VERBS).filter((key) => key !== "be");
+    const myVerbOptions = allExceptBe.map((key) => {
+      const verb = VERBS[key];
+      const isRegular = verb.preterite === verb.pastParticiple;
+      return {
+        key: verb.head,
+        value: capitalizeFirstLetter(verb.head),
+        isRegular,
+      };
+    });
+    setVerbOptions(myVerbOptions);
 
     onLoaded(ids);
   }, []);
@@ -86,7 +102,7 @@ function GrammarContainer({
             className="col-start-2 py-2"
           />
         )}
-        <SelectDropdown
+        <SelectDropdownVerb
           title="Boss Verb:"
           options={verbOptions}
           onSelect={handleVerbSelect}
