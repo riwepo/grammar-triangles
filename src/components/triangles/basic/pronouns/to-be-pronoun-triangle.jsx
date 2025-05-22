@@ -194,7 +194,7 @@ function ToBePronounTriangle({ uuid, classNames = DEFAULT_CLASS_NAMES }) {
         y="0"
         className={classNames.triangle}
       />
-      <use href={`#${uuid}am`} x="0" y="0" className={classNames.amPronouns} />
+      <use href={`#${uuid}am`} x="0" y="0" className={classNames.am} />
       <use
         href={`#${uuid}am-pronouns`}
         x="0"
