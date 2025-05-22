@@ -65,7 +65,33 @@ function Tenses() {
           preteritePronouns: easeInVisible,
         },
       },
-      continuous: { helperVerbBe: 1, bossVerb: 2, bossVerbPronouns: 3 },
+      continuous: {
+        helperVerbBe: {
+          ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
+          svg: "col-start-4 row-start-3",
+          am: "visible",
+          are: "visible",
+          is: "visible",
+          was: "visible",
+          were: "visible",
+          tenseLine: "visible",
+        },
+        helperVerbBePronouns: {
+          ...DEFAULT_TO_BE_PRONOUN_CLASS_NAMES,
+          svg: "col-start-4 row-start-3",
+          amPronouns: "visible",
+          arePronouns: "visible",
+          isPronouns: "visible",
+          wasPronouns: "visible",
+          werePronouns: "visible",
+        },
+        not: `${easeOutInvisible} col-start-5 row-start-3 m-auto text-2xl font-bold text-red-500`,
+        bossVerb: {
+          ...DEFAULT_VERB_CLASS_NAMES,
+          svg: "col-start-6 row-start-3",
+          presentParticiple: "visible",
+        },
+      },
       perfect: { helperVerbHave: 1, bossVerb: 2, bossVerbPronouns: 3 },
       perfectContinuous: {
         helperVerbHave: 1,
@@ -108,7 +134,33 @@ function Tenses() {
           preteritePronouns: easeOutInvisible,
         },
       },
-      continuous: { helperVerbBe: 1, bossVerb: 2, bossVerbPronouns: 3 },
+      continuous: {
+        helperVerbBe: {
+          ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
+          svg: "col-start-4 row-start-3",
+          am: "visible",
+          are: "visible",
+          is: "visible",
+          was: "visible",
+          were: "visible",
+          tenseLine: "visible",
+        },
+        helperVerbBePronouns: {
+          ...DEFAULT_TO_BE_PRONOUN_CLASS_NAMES,
+          svg: "col-start-4 row-start-3",
+          amPronouns: "visible",
+          arePronouns: "visible",
+          isPronouns: "visible",
+          wasPronouns: "visible",
+          werePronouns: "visible",
+        },
+        not: `${easeInVisible} col-start-5 row-start-3 m-auto text-2xl font-bold text-red-500`,
+        bossVerb: {
+          ...DEFAULT_VERB_CLASS_NAMES,
+          svg: "col-start-6 row-start-3",
+          presentParticiple: "visible",
+        },
+      },
       perfect: { helperVerbHave: 1, bossVerb: 2, bossVerbPronouns: 3 },
       perfectContinuous: {
         helperVerbHave: 1,
@@ -211,58 +263,17 @@ function Tenses() {
             </div>
             <HelperVerbBeTriangle
               uuid={svgUseIds[4]}
-              /* visibility={{
-                am: true,
-                are: true,
-                is: true,
-                was: true,
-                were: true,
-                tenseLine: true,
-              }} */
-              classNames={{
-                ...DEFAULT_TO_BE_VERB_CLASS_NAMES,
-                svg: "col-start-4 row-start-3",
-                am: "visible",
-                are: "visible",
-                is: "visible",
-                was: "visible",
-                were: "visible",
-                tenseLine: "visible",
-              }}
+              classNames={classNames.continuous.helperVerbBe}
             />
             <ToBePronounTriangle
               uuid={svgUseIds[5]}
-              /* visibility={{
-                amPronouns: true,
-                arePronouns: true,
-                isPronouns: true,
-                wasPronouns: true,
-                werePronouns: true,
-              }} */
-              classNames={{
-                ...DEFAULT_TO_BE_PRONOUN_CLASS_NAMES,
-                svg: "col-start-4 row-start-3",
-                amPronouns: "visible",
-                arePronouns: "visible",
-                isPronouns: "visible",
-                wasPronouns: "visible",
-                werePronouns: "visible",
-              }}
+              classNames={classNames.continuous.helperVerbBePronouns}
             />
-            <p
-              className={`${visibleForNot} col-start-5 row-start-3 m-auto text-2xl font-bold text-red-500`}
-            >
-              not
-            </p>
+            <p className={classNames.continuous.not}>not</p>
             <BossVerbTriangle
               uuid={svgUseIds[6]}
               verb={selectedVerb}
-              // visibility={{ presentParticiple: true }}
-              classNames={{
-                ...DEFAULT_VERB_CLASS_NAMES,
-                svg: "col-start-6 row-start-3",
-                presentParticiple: "visible",
-              }}
+              classNames={classNames.continuous.bossVerb}
             />
             <div className="col-span-6 col-start-1 row-start-4 bg-gray-200"></div>
             <div className="col-start-1 row-start-5 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
