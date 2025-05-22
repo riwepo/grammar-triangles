@@ -22,8 +22,8 @@ function Nav({ className }) {
     },
     {
       key: 4,
-      href: `/modal-verbs`,
-      name: "Modal Verbs",
+      href: `/modals`,
+      name: "Modals",
     },
     {
       key: 5,

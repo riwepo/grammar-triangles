@@ -21,7 +21,7 @@ import {
   SENTENCE_TYPES,
 } from "@/lib/grammar-data";
 
-function ModalVerbs() {
+function Modals() {
   const [selectedSentenceType, setSentenceType] = useState(
     SENTENCE_TYPES.statement,
   );
@@ -199,4 +199,4 @@ function ModalVerbs() {
   );
 }
 
-export default ModalVerbs;
+export default Modals;
