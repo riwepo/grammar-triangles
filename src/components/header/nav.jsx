@@ -17,8 +17,8 @@ function Nav({ className }) {
     },
     {
       key: 3,
-      href: `/the-pattern`,
-      name: "The Pattern",
+      href: `/pattern`,
+      name: "Pattern",
     },
     {
       key: 4,

@@ -14,7 +14,7 @@ import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/grammar-data";
 
-function ThePattern() {
+function Pattern() {
   // the selected verb
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
@@ -34,9 +34,7 @@ function ThePattern() {
       onLoaded={handleContainerLoaded}
     >
       <div className="absolute top-0 right-0 bottom-0 left-0 grid grid-rows-[auto_1fr] gap-y-2">
-        <p className="row-start-1 mx-auto pt-2 text-2xl font-bold">
-          The Pattern
-        </p>
+        <p className="row-start-1 mx-auto pt-2 text-2xl font-bold">Pattern</p>
         <Card className="absolute top-0 right-0 bottom-0 left-0 row-start-2 m-4 bg-white">
           <div className="grid h-full grid-cols-[auto_1fr_1fr_1fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] bg-white">
             <p className="col-start-1 row-start-1 mx-auto content-center">
@@ -135,4 +133,4 @@ function ThePattern() {
   );
 }
 
-export default ThePattern;
+export default Pattern;
