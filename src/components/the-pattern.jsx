@@ -5,6 +5,7 @@ import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
 import { DEFAULT_CLASS_NAMES } from "@/components/triangles/basic/verbs/normal-verb-triangle";
+import { DEFAULT_CLASS_NAMES as DEFAULT_TO_BE_CLASS_NAMES } from "@/components/triangles/basic/verbs/to-be-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
 import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
@@ -59,7 +60,7 @@ function ThePattern() {
             <HelperVerbBeTriangle
               uuid={svgUseIds[1]}
               classNames={{
-                ...DEFAULT_CLASS_NAMES,
+                ...DEFAULT_TO_BE_CLASS_NAMES,
                 svg: "col-start-3 row-start-3",
                 head: "visible",
               }}
@@ -113,7 +114,7 @@ function ThePattern() {
             <HelperVerbBeTriangle
               uuid={svgUseIds[6]}
               classNames={{
-                ...DEFAULT_CLASS_NAMES,
+                ...DEFAULT_TO_BE_CLASS_NAMES,
                 svg: "col-start-3 row-start-7",
                 pastParticiple: "visible",
               }}
