@@ -93,7 +93,7 @@ function GrammarContainer({
 
   return (
     <>
-      <div className="grid h-auto grid-cols-[1fr_auto_auto_auto_1fr] items-center gap-4 border-t-1 border-black">
+      <div className="grid h-auto grid-cols-[1fr_auto_auto_auto_1fr] items-center gap-4 border-t-1 border-black print:hidden">
         {sentenceTypeOptions && (
           <SelectDropdown
             title="Sentence Type:"
