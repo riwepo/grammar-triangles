@@ -8,14 +8,11 @@ function SelectDropdownVerb({ title, options, onSelect, className }) {
   const handleChange = (event) => {
     const key = event.target.value;
     const option = options.filter((option) => option.key === key)[0];
-    console.log(option);
     setSelected(option);
     if (onSelect) {
       onSelect(key);
     }
   };
-
-  console.log("selected", selected);
 
   const getSelectDisplay = (option) =>
     option.isRegular ? option.value : option.value + " (Irregular)";
