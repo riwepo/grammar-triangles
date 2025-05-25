@@ -19,6 +19,7 @@ import HelperVerbDoTriangle from "@/components/triangles/helper-verb-do-triangle
 import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
+import { capitalizeFirstLetter } from "@/lib/utils/capatilize-first-letter";
 
 function Tenses() {
   const easeInVisible =
@@ -475,6 +476,7 @@ function Tenses() {
     }
   };
 
+  const heading = `Tenses for a ${selectedSentenceType} for verb '${capitalizeFirstLetter(selectedVerb.head)}'`;
 
   return (
     <GrammarContainer
@@ -489,7 +491,7 @@ function Tenses() {
     >
       <div className="absolute top-0 right-0 bottom-0 left-0 grid grid-rows-[auto_1fr] gap-y-2">
         <div className="row-start-1 mx-auto flex flex-row gap-4 pt-2">
-          <p className="text-2xl font-bold">Tenses</p>
+          <p className="text-2xl font-bold">{heading}</p>
         </div>
         <Card className="absolute top-0 right-0 bottom-0 left-0 row-start-2 m-4 bg-white">
           <div className="grid h-full grid-cols-[auto_10fr_10fr_1fr_10fr_1fr_10fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] gap-y-1">
