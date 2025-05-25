@@ -43,11 +43,15 @@ function Triangles() {
       onPronounsSelected={handlePronounSelected}
       onLoaded={handleContainerLoaded}
     >
-      <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-y-2">
+      <div className="grid grid-cols-1 grid-rows-[auto_auto_1fr] gap-y-2">
         <p className="col-start-1 row-start-1 mx-auto pt-2 text-2xl font-bold">
           Triangles
         </p>
-        <Card className="col-start-1 row-start-2 mx-auto h-full w-1/2 bg-white">
+        <div className="col-start-1 row-start-2 flex flex-row">
+          <button>All Verbs Except One</button>
+          <button>Verb 'To Be'</button>
+        </div>
+        <Card className="col-start-1 row-start-3 mx-auto h-full w-1/2 bg-white">
           <div className="grid grid-cols-1 grid-rows-1">
             <div className="col-start-1 row-start-1 grid grid-cols-1 grid-rows-[auto_1fr] items-center gap-4">
               <p className="col-start-1 row-start-1 text-center text-2xl font-bold">
