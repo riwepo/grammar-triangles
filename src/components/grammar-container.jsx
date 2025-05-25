@@ -8,6 +8,7 @@ import SelectDropdown from "@/components/ui/select-dropdown";
 import SelectDropdownVerb from "@/components/ui/select-dropdown-verb";
 
 import { VERBS } from "@/lib/grammar-data";
+import { capitalizeFirstLetter } from "@/lib/utils/capatilize-first-letter";
 
 /**
  * this container does 3 things
@@ -52,10 +53,6 @@ function GrammarContainer({
     setSvgUseIds(ids);
 
     setSentenceTypeOptions(sentenceTypes);
-
-    function capitalizeFirstLetter(val) {
-      return String(val).charAt(0).toUpperCase() + String(val).slice(1);
-    }
 
     // we want all verbs except 'be'
     // regular verbs will be green
