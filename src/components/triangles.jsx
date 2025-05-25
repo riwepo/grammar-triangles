@@ -43,81 +43,81 @@ function Triangles() {
       onPronounsSelected={handlePronounSelected}
       onLoaded={handleContainerLoaded}
     >
-      <div className="grid grid-cols-2 grid-rows-[auto_1fr] gap-y-2">
-        <p className="col-span-2 col-start-1 row-start-1 mx-auto pt-2 text-2xl font-bold">
+      <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-y-2">
+        <p className="col-start-1 row-start-1 mx-auto pt-2 text-2xl font-bold">
           Triangles
         </p>
-        <Card className="col-start-1 row-start-2 bg-white">
-          <div className="grid grid-cols-1 grid-rows-[auto_1fr] items-center gap-4">
-            <p className="col-start-1 row-start-1 text-center text-2xl font-bold">
-              All Verbs Except 'To Be'
-            </p>
-            <BossVerbTriangle
-              uuid={svgUseIds[0]}
-              verb={selectedVerb}
-              classNames={{
-                ...DEFAULT_CLASS_NAMES,
-                svg: "row-start-2 col-start-1",
-                head: "visible",
-                preterite: "visible",
-                pastParticiple: "visible",
-                presentParticiple: "visible",
-                thirdPersonSingular: "visible",
-                numbers: "visible",
-              }}
-            />
-            {showPronouns && (
-              <NormalPronounTriangle
-                uuid={svgUseIds[1]}
+        <Card className="col-start-1 row-start-2 mx-auto h-full w-1/2 bg-white">
+          <div className="grid grid-cols-1 grid-rows-1">
+            <div className="col-start-1 row-start-1 grid grid-cols-1 grid-rows-[auto_1fr] items-center gap-4">
+              <p className="col-start-1 row-start-1 text-center text-2xl font-bold">
+                All Verbs Except 'To Be'
+              </p>
+              <BossVerbTriangle
+                uuid={svgUseIds[0]}
                 verb={selectedVerb}
                 classNames={{
                   ...DEFAULT_CLASS_NAMES,
                   svg: "row-start-2 col-start-1",
-                  headPronouns: "visible",
-                  preteritePronouns: "visible",
-                  thirdPersonSingularPronouns: "visible",
+                  head: "visible",
+                  preterite: "visible",
+                  pastParticiple: "visible",
+                  presentParticiple: "visible",
+                  thirdPersonSingular: "visible",
+                  numbers: "visible",
                 }}
               />
-            )}
-          </div>
-        </Card>
-        <Card className="col-start-2 row-start-2 bg-white">
-          <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-4">
-            <p className="col-start-1 row-start-1 text-center text-2xl font-bold">
-              The Verb 'To Be'
-            </p>
-            <ToBeBossVerbTriangle
-              uuid={svgUseIds[2]}
-              classNames={{
-                ...DEFAULT_CLASS_NAMES,
-                svg: "row-start-2 col-start-1",
-                head: "visible",
-                pastParticiple: "visible",
-                presentParticiple: "visible",
-                am: "visible",
-                is: "visible",
-                are: "visible",
-                was: "visible",
-                were: "visible",
-                numbers: "visible",
-              }}
-            />
-            {showPronouns && (
-              <ToBePronounTriangle
-                uuid={svgUseIds[3]}
-                verb={selectedVerb}
+              {showPronouns && (
+                <NormalPronounTriangle
+                  uuid={svgUseIds[1]}
+                  verb={selectedVerb}
+                  classNames={{
+                    ...DEFAULT_CLASS_NAMES,
+                    svg: "row-start-2 col-start-1",
+                    headPronouns: "visible",
+                    preteritePronouns: "visible",
+                    thirdPersonSingularPronouns: "visible",
+                  }}
+                />
+              )}
+            </div>
+            <div className="col-start-1 row-start-1 grid grid-cols-1 grid-rows-[auto_1fr] gap-4">
+              <p className="col-start-1 row-start-1 text-center text-2xl font-bold">
+                The Verb 'To Be'
+              </p>
+              <ToBeBossVerbTriangle
+                uuid={svgUseIds[2]}
                 classNames={{
                   ...DEFAULT_CLASS_NAMES,
                   svg: "row-start-2 col-start-1",
-                  amPronouns: "visible",
-                  arePronouns: "visible",
-                  isPronouns: "visible",
-                  wasPronouns: "visible",
-                  werePronouns: "visible",
+                  head: "visible",
+                  pastParticiple: "visible",
+                  presentParticiple: "visible",
+                  am: "visible",
+                  is: "visible",
+                  are: "visible",
+                  was: "visible",
+                  were: "visible",
+                  numbers: "visible",
                 }}
               />
-            )}
-          </div>
+              {showPronouns && (
+                <ToBePronounTriangle
+                  uuid={svgUseIds[3]}
+                  verb={selectedVerb}
+                  classNames={{
+                    ...DEFAULT_CLASS_NAMES,
+                    svg: "row-start-2 col-start-1",
+                    amPronouns: "visible",
+                    arePronouns: "visible",
+                    isPronouns: "visible",
+                    wasPronouns: "visible",
+                    werePronouns: "visible",
+                  }}
+                />
+              )}
+            </div>
+          </div>{" "}
         </Card>
       </div>
     </GrammarContainer>
