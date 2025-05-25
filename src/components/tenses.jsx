@@ -475,9 +475,6 @@ function Tenses() {
     }
   };
 
-  const handlePrintClick = () => {
-    window.print();
-  };
 
   return (
     <GrammarContainer
@@ -493,9 +490,6 @@ function Tenses() {
       <div className="absolute top-0 right-0 bottom-0 left-0 grid grid-rows-[auto_1fr] gap-y-2">
         <div className="row-start-1 mx-auto flex flex-row gap-4 pt-2">
           <p className="text-2xl font-bold">Tenses</p>
-          <button className="rounded-sm border p-2" onClick={handlePrintClick}>
-            Print
-          </button>
         </div>
         <Card className="absolute top-0 right-0 bottom-0 left-0 row-start-2 m-4 bg-white">
           <div className="grid h-full grid-cols-[auto_10fr_10fr_1fr_10fr_1fr_10fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] gap-y-1">
