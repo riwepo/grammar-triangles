@@ -1,4 +1,5 @@
 
+traingle page, pronouns aren't shown when page refreshed
 
 add explanations to basic triangles page
 
