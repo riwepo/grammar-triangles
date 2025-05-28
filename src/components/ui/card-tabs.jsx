@@ -1,0 +1,38 @@
+import { useState } from "react";
+
+import { cn } from "@/lib/utils/css-class";
+
+function CardTabs({ tabs, children, className }) {
+  const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+  const selectedClasses = "bg-white border-b-0";
+  const unselectedClasses = "bg-gray-100 border-b";
+  const handleClick = (index) => {
+    console.log(index);
+    setSelectedTabIndex(index);
+  };
+  return (
+    <div className="flex flex-col">
+      <div className={cn(className, "relative rounded-lg p-4 shadow-md")}>
+        <div className="absolute top-0 left-0 flex flex-row gap-1">
+          {tabs.map((tab, index) => {
+            const tabClasses =
+              index === selectedTabIndex ? selectedClasses : unselectedClasses;
+            return (
+              <button
+                className={`cursor-pointer rounded-t-sm border-t border-r border-l px-2 py-1 hover:bg-amber-100 ${tabClasses}`}
+                key={index}
+                onClick={() => handleClick(index)}
+              >
+                {tab}
+              </button>
+            );
+          })}
+        </div>
+        <div className="mt-10 flex h-[50vh] w-full flex-row items-center justify-center">
+          {children[selectedTabIndex]}
+        </div>
+      </div>
+    </div>
+  );
+}
+export default CardTabs;
