@@ -5,14 +5,14 @@ import { cn } from "@/lib/utils/css-class";
 function CardTabs({ tabs, children, className }) {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
   const selectedClasses = "bg-white";
-  const unselectedClasses = "bg-gray-100";
+  const unselectedClasses = "bg-gray-100 border-b";
   const handleClick = (index) => {
     setSelectedTabIndex(index);
   };
   return (
     <div className="flex flex-col">
       <div className={cn(className, "relative rounded-lg p-4 shadow-md")}>
-        <div className="absolute top-0 left-0 flex w-full flex-row gap-1 border-b">
+        <div className="absolute top-0 left-0 flex w-full flex-row">
           {tabs.map((tab, index) => {
             const tabClasses =
               index === selectedTabIndex ? selectedClasses : unselectedClasses;
@@ -26,6 +26,7 @@ function CardTabs({ tabs, children, className }) {
               </button>
             );
           })}
+          <div className="flex-grow-1 border-b"></div>
         </div>
         <div className="mt-10 flex h-[50vh] w-full flex-row items-center justify-center">
           {children[selectedTabIndex]}
