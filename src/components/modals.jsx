@@ -5,8 +5,6 @@ import { useState } from "react";
 import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
-import { DEFAULT_CLASS_NAMES } from "@/components/triangles/basic/verbs/normal-verb-triangle";
-import { DEFAULT_CLASS_NAMES as DEFAULT_TO_BE_CLASS_NAMES } from "@/components/triangles/basic/verbs/to-be-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
 import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
@@ -116,7 +114,6 @@ function Modals() {
                 uuid={svgUseIds[0]}
                 verb={selectedVerb}
                 classNames={{
-                  ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-3 row-start-1",
                   head: "visible",
                 }}
@@ -127,7 +124,6 @@ function Modals() {
               <HelperVerbBeTriangle
                 uuid={svgUseIds[1]}
                 classNames={{
-                  ...DEFAULT_TO_BE_CLASS_NAMES,
                   svg: "col-start-2 row-start-3",
                   head: "visible",
                 }}
@@ -136,7 +132,6 @@ function Modals() {
                 uuid={svgUseIds[2]}
                 verb={selectedVerb}
                 classNames={{
-                  ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-3 row-start-3",
                   presentParticiple: "visible",
                 }}
@@ -147,7 +142,6 @@ function Modals() {
               <HelperVerbHaveTriangle
                 uuid={svgUseIds[3]}
                 classNames={{
-                  ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-1 row-start-5",
                   head: "visible",
                 }}
@@ -157,7 +151,6 @@ function Modals() {
                 className=""
                 verb={selectedVerb}
                 classNames={{
-                  ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-3 row-start-5",
                   pastParticiple: "visible",
                 }}
@@ -168,7 +161,6 @@ function Modals() {
               <HelperVerbHaveTriangle
                 uuid={svgUseIds[5]}
                 classNames={{
-                  ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-1 row-start-7",
                   head: "visible",
                 }}
@@ -176,7 +168,6 @@ function Modals() {
               <HelperVerbBeTriangle
                 uuid={svgUseIds[6]}
                 classNames={{
-                  ...DEFAULT_TO_BE_CLASS_NAMES,
                   svg: "col-start-2 row-start-7",
                   pastParticiple: "visible",
                 }}
@@ -185,7 +176,6 @@ function Modals() {
                 uuid={svgUseIds[7]}
                 verb={selectedVerb}
                 classNames={{
-                  ...DEFAULT_CLASS_NAMES,
                   svg: "col-start-3 row-start-7",
                   presentParticiple: "visible",
                 }}

@@ -1,23 +1,22 @@
-import { cn } from "@/lib/utils/css-class";
-
 import { VERBS } from "@/lib/grammar-data";
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
-export const DEFAULT_CLASS_NAMES = {
-  svg: "",
-  triangle: "invisible",
-  head: "invisible",
-  am: "invisible",
-  are: "invisible",
-  is: "invisible",
-  was: "invisible",
-  were: "invisible",
-  pastParticiple: "invisible",
-  presentParticiple: "invisible",
-  numbers: "invisible",
-  tenseLine: "invisible",
-};
 
-function ToBeVerbTriangle({ uuid, classNames = DEFAULT_CLASS_NAMES }) {
+function ToBeVerbTriangle({ uuid, classNames }) {
+  const DEFAULT_CLASS_NAMES = {
+    svg: "",
+    triangle: "invisible",
+    head: "invisible",
+    am: "invisible",
+    are: "invisible",
+    is: "invisible",
+    was: "invisible",
+    were: "invisible",
+    pastParticiple: "invisible",
+    presentParticiple: "invisible",
+    numbers: "invisible",
+    tenseLine: "invisible",
+  };
+  const classNamesWithDefaults = { ...DEFAULT_CLASS_NAMES, ...classNames };
   const toBeVerb = VERBS.be;
   return (
     <svg
@@ -27,7 +26,7 @@ function ToBeVerbTriangle({ uuid, classNames = DEFAULT_CLASS_NAMES }) {
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={classNames.svg}
+      className={classNamesWithDefaults.svg}
     >
       <defs>
         <polygon
@@ -211,37 +210,67 @@ function ToBeVerbTriangle({ uuid, classNames = DEFAULT_CLASS_NAMES }) {
         href={`#${uuid}triangle`}
         x="0"
         y="0"
-        className={classNames.triangle}
+        className={classNamesWithDefaults.triangle}
       />
-      <use href={`#${uuid}head`} x="0" y="0" className={classNames.head} />
-      <use href={`#${uuid}am`} x="0" y="0" className={classNames.am} />
-      <use href={`#${uuid}are`} x="0" y="0" className={classNames.are} />
-      <use href={`#${uuid}is`} x="0" y="0" className={classNames.is} />
-      <use href={`#${uuid}was`} x="0" y="0" className={classNames.was} />
-      <use href={`#${uuid}were`} x="0" y="0" className={classNames.were} />
+      <use
+        href={`#${uuid}head`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.head}
+      />
+      <use
+        href={`#${uuid}am`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.am}
+      />
+      <use
+        href={`#${uuid}are`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.are}
+      />
+      <use
+        href={`#${uuid}is`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.is}
+      />
+      <use
+        href={`#${uuid}was`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.was}
+      />
+      <use
+        href={`#${uuid}were`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.were}
+      />
       <use
         href={`#${uuid}past-participle`}
         x="0"
         y="0"
-        className={classNames.pastParticiple}
+        className={classNamesWithDefaults.pastParticiple}
       />
       <use
         href={`#${uuid}present-participle`}
         x="0"
         y="0"
-        className={classNames.presentParticiple}
+        className={classNamesWithDefaults.presentParticiple}
       />
       <use
         href={`#${uuid}numbers`}
         x="0"
         y="0"
-        className={classNames.numbers}
+        className={classNamesWithDefaults.numbers}
       />
       <use
         href={`#${uuid}tense-line`}
         x="0"
         y="0"
-        className={classNames.tenseLine}
+        className={classNamesWithDefaults.tenseLine}
       />
     </svg>
   );

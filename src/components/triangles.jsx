@@ -6,7 +6,6 @@ import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
 import Card from "@/components/ui/card";
-import { DEFAULT_CLASS_NAMES } from "@/components/triangles/basic/verbs/normal-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import ToBeBossVerbTriangle from "@/components/triangles/to-be-boss-verb-triangle";
 import NormalPronounTriangle from "@/components/triangles/basic/pronouns/normal-pronoun-triangle";
@@ -61,7 +60,6 @@ function Triangles() {
                 uuid={svgUseIds[0]}
                 verb={selectedVerb}
                 classNames={{
-                  ...DEFAULT_CLASS_NAMES,
                   svg: "row-start-2 col-start-1",
                   head: "visible",
                   preterite: "visible",
@@ -76,7 +74,6 @@ function Triangles() {
                   uuid={svgUseIds[1]}
                   verb={selectedVerb}
                   classNames={{
-                    ...DEFAULT_CLASS_NAMES,
                     svg: "row-start-2 col-start-1",
                     headPronouns: "visible",
                     preteritePronouns: "visible",
@@ -92,7 +89,6 @@ function Triangles() {
               <ToBeBossVerbTriangle
                 uuid={svgUseIds[2]}
                 classNames={{
-                  ...DEFAULT_CLASS_NAMES,
                   svg: "row-start-2 col-start-1",
                   head: "visible",
                   pastParticiple: "visible",
@@ -110,7 +106,6 @@ function Triangles() {
                   uuid={svgUseIds[3]}
                   verb={selectedVerb}
                   classNames={{
-                    ...DEFAULT_CLASS_NAMES,
                     svg: "row-start-2 col-start-1",
                     amPronouns: "visible",
                     arePronouns: "visible",

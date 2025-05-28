@@ -1,18 +1,18 @@
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
 
-export const DEFAULT_CLASS_NAMES = {
-  svg: "invisible",
-  triangle: "invisible",
-  head: "invisible",
-  preterite: "invisible",
-  pastParticiple: "invisible",
-  presentParticiple: "invisible",
-  thirdPersonSingular: "invisible",
-  numbers: "invisible",
-  tenseLine: "invisible",
-};
-
-function NormalVerbTriangle({ uuid, verb, classNames = DEFAULT_CLASS_NAMES }) {
+function NormalVerbTriangle({ uuid, verb, classNames }) {
+  const DEFAULT_CLASS_NAMES = {
+    svg: "invisible",
+    triangle: "invisible",
+    head: "invisible",
+    preterite: "invisible",
+    pastParticiple: "invisible",
+    presentParticiple: "invisible",
+    thirdPersonSingular: "invisible",
+    numbers: "invisible",
+    tenseLine: "invisible",
+  };
+  const classNamesWithDefaults = { ...DEFAULT_CLASS_NAMES, ...classNames };
   return (
     <svg
       width="100%"
@@ -21,7 +21,7 @@ function NormalVerbTriangle({ uuid, verb, classNames = DEFAULT_CLASS_NAMES }) {
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={classNames.svg}
+      className={classNamesWithDefaults.svg}
     >
       <defs>
         <polygon
@@ -180,44 +180,49 @@ function NormalVerbTriangle({ uuid, verb, classNames = DEFAULT_CLASS_NAMES }) {
         href={`#${uuid}triangle`}
         x="0"
         y="0"
-        className={classNames.triangle}
+        className={classNamesWithDefaults.triangle}
       />
-      <use href={`#${uuid}head`} x="0" y="0" className={classNames.head} />
+      <use
+        href={`#${uuid}head`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.head}
+      />
       <use
         href={`#${uuid}preterite`}
         x="0"
         y="0"
-        className={classNames.preterite}
+        className={classNamesWithDefaults.preterite}
       />
       <use
         href={`#${uuid}past-participle`}
         x="0"
         y="0"
-        className={classNames.pastParticiple}
+        className={classNamesWithDefaults.pastParticiple}
       />
       <use
         href={`#${uuid}present-participle`}
         x="0"
         y="0"
-        className={classNames.presentParticiple}
+        className={classNamesWithDefaults.presentParticiple}
       />
       <use
         href={`#${uuid}third-person-singular`}
         x="0"
         y="0"
-        className={classNames.thirdPersonSingular}
+        className={classNamesWithDefaults.thirdPersonSingular}
       />
       <use
         href={`#${uuid}numbers`}
         x="0"
         y="0"
-        className={classNames.numbers}
+        className={classNamesWithDefaults.numbers}
       />
       <use
         href={`#${uuid}tense-line`}
         x="0"
         y="0"
-        className={classNames.tenseLine}
+        className={classNamesWithDefaults.tenseLine}
       />
     </svg>
   );

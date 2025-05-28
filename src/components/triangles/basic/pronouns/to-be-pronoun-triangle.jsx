@@ -1,22 +1,23 @@
 import { cn } from "@/lib/utils/css-class";
 
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
-export const DEFAULT_CLASS_NAMES = {
-  svg: "",
-  triangle: "invisible",
-  am: "invisible",
-  amPronouns: "invisible",
-  are: "invisible",
-  arePronouns: "invisible",
-  is: "invisible",
-  isPronouns: "invisible",
-  was: "invisible",
-  wasPronouns: "invisible",
-  were: "invisible",
-  werePronouns: "invisible",
-};
 
-function ToBePronounTriangle({ uuid, classNames = DEFAULT_CLASS_NAMES }) {
+function ToBePronounTriangle({ uuid, classNames }) {
+  const DEFAULT_CLASS_NAMES = {
+    svg: "",
+    triangle: "invisible",
+    am: "invisible",
+    amPronouns: "invisible",
+    are: "invisible",
+    arePronouns: "invisible",
+    is: "invisible",
+    isPronouns: "invisible",
+    was: "invisible",
+    wasPronouns: "invisible",
+    were: "invisible",
+    werePronouns: "invisible",
+  };
+  const classNamesWithDefaults = { ...DEFAULT_CLASS_NAMES, ...classNames };
   return (
     <svg
       width="100%"
@@ -25,7 +26,7 @@ function ToBePronounTriangle({ uuid, classNames = DEFAULT_CLASS_NAMES }) {
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn(classNames.svg)}
+      className={cn(classNamesWithDefaults.svg)}
     >
       <defs>
         <polygon
@@ -192,42 +193,67 @@ function ToBePronounTriangle({ uuid, classNames = DEFAULT_CLASS_NAMES }) {
         href={`#${uuid}triangle`}
         x="0"
         y="0"
-        className={classNames.triangle}
+        className={classNamesWithDefaults.triangle}
       />
-      <use href={`#${uuid}am`} x="0" y="0" className={classNames.am} />
+      <use
+        href={`#${uuid}am`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.am}
+      />
       <use
         href={`#${uuid}am-pronouns`}
         x="0"
         y="0"
-        className={classNames.amPronouns}
+        className={classNamesWithDefaults.amPronouns}
       />
-      <use href={`#${uuid}are`} x="0" y="0" className={classNames.are} />
+      <use
+        href={`#${uuid}are`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.are}
+      />
       <use
         href={`#${uuid}are-pronouns`}
         x="0"
         y="0"
-        className={classNames.arePronouns}
+        className={classNamesWithDefaults.arePronouns}
       />
-      <use href={`#${uuid}is`} x="0" y="0" className={classNames.is} />
+      <use
+        href={`#${uuid}is`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.is}
+      />
       <use
         href={`#${uuid}is-pronouns`}
         x="0"
         y="0"
-        className={classNames.isPronouns}
+        className={classNamesWithDefaults.isPronouns}
       />
-      <use href={`#${uuid}was`} x="0" y="0" className={classNames.was} />
+      <use
+        href={`#${uuid}was`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.was}
+      />
       <use
         href={`#${uuid}was-pronouns`}
         x="0"
         y="0"
-        className={classNames.wasPronouns}
+        className={classNamesWithDefaults.wasPronouns}
       />
-      <use href={`#${uuid}were`} x="0" y="0" className={classNames.were} />
+      <use
+        href={`#${uuid}were`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.were}
+      />
       <use
         href={`#${uuid}were-pronouns`}
         x="0"
         y="0"
-        className={classNames.werePronouns}
+        className={classNamesWithDefaults.werePronouns}
       />
     </svg>
   );

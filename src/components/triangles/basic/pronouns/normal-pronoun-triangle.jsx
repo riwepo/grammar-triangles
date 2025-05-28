@@ -1,22 +1,19 @@
 import { cn } from "@/lib/utils/css-class";
 
 import { BASIC_TRIANGLE_VIEWBOX } from "@/lib/constants";
-export const DEFAULT_CLASS_NAMES = {
-  svg: "",
-  triangle: "invisible",
-  head: "invisible",
-  headPronouns: "invisible",
-  preterite: "invisible",
-  preteritePronouns: "invisible",
-  thirdPersonSingular: "invisible",
-  thirdPersonSingularPronouns: "invisible",
-};
 
-function NormalPronounTriangle({
-  uuid,
-  verb,
-  classNames = DEFAULT_CLASS_NAMES,
-}) {
+function NormalPronounTriangle({ uuid, verb, classNames }) {
+  const DEFAULT_CLASS_NAMES = {
+    svg: "",
+    triangle: "invisible",
+    head: "invisible",
+    headPronouns: "invisible",
+    preterite: "invisible",
+    preteritePronouns: "invisible",
+    thirdPersonSingular: "invisible",
+    thirdPersonSingularPronouns: "invisible",
+  };
+  const classNamesWithDefaults = { ...DEFAULT_CLASS_NAMES, ...classNames };
   return (
     <svg
       width="100%"
@@ -25,7 +22,7 @@ function NormalPronounTriangle({
       preserveAspectRatio="xMidYMid meet"
       //preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={classNames.svg}
+      className={classNamesWithDefaults.svg}
     >
       <defs>
         <polygon
@@ -121,38 +118,43 @@ function NormalPronounTriangle({
         href={`#${uuid}triangle`}
         x="0"
         y="0"
-        className={classNames.triangle}
+        className={classNamesWithDefaults.triangle}
       />
-      <use href={`#${uuid}head`} x="0" y="0" className={classNames.head} />
+      <use
+        href={`#${uuid}head`}
+        x="0"
+        y="0"
+        className={classNamesWithDefaults.head}
+      />
       <use
         href={`#${uuid}head-pronouns`}
         x="0"
         y="0"
-        className={classNames.headPronouns}
+        className={classNamesWithDefaults.headPronouns}
       />
       <use
         href={`#${uuid}preterite`}
         x="0"
         y="0"
-        className={classNames.preterite}
+        className={classNamesWithDefaults.preterite}
       />
       <use
         href={`#${uuid}preterite-pronouns`}
         x="0"
         y="0"
-        className={classNames.preteritePronouns}
+        className={classNamesWithDefaults.preteritePronouns}
       />
       <use
         href={`#${uuid}third-person-singular`}
         x="0"
         y="0"
-        className={classNames.thirdPersonSingular}
+        className={classNamesWithDefaults.thirdPersonSingular}
       />
       <use
         href={`#${uuid}third-person-singular-pronouns`}
         x="0"
         y="0"
-        className={classNames.thirdPersonSingularPronouns}
+        className={classNamesWithDefaults.thirdPersonSingularPronouns}
       />
     </svg>
   );

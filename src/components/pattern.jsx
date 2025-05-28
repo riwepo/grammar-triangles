@@ -4,8 +4,6 @@ import { useState } from "react";
 import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
-import { DEFAULT_CLASS_NAMES } from "@/components/triangles/basic/verbs/normal-verb-triangle";
-import { DEFAULT_CLASS_NAMES as DEFAULT_TO_BE_CLASS_NAMES } from "@/components/triangles/basic/verbs/to-be-verb-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
 import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
@@ -44,7 +42,6 @@ function Pattern() {
               uuid={svgUseIds[0]}
               verb={selectedVerb}
               classNames={{
-                ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-1",
                 head: "visible",
               }}
@@ -58,7 +55,6 @@ function Pattern() {
             <HelperVerbBeTriangle
               uuid={svgUseIds[1]}
               classNames={{
-                ...DEFAULT_TO_BE_CLASS_NAMES,
                 svg: "col-start-3 row-start-3",
                 head: "visible",
               }}
@@ -67,7 +63,6 @@ function Pattern() {
               uuid={svgUseIds[2]}
               verb={selectedVerb}
               classNames={{
-                ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-3",
                 presentParticiple: "visible",
               }}
@@ -81,7 +76,6 @@ function Pattern() {
             <HelperVerbHaveTriangle
               uuid={svgUseIds[3]}
               classNames={{
-                ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-2 row-start-5",
                 head: "visible",
               }}
@@ -90,7 +84,6 @@ function Pattern() {
               uuid={svgUseIds[4]}
               verb={selectedVerb}
               classNames={{
-                ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-5",
                 pastParticiple: "visible",
               }}
@@ -104,7 +97,6 @@ function Pattern() {
             <HelperVerbHaveTriangle
               uuid={svgUseIds[5]}
               classNames={{
-                ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-2 row-start-7",
                 head: "VISIBLE",
               }}
@@ -112,7 +104,6 @@ function Pattern() {
             <HelperVerbBeTriangle
               uuid={svgUseIds[6]}
               classNames={{
-                ...DEFAULT_TO_BE_CLASS_NAMES,
                 svg: "col-start-3 row-start-7",
                 pastParticiple: "visible",
               }}
@@ -121,7 +112,6 @@ function Pattern() {
               uuid={svgUseIds[7]}
               verb={selectedVerb}
               classNames={{
-                ...DEFAULT_CLASS_NAMES,
                 svg: "col-start-4 row-start-7",
                 presentParticiple: "VISIBLE",
               }}
