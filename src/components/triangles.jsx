@@ -32,7 +32,7 @@ function Triangles() {
   const handleVerbSelected = (key) => {
     setSelectedVerb(VERBS[key]);
   };
-  const handlePronounSelected = (key) => {
+  const handleShowPronounSelected = (key) => {
     console.log("handlePronounSelected", key);
     setShowPronouns(key === "true");
   };
@@ -104,9 +104,9 @@ function Triangles() {
 
   return (
     <GrammarContainer
-      showPronouns={true}
+      showPronounsCombo={true}
       onVerbSelected={handleVerbSelected}
-      onPronounsSelected={handlePronounSelected}
+      onShowPronounsSelected={handleShowPronounSelected}
       onLoaded={handleContainerLoaded}
     >
       <div className="grid grid-cols-1 grid-rows-[auto_auto_1fr] gap-y-2">
