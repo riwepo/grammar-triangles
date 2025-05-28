@@ -7,7 +7,6 @@ function CardTabs({ tabs, children, className }) {
   const selectedClasses = "bg-white border-b-0";
   const unselectedClasses = "bg-gray-100 border-b";
   const handleClick = (index) => {
-    console.log(index);
     setSelectedTabIndex(index);
   };
   return (

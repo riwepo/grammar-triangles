@@ -18,8 +18,6 @@ function Triangles() {
     VERBS[Object.keys(VERBS)[0]],
   );
 
-  console.log("selectedVerb", selectedVerb);
-
   let svgUseIds = SVG_USE_ID_PLACEHOLDERS;
   const handleContainerLoaded = (mySvgUseIds) => {
     svgUseIds = mySvgUseIds;
@@ -27,13 +25,10 @@ function Triangles() {
   // show pronouns options
   const [showPronouns, setShowPronouns] = useState(false);
 
-  console.log("showPronouns", showPronouns);
-
   const handleVerbSelected = (key) => {
     setSelectedVerb(VERBS[key]);
   };
   const handleShowPronounSelected = (key) => {
-    console.log("handlePronounSelected", key);
     setShowPronouns(key === "true");
   };
 
