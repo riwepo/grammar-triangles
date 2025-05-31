@@ -1,12 +1,8 @@
-"use client";
-
-import { useState } from "react";
-
 import CardTabs from "@/components/ui/card-tabs";
 
 import { VERB_FORM_EXPLANATIONS } from "@/lib/grammar-data";
 
-function VerbFormExplanations() {
+function VerbFormExplanations2() {
   const VerbExplanation = ({ verbData }) => {
     return (
       <li>
@@ -23,7 +19,13 @@ function VerbFormExplanations() {
       </li>
     );
   };
-
+  const verbExplanations = [
+    <VerbExplanation verbData={VERB_FORM_EXPLANATIONS.base} />,
+    <VerbExplanation verbData={VERB_FORM_EXPLANATIONS.pastSimple} />,
+    <VerbExplanation verbData={VERB_FORM_EXPLANATIONS.pastParticiple} />,
+    <VerbExplanation verbData={VERB_FORM_EXPLANATIONS.presentParticiple} />,
+    <VerbExplanation verbData={VERB_FORM_EXPLANATIONS.thirdPersonSingular} />,
+  ];
   return (
     <div className="text-center">
       <p>
@@ -34,17 +36,20 @@ function VerbFormExplanations() {
         These numbers correspond to the labels on the points in the triangle
         above.
       </p>
-      <ol>
-        <VerbExplanation verbData={VERB_FORM_EXPLANATIONS.base} />
-        <VerbExplanation verbData={VERB_FORM_EXPLANATIONS.pastSimple} />
-        <VerbExplanation verbData={VERB_FORM_EXPLANATIONS.pastParticiple} />
-        <VerbExplanation verbData={VERB_FORM_EXPLANATIONS.presentParticiple} />
-        <VerbExplanation
-          verbData={VERB_FORM_EXPLANATIONS.thirdPersonSingular}
-        />
-      </ol>
+      <CardTabs
+        tabs={[
+          VERB_FORM_EXPLANATIONS.base.heading,
+          VERB_FORM_EXPLANATIONS.pastSimple.heading,
+          VERB_FORM_EXPLANATIONS.pastParticiple.heading,
+          VERB_FORM_EXPLANATIONS.presentParticiple.heading,
+          VERB_FORM_EXPLANATIONS.thirdPersonSingular.heading,
+        ]}
+        className="mx-auto h-full w-3/4 bg-white"
+      >
+        {verbExplanations}
+      </CardTabs>
     </div>
   );
 }
 
-export default VerbFormExplanations;
+export default VerbFormExplanations2;
