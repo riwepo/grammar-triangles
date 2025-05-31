@@ -735,132 +735,270 @@ const VERBS = {
 const VERB_FORM_EXPLANATIONS = {
   base: {
     heading: "V1 - Base Form",
-    intro:
-      "This is the root form of the verb, used in the present tense and infinitives.",
-    howToCreate: "This is itself the base form",
+    howToCreate: "This is itself the base form.",
+    creationExamples: [
+      {
+        key: 1,
+        value: "---",
+      },
+    ],
     uses: [
       {
         key: 1,
         heading: "Present simple tense",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 2,
         heading: "To-plus infinitives",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 3,
         heading: "Bare infinitives",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
-      { key: 4, heading: "Imperatives", examples: ["One", "two", "three"] },
+      {
+        key: 4,
+        heading: "Imperatives",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
+      },
       {
         key: 5,
         heading: "After modal verbs",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
     ],
   },
   pastSimple: {
     heading: "V2 - Past Simple",
-    intro:
-      "It represents actions that occurred in the past and is often formed by adding -ed to regular verbs. However, irregular verbs change unpredictably.",
-    howToCreate:
-      "For regular verbs we add -ed to the base verb. Somethimes a small spelling change is needed. Some verbs are irregular and the change is unpredictably.",
+    howToCreate: `For regular verbs we add -ed to the base verb.
+       Sometimes a small spelling change is needed.
+       Some verbs are irregular and the change is unpredictable.`,
+    creationExamples: [
+      { key: 1, value: "walk -> walked (simply add '-ed')" },
+      { key: 2, value: "study -> studied (small spelling change)" },
+      { key: 3, value: "go -> went (irregular)" },
+    ],
     uses: [
       {
         key: 1,
         heading: "Past simple tense",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 2,
         heading: "Second conditional sentences",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 3,
         heading: "Reported speech",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 4,
         heading: "Past narratives",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
     ],
   },
   pastParticiple: {
     heading: "V3 - Past Participle",
-    intro:
-      "It is used in perfect tenses and passive sentences and is often formed by adding -ed to regular verbs. However, irregular verbs change unpredictably.",
-    howToCreate:
-      "For regular verbs we add -ed to the base verb. Somethimes a small spelling change is needed. Some verbs are irregular and the change is unpredictably.",
+    howToCreate: `For regular verbs we add -ed to the base verb.
+       Sometimes a small spelling change is needed.
+       Some verbs are irregular and the change is unpredictable.`,
+    creationExamples: [
+      { key: 1, value: "talk -> talked (simply add '-ed')" },
+      {
+        key: 2,
+        value:
+          "believe -> believed (small spelling change, only need to add 'd')",
+      },
+      { key: 3, value: "begin -> begun (irregular)" },
+    ],
     uses: [
       {
         key: 1,
         heading: "Present perfect tense",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 2,
         heading: "Past perfect tense",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
-      { key: 3, heading: "Passive voice", examples: ["One", "two", "three"] },
-      { key: 4, heading: "Adjectives", examples: ["One", "two", "three"] },
+      {
+        key: 3,
+        heading: "Passive voice",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
+      },
+      {
+        key: 4,
+        heading: "Adjectives",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
+      },
     ],
   },
   presentParticiple: {
     heading: "V4 - Present Participle",
-    intro: "It is formed by adding -ing to the base verb",
-    howToCreate:
-      "We add -ing to the base verb. Somethimes a small spelling change is needed.",
+    howToCreate: `We add -ing to the base verb.
+       Somethimes a small spelling change is needed.`,
+    creationExamples: [
+      { key: 1, value: "accept -> accepting (simply add '-ing')" },
+      {
+        key: 2,
+        value: "change -> changing (small spelling change, drop the 'e')",
+      },
+    ],
     uses: [
       {
         key: 1,
         heading: "Present continuous tense",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 2,
         heading: "Present perfect continuous tense",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 3,
         heading: "Past continuous tense",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 4,
         heading: "Past perfect continuous tense",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 5,
         heading: "Adjectives",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
       {
         key: 6,
         heading: "Gerunds",
-        examples: ["One", "two", "three"],
+        description: "",
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
     ],
   },
   thirdPersonSingular: {
     heading: "V5 - Third Person Singular",
-    intro:
-      " It is used in the present simple tense when the subject is he, she, or it.",
-    howToCreate:
-      "We add -s to the base verb. Somethimes a small spelling change is needed.",
+    howToCreate: `We add -s to the base verb.
+       Sometimes a small spelling change is needed.`,
+    creationExamples: [
+      { key: 1, value: "build -> builds (simply add '-s')" },
+      {
+        key: 2,
+        value:
+          "carry -> carries (small spelling change, drop '-y' and add '-ies')",
+      },
+    ],
     uses: [
       {
         key: 1,
         heading: "Present simple tense",
-        examples: ["One", "two", "three"],
+        description: `The -s is added for the present simple tense when the subject is a third person.
+        The subject pronoun will be either he, she, or it.`,
+        examples: [
+          { key: 1, value: "One" },
+          { key: 2, value: "two" },
+          { key: 3, value: "three" },
+        ],
       },
     ],
   },
