@@ -3,14 +3,19 @@ import CardTabs from "@/components/ui/card-tabs";
 import { VERB_FORM_EXPLANATIONS } from "@/lib/grammar-data";
 
 function VerbFormExplanations() {
-  const VerbFormUse = ({ verbFormUseData }) => {
+  const VerbFormUse = ({ verbFormUseData, index }) => {
     return (
-      <li key={verbFormUseData.key}>
-        <p>{verbFormUseData.heading}</p>
+      <li>
+        <p className="mt-2 mb-2 text-xl font-bold">{`${index}. ${verbFormUseData.heading}`}</p>
         <p className="whitespace-pre">{verbFormUseData.description}</p>
+        <p className="text-l mt-2 font-semibold">Examples</p>
         <ul>
           {verbFormUseData.examples.map((example) => (
-            <p key={example.key}>{example.value}</p>
+            <p
+              key={example.key}
+              className="italic"
+              dangerouslySetInnerHTML={{ __html: example.value }}
+            />
           ))}
         </ul>
       </li>
@@ -19,29 +24,33 @@ function VerbFormExplanations() {
   const VerbFormExplanation = ({ verbFormData }) => {
     return (
       <div>
-        <p className="text-xl font-bold">{verbFormData.heading}</p>
-        <p className="text-l font-semibold">
+        <p className="text-3xl font-extrabold">{verbFormData.heading}</p>
+        <p className="mt-4 mb-2 text-2xl font-extrabold">
           How to create it from the base verb
         </p>
         <p className="whitespace-pre">{verbFormData.howToCreate}</p>
-        <p className="text-l font-semibold">Creation examples</p>
+        <p className="mt-2 mb-2 text-2xl font-extrabold">Creation examples</p>
         <ul>
-          {verbFormData.creationExamples.map((eg) => (
-            <li key={eg.key}>{eg.value}</li>
+          {verbFormData.creationExamples.map((example) => (
+            <li key={example.key}>{example.value}</li>
           ))}
         </ul>
-        <p className="text-l font-semibold">Where it is used</p>
+        <p className="mt-2 mb-2 text-2xl font-extrabold">Where it is used</p>
         <ul>
-          {verbFormData.uses.map((use) => (
-            <VerbFormUse verbFormUseData={use}></VerbFormUse>
+          {verbFormData.uses.map((use, index) => (
+            <VerbFormUse
+              key={use.key}
+              verbFormUseData={use}
+              index={index + 1}
+            ></VerbFormUse>
           ))}
         </ul>
       </div>
     );
   };
 
-  {
-    /* <VerbFormExplanation verbFormData={VERB_FORM_EXPLANATIONS.base} />,
+  const verbFormExplanations = [
+    <VerbFormExplanation verbFormData={VERB_FORM_EXPLANATIONS.base} />,
     <VerbFormExplanation verbFormData={VERB_FORM_EXPLANATIONS.pastSimple} />,
     <VerbFormExplanation
       verbFormData={VERB_FORM_EXPLANATIONS.pastParticiple}
@@ -51,12 +60,6 @@ function VerbFormExplanations() {
     />,
     <VerbFormExplanation
       verbFormData={VERB_FORM_EXPLANATIONS.thirdPersonSingular}
-    />, */
-  }
-
-  const verbFormExplanations = [
-    <VerbFormExplanation
-      verbFormData={VERB_FORM_EXPLANATIONS.presentParticiple}
     />,
   ];
   return (
@@ -70,8 +73,14 @@ function VerbFormExplanations() {
         above.
       </p>
       <CardTabs
-        tabs={[VERB_FORM_EXPLANATIONS.presentParticiple.heading]}
-        className="mx-auto h-full w-3/4 bg-white"
+        tabs={[
+          VERB_FORM_EXPLANATIONS.base.heading,
+          VERB_FORM_EXPLANATIONS.pastSimple.heading,
+          VERB_FORM_EXPLANATIONS.pastParticiple.heading,
+          VERB_FORM_EXPLANATIONS.presentParticiple.heading,
+          VERB_FORM_EXPLANATIONS.thirdPersonSingular.heading,
+        ]}
+        className="mx-auto mb-4 w-3/4 bg-white"
       >
         {verbFormExplanations}
       </CardTabs>
@@ -80,8 +89,3 @@ function VerbFormExplanations() {
 }
 
 export default VerbFormExplanations;
-/* VERB_FORM_EXPLANATIONS.base.heading,
-          VERB_FORM_EXPLANATIONS.pastSimple.heading,
-          VERB_FORM_EXPLANATIONS.pastParticiple.heading,
-          VERB_FORM_EXPLANATIONS.presentParticiple.heading,
-          VERB_FORM_EXPLANATIONS.thirdPersonSingular.heading, */

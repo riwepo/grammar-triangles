@@ -10,27 +10,25 @@ function CardTabs({ tabs, children, className }) {
     setSelectedTabIndex(index);
   };
   return (
-    <div className="flex flex-col">
-      <div className={cn(className, "relative rounded-lg p-4 shadow-md")}>
-        <div className="absolute top-0 left-0 flex w-full flex-row">
-          {tabs.map((tab, index) => {
-            const tabClasses =
-              index === selectedTabIndex ? selectedClasses : unselectedClasses;
-            return (
-              <button
-                className={`cursor-pointer rounded-t-sm border-t border-r border-l px-2 py-1 hover:bg-amber-100 ${tabClasses}`}
-                key={index}
-                onClick={() => handleClick(index)}
-              >
-                {tab}
-              </button>
-            );
-          })}
-          <div className="flex-grow-1 border-b"></div>
-        </div>
-        <div className="mt-10 flex h-[50vh] w-full flex-row items-center justify-center">
-          {children[selectedTabIndex]}
-        </div>
+    <div className={cn(className, "relative rounded-lg p-4 shadow-md")}>
+      <div className="absolute top-0 left-0 flex w-full flex-row">
+        {tabs.map((tab, index) => {
+          const tabClasses =
+            index === selectedTabIndex ? selectedClasses : unselectedClasses;
+          return (
+            <button
+              className={`cursor-pointer rounded-t-sm border-t border-r border-l px-2 py-1 hover:bg-amber-100 ${tabClasses}`}
+              key={index}
+              onClick={() => handleClick(index)}
+            >
+              {tab}
+            </button>
+          );
+        })}
+        <div className="flex-grow-1 border-b"></div>
+      </div>
+      <div className="mt-10 flex w-full flex-row items-center justify-center">
+        {children[selectedTabIndex]}
       </div>
     </div>
   );

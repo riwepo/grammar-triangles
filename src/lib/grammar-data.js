@@ -864,40 +864,40 @@ const VERB_FORM_EXPLANATIONS = {
     uses: [
       {
         key: 1,
-        heading: "Present perfect tense",
-        description: "",
+        heading: "All perfect tenses",
+        description: `These tenses include the present perfect, the present perfect continuous, the past perfect and the past perfect continuous.
+        These tenses emphasize a connection between different points in time`,
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
-        ],
-      },
-      {
-        key: 2,
-        heading: "Past perfect tense",
-        description: "",
-        examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          { key: 1, value: "He has studi<b>ed</b> grammar." },
+          { key: 2, value: "She has <b>been</b> studying grammar." },
+          { key: 3, value: "They had studi<b>ed</b> grammar." },
+          { key: 4, value: "They had <b>been</b> studying grammar." },
         ],
       },
       {
         key: 3,
         heading: "Passive voice",
+        description: `The past participle is a fundamental part of all passive tenses, regardless of whether the sentence is in the present, past, or future.
+          The past participle is used with a form of the verb 'to be' to indicate that the subject is receiving the action.`,
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          { key: 1, value: "Grammar is studi<b>ed</b> by many people." },
+          { key: 2, value: "Grammar was studi<b>ed</b> in the past." },
+          { key: 3, value: "Grammar will be studi<b>ed</b> in the future." },
+          { key: 4, value: "Grammar has been studi<b>ed</b> for many years." },
         ],
       },
       {
         key: 4,
         heading: "Adjectives",
+        description:
+          "A past participle can act as an adjective, either directly on a noun, or as part of a participle phrase.",
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          { key: 1, value: "The brok<b>en</b> window needs to be repaired." },
+          {
+            key: 2,
+            value:
+              "Grammar, develop<b>ed</b> many years ago, it still important today.",
+          },
         ],
       },
     ],
@@ -916,62 +916,40 @@ const VERB_FORM_EXPLANATIONS = {
     uses: [
       {
         key: 1,
-        heading: "Present continuous tense",
-        description: "",
+        heading: "All continuous tenses",
+        description: `These tenses include the present continuous, present perfect continuous, past continuous and past perfect continuous.
+          These tenses emphasize an action in progress at a particular time.`,
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
-        ],
-      },
-      {
-        key: 2,
-        heading: "Present perfect continuous tense",
-        description: "",
-        examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
-        ],
-      },
-      {
-        key: 3,
-        heading: "Past continuous tense",
-        description: "",
-        examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
-        ],
-      },
-      {
-        key: 4,
-        heading: "Past perfect continuous tense",
-        description: "",
-        examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          { key: 1, value: "He is study<b>ing</b> grammar." },
+          { key: 2, value: "He has been study<b>ing</b> grammar." },
+          { key: 3, value: "He was study<b>ing</b> grammar." },
+          { key: 4, value: "He had been stud<b>ing</b> grammar." },
         ],
       },
       {
         key: 5,
         heading: "Adjectives",
-        description: "",
+        description:
+          "A present participle can act as an adjective, either directly on a noun, or as part of a participle phrase.",
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          { key: 1, value: "He finds study bor<b>ing</b>." },
+          {
+            key: 2,
+            value: "The boy, smil<b>ing</b> happily, studied.",
+          },
         ],
       },
       {
         key: 6,
         heading: "Gerunds",
-        description: "",
+        description:
+          "A present participle can act as a noun, where we call it a gerund.",
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          {
+            key: 1,
+            value:
+              "Study<b>ing</b> grammar is one of the coolest things you can do.",
+          },
         ],
       },
     ],
@@ -995,9 +973,18 @@ const VERB_FORM_EXPLANATIONS = {
         description: `The -s is added for the present simple tense when the subject is a third person.
         The subject pronoun will be either he, she, or it.`,
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          {
+            key: 1,
+            value: "He find<b>s</b> grammar very difficult.",
+          },
+          {
+            key: 2,
+            value: "However she learn<b>s</b> it very easily.",
+          },
+          {
+            key: 3,
+            value: "It doe<b>s</b> not seem too complicated.",
+          },
         ],
       },
     ],

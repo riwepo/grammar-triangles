@@ -112,7 +112,7 @@ function Triangles() {
           </p>
           <CardTabs
             tabs={["All verbs except 'To Be'", "The verb 'To Be'"]}
-            className="col-start-1 row-start-3 mx-auto h-full w-1/2 bg-white"
+            className="col-start-1 row-start-3 mx-auto mt-4 mb-4 min-h-full w-1/2 bg-white"
           >
             {verbTypes}
           </CardTabs>
