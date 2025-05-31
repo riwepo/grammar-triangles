@@ -23,7 +23,11 @@ const MODAL_VERBS = [
 ];
 
 const SUBJECT_PRONOUNS = ["I", "you", "he", "she", "it", "we", "they"];
-const SENTENCE_TYPES = {statement:"Statement", question:"Question", negative:"Negative"};
+const SENTENCE_TYPES = {
+  statement: "Statement",
+  question: "Question",
+  negative: "Negative",
+};
 
 const VERBS = {
   accept: {
@@ -728,4 +732,144 @@ const VERBS = {
   },
 };
 
-export { VERBS, MODAL_VERBS, SENTENCE_TYPES, SUBJECT_PRONOUNS };
+const VERB_FORM_EXPLANATIONS = {
+  base: {
+    heading: "V1 - Base Form",
+    intro:
+      "This is the root form of the verb, used in the present tense and infinitives.",
+    howToCreate: "This is itself the base form",
+    uses: [
+      {
+        key: 1,
+        heading: "Present simple tense",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 2,
+        heading: "To-plus infinitives",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 3,
+        heading: "Bare infinitives",
+        examples: ["One", "two", "three"],
+      },
+      { key: 4, heading: "Imperatives", examples: ["One", "two", "three"] },
+      {
+        key: 5,
+        heading: "After modal verbs",
+        examples: ["One", "two", "three"],
+      },
+    ],
+  },
+  pastSimple: {
+    heading: "V2 - Past Simple",
+    intro:
+      "It represents actions that occurred in the past and is often formed by adding -ed to regular verbs. However, irregular verbs change unpredictably.",
+    howToCreate:
+      "For regular verbs we add -ed to the base verb. Somethimes a small spelling change is needed. Some verbs are irregular and the change is unpredictably.",
+    uses: [
+      {
+        key: 1,
+        heading: "Past simple tense",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 2,
+        heading: "Second conditional sentences",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 3,
+        heading: "Reported speech",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 4,
+        heading: "Past narratives",
+        examples: ["One", "two", "three"],
+      },
+    ],
+  },
+  pastParticiple: {
+    heading: "V3 - Past Participle",
+    intro:
+      "It is used in perfect tenses and passive sentences and is often formed by adding -ed to regular verbs. However, irregular verbs change unpredictably.",
+    howToCreate:
+      "For regular verbs we add -ed to the base verb. Somethimes a small spelling change is needed. Some verbs are irregular and the change is unpredictably.",
+    uses: [
+      {
+        key: 1,
+        heading: "Present perfect tense",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 2,
+        heading: "Past perfect tense",
+        examples: ["One", "two", "three"],
+      },
+      { key: 3, heading: "Passive voice", examples: ["One", "two", "three"] },
+      { key: 4, heading: "Adjectives", examples: ["One", "two", "three"] },
+    ],
+  },
+  presentParticiple: {
+    heading: "V4 - Present Participle",
+    intro: "It is formed by adding -ing to the base verb",
+    howToCreate:
+      "We add -ing to the base verb. Somethimes a small spelling change is needed.",
+    uses: [
+      {
+        key: 1,
+        heading: "Present continuous tense",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 2,
+        heading: "Present perfect continuous tense",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 3,
+        heading: "Past continuous tense",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 4,
+        heading: "Past perfect continuous tense",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 5,
+        heading: "Adjectives",
+        examples: ["One", "two", "three"],
+      },
+      {
+        key: 6,
+        heading: "Gerunds",
+        examples: ["One", "two", "three"],
+      },
+    ],
+  },
+  thirdPersonSingular: {
+    heading: "V5 - Third Person Singular",
+    intro:
+      " It is used in the present simple tense when the subject is he, she, or it.",
+    howToCreate:
+      "We add -s to the base verb. Somethimes a small spelling change is needed.",
+    uses: [
+      {
+        key: 1,
+        heading: "Present simple tense",
+        examples: ["One", "two", "three"],
+      },
+    ],
+  },
+};
+
+export {
+  VERBS,
+  MODAL_VERBS,
+  SENTENCE_TYPES,
+  SUBJECT_PRONOUNS,
+  VERB_FORM_EXPLANATIONS,
+};
