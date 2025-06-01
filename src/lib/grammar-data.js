@@ -796,7 +796,8 @@ const VERB_FORM_EXPLANATIONS = {
   },
   pastSimple: {
     heading: "V2 - Past Simple",
-    howToCreate: `For regular verbs we add -ed to the base verb.
+    howToCreate: `For regular verbs the past simple is the same as the past participle.
+       We add -ed to the base verb.
        Sometimes a small spelling change is needed.
        Some verbs are irregular and the change is unpredictable.`,
     creationExamples: [
@@ -808,48 +809,58 @@ const VERB_FORM_EXPLANATIONS = {
       {
         key: 1,
         heading: "Past simple tense",
-        description: "",
+        description: `This tense is used to describe actions that happened and finished in the past.
+           It is the backbone of past narratives, as it helps describe sequences of events that happened in a clear, chronological order.`,
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          { key: 1, value: "Yesterday I studi<b>ed</b> a lot of grammar." },
+          {
+            key: 2,
+            value:
+              "He <b>woke</b> up late, rush<b>ed</b> to catch the bus, and arriv<b>ed</b> at work just in time.",
+          },
         ],
       },
       {
         key: 2,
         heading: "Second conditional sentences",
-        description: "",
+        description: `Second conditional sentences describe hypothetical situations in the present or future that are unlikely or impossible.
+        They follow the structure if + past simple, (then) would + base verb.`,
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          {
+            key: 1,
+            value:
+              "If I studi<b>ed</b> grammar for four hours every day, I would be very good at it.",
+          },
+          {
+            key: 2,
+            value: "If she <b>won</b> the lottery, she would travel the world.",
+          },
         ],
       },
       {
         key: 3,
         heading: "Reported speech",
-        description: "",
+        description:
+          "Reported speech can shift to past simple if the original statement is in present simple. ",
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
-        ],
-      },
-      {
-        key: 4,
-        heading: "Past narratives",
-        description: "",
-        examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          {
+            key: 1,
+            value:
+              "Direct - 'I live in Sydney', she said. Reported - She said that she liv<b>ed</b> in Sydney",
+          },
+          {
+            key: 2,
+            value:
+              "Direct - 'I work at a bank', she said. Reported - He said that he work<b>ed</b> at a bank",
+          },
         ],
       },
     ],
   },
   pastParticiple: {
     heading: "V3 - Past Participle",
-    howToCreate: `For regular verbs we add -ed to the base verb.
+    howToCreate: `For regular verbs the past participle is the same as the past simple.
+       We add -ed to the base verb.
        Sometimes a small spelling change is needed.
        Some verbs are irregular and the change is unpredictable.`,
     creationExamples: [
