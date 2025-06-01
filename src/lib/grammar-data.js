@@ -746,50 +746,66 @@ const VERB_FORM_EXPLANATIONS = {
       {
         key: 1,
         heading: "Present simple tense",
-        description: "",
+        description:
+          "This tense is used to describe actions, facts, or situations that are habitual, general truths, scheduled events, or instructions.",
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          { key: 1, value: "I <b>teach</b> grammar." },
+          { key: 2, value: "They <b>drink</b> coffee every morning" },
+          { key: 3, value: "The trains <b>leave</b> at 8 PM" },
+          { key: 4, value: "You <b>turn</b> left at the traffic light" },
         ],
       },
       {
         key: 2,
-        heading: "To-plus infinitives",
-        description: "",
+        heading: "To plus infinitives",
+        description: `We use this term when the base form of the verb is preceded by 'to'.
+                      This structure is used in many ways in English.
+                      It can be used as an adjective, an adverb, or a noun.
+                      They key to remember is that if there is a 'to' in front, the verb is never acting as a verb.`,
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          {
+            key: 1,
+            value:
+              "She gave me a book <b>to read</b>. - adjective describing noun 'book'",
+          },
+          {
+            key: 2,
+            value:
+              "She studies hard <b>to succeed</b>. - adverb modifying verb 'study'",
+          },
+          {
+            key: 3,
+            value:
+              "This problem is difficult <b>to solve</b>. - adverb modifying adjective 'difficult'",
+          },
+          {
+            key: 4,
+            value:
+              "He wants <b>to learn</b> grammar. - 'to learn' is a noun, the object of 'wants'",
+          },
         ],
       },
       {
         key: 3,
         heading: "Bare infinitives",
-        description: "",
+        description: `We use this term when the base form of the verb appears without the preceding 'to'.
+        This structure is used after modal verbs and with verbs of perception, permission, or causation.
+        The key to remember is that the bare infinitive always acts as a verb.`,
         examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
-        ],
-      },
-      {
-        key: 4,
-        heading: "Imperatives",
-        examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
-        ],
-      },
-      {
-        key: 5,
-        heading: "After modal verbs",
-        description: "",
-        examples: [
-          { key: 1, value: "One" },
-          { key: 2, value: "two" },
-          { key: 3, value: "three" },
+          {
+            key: 1,
+            value: "She can <b>swim</b> very fast. - after modal verb 'can'",
+          },
+          {
+            key: 2,
+            value:
+              "I saw him <b>run</b> across the street. - with verb of perception 'saw'",
+          },
+          {
+            key: 3,
+            value:
+              "He made me <b>apologize</b>. - with verb of causation 'make'",
+          },
         ],
       },
     ],
@@ -877,7 +893,7 @@ const VERB_FORM_EXPLANATIONS = {
         key: 1,
         heading: "All perfect tenses",
         description: `These tenses include the present perfect, the present perfect continuous, the past perfect and the past perfect continuous.
-        These tenses emphasize a connection between different points in time`,
+        These tenses emphasize a connection between different points in time.`,
         examples: [
           { key: 1, value: "He has studi<b>ed</b> grammar." },
           { key: 2, value: "She has <b>been</b> studying grammar." },
@@ -916,7 +932,7 @@ const VERB_FORM_EXPLANATIONS = {
   presentParticiple: {
     heading: "V4 - Present Participle",
     howToCreate: `We add -ing to the base verb.
-       Somethimes a small spelling change is needed.`,
+       Sometimes a small spelling change is needed.`,
     creationExamples: [
       { key: 1, value: "accept -> accepting (simply add '-ing')" },
       {
@@ -953,8 +969,7 @@ const VERB_FORM_EXPLANATIONS = {
       {
         key: 6,
         heading: "Gerunds",
-        description:
-          "A present participle can act as a noun, where we call it a gerund.",
+        description: "A gerund is when a present participle acts as a noun.",
         examples: [
           {
             key: 1,
