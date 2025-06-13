@@ -8,25 +8,23 @@ import { cn } from "@/lib/utils/css-class";
 function Nav({ className }) {
   const router = useRouter();
   const navLinkData = [
-    { key: 1, href: `/`, name: "Home" },
-
     {
-      key: 2,
+      key: 1,
       href: `/triangles`,
       name: "Triangles",
     },
     {
-      key: 3,
+      key: 2,
       href: `/pattern`,
       name: "Pattern",
     },
     {
-      key: 4,
+      key: 3,
       href: `/modals`,
       name: "Modals",
     },
     {
-      key: 5,
+      key: 4,
       href: `/tenses`,
       name: "Tenses",
     },
