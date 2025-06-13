@@ -1,4 +1,5 @@
 import CardTabs from "@/components/ui/card-tabs";
+import PageContent from "@/components/page-content";
 
 import { VERB_FORM_EXPLANATIONS } from "@/lib/grammar-data";
 
@@ -64,14 +65,7 @@ function VerbFormExplanations() {
   ];
   return (
     <div className="text-center">
-      <p>
-        In English grammar, verbs have five main forms, often labeled as V1 to
-        V5
-      </p>
-      <p>
-        These numbers correspond to the labels on the points in the triangle
-        above.
-      </p>
+      <PageContent />
       <CardTabs
         tabs={[
           VERB_FORM_EXPLANATIONS.base.heading,
