@@ -283,4 +283,46 @@ const VERB_FORM_EXPLANATIONS = {
   },
 };
 
-export { VERB_FORM_EXPLANATIONS };
+const PAGE_EXPLANATIONS = {
+  triangles: [
+    {
+      key: 1,
+      content:
+        "In English grammar, verbs have five main forms, often labeled as V1 to V5.",
+    },
+    {
+      key: 2,
+      content:
+        "These numbers correspond to the labels on the points in the triangle above.",
+    },
+  ],
+  pattern: [
+    {
+      key: 1,
+      content:
+        "In English grammar, there are two common helper verbs that can come before the main (or 'boss') verb.",
+    },
+    {
+      key: 2,
+      content:
+        "Helper verb 'have' is shown in green, and occupies the first slot.",
+    },
+    {
+      key: 3,
+      content:
+        "'Helper verb 'be' is shown in blue, and occupies the second slot.",
+    },
+    {
+      key: 4,
+      content:
+        "Following the green helper verb 'have' will always be a Past Participle, V3, lower right corner form of verb.",
+    },
+    {
+      key: 5,
+      content:
+        "Following the blue helper verb 'have' will always be a Present Participle, V4, center heart form of verb.",
+    },
+  ],
+};
+
+export { VERB_FORM_EXPLANATIONS, PAGE_EXPLANATIONS };

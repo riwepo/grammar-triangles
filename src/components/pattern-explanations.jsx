@@ -1,7 +1,10 @@
 import CardTabs from "@/components/ui/card-tabs";
 import PageContent from "@/components/page-content";
 
-import { VERB_FORM_EXPLANATIONS } from "@/lib/explanation-data";
+import {
+  PAGE_EXPLANATIONS,
+  VERB_FORM_EXPLANATIONS,
+} from "@/lib/explanation-data";
 
 function PatternExplanations() {
   const VerbFormUse = ({ verbFormUseData, index }) => {
@@ -65,7 +68,7 @@ function PatternExplanations() {
   ];
   return (
     <div className="text-center">
-      <PageContent />
+      <PageContent sentences={PAGE_EXPLANATIONS.pattern} />
       <CardTabs
         tabs={[
           VERB_FORM_EXPLANATIONS.base.heading,
