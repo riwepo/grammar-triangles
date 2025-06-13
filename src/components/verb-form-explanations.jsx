@@ -1,7 +1,7 @@
 import CardTabs from "@/components/ui/card-tabs";
 import PageContent from "@/components/page-content";
 
-import { VERB_FORM_EXPLANATIONS } from "@/lib/grammar-data";
+import { VERB_FORM_EXPLANATIONS } from "@/lib/explanation-data";
 
 function VerbFormExplanations() {
   const VerbFormUse = ({ verbFormUseData, index }) => {
