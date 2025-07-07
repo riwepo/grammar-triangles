@@ -12,7 +12,7 @@ import NormalPronounTriangle from "@/components/triangles/basic/pronouns/normal-
 import ToBePronounTriangle from "@/components/triangles/basic/pronouns/to-be-pronoun-triangle";
 
 import { VERBS } from "@/lib/grammar-data";
-import VerbFormExplanations from "@/components/verb-form-explanations";
+import TrianglesExplanations from "@/components/triangles-explanations";
 
 function Triangles() {
   const [selectedVerb, setSelectedVerb] = useState(
@@ -118,7 +118,7 @@ function Triangles() {
           </CardTabs>
         </div>
       </GrammarContainer>
-      <VerbFormExplanations />
+      <TrianglesExplanations />
     </>
   );
 }
