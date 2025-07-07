@@ -323,6 +323,38 @@ const PAGE_EXPLANATIONS = {
         "Following the blue helper verb 'have' will always be a Present Participle, V4, center heart form of verb.",
     },
   ],
+  modals: [
+    {
+      key: 1,
+      content:
+        "In English grammar, there is a special group of auxillary verbs called modal verbs, which include 'will', 'can', 'might' etc.",
+    },
+    {
+      key: 2,
+      content:
+        "There are only about 20 modal verbs, while there are about 10,000 normal verbs.",
+    },
+    {
+      key: 3,
+      content:
+        "Modal verbs are used before normal verbs, and express possibility, necessity, permission, ability, or obligation."
+    },
+    {
+      key: 4,
+      content:
+        "Modal verbs only have one form. They don't fit into our verb triangles.",
+    },
+    {
+      key: 5,
+      content:
+        "The verb following a modal verb is always in 'bare infinitive' form i.e. no 'to'. For example 'I can teach.'",
+    },
+    {
+      key: 6,
+      content:
+        "To make a question when there is a modal verb, all we have to do is swap the subject and the modal. Try it above.",
+    },
+  ],
 };
 
 export { VERB_FORM_EXPLANATIONS, PAGE_EXPLANATIONS };
