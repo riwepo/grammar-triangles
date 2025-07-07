@@ -1,13 +1,11 @@
 import PageContent from "@/components/page-content";
 
-import {
-  PAGE_EXPLANATIONS,  
-} from "@/lib/explanation-data";
+import { PAGE_EXPLANATIONS } from "@/lib/explanation-data";
 
-function ModalExplanations() {    
+function ModalExplanations() {
   return (
-    <div className="text-center">
-      <PageContent sentences={PAGE_EXPLANATIONS.modals} />      
+    <div className="text-center print:hidden">
+      <PageContent sentences={PAGE_EXPLANATIONS.modals} />
     </div>
   );
 }

@@ -1,13 +1,11 @@
 import PageContent from "@/components/page-content";
 
-import {
-  PAGE_EXPLANATIONS,  
-} from "@/lib/explanation-data";
+import { PAGE_EXPLANATIONS } from "@/lib/explanation-data";
 
-function TensesExplanations() {    
+function TensesExplanations() {
   return (
-    <div className="text-center">
-      <PageContent sentences={PAGE_EXPLANATIONS.tenses} />      
+    <div className="mb-2 text-center print:hidden">
+      <PageContent sentences={PAGE_EXPLANATIONS.tenses} />
     </div>
   );
 }
