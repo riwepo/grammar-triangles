@@ -6,7 +6,7 @@ import {
   VERB_FORM_EXPLANATIONS,
 } from "@/lib/explanation-data";
 
-function VerbFormExplanations() {
+function TrianglesExplanations() {
   const VerbFormUse = ({ verbFormUseData, index }) => {
     return (
       <li>
@@ -67,7 +67,7 @@ function VerbFormExplanations() {
     />,
   ];
   return (
-    <div className="text-center">
+    <div className="text-center print:hidden">
       <PageContent sentences={PAGE_EXPLANATIONS.triangles} />
       <CardTabs
         tabs={[
@@ -85,4 +85,4 @@ function VerbFormExplanations() {
   );
 }
 
-export default VerbFormExplanations;
+export default TrianglesExplanations;
