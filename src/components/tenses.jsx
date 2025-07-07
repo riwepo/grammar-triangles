@@ -13,7 +13,8 @@ import HelperVerbDoTriangle from "@/components/triangles/helper-verb-do-triangle
 import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
-import { capitalizeFirstLetter } from "@/lib/utils/capatilize-first-letter";
+import { capitalizeFirstLetter, uncapitalizeFirstLetter } from "@/lib/utils/change-first-letter";
+import TensesExplanations from "./tenses-explanations";
 
 function Tenses() {
   const easeInVisible =
@@ -419,9 +420,10 @@ function Tenses() {
     }
   };
 
-  const heading = `Tenses for a ${selectedSentenceType} for verb '${capitalizeFirstLetter(selectedVerb.head)}'`;
+  const heading = `Tenses for a ${uncapitalizeFirstLetter(selectedSentenceType)} for verb '${capitalizeFirstLetter(selectedVerb.head)}'`;
 
   return (
+    <>
     <GrammarContainer
       sentenceTypes={[
         SENTENCE_TYPES.statement,
@@ -545,6 +547,8 @@ function Tenses() {
         </Card>
       </div>
     </GrammarContainer>
+    <TensesExplanations/>
+    </>
   );
 }
 

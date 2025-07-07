@@ -360,6 +360,43 @@ const PAGE_EXPLANATIONS = {
         "In the diagram above, we can make  588 differnet sentences by combining different subjects (7), modals (21) and aspects (4).",
     },
   ],
+  tenses: [
+    {
+      key: 1,
+      content:
+        "In the diagram above we can make statements, negative statements and quetions for the 8 different tenses.",
+    },
+    {
+      key: 2,
+      content:
+        "Notice how it is always the first verb in the sentence that changes with the subject and the past/present.",
+    },
+    {
+      key: 3,
+      content:
+        "Notice how the helper verb 'do' is used in the simple tenses, to make negatives and questions."
+    },
+    {
+      key: 4,
+      content:
+        "Notice how the 'not' always goes after the first verb when making negatives.",
+    }, 
+    {
+      key: 5,
+      content:
+        "Notice how the subject swaps with first verb when making questions.",
+    }, 
+    {
+      key: 6,
+      content:
+        "Notice how the 'ing' heart verb form 4 always always follows the blue 'be' helper verb.",
+    },
+    {
+      key: 7,
+      content:
+        "Notice how the bottom right past participle verb form 3 always always follows the green 'have' helper verb.",
+    },           
+  ],
 };
 
 export { VERB_FORM_EXPLANATIONS, PAGE_EXPLANATIONS };

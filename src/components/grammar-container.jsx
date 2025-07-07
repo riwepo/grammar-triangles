@@ -9,7 +9,7 @@ import SelectDropdown from "@/components/ui/select-dropdown";
 import SelectDropdownVerb from "@/components/ui/select-dropdown-verb";
 
 import { VERBS } from "@/lib/grammar-data";
-import { capitalizeFirstLetter } from "@/lib/utils/capatilize-first-letter";
+import { capitalizeFirstLetter } from "@/lib/utils/change-first-letter";
 
 /**
  * this container does 3 things
