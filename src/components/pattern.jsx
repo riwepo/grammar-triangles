@@ -11,7 +11,7 @@ import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle
 import Card from "@/components/ui/card";
 
 import { VERBS } from "@/lib/grammar-data";
-import PatternExplanations from "./pattern-explanations";
+import PatternExplanations from "@/components/pattern-explanations";
 
 function Pattern() {
   // the selected verb
