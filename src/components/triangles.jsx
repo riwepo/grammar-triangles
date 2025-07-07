@@ -99,7 +99,7 @@ function Triangles() {
   ];
 
   return (
-    <>
+    <div className="grid grid-rows-[1fr_auto] bg-yellow-100 pb-4">
       <GrammarContainer
         showPronounsCombo={true}
         onVerbSelected={handleVerbSelected}
@@ -119,7 +119,7 @@ function Triangles() {
         </div>
       </GrammarContainer>
       <TrianglesExplanations />
-    </>
+    </div>
   );
 }
 

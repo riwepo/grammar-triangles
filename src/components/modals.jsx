@@ -9,7 +9,7 @@ import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
 import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 import Card from "@/components/ui/card";
-import ModalExplanations from "@/components/modal-explanations"
+import ModalExplanations from "@/components/modal-explanations";
 
 import {
   VERBS,
@@ -17,7 +17,6 @@ import {
   SUBJECT_PRONOUNS,
   SENTENCE_TYPES,
 } from "@/lib/grammar-data";
-
 
 function Modals() {
   const [selectedSentenceType, setSentenceType] = useState(
@@ -48,7 +47,7 @@ function Modals() {
     : "grid-cols-[0.2fr_2px_0.1fr_2px_0.7fr]";
 
   return (
-    <>
+    <div className="grid grid-rows-[1fr_auto] bg-yellow-100 pb-4">
       <GrammarContainer
         sentenceTypes={[SENTENCE_TYPES.statement, SENTENCE_TYPES.question]}
         onVerbSelected={handleVerbSelected}
@@ -188,7 +187,7 @@ function Modals() {
         </div>
       </GrammarContainer>
       <ModalExplanations />
-    </>
+    </div>
   );
 }
 

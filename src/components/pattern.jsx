@@ -28,7 +28,7 @@ function Pattern() {
   };
 
   return (
-    <>
+    <div className="grid grid-rows-[1fr_auto] bg-yellow-100 pb-4">
       <GrammarContainer
         onVerbSelected={handleVerbSelected}
         onLoaded={handleContainerLoaded}
@@ -123,7 +123,7 @@ function Pattern() {
         </div>
       </GrammarContainer>
       <PatternExplanations />
-    </>
+    </div>
   );
 }
 

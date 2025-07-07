@@ -13,7 +13,10 @@ import HelperVerbDoTriangle from "@/components/triangles/helper-verb-do-triangle
 import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
-import { capitalizeFirstLetter, uncapitalizeFirstLetter } from "@/lib/utils/change-first-letter";
+import {
+  capitalizeFirstLetter,
+  uncapitalizeFirstLetter,
+} from "@/lib/utils/change-first-letter";
 import TensesExplanations from "./tenses-explanations";
 
 function Tenses() {
@@ -423,132 +426,132 @@ function Tenses() {
   const heading = `Tenses for a ${uncapitalizeFirstLetter(selectedSentenceType)} for verb '${capitalizeFirstLetter(selectedVerb.head)}'`;
 
   return (
-    <>
-    <GrammarContainer
-      sentenceTypes={[
-        SENTENCE_TYPES.statement,
-        SENTENCE_TYPES.negative,
-        SENTENCE_TYPES.question,
-      ]}
-      onVerbSelected={handleVerbSelected}
-      onSentenceTypeSelected={handleSentenceTypeSelected}
-      onLoaded={handleContainerLoaded}
-    >
-      <div className="absolute top-0 right-0 bottom-0 left-0 grid grid-rows-[auto_1fr] gap-y-2">
-        <div className="row-start-1 mx-auto flex flex-row gap-4 pt-2">
-          <p className="text-2xl font-bold">{heading}</p>
-        </div>
-        <Card className="absolute top-0 right-0 bottom-0 left-0 row-start-2 m-4 bg-white">
-          <div className="grid h-full grid-cols-[auto_10fr_10fr_1fr_10fr_1fr_10fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] gap-y-1">
-            <div className="col-start-1 row-start-1 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
-              <p className="row-start-1">Present Simple</p>
-              <div className="row-start-2 h-full bg-red-500"></div>
-              <p className="row-start-3">Past Simple</p>
-            </div>
-            <HelperVerbDoTriangle
-              uuid={svgUseIds[0]}
-              classNames={classNames.simple.helperVerbDo}
-            />
-            <NormalPronounTriangle
-              uuid={svgUseIds[1]}
-              verb={VERBS.do}
-              classNames={classNames.simple.helperVerbDoPronouns}
-            />
-            <p className={classNames.simple.not}>not</p>
-            <BossVerbTriangle
-              uuid={svgUseIds[2]}
-              verb={selectedVerb}
-              classNames={classNames.simple.bossVerb}
-            />
-            <NormalPronounTriangle
-              uuid={svgUseIds[3]}
-              verb={selectedVerb}
-              classNames={classNames.simple.bossVerbPronouns}
-            />
-            <div className="col-span-7 col-start-1 row-start-2 bg-gray-200"></div>
-            <div className="col-start-1 row-start-3 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
-              <p className="row-start-1">Present Continuous</p>
-              <div className="row-start-2 h-full bg-red-500"></div>
-              <p className="row-start-3">Past Continuous</p>
-            </div>
-            <HelperVerbBeTriangle
-              uuid={svgUseIds[4]}
-              classNames={classNames.continuous.helperVerbBeQuestion}
-            />
-            <HelperVerbBeTriangle
-              uuid={svgUseIds[5]}
-              classNames={classNames.continuous.helperVerbBe}
-            />
-            <ToBePronounTriangle
-              uuid={svgUseIds[6]}
-              classNames={classNames.continuous.helperVerbBePronouns}
-            />
-            <p className={classNames.continuous.not}>not</p>
-            <BossVerbTriangle
-              uuid={svgUseIds[7]}
-              verb={selectedVerb}
-              classNames={classNames.continuous.bossVerb}
-            />
-            <div className="col-span-7 col-start-1 row-start-4 bg-gray-200"></div>
-            <div className="col-start-1 row-start-5 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
-              <p className="row-start-1">Present Perfect Simple</p>
-              <div className="row-start-2 h-full bg-red-500"></div>
-              <p className="row-start-3">Past Perfect Simple</p>
-            </div>
-            <HelperVerbHaveTriangle
-              uuid={svgUseIds[8]}
-              classNames={classNames.perfect.helperVerbHaveQuestion}
-            />
-            <HelperVerbHaveTriangle
-              uuid={svgUseIds[9]}
-              classNames={classNames.perfect.helperVerbHave}
-            />
-            <NormalPronounTriangle
-              uuid={svgUseIds[10]}
-              verb={selectedVerb}
-              classNames={classNames.perfect.helperVerbHavePronouns}
-            />
-            <p className={classNames.perfect.not}>not</p>
-            <BossVerbTriangle
-              uuid={svgUseIds[11]}
-              verb={selectedVerb}
-              classNames={classNames.perfect.bossVerb}
-            />
-            <div className="col-span-7 col-start-1 row-start-6 bg-gray-200"></div>
-            <div className="col-start-1 row-start-7 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
-              <p className="row-start-1">Present Perfect Continuous</p>
-              <div className="row-start-2 h-full bg-red-500"></div>
-              <p className="row-start-3">Past Perfect Continuous</p>
-            </div>
-            <HelperVerbHaveTriangle
-              uuid={svgUseIds[12]}
-              classNames={classNames.perfectContinuous.helperVerbHaveQuestion}
-            />
-            <HelperVerbHaveTriangle
-              uuid={svgUseIds[13]}
-              classNames={classNames.perfectContinuous.helperVerbHave}
-            />
-            <NormalPronounTriangle
-              uuid={svgUseIds[14]}
-              verb={selectedVerb}
-              classNames={classNames.perfectContinuous.helperVerbHavePronouns}
-            />
-            <p className={classNames.perfectContinuous.not}>not</p>
-            <HelperVerbBeTriangle
-              uuid={svgUseIds[15]}
-              classNames={classNames.perfectContinuous.helperVerbBe}
-            />
-            <BossVerbTriangle
-              uuid={svgUseIds[16]}
-              verb={selectedVerb}
-              classNames={classNames.perfectContinuous.bossVerb}
-            />
+    <div className="grid grid-rows-[1fr_auto] bg-yellow-100 pb-4">
+      <GrammarContainer
+        sentenceTypes={[
+          SENTENCE_TYPES.statement,
+          SENTENCE_TYPES.negative,
+          SENTENCE_TYPES.question,
+        ]}
+        onVerbSelected={handleVerbSelected}
+        onSentenceTypeSelected={handleSentenceTypeSelected}
+        onLoaded={handleContainerLoaded}
+      >
+        <div className="absolute top-0 right-0 bottom-0 left-0 grid grid-rows-[auto_1fr] gap-y-2">
+          <div className="row-start-1 mx-auto flex flex-row gap-4 pt-2">
+            <p className="text-2xl font-bold">{heading}</p>
           </div>
-        </Card>
-      </div>
-    </GrammarContainer>
-    <TensesExplanations/>
-    </>
+          <Card className="absolute top-0 right-0 bottom-0 left-0 row-start-2 m-4 bg-white">
+            <div className="grid h-full grid-cols-[auto_10fr_10fr_1fr_10fr_1fr_10fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] gap-y-1">
+              <div className="col-start-1 row-start-1 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
+                <p className="row-start-1">Present Simple</p>
+                <div className="row-start-2 h-full bg-red-500"></div>
+                <p className="row-start-3">Past Simple</p>
+              </div>
+              <HelperVerbDoTriangle
+                uuid={svgUseIds[0]}
+                classNames={classNames.simple.helperVerbDo}
+              />
+              <NormalPronounTriangle
+                uuid={svgUseIds[1]}
+                verb={VERBS.do}
+                classNames={classNames.simple.helperVerbDoPronouns}
+              />
+              <p className={classNames.simple.not}>not</p>
+              <BossVerbTriangle
+                uuid={svgUseIds[2]}
+                verb={selectedVerb}
+                classNames={classNames.simple.bossVerb}
+              />
+              <NormalPronounTriangle
+                uuid={svgUseIds[3]}
+                verb={selectedVerb}
+                classNames={classNames.simple.bossVerbPronouns}
+              />
+              <div className="col-span-7 col-start-1 row-start-2 bg-gray-200"></div>
+              <div className="col-start-1 row-start-3 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
+                <p className="row-start-1">Present Continuous</p>
+                <div className="row-start-2 h-full bg-red-500"></div>
+                <p className="row-start-3">Past Continuous</p>
+              </div>
+              <HelperVerbBeTriangle
+                uuid={svgUseIds[4]}
+                classNames={classNames.continuous.helperVerbBeQuestion}
+              />
+              <HelperVerbBeTriangle
+                uuid={svgUseIds[5]}
+                classNames={classNames.continuous.helperVerbBe}
+              />
+              <ToBePronounTriangle
+                uuid={svgUseIds[6]}
+                classNames={classNames.continuous.helperVerbBePronouns}
+              />
+              <p className={classNames.continuous.not}>not</p>
+              <BossVerbTriangle
+                uuid={svgUseIds[7]}
+                verb={selectedVerb}
+                classNames={classNames.continuous.bossVerb}
+              />
+              <div className="col-span-7 col-start-1 row-start-4 bg-gray-200"></div>
+              <div className="col-start-1 row-start-5 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
+                <p className="row-start-1">Present Perfect Simple</p>
+                <div className="row-start-2 h-full bg-red-500"></div>
+                <p className="row-start-3">Past Perfect Simple</p>
+              </div>
+              <HelperVerbHaveTriangle
+                uuid={svgUseIds[8]}
+                classNames={classNames.perfect.helperVerbHaveQuestion}
+              />
+              <HelperVerbHaveTriangle
+                uuid={svgUseIds[9]}
+                classNames={classNames.perfect.helperVerbHave}
+              />
+              <NormalPronounTriangle
+                uuid={svgUseIds[10]}
+                verb={selectedVerb}
+                classNames={classNames.perfect.helperVerbHavePronouns}
+              />
+              <p className={classNames.perfect.not}>not</p>
+              <BossVerbTriangle
+                uuid={svgUseIds[11]}
+                verb={selectedVerb}
+                classNames={classNames.perfect.bossVerb}
+              />
+              <div className="col-span-7 col-start-1 row-start-6 bg-gray-200"></div>
+              <div className="col-start-1 row-start-7 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
+                <p className="row-start-1">Present Perfect Continuous</p>
+                <div className="row-start-2 h-full bg-red-500"></div>
+                <p className="row-start-3">Past Perfect Continuous</p>
+              </div>
+              <HelperVerbHaveTriangle
+                uuid={svgUseIds[12]}
+                classNames={classNames.perfectContinuous.helperVerbHaveQuestion}
+              />
+              <HelperVerbHaveTriangle
+                uuid={svgUseIds[13]}
+                classNames={classNames.perfectContinuous.helperVerbHave}
+              />
+              <NormalPronounTriangle
+                uuid={svgUseIds[14]}
+                verb={selectedVerb}
+                classNames={classNames.perfectContinuous.helperVerbHavePronouns}
+              />
+              <p className={classNames.perfectContinuous.not}>not</p>
+              <HelperVerbBeTriangle
+                uuid={svgUseIds[15]}
+                classNames={classNames.perfectContinuous.helperVerbBe}
+              />
+              <BossVerbTriangle
+                uuid={svgUseIds[16]}
+                verb={selectedVerb}
+                classNames={classNames.perfectContinuous.bossVerb}
+              />
+            </div>
+          </Card>
+        </div>
+      </GrammarContainer>
+      <TensesExplanations />
+    </div>
   );
 }
 
