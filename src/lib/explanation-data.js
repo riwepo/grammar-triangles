@@ -364,7 +364,7 @@ const PAGE_EXPLANATIONS = {
     {
       key: 1,
       content:
-        "In the diagram above we can make statements, negative statements and quetions for the 8 different tenses.",
+        "In the diagram above we can make statements, negative statements and questions for the 8 different tenses.",
     },
     {
       key: 2,
