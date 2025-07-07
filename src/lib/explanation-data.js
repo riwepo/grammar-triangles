@@ -337,7 +337,7 @@ const PAGE_EXPLANATIONS = {
     {
       key: 3,
       content:
-        "Modal verbs are used before normal verbs, and express possibility, necessity, permission, ability, or obligation."
+        "Modal verbs are used in front of normal verbs, and express possibility, necessity, permission, ability, or obligation."
     },
     {
       key: 4,
@@ -353,6 +353,11 @@ const PAGE_EXPLANATIONS = {
       key: 6,
       content:
         "To make a question when there is a modal verb, all we have to do is swap the subject and the modal. Try it above.",
+    },
+     {
+      key: 7,
+      content:
+        "In the diagram above, we can make  588 differnet sentences by combining different subjects (7), modals (21) and aspects (4).",
     },
   ],
 };
