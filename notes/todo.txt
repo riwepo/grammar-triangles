@@ -1,9 +1,4 @@
 
-traingle page, pronouns aren't shown when page refreshed
-
-add explanations to basic triangles page
-
-basic triangles - put in tabs so not distracting
-
-
+deploy to vercel
+check look on mobile
 add passive option
