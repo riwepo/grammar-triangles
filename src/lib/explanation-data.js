@@ -342,7 +342,7 @@ const PAGE_EXPLANATIONS = {
     {
       key: 4,
       content:
-        "Modal verbs only have one form. They don't fit into our verb triangles.",
+        "Modal verbs only have one form. They don't fit into our verb triangle.",
     },
     {
       key: 5,
