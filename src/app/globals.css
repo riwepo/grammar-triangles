@@ -12,6 +12,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@theme navigation {
+  --shadow-orange: 0 0 0 0.5rem rgba(230,125,34,0.5); 
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
