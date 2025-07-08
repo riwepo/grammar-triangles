@@ -8,7 +8,7 @@ import logo from "@/public/logo.png";
 
 function Header() {
   return (
-    <header className="grid-cols-grid-cols-[auto_minmax(0,1fr)_auto_minmax(0,1fr)_auto] grid h-16 min-w-0 items-center gap-x-4 px-8 py-0 print:hidden">
+    <header className="grid h-16 min-w-0 grid-cols-[auto_1fr_auto_1fr] items-center gap-x-4 px-8 py-0 print:hidden">
       <Link href="/" prefetch={false} className="col-start-1">
         <Image
           alt="Grammmar Triangles logo"
@@ -16,9 +16,7 @@ function Header() {
           className="h-16 w-auto"
         />
       </Link>
-      <div className="col-start-2 min-w-0 overflow-hidden"></div>
       <Nav className="col-start-3" />
-      <div className="col-start-4 min-w-0 overflow-hidden"></div>
     </header>
   );
 }
