@@ -11,7 +11,7 @@ function TrianglesExplanations() {
     return (
       <li>
         <p className="mt-2 mb-2 text-xl font-bold">{`${index}. ${verbFormUseData.heading}`}</p>
-        <p className="whitespace-pre">{verbFormUseData.description}</p>
+        <p className="text-base">{verbFormUseData.description}</p>
         <p className="text-l mt-2 font-semibold">Examples</p>
         <ul>
           {verbFormUseData.examples.map((example) => (
@@ -32,7 +32,7 @@ function TrianglesExplanations() {
         <p className="mt-4 mb-2 text-2xl font-extrabold">
           How to create it from the base verb
         </p>
-        <p className="whitespace-pre">{verbFormData.howToCreate}</p>
+        <p className="text-base">{verbFormData.howToCreate}</p>
         <p className="mt-2 mb-2 text-2xl font-extrabold">Creation examples</p>
         <ul>
           {verbFormData.creationExamples.map((example) => (
