@@ -337,7 +337,7 @@ const PAGE_EXPLANATIONS = {
     {
       key: 3,
       content:
-        "Modal verbs are used in front of normal verbs, and express possibility, necessity, permission, ability, or obligation."
+        "Modal verbs are used in front of normal verbs, and express possibility, necessity, permission, ability, or obligation.",
     },
     {
       key: 4,
@@ -354,7 +354,7 @@ const PAGE_EXPLANATIONS = {
       content:
         "To make a question when there is a modal verb, all we have to do is swap the subject and the modal. Try it above.",
     },
-     {
+    {
       key: 7,
       content:
         "In the diagram above, we can make  588 differnet sentences by combining different subjects (7), modals (21) and aspects (4).",
@@ -374,18 +374,18 @@ const PAGE_EXPLANATIONS = {
     {
       key: 3,
       content:
-        "Notice how the helper verb 'do' is used in the simple tenses, to make negatives and questions."
+        "Notice how the helper verb 'do' is used in the simple tenses, to make negatives and questions.",
     },
     {
       key: 4,
       content:
         "Notice how the 'not' always goes after the first verb when making negatives.",
-    }, 
+    },
     {
       key: 5,
       content:
         "Notice how the subject swaps with first verb when making questions.",
-    }, 
+    },
     {
       key: 6,
       content:
@@ -395,7 +395,7 @@ const PAGE_EXPLANATIONS = {
       key: 7,
       content:
         "Notice how the bottom right past participle verb form 3 always always follows the green 'have' helper verb.",
-    },           
+    },
   ],
 };
 
