@@ -45,7 +45,8 @@ function Nav({ className }) {
               <NavLink
                 href={link.href}
                 className={({ isActive }) =>
-                  `focus:shadow-orange text-xl font-medium hover:text-[#4C0000] focus:outline-none active:text-[#990000] ${isActive ? "border-b-2 border-orange-500" : ""}`
+                  "focus:shadow-orange text-xl font-medium hover:text-[#4C0000] focus:outline-none active:text-[#990000] " +
+                  (isActive ? "border-b-2 border-orange-500" : "")
                 }
               >
                 {link.name}
