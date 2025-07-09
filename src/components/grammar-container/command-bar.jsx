@@ -19,6 +19,12 @@ function CommandBar({
         className,
       )}
     >
+      <SelectDropdownVerb
+        title="Boss Verb:"
+        options={verbOptions}
+        onSelect={onVerbSelect}
+        className="py-2"
+      />
       {sentenceTypeOptions && (
         <SelectDropdown
           title="Sentence Type:"
@@ -27,12 +33,6 @@ function CommandBar({
           className="py-2"
         />
       )}
-      <SelectDropdownVerb
-        title="Boss Verb:"
-        options={verbOptions}
-        onSelect={onVerbSelect}
-        className="py-2"
-      />
       {showPronounsOptions && (
         <SelectDropdown
           title="Show Pronouns:"
