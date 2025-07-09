@@ -1,4 +1,4 @@
-import SelectDropdownVerb from "@/components/grammar-container/select-dropdown-verb";
+import SelectDropdownVerb from "@/components/grammar-container2/select-dropdown-verb";
 import SelectDropdown from "@/components/ui/select-dropdown";
 
 import { cn } from "@/lib/utils/css-class";
@@ -28,7 +28,7 @@ function CommandBar({
         />
       )}
       <SelectDropdownVerb
-        title="Boss Verbxx:"
+        title="Boss Verb:"
         options={verbOptions}
         onSelect={onVerbSelect}
         className="col-start-3 py-2"

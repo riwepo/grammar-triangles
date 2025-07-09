@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import GrammarContainer2, {
   SVG_USE_ID_PLACEHOLDERS,
-} from "@/components/grammar-container/grammar-container2";
+} from "@/components/grammar-container2";
 import CardTabs from "@/components/ui/card-tabs";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import ToBeBossVerbTriangle from "@/components/triangles/to-be-boss-verb-triangle";
@@ -99,26 +99,21 @@ function Triangles() {
   ];
 
   return (
-    //<div className="grid grid-rows-[1fr_auto] bg-yellow-100 pb-4">
     <GrammarContainer2
+      printableDiagramHeading="Triangles"
       showPronounsCombo={true}
       onVerbSelected={handleVerbSelected}
       onShowPronounsSelected={handleShowPronounSelected}
       onLoaded={handleContainerLoaded}
     >
-      <div className="grid grid-cols-1 grid-rows-[auto_auto_1fr] gap-y-2">
-        <p className="col-start-1 row-start-1 mx-auto pt-2 text-2xl font-bold">
-          Trianglesxxx
-        </p>
-        <CardTabs
-          tabs={["All verbs except 'To Be'", "The verb 'To Be'"]}
-          className="col-start-1 row-start-3 mx-auto mt-4 mb-4 min-h-full w-1/2 bg-white"
-        >
-          {verbTypes}
-        </CardTabs>
-      </div>
+      <CardTabs
+        tabs={["All verbs except 'To Be'", "The verb 'To Be'"]}
+        //className="col-start-1 row-start-3 mx-auto mt-4 mb-4 min-h-full w-1/2 bg-white"
+        className="mx-auto my-auto mt-20 max-w-[50rem] bg-white"
+      >
+        {verbTypes}
+      </CardTabs>
     </GrammarContainer2>
-    //</div>
   );
 }
 

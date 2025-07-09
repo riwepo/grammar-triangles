@@ -6,7 +6,7 @@ import Image from "next/image";
 import { nanoid } from "nanoid";
 
 import SelectDropdown from "@/components/ui/select-dropdown";
-import SelectDropdownVerb from "@/components/grammar-container/select-dropdown-verb";
+import SelectDropdownVerb from "@/components/grammar-container2/select-dropdown-verb";
 
 import { VERBS } from "@/lib/grammar-data";
 import { capitalizeFirstLetter } from "@/lib/utils/change-first-letter";
