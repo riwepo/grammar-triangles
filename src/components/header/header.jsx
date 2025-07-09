@@ -5,6 +5,7 @@ import Image from "next/image";
 import React from "react";
 import Nav from "@/components/header/nav";
 import logo from "@/public/logo.png";
+import ScreenSize from "@/components/ui/screen-size";
 
 function Header() {
   return (
@@ -16,6 +17,7 @@ function Header() {
           className="h-16 w-auto"
         />
       </Link>
+      <ScreenSize className="col-start-2" />
       <Nav className="col-start-3" />
     </header>
   );
