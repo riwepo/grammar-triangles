@@ -30,6 +30,7 @@ function GrammarContainer2({
   printableDiagramContent,
   explanationsContent,
   sentenceTypes,
+  allowShowPronouns,
   onVerbSelected,
   onSentenceTypeSelected,
   onShowPronounsSelected,
@@ -97,7 +98,7 @@ function GrammarContainer2({
       <CommandBar
         sentenceTypeOptions={sentenceTypeOptions}
         verbOptions={verbOptions}
-        showPronounsOptions={showPronounsOptions}
+        showPronounsOptions={allowShowPronouns ? showPronounsOptions : null}
         onSentenceTypeSelect={handleSentenceTypeSelect}
         onVerbSelect={handleVerbSelect}
         onShowPronounsSelect={handleShowPronounsSelect}

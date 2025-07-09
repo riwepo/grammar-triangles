@@ -114,7 +114,7 @@ function Triangles() {
       printableDiagramHeading="Triangles"
       printableDiagramContent={printableDiagramContent}
       explanationsContent={explanationsContent}
-      showPronounsCombo={true}
+      allowShowPronouns={true}
       onVerbSelected={handleVerbSelected}
       onShowPronounsSelected={handleShowPronounSelected}
       onLoaded={handleContainerLoaded}
