@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import GrammarContainer2, {
   SVG_USE_ID_PLACEHOLDERS,
-} from "@/components/grammar-container2";
+} from "@/components/grammar-container";
 import NormalPronounTriangle from "@/components/triangles/basic/pronouns/normal-pronoun-triangle";
 import ToBePronounTriangle from "@/components/triangles/basic/pronouns/to-be-pronoun-triangle";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";

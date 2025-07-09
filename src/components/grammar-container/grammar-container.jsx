@@ -1,15 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 import { nanoid } from "nanoid";
 
-import SelectDropdown from "@/components/ui/select-dropdown";
-import SelectDropdownVerb from "@/components/grammar-container2/select-dropdown-verb";
-
 import { VERBS } from "@/lib/grammar-data";
 import { capitalizeFirstLetter } from "@/lib/utils/change-first-letter";
+import CommandBar from "@/components/grammar-container/command-bar";
+import PrintableDiagram from "@/components/grammar-container/printable-diagram";
+import Explanations from "@/components/grammar-container/explanations";
 
 /**
  * this container does 3 things
@@ -24,9 +23,11 @@ const SVG_USE_ID_COUNT = 20;
 export const SVG_USE_ID_PLACEHOLDERS = [...Array(SVG_USE_ID_COUNT).keys()];
 
 function GrammarContainer({
+  printableDiagramHeading,
+  printableDiagramContent,
+  explanationsContent,
   sentenceTypes,
-  showPronounsCombo,
-  children,
+  allowShowPronouns,
   onVerbSelected,
   onSentenceTypeSelected,
   onShowPronounsSelected,
@@ -90,47 +91,26 @@ function GrammarContainer({
   }
 
   return (
-    <>
-      <div className="grid h-auto grid-cols-[1fr_auto_auto_auto_1fr] items-center gap-4 border-t-1 border-black print:hidden">
-        {sentenceTypeOptions && (
-          <SelectDropdown
-            title="Sentence Type:"
-            options={sentenceTypeOptions}
-            onSelect={handleSentenceTypeSelect}
-            className="col-start-2 py-2"
-          />
-        )}
-        <SelectDropdownVerb
-          title="Boss Verb:"
-          options={verbOptions}
-          onSelect={handleVerbSelect}
-          className="col-start-3 py-2"
-        />
-        {showPronounsCombo && (
-          <SelectDropdown
-            title="Show Pronouns:"
-            options={showPronounsOptions}
-            onSelect={handleShowPronounsSelect}
-            className="col-start-4 py-2"
-          />
-        )}
-      </div>
-      <div className="relative flex h-screen w-full flex-col overflow-visible border bg-gray-300">
-        {children}
-        <button
-          className="absolute right-2 bottom-2 cursor-pointer rounded-sm border bg-gray-200 p-1 hover:bg-gray-100 focus:ring-2 focus:ring-blue-300"
-          onClick={() => window.print()}
-        >
-          <Image
-            src="/print.png"
-            alt="Button Icon"
-            width={24}
-            height={24}
-            className=""
-          />
-        </button>
-      </div>
-    </>
+    <div className="grid grid-rows-[auto_auto_auto]">
+      <CommandBar
+        sentenceTypeOptions={sentenceTypeOptions}
+        verbOptions={verbOptions}
+        showPronounsOptions={allowShowPronouns ? showPronounsOptions : null}
+        onSentenceTypeSelect={handleSentenceTypeSelect}
+        onVerbSelect={handleVerbSelect}
+        onShowPronounsSelect={handleShowPronounsSelect}
+        className="row-start-1"
+      />
+      <PrintableDiagram
+        heading={printableDiagramHeading}
+        className="row-start-2"
+      >
+        {printableDiagramContent}
+      </PrintableDiagram>
+      <Explanations className="row-start-3 mx-4">
+        {explanationsContent}
+      </Explanations>
+    </div>
   );
 }
 

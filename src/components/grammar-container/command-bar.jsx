@@ -1,4 +1,4 @@
-import SelectDropdownVerb from "@/components/grammar-container2/select-dropdown-verb";
+import SelectDropdownVerb from "@/components/grammar-container/select-dropdown-verb";
 import SelectDropdown from "@/components/ui/select-dropdown";
 
 import { cn } from "@/lib/utils/css-class";

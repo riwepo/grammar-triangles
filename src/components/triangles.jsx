@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import GrammarContainer2, {
   SVG_USE_ID_PLACEHOLDERS,
-} from "@/components/grammar-container2";
+} from "@/components/grammar-container";
 import CardTabs from "@/components/ui/card-tabs";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import ToBeBossVerbTriangle from "@/components/triangles/to-be-boss-verb-triangle";
