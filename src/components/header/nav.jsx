@@ -1,12 +1,9 @@
 "use client";
 
+import NavLink from "@/components/header/navlink";
 import { useRouter } from "next/navigation";
 
-import { cn } from "@/lib/utils/css-class";
-
-import NavLink from "@/components/ui/navlink";
-
-function Nav({ className }) {
+function Nav({ isNavOpen, onClick }) {
   const router = useRouter();
   const navLinkData = [
     {
@@ -31,23 +28,36 @@ function Nav({ className }) {
     },
   ];
 
-  // this used to be used as a signal to close the mobile navigation
-  const handleClick = async function (e) {
+  // the nav bar has a Z index of 1, it will be shown on top of everything else
+  // when we are on small screen, the navbar is moved off to the side and hidden when not open
+  // note that these classes get overridden below for larger screens
+  const navOpenClosedClasses = isNavOpen
+    ? "translate-x-0 opacity-100 block pointer-events-auto"
+    : "translate-x-full opacity-0 hidden pointer-events-none";
+
+  // this is used as a signal to close the mobile navigation
+  const handleClick = async function (e, href) {
+    e.preventDefault();
     router.push(e.target.href);
+    onClick(href);
   };
 
   return (
-    <nav className={cn(className, "items-center justify-center")}>
-      <ul className="flex list-none flex-row items-center gap-8">
+    <nav
+      className={`${navOpenClosedClasses} absolute top-17 left-0 z-1 flex h-[100vh] w-full items-center justify-center bg-[rgba(255,255,0,0.5)] backdrop-blur transition-all duration-500 md:pointer-events-auto md:relative md:block md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:backdrop-blur-none`}
+    >
+      <ul className="flex list-none flex-col items-center gap-8 md:flex-row xl:gap-12">
         {navLinkData.map((link) => {
           return (
             <li key={link.key}>
               <NavLink
-                href={link.href}
                 className={({ isActive }) =>
                   "focus:shadow-orange text-xl font-medium hover:text-[#4C0000] focus:outline-none active:text-[#990000] " +
                   (isActive ? "border-b-2 border-orange-500" : "")
                 }
+                href={link.href}
+                onClick={(e) => handleClick(e, link.href)}
+                prefetch={false}
               >
                 {link.name}
               </NavLink>

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils/css-class";
 
 function MobileMenuButton({ isNavOpen, onClick, className }) {
   return (
-    <div className={cn("z-60", className)}>
+    <div className={cn("", className)}>
       {isNavOpen && (
         <button
           aria-label="close"

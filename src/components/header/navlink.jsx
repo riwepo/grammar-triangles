@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function NavLink({ href, className, children }) {
+export default function NavLink({ href, onClick, className, children }) {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -11,7 +11,7 @@ export default function NavLink({ href, className, children }) {
     typeof className === "function" ? className({ isActive }) : className;
 
   return (
-    <Link href={href} className={resolvedClassName}>
+    <Link href={href} onClick={onClick} className={resolvedClassName}>
       {children}
     </Link>
   );

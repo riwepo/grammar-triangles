@@ -3,21 +3,33 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import Nav2 from "@/components/header/nav2";
+import { usePathname } from "next/navigation";
+
+import Nav from "@/components/header/nav";
 import logo from "@/public/logo.png";
 import ScreenSize from "@/components/ui/screen-size";
 import MobileMenuButton from "@/components/header/mobile-menu-button";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
+  const pathname = usePathname();
 
   const handleMobileMenuClick = function (e) {
     setIsNavOpen((prev) => !prev);
   };
 
-  const handleNavClick = function (e) {
-    setIsNavOpen(false);
+  const handleNavClick = function (href) {
+    // this is a fallback to close nav
+    // if the path doesn't change from the click
+    if (href === pathname) {
+      setIsNavOpen(false);
+    }
   };
+
+  React.useEffect(() => {
+    //close nav on path change
+    setIsNavOpen(false);
+  }, [pathname]);
 
   return (
     <header className="grid h-16 min-w-0 grid-cols-[auto_1fr_auto_1fr_auto] items-center gap-x-4 px-8 py-0 print:hidden">
@@ -29,7 +41,7 @@ function Header() {
         />
       </Link>
       <ScreenSize className="col-start-2" />
-      <Nav2
+      <Nav
         isNavOpen={isNavOpen}
         onClick={handleNavClick}
         className="col-start-3"
