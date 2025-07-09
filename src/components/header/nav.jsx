@@ -12,26 +12,22 @@ function Nav({ className }) {
     {
       key: 1,
       href: `/triangles`,
-      //name: "Triangles",
-      name: "T",
+      name: "Triangles",
     },
     {
       key: 2,
       href: `/pattern`,
-      //name: "Pattern",
-      name: "P",
+      name: "Pattern",
     },
     {
       key: 3,
       href: `/modals`,
-      //name: "Modals",
-      name: "M",
+      name: "Modals",
     },
     {
       key: 4,
       href: `/tenses`,
-      //name: "Tenses",
-      name: "T",
+      name: "Tenses",
     },
   ];
 
