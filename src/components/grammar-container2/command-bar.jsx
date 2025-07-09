@@ -15,7 +15,7 @@ function CommandBar({
   return (
     <div
       className={cn(
-        "grid h-auto grid-cols-[1fr_auto_auto_auto_1fr] items-center gap-4 border-t-1 border-black print:hidden",
+        "flex h-auto flex-wrap items-center justify-center gap-4 border-t-1 border-black print:hidden",
         className,
       )}
     >
@@ -24,21 +24,21 @@ function CommandBar({
           title="Sentence Type:"
           options={sentenceTypeOptions}
           onSelect={onSentenceTypeSelect}
-          className="col-start-2 py-2"
+          className="py-2"
         />
       )}
       <SelectDropdownVerb
         title="Boss Verb:"
         options={verbOptions}
         onSelect={onVerbSelect}
-        className="col-start-3 py-2"
+        className="py-2"
       />
       {showPronounsOptions && (
         <SelectDropdown
           title="Show Pronouns:"
           options={showPronounsOptions}
           onSelect={onShowPronounsSelect}
-          className="col-start-4 py-2"
+          className="py-2"
         />
       )}
     </div>
