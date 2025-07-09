@@ -101,7 +101,6 @@ function Triangles() {
   const printableDiagramContent = (
     <CardTabs
       tabs={["All verbs except 'To Be'", "The verb 'To Be'"]}
-      //className="col-start-1 row-start-3 mx-auto mt-4 mb-4 min-h-full w-1/2 bg-white"
       className="mx-auto my-auto mt-20 max-w-[50rem] bg-white"
     >
       {verbTypes}

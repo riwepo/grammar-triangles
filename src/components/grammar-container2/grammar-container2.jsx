@@ -109,7 +109,9 @@ function GrammarContainer2({
       >
         {printableDiagramContent}
       </PrintableDiagram>
-      <Explanations className="row-start-3">{explanationsContent}</Explanations>
+      <Explanations className="row-start-3 mx-4">
+        {explanationsContent}
+      </Explanations>
     </div>
   );
 }
