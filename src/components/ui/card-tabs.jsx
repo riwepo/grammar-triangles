@@ -10,7 +10,7 @@ function CardTabs({ tabs, children, className }) {
     setSelectedTabIndex(index);
   };
   return (
-    <div className={cn(className, "relative rounded-lg p-4 shadow-md")}>
+    <div className={cn("relative rounded-lg p-4 shadow-md", className)}>
       <div className="absolute top-0 left-0 flex w-full flex-row">
         {tabs.map((tab, index) => {
           const tabClasses =
