@@ -10,8 +10,13 @@ function CardTabs({ tabs, children, className }) {
     setSelectedTabIndex(index);
   };
   return (
-    <div className={cn("relative rounded-lg p-4 shadow-md", className)}>
-      <div className="absolute top-0 left-0 flex w-full flex-row">
+    <div
+      className={cn(
+        "relative flex flex-col rounded-lg p-4 shadow-md",
+        className,
+      )}
+    >
+      <div className="absolute top-0 left-0 mb-4 flex w-full flex-row">
         {tabs.map((tab, index) => {
           const tabClasses =
             index === selectedTabIndex ? selectedClasses : unselectedClasses;
@@ -27,7 +32,7 @@ function CardTabs({ tabs, children, className }) {
         })}
         <div className="flex-grow-1 border-b"></div>
       </div>
-      <div className="mt-10 flex w-full flex-row items-center justify-center">
+      <div className="mt-10 flex w-full flex-row items-center justify-center pt-20 md:pt-10">
         {children[selectedTabIndex]}
       </div>
     </div>
