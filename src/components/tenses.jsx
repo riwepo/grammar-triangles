@@ -13,11 +13,8 @@ import HelperVerbDoTriangle from "@/components/triangles/helper-verb-do-triangle
 import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
-import {
-  capitalizeFirstLetter,
-  uncapitalizeFirstLetter,
-} from "@/lib/utils/change-first-letter";
-import TensesExplanations from "./tenses-explanations";
+import { uncapitalizeFirstLetter } from "@/lib/utils/change-first-letter";
+import TensesExplanations from "@/components/tenses-explanations";
 
 function Tenses() {
   const easeInVisible =
@@ -423,7 +420,7 @@ function Tenses() {
     }
   };
 
-  const heading = `Tenses for a ${uncapitalizeFirstLetter(selectedSentenceType)} for verb '${capitalizeFirstLetter(selectedVerb.head)}'`;
+  const heading = `Tenses for a ${uncapitalizeFirstLetter(selectedSentenceType)} for verb '${uncapitalizeFirstLetter(selectedVerb.head)}'`;
 
   const printableDiagramContent = (
     <Card className="absolute top-0 right-0 bottom-0 left-0 row-start-2 m-4 bg-white">
@@ -547,7 +544,7 @@ function Tenses() {
         SENTENCE_TYPES.negative,
         SENTENCE_TYPES.question,
       ]}
-      allowShowPronouns={true}
+      allowShowPronouns={false}
       onVerbSelected={handleVerbSelected}
       onSentenceTypeSelected={handleSentenceTypeSelected}
       onLoaded={handleContainerLoaded}
