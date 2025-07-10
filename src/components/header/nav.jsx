@@ -1,9 +1,11 @@
 "use client";
 
-import NavLink from "@/components/header/navlink";
 import { useRouter } from "next/navigation";
 
-function Nav({ isNavOpen, onClick }) {
+import NavLink from "@/components/header/navlink";
+import { cn } from "@/lib/utils/css-class";
+
+function Nav({ isNavOpen, onClick, className }) {
   const router = useRouter();
   const navLinkData = [
     {
@@ -44,7 +46,10 @@ function Nav({ isNavOpen, onClick }) {
 
   return (
     <nav
-      className={`${navOpenClosedClasses} absolute top-25 left-0 z-1 flex h-[100vh] w-full justify-center bg-[rgba(255,255,255,0.5)] pt-8 backdrop-blur transition-all duration-500 md:pointer-events-auto md:relative md:top-auto md:block md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:backdrop-blur-none`}
+      className={cn(
+        `${navOpenClosedClasses} absolute top-25 left-0 z-1 flex h-[100vh] w-full justify-center bg-[rgba(255,255,255,0.5)] pt-8 backdrop-blur transition-all duration-500 md:pointer-events-auto md:relative md:top-auto md:block md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:backdrop-blur-none`,
+        className,
+      )}
     >
       <ul className="flex list-none flex-col gap-8 md:flex-row xl:gap-12">
         {navLinkData.map((link) => {
