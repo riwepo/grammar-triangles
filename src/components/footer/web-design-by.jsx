@@ -1,7 +1,20 @@
 import { cn } from "@/lib/utils/css-class";
 
 function WebDesignBy({ className }) {
-  return <p className={cn("", className)}>riwepo</p>;
+  return (
+    <div className={cn("flex flex-col items-center", className)}>
+      <p>
+        © 2025{" "}
+        <a
+          href="mailto:riwepo.au@gmail.com.com"
+          class="underline hover:text-blue-500"
+        >
+          riwepo
+        </a>
+      </p>
+      <p>All rights reserved</p>
+    </div>
+  );
 }
 
 export default WebDesignBy;
