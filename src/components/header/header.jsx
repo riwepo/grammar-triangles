@@ -49,7 +49,7 @@ function Header() {
   }, [pathname]);
 
   return (
-    <header className="grid h-16 min-w-0 grid-cols-[auto_1fr_auto_1fr_auto] items-center gap-x-4 px-8 py-0 print:hidden">
+    <header className="grid h-24 min-w-0 grid-cols-[auto_1fr_auto_1fr_auto] items-center gap-x-4 px-2 py-2 md:px-8 print:hidden">
       <Link href="/" prefetch={false} className="col-start-1">
         <Image
           alt="Grammmar Triangles logo"
