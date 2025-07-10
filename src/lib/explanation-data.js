@@ -357,7 +357,7 @@ const PAGE_EXPLANATIONS = {
     {
       key: 7,
       content:
-        "In the diagram above, we can make  588 differnet sentences by combining different subjects (7), modals (21) and aspects (4).",
+        "In the diagram above, we can make  588 different sentences by combining different subjects (7), modals (21) and aspects (4).",
     },
   ],
   tenses: [
