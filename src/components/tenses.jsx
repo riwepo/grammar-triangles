@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import GrammarContainer2, {
+import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
 import NormalPronounTriangle from "@/components/triangles/basic/pronouns/normal-pronoun-triangle";
@@ -538,7 +538,7 @@ function Tenses() {
   const explanationsContent = <TensesExplanations />;
 
   return (
-    <GrammarContainer2
+    <GrammarContainer
       printableDiagramHeading={heading}
       printableDiagramContent={printableDiagramContent}
       explanationsContent={explanationsContent}

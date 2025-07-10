@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import GrammarContainer2, {
+import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
@@ -178,7 +178,7 @@ function Modals() {
   const explanationsContent = <ModalExplanations />;
 
   return (
-    <GrammarContainer2
+    <GrammarContainer
       printableDiagramHeading="Modals"
       printableDiagramContent={printableDiagramContent}
       explanationsContent={explanationsContent}

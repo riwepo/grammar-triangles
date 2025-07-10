@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import GrammarContainer2, {
+import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
@@ -116,7 +116,7 @@ function Pattern() {
   const explanationsContent = <PatternExplanations />;
 
   return (
-    <GrammarContainer2
+    <GrammarContainer
       printableDiagramHeading="Pattern"
       printableDiagramContent={printableDiagramContent}
       explanationsContent={explanationsContent}

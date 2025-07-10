@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import GrammarContainer2, {
+import GrammarContainer, {
   SVG_USE_ID_PLACEHOLDERS,
 } from "@/components/grammar-container";
 import CardTabs from "@/components/ui/card-tabs";
@@ -110,7 +110,7 @@ function Triangles() {
   const explanationsContent = <TrianglesExplanations />;
 
   return (
-    <GrammarContainer2
+    <GrammarContainer
       printableDiagramHeading="Triangles"
       printableDiagramContent={printableDiagramContent}
       explanationsContent={explanationsContent}
