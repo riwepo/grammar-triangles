@@ -77,7 +77,7 @@ function TrianglesExplanations() {
           VERB_FORM_EXPLANATIONS.presentParticiple.heading,
           VERB_FORM_EXPLANATIONS.thirdPersonSingular.heading,
         ]}
-        className="mx-auto mb-4 w-3/4 bg-white"
+        className="mx-auto mb-4 max-w-250 bg-white"
       >
         {verbFormExplanations}
       </CardTabs>
