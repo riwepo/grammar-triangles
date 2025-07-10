@@ -57,7 +57,7 @@ function Header() {
           className="h-16 w-auto"
         />
       </Link>
-      <ScreenSize className="col-start-2" />
+      {/* <ScreenSize className="col-start-2" /> debugging */}
       <Nav
         isNavOpen={isNavOpen}
         onClick={handleNavClick}
