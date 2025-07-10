@@ -44,9 +44,9 @@ function Nav({ isNavOpen, onClick }) {
 
   return (
     <nav
-      className={`${navOpenClosedClasses} absolute top-17 left-0 z-1 flex h-[100vh] w-full items-center justify-center bg-[rgba(255,255,255,0.5)] backdrop-blur transition-all duration-500 md:pointer-events-auto md:relative md:top-auto md:block md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:backdrop-blur-none`}
+      className={`${navOpenClosedClasses} absolute top-25 left-0 z-1 flex h-[100vh] w-full justify-center bg-[rgba(255,255,255,0.5)] pt-8 backdrop-blur transition-all duration-500 md:pointer-events-auto md:relative md:top-auto md:block md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:backdrop-blur-none`}
     >
-      <ul className="flex list-none flex-col items-center gap-8 md:flex-row xl:gap-12">
+      <ul className="flex list-none flex-col gap-8 md:flex-row xl:gap-12">
         {navLinkData.map((link) => {
           return (
             <li key={link.key}>
