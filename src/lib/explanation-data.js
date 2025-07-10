@@ -310,7 +310,7 @@ const PAGE_EXPLANATIONS = {
     {
       key: 3,
       content:
-        "'Helper verb 'be' is shown in blue, and occupies the second slot.",
+        "Helper verb 'be' is shown in blue, and occupies the second slot.",
     },
     {
       key: 4,
