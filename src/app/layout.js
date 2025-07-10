@@ -7,6 +7,15 @@ import Footer from "@/components/footer";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
+// app/layout.tsx or app/layout.js
+export const metadata = {
+  icons: {
+    icon: [
+      { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/favicon.png' },
+    ],
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="text-[0.8rem] lg:text-[0.9rem] 2xl:text-[1rem]">
