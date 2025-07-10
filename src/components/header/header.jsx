@@ -14,21 +14,38 @@ function Header() {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
   const pathname = usePathname();
 
+  const toggleNavOpenScrollLock = () => {
+    setIsNavOpen((prev) => {
+      const updated = !prev;
+      if (updated) {
+        document.body.classList.add("overflow-hidden");
+      } else {
+        document.body.classList.remove("overflow-hidden");
+      }
+      return updated;
+    });
+  };
+
+  const closeNavOpenScrollLock = () => {
+    document.body.classList.remove("overflow-hidden");
+    setIsNavOpen(false);
+  };
+
   const handleMobileMenuClick = function (e) {
-    setIsNavOpen((prev) => !prev);
+    toggleNavOpenScrollLock();
   };
 
   const handleNavClick = function (href) {
     // this is a fallback to close nav
     // if the path doesn't change from the click
     if (href === pathname) {
-      setIsNavOpen(false);
+      closeNavOpenScrollLock(false);
     }
   };
 
   React.useEffect(() => {
     //close nav on path change
-    setIsNavOpen(false);
+    closeNavOpenScrollLock(false);
   }, [pathname]);
 
   return (
