@@ -10,7 +10,9 @@ function PrintableDiagram({ heading, className, children }) {
         className,
       )}
     >
-      <p className="row-start-1 mx-auto pt-8 text-2xl font-bold">{heading}</p>
+      <p className="row-start-1 mx-auto pt-8 text-center text-2xl font-bold">
+        {heading}
+      </p>
       <div className="row-start-2 mx-2">{children}</div>
       <button
         className="absolute right-2 bottom-2 cursor-pointer rounded-sm border bg-gray-200 p-1 hover:bg-gray-100 focus:ring-2 focus:ring-blue-300"
