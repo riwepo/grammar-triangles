@@ -7,7 +7,7 @@ function WebDesignBy({ className }) {
         © 2025{" "}
         <a
           href="mailto:riwepo.au@gmail.com.com"
-          class="underline hover:text-blue-500"
+          className="underline hover:text-blue-500"
         >
           riwepo
         </a>
