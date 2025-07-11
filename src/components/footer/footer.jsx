@@ -4,7 +4,7 @@ import React from "react";
 
 import logo from "@/public/logo.png";
 import WebDesignBy from "@/components/footer/web-design-by";
-import AcknowledgeTo from "./acknowledge_to";
+import ThankRita from "@/components/footer/thank_rita";
 
 function Footer() {
   return (
@@ -16,10 +16,7 @@ function Footer() {
           className="h-16 w-auto"
         />
       </Link>
-      {/* <Link href="/acknowledgements" prefetch={false} className="col-start-3">
-        <p>Acknowledgements</p>
-      </Link> */}
-      <AcknowledgeTo className="col-start-3" />
+      <ThankRita className="col-start-3" />
       <WebDesignBy className="col-start-5" />
     </footer>
   );

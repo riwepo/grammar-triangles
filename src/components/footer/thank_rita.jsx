@@ -2,22 +2,21 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils/css-class";
 
-function AcknowledgeTo({ className }) {
+function ThankRita({ className }) {
   return (
     <div className={cn("flex flex-col items-center", className)}>
       <Link
-        href="/acknowledgements"
+        href="/rita-baker"
         prefetch={false}
         className="underline hover:text-blue-500"
       >
         <div className="flex flex-col items-center">
-          <p>Acknowledgements</p>
-          <p>to</p>
-          <p>Rita Whatshername</p>
+          <p>Thanks</p>
+          <p>Rita Baker</p>
         </div>
       </Link>
     </div>
   );
 }
 
-export default AcknowledgeTo;
+export default ThankRita;
