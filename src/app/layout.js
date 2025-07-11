@@ -7,7 +7,6 @@ import Footer from "@/components/footer";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
-// app/layout.tsx or app/layout.js
 export const metadata = {
   icons: {
     icon: [
