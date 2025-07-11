@@ -18,9 +18,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="text-[0.8rem] lg:text-[0.9rem] 2xl:text-[1rem]">
+    <html lang="en" className="text-[0.8rem] lg:text-[0.9rem] 2xl:text-[1rem] overflow-hidden">
       <body
-        className={`${rubik.className} text-greys-200 grid min-h-svh grid-rows-[auto_1fr_auto]`}
+        className={`${rubik.className} text-greys-200 grid min-h-svh grid-rows-[auto_1fr_auto] overflow-hidden`}
       >
         <Header />
         {children}
