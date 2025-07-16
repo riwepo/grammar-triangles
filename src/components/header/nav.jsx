@@ -34,7 +34,7 @@ function Nav({ isNavOpen, onClick, className }) {
   // when we are on small screen, the navbar is moved off to the side and hidden when not open
   // note that these classes get overridden below for larger screens
   const navOpenClosedClasses = isNavOpen
-    ? "translate-x-0 opacity-100 block pointer-events-auto"
+    ? "translate-x-0 opacity-100 flex pointer-events-auto"
     : "translate-x-full opacity-0 hidden pointer-events-none";
 
   // this is used as a signal to close the mobile navigation
@@ -47,7 +47,7 @@ function Nav({ isNavOpen, onClick, className }) {
   return (
     <nav
       className={cn(
-        `${navOpenClosedClasses} absolute top-25 left-0 z-1 flex h-[100vh] w-full justify-center bg-[rgba(255,255,255,0.5)] pt-8 backdrop-blur transition-all duration-500 md:pointer-events-auto md:relative md:top-auto md:block md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:backdrop-blur-none`,
+        `${navOpenClosedClasses} absolute top-25 left-0 z-1 h-[100vh] w-full justify-center bg-[rgba(255,255,255,0.5)] pt-8 backdrop-blur transition-all duration-500 md:pointer-events-auto md:relative md:top-auto md:block md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:backdrop-blur-none`,
         className,
       )}
     >
