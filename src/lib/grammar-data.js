@@ -27,6 +27,8 @@ const SENTENCE_TYPES = {
   statement: "Statement",
   question: "Question",
   negative: "Negative",
+  active: "Active",
+  passive: "Passive",
 };
 
 const VERBS = {
@@ -732,9 +734,4 @@ const VERBS = {
   },
 };
 
-export {
-  VERBS,
-  MODAL_VERBS,
-  SENTENCE_TYPES,
-  SUBJECT_PRONOUNS,
-};
+export { VERBS, MODAL_VERBS, SENTENCE_TYPES, SUBJECT_PRONOUNS };

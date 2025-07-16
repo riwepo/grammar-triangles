@@ -28,6 +28,11 @@ function Nav({ isNavOpen, onClick, className }) {
       href: `/tenses`,
       name: "Tenses",
     },
+    {
+      key: 5,
+      href: `/passives`,
+      name: "Passives",
+    },
   ];
 
   // the nav bar has a Z index of 1, it will be shown on top of everything else
