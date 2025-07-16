@@ -37,65 +37,83 @@ function Modals() {
 
   const handleSentenceTypeSelected = (key) => {
     setSentenceType(key);
+    if (key === SENTENCE_TYPES.statement) {
+      setClassNames(classNamesDict.statement);
+    } else if (key === SENTENCE_TYPES.question) {
+      setClassNames(classNamesDict.question);
+    }
   };
 
-  const statement = selectedSentenceType === SENTENCE_TYPES.statement;
-  const question = selectedSentenceType === SENTENCE_TYPES.question;
+  const easeInVisible =
+    "opacity-100 transition-opacity duration-2000 ease-in-out";
+  const easeOutInvisible =
+    "opacity-0 transition-opacity duration-2000 ease-in-out";
 
-  const gridTemplateCols = statement
-    ? "grid-cols-[0.1fr_2px_0.2fr_2px_0.7fr]"
-    : "grid-cols-[0.2fr_2px_0.1fr_2px_0.7fr]";
+  const classNamesDict = {
+    statement: {
+      col1_subjectPronoun: `${easeInVisible}`,
+      col1_modalVerb: `${easeOutInvisible} text-yellow-500`,
+      col2_subjectPronoun: `${easeOutInvisible}`,
+      col2_modalVerb: `${easeInVisible} text-yellow-500`,
+    },
+    question: {
+      col1_subjectPronoun: `${easeOutInvisible}`,
+      col1_modalVerb: `${easeInVisible} text-yellow-500`,
+      col2_subjectPronoun: `${easeInVisible}`,
+      col2_modalVerb: `${easeOutInvisible} text-yellow-500`,
+    },
+  };
+
+  const [classNames, setClassNames] = useState(classNamesDict.statement);
+
+  const gridTemplateCols = "grid-cols-[0.2fr_2px_0.2fr_2px_0.6fr]";
 
   const printableDiagramContent = (
     <Card className="absolute top-0 right-0 bottom-0 left-0 row-start-2 m-4 bg-white">
       <div
         className={`grid h-full ${gridTemplateCols} transition-all duration-500`}
       >
-        {statement && (
-          <div
-            className={`col-start-1 row-start-1 grid h-full auto-rows-auto place-items-center py-2 transition-all duration-500`}
-          >
-            {SUBJECT_PRONOUNS.map((sp) => (
-              <p key={sp}>{sp}</p>
-            ))}
-          </div>
-        )}
+        <div
+          className={`col-start-1 row-start-1 grid h-full auto-rows-auto place-items-center py-2 transition-all duration-500`}
+        >
+          {SUBJECT_PRONOUNS.map((sp) => (
+            <p key={sp} className={classNames.col1_subjectPronoun}>
+              {sp}
+            </p>
+          ))}
+        </div>
 
-        {question && (
-          <div
-            className={`col-start-1 row-start-1 grid h-full auto-rows-auto place-items-center py-2`}
-          >
-            {MODAL_VERBS.map((mv) => (
-              <p key={mv} className="text-yellow-500">
-                {mv}
-              </p>
-            ))}
-          </div>
-        )}
+        <div
+          className={`col-start-1 row-start-1 grid h-full auto-rows-auto place-items-center py-2`}
+        >
+          {MODAL_VERBS.map((mv) => (
+            <p key={mv} className={classNames.col1_modalVerb}>
+              {mv}
+            </p>
+          ))}
+        </div>
 
         <div className="col-start-2 bg-gray-200"></div>
 
-        {question && (
-          <div
-            className={`col-start-3 row-start-1 grid h-full auto-rows-auto place-items-center py-2`}
-          >
-            {SUBJECT_PRONOUNS.map((sp) => (
-              <p key={sp}>{sp}</p>
-            ))}
-          </div>
-        )}
+        <div
+          className={`col-start-3 row-start-1 grid h-full auto-rows-auto place-items-center py-2`}
+        >
+          {SUBJECT_PRONOUNS.map((sp) => (
+            <p key={sp} className={classNames.col2_subjectPronoun}>
+              {sp}
+            </p>
+          ))}
+        </div>
 
-        {statement && (
-          <div
-            className={`col-start-3 row-start-1 grid h-full auto-rows-auto place-items-center py-2`}
-          >
-            {MODAL_VERBS.map((mv) => (
-              <p key={mv} className="text-yellow-500">
-                {mv}
-              </p>
-            ))}
-          </div>
-        )}
+        <div
+          className={`col-start-3 row-start-1 grid h-full auto-rows-auto place-items-center py-2`}
+        >
+          {MODAL_VERBS.map((mv) => (
+            <p key={mv} className={classNames.col2_modalVerb}>
+              {mv}
+            </p>
+          ))}
+        </div>
 
         <div className="col-start-4 bg-gray-200"></div>
 
