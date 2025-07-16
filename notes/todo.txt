@@ -1,6 +1,5 @@
 
-deploy to vercel
-check look on mobile
+
+change way modals works
 add passive option
 
-fix side scrolling on mobile
