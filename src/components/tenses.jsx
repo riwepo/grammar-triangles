@@ -11,11 +11,12 @@ import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-tria
 import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 import HelperVerbDoTriangle from "@/components/triangles/helper-verb-do-triangle";
 import Card from "@/components/ui/card";
+import Explanations from "@/components/explanations";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
 import { uncapitalizeFirstLetter } from "@/lib/utils/change-first-letter";
-import TensesExplanations from "@/components/tenses-explanations";
 import { EASE_IN_VISIBLE, EASE_OUT_INVISIBLE } from "@/lib/constants";
+import { PAGE_EXPLANATIONS } from "@/lib/explanation-data";
 
 function Tenses() {
   const classNamesDict = {
@@ -528,13 +529,13 @@ function Tenses() {
     </Card>
   );
 
-  const explanationsContent = <TensesExplanations />;
-
   return (
     <GrammarContainer
       printableDiagramHeading={heading}
       printableDiagramContent={printableDiagramContent}
-      explanationsContent={explanationsContent}
+      explanationsContent={
+        <Explanations sentences={PAGE_EXPLANATIONS.tenses} />
+      }
       sentenceTypes={[
         SENTENCE_TYPES.statement,
         SENTENCE_TYPES.negative,

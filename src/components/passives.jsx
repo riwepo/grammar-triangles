@@ -10,11 +10,12 @@ import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
 import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 import Card from "@/components/ui/card";
+import Explanations from "@/components/explanations";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
 import { uncapitalizeFirstLetter } from "@/lib/utils/change-first-letter";
-import PassivesExplanations from "@/components/passives-explanations";
 import { EASE_IN_VISIBLE, EASE_OUT_INVISIBLE } from "@/lib/constants";
+import { PAGE_EXPLANATIONS } from "@/lib/explanation-data";
 
 function Passives() {
   const classNamesDict = {
@@ -445,7 +446,9 @@ function Passives() {
     <GrammarContainer
       printableDiagramHeading={heading}
       printableDiagramContent={printableDiagramContent}
-      explanationsContent={<PassivesExplanations />}
+      explanationsContent={
+        <Explanations sentences={PAGE_EXPLANATIONS.tenses} />
+      }
       sentenceTypes={[SENTENCE_TYPES.active, SENTENCE_TYPES.passive]}
       allowShowPronouns={false}
       onVerbSelected={handleVerbSelected}

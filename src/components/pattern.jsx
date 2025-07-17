@@ -7,11 +7,11 @@ import GrammarContainer, {
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
 import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
-
 import Card from "@/components/ui/card";
+import Explanations from "@/components/explanations";
 
 import { VERBS } from "@/lib/grammar-data";
-import PatternExplanations from "@/components/pattern-explanations";
+import { PAGE_EXPLANATIONS } from "@/lib/explanation-data";
 
 function Pattern() {
   // the selected verb
@@ -113,13 +113,13 @@ function Pattern() {
     </Card>
   );
 
-  const explanationsContent = <PatternExplanations />;
-
   return (
     <GrammarContainer
       printableDiagramHeading="Pattern"
       printableDiagramContent={printableDiagramContent}
-      explanationsContent={explanationsContent}
+      explanationsContent={
+        <Explanations sentences={PAGE_EXPLANATIONS.pattern} />
+      }
       onVerbSelected={handleVerbSelected}
       onLoaded={handleContainerLoaded}
     />
