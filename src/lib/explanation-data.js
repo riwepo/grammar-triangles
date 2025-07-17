@@ -79,7 +79,9 @@ const VERB_FORM_EXPLANATIONS = {
   pastSimple: {
     heading: "V2 - Past Simple",
     howToCreate: `For regular verbs the past simple is the same as the past participle.
-       We add -ed to the base verb.
+       Over 99% of Engish verbs are regular verbs.
+       It may seem like there are more irregular verbs, but this is only because they are among the most commonly used.
+       To form the past participle, we add -ed to the base verb.
        Sometimes a small spelling change is needed.
        Some verbs are irregular and the change is unpredictable.`,
     creationExamples: [
@@ -142,7 +144,9 @@ const VERB_FORM_EXPLANATIONS = {
   pastParticiple: {
     heading: "V3 - Past Participle",
     howToCreate: `For regular verbs the past participle is the same as the past simple.
-       We add -ed to the base verb.
+       Over 99% of Engish verbs are regular verbs.
+       It may seem like there are more irregular verbs, but this is only because they are among the most commonly used.
+       To form the past participle, we add -ed to the base verb.
        Sometimes a small spelling change is needed.
        Some verbs are irregular and the change is unpredictable.`,
     creationExamples: [
@@ -262,7 +266,7 @@ const VERB_FORM_EXPLANATIONS = {
       {
         key: 1,
         heading: "Present simple tense",
-        description: `The -s is added for the present simple tense when the subject is a third person.
+        description: `The -s is added for the present simple tense when the subject is in the third person.
         The subject pronoun will be either he, she, or it.`,
         examples: [
           {
@@ -288,12 +292,17 @@ const PAGE_EXPLANATIONS = {
     {
       key: 1,
       content:
-        "In English grammar, verbs have five main forms, often labeled as V1 to V5.",
+        "In English grammar, every verb have five main forms, often labeled as V1 to V5.",
     },
     {
       key: 2,
       content:
-        "These numbers correspond to the labels on the points in the triangle above.",
+        "These is one and only one exception to this pattern, the verb 'to be'.",
+    },
+    {
+      key: 3,
+      content:
+        "These five forms, V1 to V5, correspond to the labels on the triangle above, and are explained below.",
     },
   ],
   pattern: [
@@ -304,23 +313,27 @@ const PAGE_EXPLANATIONS = {
     },
     {
       key: 2,
-      content:
-        "Helper verb 'have' is shown in green, and occupies the first slot.",
+      content: "The helper verbs occupy 'slots' before the boss verb.",
     },
     {
       key: 3,
       content:
-        "Helper verb 'be' is shown in blue, and occupies the second slot.",
+        "The helper verb 'to have' is shown in green, and occupies the first slot.",
     },
     {
       key: 4,
       content:
-        "Following the green helper verb 'have' will always be a Past Participle, V3, lower right corner form of verb.",
+        "The helper verb 'to be' is shown in blue, and occupies the second slot.",
     },
     {
       key: 5,
       content:
-        "Following the blue helper verb 'have' will always be a Present Participle, V4, center heart form of verb.",
+        "Following the green helper verb 'to have', will always be a Past Participle, V3, lower right corner form of verb.",
+    },
+    {
+      key: 6,
+      content:
+        "Following the blue helper verb 'to be', will always be a Present Participle, V4, center heart form of verb.",
     },
   ],
   modals: [
