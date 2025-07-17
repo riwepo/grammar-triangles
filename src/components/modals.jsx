@@ -10,6 +10,7 @@ import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-tria
 import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 import Card from "@/components/ui/card";
 import ModalExplanations from "@/components/modal-explanations";
+import { EASE_IN_VISIBLE, EASE_OUT_INVISIBLE } from "@/lib/constants";
 
 import {
   VERBS,
@@ -19,10 +20,6 @@ import {
 } from "@/lib/grammar-data";
 
 function Modals() {
-  const [selectedSentenceType, setSentenceType] = useState(
-    SENTENCE_TYPES.statement,
-  );
-
   const [selectedVerb, setSelectedVerb] = useState(
     VERBS[Object.keys(VERBS)[0]],
   );
@@ -36,7 +33,6 @@ function Modals() {
   };
 
   const handleSentenceTypeSelected = (key) => {
-    setSentenceType(key);
     if (key === SENTENCE_TYPES.statement) {
       setClassNames(classNamesDict.statement);
     } else if (key === SENTENCE_TYPES.question) {
@@ -44,23 +40,18 @@ function Modals() {
     }
   };
 
-  const easeInVisible =
-    "opacity-100 transition-opacity duration-2000 ease-in-out";
-  const easeOutInvisible =
-    "opacity-0 transition-opacity duration-2000 ease-in-out";
-
   const classNamesDict = {
     statement: {
-      col1_subjectPronoun: `${easeInVisible}`,
-      col1_modalVerb: `${easeOutInvisible} text-yellow-500`,
-      col2_subjectPronoun: `${easeOutInvisible}`,
-      col2_modalVerb: `${easeInVisible} text-yellow-500`,
+      col1_subjectPronoun: `${EASE_IN_VISIBLE}`,
+      col1_modalVerb: `${EASE_OUT_INVISIBLE} text-yellow-500`,
+      col2_subjectPronoun: `${EASE_OUT_INVISIBLE}`,
+      col2_modalVerb: `${EASE_IN_VISIBLE} text-yellow-500`,
     },
     question: {
-      col1_subjectPronoun: `${easeOutInvisible}`,
-      col1_modalVerb: `${easeInVisible} text-yellow-500`,
-      col2_subjectPronoun: `${easeInVisible}`,
-      col2_modalVerb: `${easeOutInvisible} text-yellow-500`,
+      col1_subjectPronoun: `${EASE_OUT_INVISIBLE}`,
+      col1_modalVerb: `${EASE_IN_VISIBLE} text-yellow-500`,
+      col2_subjectPronoun: `${EASE_IN_VISIBLE}`,
+      col2_modalVerb: `${EASE_OUT_INVISIBLE} text-yellow-500`,
     },
   };
 
