@@ -1,4 +1,4 @@
-function Explanations({ sentences }) {
+function Explanations({ sentences, children }) {
   return (
     <div className="mb-2 text-center print:hidden">
       <ul className="py-4 text-center">
@@ -10,6 +10,7 @@ function Explanations({ sentences }) {
           );
         })}
       </ul>
+      {children}
     </div>
   );
 }
