@@ -26,46 +26,46 @@ function Passives() {
   const classNamesDict = {
     active: {
       simple: {
-        helperVerbDo: {
-          svg: `${easeOutInvisible} col-start-5 row-start-1`,
-          head: "visible",
-          thirdPersonSingular: "visible",
-          preterite: "visible",
-          tenseLine: "visible",
+        helperVerbBePassive: {
+          svg: `${easeOutInvisible} col-start-4 row-start-1`,
+          am: easeOutInvisible,
+          are: easeOutInvisible,
+          is: easeOutInvisible,
+          was: easeOutInvisible,
+          were: easeOutInvisible,
+          tenseLine: easeOutInvisible,
         },
-        helperVerbDoPronouns: {
-          svg: `${easeOutInvisible} col-start-5 row-start-1`,
-          headPronouns: "visible",
-          thirdPersonSingularPronouns: "visible",
-          preteritePronouns: "visible",
+        helperVerbBePassivePronouns: {
+          svg: `${easeOutInvisible} col-start-4 row-start-1`,
+          amPronouns: easeOutInvisible,
+          arePronouns: easeOutInvisible,
+          isPronouns: easeOutInvisible,
+          wasPronouns: easeOutInvisible,
+          werePronouns: easeOutInvisible,
         },
-        not: `${easeOutInvisible} col-start-6 row-start-1 m-auto text-2xl font-bold text-red-500`,
-        bossVerb: {
-          svg: "col-start-7 row-start-1",
-          head: "visible",
+        bossVerbActive: {
+          svg: `${easeInVisible} col-start-4 row-start-1`,
+          head: easeInVisible,
           thirdPersonSingular: easeInVisible,
           preterite: easeInVisible,
+          pastParticiple: easeInVisible,
           tenseLine: easeInVisible,
         },
-        bossVerbPronouns: {
-          svg: "col-start-7 row-start-1",
+        bossVerbActivePronouns: {
+          svg: `${easeInVisible} col-start-4 row-start-1`,
           headPronouns: easeInVisible,
           thirdPersonSingularPronouns: easeInVisible,
           preteritePronouns: easeInVisible,
+          pastParticiplePronouns: easeInVisible,
+        },
+        bossVerbPassive: {
+          svg: `${easeOutInvisible} col-start-5 row-start-1`,
+          pastParticiple: easeOutInvisible,
         },
       },
       continuous: {
-        helperVerbBeQuestion: {
-          svg: `${easeOutInvisible} col-start-3 row-start-3`,
-          am: "visible",
-          are: "visible",
-          is: "visible",
-          was: "visible",
-          were: "visible",
-          tenseLine: "visible",
-        },
         helperVerbBe: {
-          svg: `${easeInVisible} col-start-5 row-start-3`,
+          svg: "col-start-3 row-start-3",
           am: "visible",
           are: "visible",
           is: "visible",
@@ -74,17 +74,24 @@ function Passives() {
           tenseLine: "visible",
         },
         helperVerbBePronouns: {
-          svg: "col-start-5 row-start-3",
+          svg: "col-start-3 row-start-3",
           amPronouns: "visible",
           arePronouns: "visible",
           isPronouns: "visible",
           wasPronouns: "visible",
           werePronouns: "visible",
         },
-        not: `${easeOutInvisible} col-start-6 row-start-3 m-auto text-2xl font-bold text-red-500`,
-        bossVerb: {
-          svg: "col-start-7 row-start-3",
-          presentParticiple: "visible",
+        helperVerbBePassive: {
+          svg: `${easeOutInvisible} col-start-4 row-start-3`,
+          presentParticiple: easeOutInvisible,
+        },
+        bossVerbActive: {
+          svg: `${easeInVisible} col-start-4 row-start-3`,
+          presentParticiple: easeInVisible,
+        },
+        bossVerbPassive: {
+          svg: `${easeOutInvisible} col-start-5 row-start-3`,
+          pastParticiple: easeOutInvisible,
         },
       },
       perfect: {
@@ -148,46 +155,46 @@ function Passives() {
     },
     passive: {
       simple: {
-        helperVerbDo: {
-          svg: `${easeInVisible} col-start-5 row-start-1`,
-          head: "visible",
-          thirdPersonSingular: "visible",
-          preterite: "visible",
-          tenseLine: "visible",
+        helperVerbBePassive: {
+          svg: `${easeInVisible} col-start-4 row-start-1`,
+          am: easeInVisible,
+          are: easeInVisible,
+          is: easeInVisible,
+          was: easeInVisible,
+          were: easeInVisible,
+          tenseLine: easeInVisible,
         },
-        helperVerbDoPronouns: {
-          svg: `${easeInVisible} col-start-5 row-start-1`,
-          headPronouns: "visible",
-          thirdPersonSingularPronouns: "visible",
-          preteritePronouns: "visible",
+        helperVerbBePassivePronouns: {
+          svg: `${easeInVisible} col-start-4 row-start-1`,
+          amPronouns: easeInVisible,
+          arePronouns: easeInVisible,
+          isPronouns: easeInVisible,
+          wasPronouns: easeInVisible,
+          werePronouns: easeInVisible,
         },
-        not: `${easeInVisible} col-start-6 row-start-1 m-auto text-2xl font-bold text-red-500`,
-        bossVerb: {
-          svg: "col-start-7 row-start-1",
-          head: "visible",
+        bossVerbActive: {
+          svg: `${easeOutInvisible} col-start-4 row-start-1`,
+          head: easeOutInvisible,
           thirdPersonSingular: easeOutInvisible,
           preterite: easeOutInvisible,
+          pastParticiple: easeOutInvisible,
           tenseLine: easeOutInvisible,
         },
-        bossVerbPronouns: {
-          svg: "col-start-7 row-start-1",
+        bossVerbActivePronouns: {
+          svg: `${easeOutInvisible} col-start-4 row-start-1`,
           headPronouns: easeOutInvisible,
           thirdPersonSingularPronouns: easeOutInvisible,
           preteritePronouns: easeOutInvisible,
+          pastParticiplePronouns: easeOutInvisible,
+        },
+        bossVerbPassive: {
+          svg: `${easeInVisible} col-start-5 row-start-1`,
+          pastParticiple: easeInVisible,
         },
       },
       continuous: {
-        helperVerbBeQuestion: {
-          svg: `${easeOutInvisible} col-start-3 row-start-3`,
-          am: "visible",
-          are: "visible",
-          is: "visible",
-          was: "visible",
-          were: "visible",
-          tenseLine: "visible",
-        },
         helperVerbBe: {
-          svg: `${easeInVisible} col-start-5 row-start-3`,
+          svg: "col-start-3 row-start-3",
           am: "visible",
           are: "visible",
           is: "visible",
@@ -196,17 +203,24 @@ function Passives() {
           tenseLine: "visible",
         },
         helperVerbBePronouns: {
-          svg: "col-start-5 row-start-3",
+          svg: "col-start-3 row-start-3",
           amPronouns: "visible",
           arePronouns: "visible",
           isPronouns: "visible",
           wasPronouns: "visible",
           werePronouns: "visible",
         },
-        not: `${easeInVisible} col-start-6 row-start-3 m-auto text-2xl font-bold text-red-500`,
-        bossVerb: {
-          svg: "col-start-7 row-start-3",
-          presentParticiple: "visible",
+        helperVerbBePassive: {
+          svg: `${easeInVisible} col-start-4 row-start-3`,
+          presentParticiple: easeInVisible,
+        },
+        bossVerbActive: {
+          svg: `${easeOutInvisible} col-start-4 row-start-3`,
+          presentParticiple: easeOutInvisible,
+        },
+        bossVerbPassive: {
+          svg: `${easeInVisible} col-start-5 row-start-3`,
+          pastParticiple: easeInVisible,
         },
       },
       perfect: {
@@ -304,55 +318,68 @@ function Passives() {
 
   const printableDiagramContent = (
     <Card className="absolute top-0 right-0 bottom-0 left-0 row-start-2 m-4 bg-white">
-      <div className="grid h-full grid-cols-[auto_10fr_10fr_1fr_10fr_1fr_10fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] gap-y-1">
+      <div className="grid h-full grid-cols-[auto_10fr_10fr_10fr_10fr] grid-rows-[1fr_2px_1fr_2px_1fr_2px_1fr] gap-y-1">
         <div className="col-start-1 row-start-1 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
           <p className="row-start-1">Present Simple</p>
           <div className="row-start-2 h-full bg-red-500"></div>
           <p className="row-start-3">Past Simple</p>
         </div>
-        <HelperVerbDoTriangle
+        <HelperVerbBeTriangle
           uuid={svgUseIds[0]}
-          classNames={classNames.simple.helperVerbDo}
+          classNames={classNames.simple.helperVerbBePassive}
         />
-        <NormalPronounTriangle
+        <ToBePronounTriangle
           uuid={svgUseIds[1]}
-          verb={VERBS.do}
-          classNames={classNames.simple.helperVerbDoPronouns}
+          classNames={classNames.simple.helperVerbBePassivePronouns}
         />
-        <p className={classNames.simple.not}>not</p>
-        <BossVerbTriangle
+        <HelperVerbBeTriangle
           uuid={svgUseIds[2]}
-          verb={selectedVerb}
-          classNames={classNames.simple.bossVerb}
+          classNames={classNames.simple.helperVerbBePassive}
         />
-        <NormalPronounTriangle
+        <BossVerbTriangle
           uuid={svgUseIds[3]}
           verb={selectedVerb}
-          classNames={classNames.simple.bossVerbPronouns}
+          classNames={classNames.simple.bossVerbActive}
         />
+        <NormalPronounTriangle
+          uuid={svgUseIds[4]}
+          verb={selectedVerb}
+          classNames={classNames.simple.bossVerbActivePronouns}
+        />
+        <BossVerbTriangle
+          uuid={svgUseIds[5]}
+          verb={selectedVerb}
+          classNames={classNames.simple.bossVerbPassive}
+        />
+
         <div className="col-span-7 col-start-1 row-start-2 bg-gray-200"></div>
         <div className="col-start-1 row-start-3 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
           <p className="row-start-1">Present Continuous</p>
           <div className="row-start-2 h-full bg-red-500"></div>
           <p className="row-start-3">Past Continuous</p>
         </div>
+
         <HelperVerbBeTriangle
-          uuid={svgUseIds[4]}
-          classNames={classNames.continuous.helperVerbBeQuestion}
-        />
-        <HelperVerbBeTriangle
-          uuid={svgUseIds[5]}
+          uuid={svgUseIds[6]}
           classNames={classNames.continuous.helperVerbBe}
         />
         <ToBePronounTriangle
-          uuid={svgUseIds[6]}
+          uuid={svgUseIds[7]}
           classNames={classNames.continuous.helperVerbBePronouns}
         />
-        <p className={classNames.continuous.not}>not</p>
+        <HelperVerbBeTriangle
+          uuid={svgUseIds[8]}
+          classNames={classNames.continuous.helperVerbBePassive}
+        />
         <BossVerbTriangle
-          uuid={svgUseIds[7]}
+          uuid={svgUseIds[9]}
           verb={selectedVerb}
-          classNames={classNames.continuous.bossVerb}
+          classNames={classNames.continuous.bossVerbActive}
+        />
+        <BossVerbTriangle
+          uuid={svgUseIds[10]}
+          verb={selectedVerb}
+          classNames={classNames.continuous.bossVerbPassive}
         />
         <div className="col-span-7 col-start-1 row-start-4 bg-gray-200"></div>
         <div className="col-start-1 row-start-5 mx-auto grid grid-rows-[1fr_2px_1fr] items-center justify-center">
@@ -361,21 +388,21 @@ function Passives() {
           <p className="row-start-3">Past Perfect Simple</p>
         </div>
         <HelperVerbHaveTriangle
-          uuid={svgUseIds[8]}
+          uuid={svgUseIds[11]}
           classNames={classNames.perfect.helperVerbHaveQuestion}
         />
         <HelperVerbHaveTriangle
-          uuid={svgUseIds[9]}
+          uuid={svgUseIds[12]}
           classNames={classNames.perfect.helperVerbHave}
         />
         <NormalPronounTriangle
-          uuid={svgUseIds[10]}
+          uuid={svgUseIds[13]}
           verb={selectedVerb}
           classNames={classNames.perfect.helperVerbHavePronouns}
         />
         <p className={classNames.perfect.not}>not</p>
         <BossVerbTriangle
-          uuid={svgUseIds[11]}
+          uuid={svgUseIds[14]}
           verb={selectedVerb}
           classNames={classNames.perfect.bossVerb}
         />
@@ -386,25 +413,25 @@ function Passives() {
           <p className="row-start-3">Past Perfect Continuous</p>
         </div>
         <HelperVerbHaveTriangle
-          uuid={svgUseIds[12]}
+          uuid={svgUseIds[15]}
           classNames={classNames.perfectContinuous.helperVerbHaveQuestion}
         />
         <HelperVerbHaveTriangle
-          uuid={svgUseIds[13]}
+          uuid={svgUseIds[16]}
           classNames={classNames.perfectContinuous.helperVerbHave}
         />
         <NormalPronounTriangle
-          uuid={svgUseIds[14]}
+          uuid={svgUseIds[17]}
           verb={selectedVerb}
           classNames={classNames.perfectContinuous.helperVerbHavePronouns}
         />
         <p className={classNames.perfectContinuous.not}>not</p>
         <HelperVerbBeTriangle
-          uuid={svgUseIds[15]}
+          uuid={svgUseIds[18]}
           classNames={classNames.perfectContinuous.helperVerbBe}
         />
         <BossVerbTriangle
-          uuid={svgUseIds[16]}
+          uuid={svgUseIds[19]}
           verb={selectedVerb}
           classNames={classNames.perfectContinuous.bossVerb}
         />
