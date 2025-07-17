@@ -9,58 +9,52 @@ import ToBePronounTriangle from "@/components/triangles/basic/pronouns/to-be-pro
 import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
 import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
-import HelperVerbDoTriangle from "@/components/triangles/helper-verb-do-triangle";
 import Card from "@/components/ui/card";
 
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
 import { uncapitalizeFirstLetter } from "@/lib/utils/change-first-letter";
-import TensesExplanations from "@/components/tenses-explanations";
-import PassivesExplanations from "./passives-explanations";
+import PassivesExplanations from "@/components/passives-explanations";
+import { EASE_IN_VISIBLE, EASE_OUT_INVISIBLE } from "@/lib/constants";
 
 function Passives() {
-  const easeInVisible =
-    "opacity-100 transition-opacity duration-2000 ease-in-out";
-  const easeOutInvisible =
-    "opacity-0 transition-opacity duration-2000 ease-in-out";
-
   const classNamesDict = {
     active: {
       simple: {
         helperVerbBePassive: {
-          svg: `${easeOutInvisible} col-start-4 row-start-1`,
-          am: easeOutInvisible,
-          are: easeOutInvisible,
-          is: easeOutInvisible,
-          was: easeOutInvisible,
-          were: easeOutInvisible,
-          tenseLine: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-4 row-start-1`,
+          am: EASE_OUT_INVISIBLE,
+          are: EASE_OUT_INVISIBLE,
+          is: EASE_OUT_INVISIBLE,
+          was: EASE_OUT_INVISIBLE,
+          were: EASE_OUT_INVISIBLE,
+          tenseLine: EASE_OUT_INVISIBLE,
         },
         helperVerbBePassivePronouns: {
-          svg: `${easeOutInvisible} col-start-4 row-start-1`,
-          amPronouns: easeOutInvisible,
-          arePronouns: easeOutInvisible,
-          isPronouns: easeOutInvisible,
-          wasPronouns: easeOutInvisible,
-          werePronouns: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-4 row-start-1`,
+          amPronouns: EASE_OUT_INVISIBLE,
+          arePronouns: EASE_OUT_INVISIBLE,
+          isPronouns: EASE_OUT_INVISIBLE,
+          wasPronouns: EASE_OUT_INVISIBLE,
+          werePronouns: EASE_OUT_INVISIBLE,
         },
         bossVerbActive: {
-          svg: `${easeInVisible} col-start-4 row-start-1`,
-          head: easeInVisible,
-          thirdPersonSingular: easeInVisible,
-          preterite: easeInVisible,
-          pastParticiple: easeInVisible,
-          tenseLine: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-4 row-start-1`,
+          head: EASE_IN_VISIBLE,
+          thirdPersonSingular: EASE_IN_VISIBLE,
+          preterite: EASE_IN_VISIBLE,
+          pastParticiple: EASE_IN_VISIBLE,
+          tenseLine: EASE_IN_VISIBLE,
         },
         bossVerbActivePronouns: {
-          svg: `${easeInVisible} col-start-4 row-start-1`,
-          headPronouns: easeInVisible,
-          thirdPersonSingularPronouns: easeInVisible,
-          preteritePronouns: easeInVisible,
-          pastParticiplePronouns: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-4 row-start-1`,
+          headPronouns: EASE_IN_VISIBLE,
+          thirdPersonSingularPronouns: EASE_IN_VISIBLE,
+          preteritePronouns: EASE_IN_VISIBLE,
+          pastParticiplePronouns: EASE_IN_VISIBLE,
         },
         bossVerbPassive: {
-          svg: `${easeOutInvisible} col-start-5 row-start-1`,
-          pastParticiple: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-5 row-start-1`,
+          pastParticiple: EASE_OUT_INVISIBLE,
         },
       },
       continuous: {
@@ -82,16 +76,16 @@ function Passives() {
           werePronouns: "visible",
         },
         helperVerbBePassive: {
-          svg: `${easeOutInvisible} col-start-4 row-start-3`,
-          presentParticiple: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-4 row-start-3`,
+          presentParticiple: EASE_OUT_INVISIBLE,
         },
         bossVerbActive: {
-          svg: `${easeInVisible} col-start-4 row-start-3`,
-          presentParticiple: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-4 row-start-3`,
+          presentParticiple: EASE_IN_VISIBLE,
         },
         bossVerbPassive: {
-          svg: `${easeOutInvisible} col-start-5 row-start-3`,
-          pastParticiple: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-5 row-start-3`,
+          pastParticiple: EASE_OUT_INVISIBLE,
         },
       },
       perfect: {
@@ -109,16 +103,16 @@ function Passives() {
           thirdPersonSingularPronouns: "visible",
         },
         helperVerbBePassive: {
-          svg: `${easeOutInvisible} col-start-4 row-start-5`,
-          pastParticiple: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-4 row-start-5`,
+          pastParticiple: EASE_OUT_INVISIBLE,
         },
         bossVerbActive: {
-          svg: `${easeInVisible} col-start-4 row-start-5`,
-          pastParticiple: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-4 row-start-5`,
+          pastParticiple: EASE_IN_VISIBLE,
         },
         bossVerbPassive: {
-          svg: `${easeOutInvisible} col-start-5 row-start-5`,
-          pastParticiple: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-5 row-start-5`,
+          pastParticiple: EASE_OUT_INVISIBLE,
         },
       },
       perfectContinuous: {
@@ -140,56 +134,56 @@ function Passives() {
           pastParticiple: "visible",
         },
         helperVerbBePassive: {
-          svg: `${easeOutInvisible} col-start-4 row-start-7`,
-          presentParticiple: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-4 row-start-7`,
+          presentParticiple: EASE_OUT_INVISIBLE,
         },
         bossVerbActive: {
-          svg: `${easeInVisible} col-start-4 row-start-7`,
-          pastParticiple: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-4 row-start-7`,
+          pastParticiple: EASE_IN_VISIBLE,
         },
         bossVerbPassive: {
-          svg: `${easeOutInvisible} col-start-5 row-start-7`,
-          pastParticiple: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-5 row-start-7`,
+          pastParticiple: EASE_OUT_INVISIBLE,
         },
       },
     },
     passive: {
       simple: {
         helperVerbBePassive: {
-          svg: `${easeInVisible} col-start-4 row-start-1`,
-          am: easeInVisible,
-          are: easeInVisible,
-          is: easeInVisible,
-          was: easeInVisible,
-          were: easeInVisible,
-          tenseLine: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-4 row-start-1`,
+          am: EASE_IN_VISIBLE,
+          are: EASE_IN_VISIBLE,
+          is: EASE_IN_VISIBLE,
+          was: EASE_IN_VISIBLE,
+          were: EASE_IN_VISIBLE,
+          tenseLine: EASE_IN_VISIBLE,
         },
         helperVerbBePassivePronouns: {
-          svg: `${easeInVisible} col-start-4 row-start-1`,
-          amPronouns: easeInVisible,
-          arePronouns: easeInVisible,
-          isPronouns: easeInVisible,
-          wasPronouns: easeInVisible,
-          werePronouns: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-4 row-start-1`,
+          amPronouns: EASE_IN_VISIBLE,
+          arePronouns: EASE_IN_VISIBLE,
+          isPronouns: EASE_IN_VISIBLE,
+          wasPronouns: EASE_IN_VISIBLE,
+          werePronouns: EASE_IN_VISIBLE,
         },
         bossVerbActive: {
-          svg: `${easeOutInvisible} col-start-4 row-start-1`,
-          head: easeOutInvisible,
-          thirdPersonSingular: easeOutInvisible,
-          preterite: easeOutInvisible,
-          pastParticiple: easeOutInvisible,
-          tenseLine: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-4 row-start-1`,
+          head: EASE_OUT_INVISIBLE,
+          thirdPersonSingular: EASE_OUT_INVISIBLE,
+          preterite: EASE_OUT_INVISIBLE,
+          pastParticiple: EASE_OUT_INVISIBLE,
+          tenseLine: EASE_OUT_INVISIBLE,
         },
         bossVerbActivePronouns: {
-          svg: `${easeOutInvisible} col-start-4 row-start-1`,
-          headPronouns: easeOutInvisible,
-          thirdPersonSingularPronouns: easeOutInvisible,
-          preteritePronouns: easeOutInvisible,
-          pastParticiplePronouns: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-4 row-start-1`,
+          headPronouns: EASE_OUT_INVISIBLE,
+          thirdPersonSingularPronouns: EASE_OUT_INVISIBLE,
+          preteritePronouns: EASE_OUT_INVISIBLE,
+          pastParticiplePronouns: EASE_OUT_INVISIBLE,
         },
         bossVerbPassive: {
-          svg: `${easeInVisible} col-start-5 row-start-1`,
-          pastParticiple: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-5 row-start-1`,
+          pastParticiple: EASE_IN_VISIBLE,
         },
       },
       continuous: {
@@ -211,16 +205,16 @@ function Passives() {
           werePronouns: "visible",
         },
         helperVerbBePassive: {
-          svg: `${easeInVisible} col-start-4 row-start-3`,
-          presentParticiple: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-4 row-start-3`,
+          presentParticiple: EASE_IN_VISIBLE,
         },
         bossVerbActive: {
-          svg: `${easeOutInvisible} col-start-4 row-start-3`,
-          presentParticiple: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-4 row-start-3`,
+          presentParticiple: EASE_OUT_INVISIBLE,
         },
         bossVerbPassive: {
-          svg: `${easeInVisible} col-start-5 row-start-3`,
-          pastParticiple: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-5 row-start-3`,
+          pastParticiple: EASE_IN_VISIBLE,
         },
       },
       perfect: {
@@ -238,16 +232,16 @@ function Passives() {
           thirdPersonSingularPronouns: "visible",
         },
         helperVerbBePassive: {
-          svg: `${easeInVisible} col-start-4 row-start-5`,
-          pastParticiple: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-4 row-start-5`,
+          pastParticiple: EASE_IN_VISIBLE,
         },
         bossVerbActive: {
-          svg: `${easeOutInvisible} col-start-4 row-start-5`,
-          pastParticiple: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-4 row-start-5`,
+          pastParticiple: EASE_OUT_INVISIBLE,
         },
         bossVerbPassive: {
-          svg: `${easeInVisible} col-start-5 row-start-5`,
-          pastParticiple: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-5 row-start-5`,
+          pastParticiple: EASE_IN_VISIBLE,
         },
       },
       perfectContinuous: {
@@ -269,16 +263,16 @@ function Passives() {
           pastParticiple: "visible",
         },
         helperVerbBePassive: {
-          svg: `${easeInVisible} col-start-4 row-start-7`,
-          presentParticiple: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-4 row-start-7`,
+          presentParticiple: EASE_IN_VISIBLE,
         },
         bossVerbActive: {
-          svg: `${easeOutInvisible} col-start-4 row-start-7`,
-          pastParticiple: easeOutInvisible,
+          svg: `${EASE_OUT_INVISIBLE} col-start-4 row-start-7`,
+          pastParticiple: EASE_OUT_INVISIBLE,
         },
         bossVerbPassive: {
-          svg: `${easeInVisible} col-start-5 row-start-7`,
-          pastParticiple: easeInVisible,
+          svg: `${EASE_IN_VISIBLE} col-start-5 row-start-7`,
+          pastParticiple: EASE_IN_VISIBLE,
         },
       },
     },
@@ -447,13 +441,11 @@ function Passives() {
     </Card>
   );
 
-  const explanationsContent = <PassivesExplanations />;
-
   return (
     <GrammarContainer
       printableDiagramHeading={heading}
       printableDiagramContent={printableDiagramContent}
-      explanationsContent={explanationsContent}
+      explanationsContent={<PassivesExplanations />}
       sentenceTypes={[SENTENCE_TYPES.active, SENTENCE_TYPES.passive]}
       allowShowPronouns={false}
       onVerbSelected={handleVerbSelected}
