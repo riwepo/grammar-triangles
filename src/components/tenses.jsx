@@ -15,47 +15,43 @@ import Card from "@/components/ui/card";
 import { SENTENCE_TYPES, VERBS } from "@/lib/grammar-data";
 import { uncapitalizeFirstLetter } from "@/lib/utils/change-first-letter";
 import TensesExplanations from "@/components/tenses-explanations";
+import { EASE_IN_VISIBLE, EASE_OUT_INVISIBLE } from "@/lib/constants";
 
 function Tenses() {
-  const easeInVisible =
-    "opacity-100 transition-opacity duration-2000 ease-in-out";
-  const easeOutInvisible =
-    "opacity-0 transition-opacity duration-2000 ease-in-out";
-
   const classNamesDict = {
     statement: {
       simple: {
         helperVerbDo: {
-          svg: `${easeOutInvisible} col-start-5 row-start-1`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-5 row-start-1`,
           head: "visible",
           thirdPersonSingular: "visible",
           preterite: "visible",
           tenseLine: "visible",
         },
         helperVerbDoPronouns: {
-          svg: `${easeOutInvisible} col-start-5 row-start-1`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-5 row-start-1`,
           headPronouns: "visible",
           thirdPersonSingularPronouns: "visible",
           preteritePronouns: "visible",
         },
-        not: `${easeOutInvisible} col-start-6 row-start-1 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_OUT_INVISIBLE} col-start-6 row-start-1 m-auto text-2xl font-bold text-red-500`,
         bossVerb: {
           svg: "col-start-7 row-start-1",
           head: "visible",
-          thirdPersonSingular: easeInVisible,
-          preterite: easeInVisible,
-          tenseLine: easeInVisible,
+          thirdPersonSingular: EASE_IN_VISIBLE,
+          preterite: EASE_IN_VISIBLE,
+          tenseLine: EASE_IN_VISIBLE,
         },
         bossVerbPronouns: {
           svg: "col-start-7 row-start-1",
-          headPronouns: easeInVisible,
-          thirdPersonSingularPronouns: easeInVisible,
-          preteritePronouns: easeInVisible,
+          headPronouns: EASE_IN_VISIBLE,
+          thirdPersonSingularPronouns: EASE_IN_VISIBLE,
+          preteritePronouns: EASE_IN_VISIBLE,
         },
       },
       continuous: {
         helperVerbBeQuestion: {
-          svg: `${easeOutInvisible} col-start-3 row-start-3`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-3 row-start-3`,
           am: "visible",
           are: "visible",
           is: "visible",
@@ -64,7 +60,7 @@ function Tenses() {
           tenseLine: "visible",
         },
         helperVerbBe: {
-          svg: `${easeInVisible} col-start-5 row-start-3`,
+          svg: `${EASE_IN_VISIBLE} col-start-5 row-start-3`,
           am: "visible",
           are: "visible",
           is: "visible",
@@ -80,7 +76,7 @@ function Tenses() {
           wasPronouns: "visible",
           werePronouns: "visible",
         },
-        not: `${easeOutInvisible} col-start-6 row-start-3 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_OUT_INVISIBLE} col-start-6 row-start-3 m-auto text-2xl font-bold text-red-500`,
         bossVerb: {
           svg: "col-start-7 row-start-3",
           presentParticiple: "visible",
@@ -88,14 +84,14 @@ function Tenses() {
       },
       perfect: {
         helperVerbHaveQuestion: {
-          svg: `${easeOutInvisible} col-start-2 row-start-5`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-2 row-start-5`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
           tenseLine: "visible",
         },
         helperVerbHave: {
-          svg: `${easeInVisible} col-start-3 row-start-5`,
+          svg: `${EASE_IN_VISIBLE} col-start-3 row-start-5`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
@@ -107,7 +103,7 @@ function Tenses() {
           thirdPersonSingularPronouns: "visible",
           preteritePronouns: "visible",
         },
-        not: `${easeOutInvisible} col-start-4 row-start-5 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_OUT_INVISIBLE} col-start-4 row-start-5 m-auto text-2xl font-bold text-red-500`,
         bossVerb: {
           svg: "col-start-7 row-start-5",
           pastParticiple: "visible",
@@ -115,14 +111,14 @@ function Tenses() {
       },
       perfectContinuous: {
         helperVerbHaveQuestion: {
-          svg: `${easeOutInvisible} col-start-2 row-start-7`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-2 row-start-7`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
           tenseLine: "visible",
         },
         helperVerbHave: {
-          svg: `${easeInVisible} col-start-3 row-start-7`,
+          svg: `${EASE_IN_VISIBLE} col-start-3 row-start-7`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
@@ -134,7 +130,7 @@ function Tenses() {
           thirdPersonSingularPronouns: "visible",
           preteritePronouns: "visible",
         },
-        not: `${easeOutInvisible} col-start-4 row-start-7 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_OUT_INVISIBLE} col-start-4 row-start-7 m-auto text-2xl font-bold text-red-500`,
         helperVerbBe: {
           svg: "col-start-5 row-start-7",
           pastParticiple: "visible",
@@ -148,36 +144,36 @@ function Tenses() {
     negative: {
       simple: {
         helperVerbDo: {
-          svg: `${easeInVisible} col-start-5 row-start-1`,
+          svg: `${EASE_IN_VISIBLE} col-start-5 row-start-1`,
           head: "visible",
           thirdPersonSingular: "visible",
           preterite: "visible",
           tenseLine: "visible",
         },
         helperVerbDoPronouns: {
-          svg: `${easeInVisible} col-start-5 row-start-1`,
+          svg: `${EASE_IN_VISIBLE} col-start-5 row-start-1`,
           headPronouns: "visible",
           thirdPersonSingularPronouns: "visible",
           preteritePronouns: "visible",
         },
-        not: `${easeInVisible} col-start-6 row-start-1 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_IN_VISIBLE} col-start-6 row-start-1 m-auto text-2xl font-bold text-red-500`,
         bossVerb: {
           svg: "col-start-7 row-start-1",
           head: "visible",
-          thirdPersonSingular: easeOutInvisible,
-          preterite: easeOutInvisible,
-          tenseLine: easeOutInvisible,
+          thirdPersonSingular: EASE_OUT_INVISIBLE,
+          preterite: EASE_OUT_INVISIBLE,
+          tenseLine: EASE_OUT_INVISIBLE,
         },
         bossVerbPronouns: {
           svg: "col-start-7 row-start-1",
-          headPronouns: easeOutInvisible,
-          thirdPersonSingularPronouns: easeOutInvisible,
-          preteritePronouns: easeOutInvisible,
+          headPronouns: EASE_OUT_INVISIBLE,
+          thirdPersonSingularPronouns: EASE_OUT_INVISIBLE,
+          preteritePronouns: EASE_OUT_INVISIBLE,
         },
       },
       continuous: {
         helperVerbBeQuestion: {
-          svg: `${easeOutInvisible} col-start-3 row-start-3`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-3 row-start-3`,
           am: "visible",
           are: "visible",
           is: "visible",
@@ -186,7 +182,7 @@ function Tenses() {
           tenseLine: "visible",
         },
         helperVerbBe: {
-          svg: `${easeInVisible} col-start-5 row-start-3`,
+          svg: `${EASE_IN_VISIBLE} col-start-5 row-start-3`,
           am: "visible",
           are: "visible",
           is: "visible",
@@ -202,7 +198,7 @@ function Tenses() {
           wasPronouns: "visible",
           werePronouns: "visible",
         },
-        not: `${easeInVisible} col-start-6 row-start-3 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_IN_VISIBLE} col-start-6 row-start-3 m-auto text-2xl font-bold text-red-500`,
         bossVerb: {
           svg: "col-start-7 row-start-3",
           presentParticiple: "visible",
@@ -210,14 +206,14 @@ function Tenses() {
       },
       perfect: {
         helperVerbHaveQuestion: {
-          svg: `${easeOutInvisible} col-start-2 row-start-5`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-2 row-start-5`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
           tenseLine: "visible",
         },
         helperVerbHave: {
-          svg: `${easeInVisible} col-start-3 row-start-5`,
+          svg: `${EASE_IN_VISIBLE} col-start-3 row-start-5`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
@@ -229,7 +225,7 @@ function Tenses() {
           thirdPersonSingularPronouns: "visible",
           preteritePronouns: "visible",
         },
-        not: `${easeInVisible} col-start-4 row-start-5 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_IN_VISIBLE} col-start-4 row-start-5 m-auto text-2xl font-bold text-red-500`,
         bossVerb: {
           svg: "col-start-7 row-start-5",
           pastParticiple: "visible",
@@ -237,14 +233,14 @@ function Tenses() {
       },
       perfectContinuous: {
         helperVerbHaveQuestion: {
-          svg: `${easeOutInvisible} col-start-2 row-start-7`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-2 row-start-7`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
           tenseLine: "visible",
         },
         helperVerbHave: {
-          svg: `${easeInVisible} col-start-3 row-start-7`,
+          svg: `${EASE_IN_VISIBLE} col-start-3 row-start-7`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
@@ -256,7 +252,7 @@ function Tenses() {
           thirdPersonSingularPronouns: "visible",
           preteritePronouns: "visible",
         },
-        not: `${easeInVisible} col-start-4 row-start-7 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_IN_VISIBLE} col-start-4 row-start-7 m-auto text-2xl font-bold text-red-500`,
         helperVerbBe: {
           svg: "col-start-5 row-start-7",
           pastParticiple: "visible",
@@ -270,36 +266,36 @@ function Tenses() {
     question: {
       simple: {
         helperVerbDo: {
-          svg: `${easeInVisible} col-start-5 row-start-1`,
+          svg: `${EASE_IN_VISIBLE} col-start-5 row-start-1`,
           head: "visible",
           thirdPersonSingular: "visible",
           preterite: "visible",
           tenseLine: "visible",
         },
         helperVerbDoPronouns: {
-          svg: `${easeOutInvisible} col-start-5 row-start-1`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-5 row-start-1`,
           headPronouns: "visible",
           thirdPersonSingularPronouns: "visible",
           preteritePronouns: "visible",
         },
-        not: `${easeOutInvisible} col-start-6 row-start-1 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_OUT_INVISIBLE} col-start-6 row-start-1 m-auto text-2xl font-bold text-red-500`,
         bossVerb: {
           svg: "col-start-7 row-start-1",
           head: "visible",
-          thirdPersonSingular: easeOutInvisible,
-          preterite: easeOutInvisible,
-          tenseLine: easeOutInvisible,
+          thirdPersonSingular: EASE_OUT_INVISIBLE,
+          preterite: EASE_OUT_INVISIBLE,
+          tenseLine: EASE_OUT_INVISIBLE,
         },
         bossVerbPronouns: {
           svg: "col-start-7 row-start-1",
-          headPronouns: easeInVisible,
-          thirdPersonSingularPronouns: easeInVisible,
-          preteritePronouns: easeInVisible,
+          headPronouns: EASE_IN_VISIBLE,
+          thirdPersonSingularPronouns: EASE_IN_VISIBLE,
+          preteritePronouns: EASE_IN_VISIBLE,
         },
       },
       continuous: {
         helperVerbBeQuestion: {
-          svg: `${easeInVisible} col-start-3 row-start-3`,
+          svg: `${EASE_IN_VISIBLE} col-start-3 row-start-3`,
           am: "visible",
           are: "visible",
           is: "visible",
@@ -308,7 +304,7 @@ function Tenses() {
           tenseLine: "visible",
         },
         helperVerbBe: {
-          svg: `${easeOutInvisible} col-start-5 row-start-3`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-5 row-start-3`,
           am: "visible",
           are: "visible",
           is: "visible",
@@ -324,7 +320,7 @@ function Tenses() {
           wasPronouns: "visible",
           werePronouns: "visible",
         },
-        not: `${easeOutInvisible} col-start-6 row-start-3 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_OUT_INVISIBLE} col-start-6 row-start-3 m-auto text-2xl font-bold text-red-500`,
         bossVerb: {
           svg: "col-start-7 row-start-3",
           presentParticiple: "visible",
@@ -332,14 +328,14 @@ function Tenses() {
       },
       perfect: {
         helperVerbHaveQuestion: {
-          svg: `${easeInVisible} col-start-2 row-start-5`,
+          svg: `${EASE_IN_VISIBLE} col-start-2 row-start-5`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
           tenseLine: "visible",
         },
         helperVerbHave: {
-          svg: `${easeOutInvisible} col-start-3 row-start-5`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-3 row-start-5`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
@@ -351,7 +347,7 @@ function Tenses() {
           thirdPersonSingularPronouns: "visible",
           preteritePronouns: "visible",
         },
-        not: `${easeOutInvisible} col-start-4 row-start-5 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_OUT_INVISIBLE} col-start-4 row-start-5 m-auto text-2xl font-bold text-red-500`,
         bossVerb: {
           svg: "col-start-7 row-start-5",
           pastParticiple: "visible",
@@ -359,14 +355,14 @@ function Tenses() {
       },
       perfectContinuous: {
         helperVerbHaveQuestion: {
-          svg: `${easeInVisible} col-start-2 row-start-7`,
+          svg: `${EASE_IN_VISIBLE} col-start-2 row-start-7`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
           tenseLine: "visible",
         },
         helperVerbHave: {
-          svg: `${easeOutInvisible} col-start-3 row-start-7`,
+          svg: `${EASE_OUT_INVISIBLE} col-start-3 row-start-7`,
           head: "visible",
           preterite: "visible",
           thirdPersonSingular: "visible",
@@ -378,7 +374,7 @@ function Tenses() {
           thirdPersonSingularPronouns: "visible",
           preteritePronouns: "visible",
         },
-        not: `${easeOutInvisible} col-start-4 row-start-7 m-auto text-2xl font-bold text-red-500`,
+        not: `${EASE_OUT_INVISIBLE} col-start-4 row-start-7 m-auto text-2xl font-bold text-red-500`,
         helperVerbBe: {
           svg: "col-start-5 row-start-7",
           pastParticiple: "visible",
