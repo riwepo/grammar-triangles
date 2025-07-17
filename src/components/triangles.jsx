@@ -10,9 +10,11 @@ import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import ToBeBossVerbTriangle from "@/components/triangles/to-be-boss-verb-triangle";
 import NormalPronounTriangle from "@/components/triangles/basic/pronouns/normal-pronoun-triangle";
 import ToBePronounTriangle from "@/components/triangles/basic/pronouns/to-be-pronoun-triangle";
+import Explanations from "@/components/explanations";
+import TrianglesExtraExplanations from "@/components/triangles-extra-explanations";
 
 import { VERBS } from "@/lib/grammar-data";
-import TrianglesExplanations from "@/components/triangles-explanations";
+import { PAGE_EXPLANATIONS } from "@/lib/explanation-data";
 
 function Triangles() {
   const [selectedVerb, setSelectedVerb] = useState(
@@ -107,13 +109,15 @@ function Triangles() {
     </CardTabs>
   );
 
-  const explanationsContent = <TrianglesExplanations />;
-
   return (
     <GrammarContainer
       printableDiagramHeading="Triangles"
       printableDiagramContent={printableDiagramContent}
-      explanationsContent={explanationsContent}
+      explanationsContent={
+        <Explanations sentences={PAGE_EXPLANATIONS.triangles}>
+          <TrianglesExtraExplanations />
+        </Explanations>
+      }
       allowShowPronouns={true}
       onVerbSelected={handleVerbSelected}
       onShowPronounsSelected={handleShowPronounSelected}

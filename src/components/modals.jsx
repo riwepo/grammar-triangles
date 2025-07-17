@@ -9,15 +9,16 @@ import BossVerbTriangle from "@/components/triangles/boss-verb-triangle";
 import HelperVerbHaveTriangle from "@/components/triangles/helper-verb-have-triangle";
 import HelperVerbBeTriangle from "@/components/triangles/helper-verb-be-triangle";
 import Card from "@/components/ui/card";
-import ModalExplanations from "@/components/modal-explanations";
-import { EASE_IN_VISIBLE, EASE_OUT_INVISIBLE } from "@/lib/constants";
+import Explanations from "@/components/explanations";
 
+import { EASE_IN_VISIBLE, EASE_OUT_INVISIBLE } from "@/lib/constants";
 import {
   VERBS,
   MODAL_VERBS,
   SUBJECT_PRONOUNS,
   SENTENCE_TYPES,
 } from "@/lib/grammar-data";
+import { PAGE_EXPLANATIONS } from "@/lib/explanation-data";
 
 function Modals() {
   const [selectedVerb, setSelectedVerb] = useState(
@@ -184,13 +185,13 @@ function Modals() {
     </Card>
   );
 
-  const explanationsContent = <ModalExplanations />;
-
   return (
     <GrammarContainer
       printableDiagramHeading="Modals"
       printableDiagramContent={printableDiagramContent}
-      explanationsContent={explanationsContent}
+      explanationsContent={
+        <Explanations sentences={PAGE_EXPLANATIONS.modals} />
+      }
       sentenceTypes={[SENTENCE_TYPES.statement, SENTENCE_TYPES.question]}
       onVerbSelected={handleVerbSelected}
       onSentenceTypeSelected={handleSentenceTypeSelected}

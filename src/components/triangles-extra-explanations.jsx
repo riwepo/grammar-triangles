@@ -1,12 +1,8 @@
 import CardTabs from "@/components/ui/card-tabs";
-import PageContent from "@/components/page-content";
 
-import {
-  PAGE_EXPLANATIONS,
-  VERB_FORM_EXPLANATIONS,
-} from "@/lib/explanation-data";
+import { VERB_FORM_EXPLANATIONS } from "@/lib/explanation-data";
 
-function TrianglesExplanations() {
+function TrianglesExtraExplanations() {
   const VerbFormUse = ({ verbFormUseData, index }) => {
     return (
       <li>
@@ -67,22 +63,19 @@ function TrianglesExplanations() {
     />,
   ];
   return (
-    <div className="text-center print:hidden">
-      <PageContent sentences={PAGE_EXPLANATIONS.triangles} />
-      <CardTabs
-        tabs={[
-          VERB_FORM_EXPLANATIONS.base.heading,
-          VERB_FORM_EXPLANATIONS.pastSimple.heading,
-          VERB_FORM_EXPLANATIONS.pastParticiple.heading,
-          VERB_FORM_EXPLANATIONS.presentParticiple.heading,
-          VERB_FORM_EXPLANATIONS.thirdPersonSingular.heading,
-        ]}
-        className="mx-auto mb-4 max-w-250 bg-white"
-      >
-        {verbFormExplanations}
-      </CardTabs>
-    </div>
+    <CardTabs
+      tabs={[
+        VERB_FORM_EXPLANATIONS.base.heading,
+        VERB_FORM_EXPLANATIONS.pastSimple.heading,
+        VERB_FORM_EXPLANATIONS.pastParticiple.heading,
+        VERB_FORM_EXPLANATIONS.presentParticiple.heading,
+        VERB_FORM_EXPLANATIONS.thirdPersonSingular.heading,
+      ]}
+      className="mx-auto mb-4 max-w-250 bg-white"
+    >
+      {verbFormExplanations}
+    </CardTabs>
   );
 }
 
-export default TrianglesExplanations;
+export default TrianglesExtraExplanations;
