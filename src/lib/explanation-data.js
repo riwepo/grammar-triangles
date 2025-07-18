@@ -328,12 +328,12 @@ const PAGE_EXPLANATIONS = {
     {
       key: 5,
       content:
-        "Following the blue helper verb 'to be', will always be a Present Participle, V4, center heart form of verb.",
+        "Following the blue helper verb 'to be', will always be a present participle, V4, center heart form of verb.",
     },
     {
       key: 6,
       content:
-        "Following the green helper verb 'to have', will always be a Past Participle, V3, lower right corner form of verb.",
+        "Following the green helper verb 'to have', will always be a past participle, V3, lower right corner form of verb.",
     },
   ],
   modals: [
@@ -427,12 +427,13 @@ const PAGE_EXPLANATIONS = {
     },
     {
       key: 3,
-      content: "However, there is an alternative form, called 'passive voice'.",
+      content:
+        "However, there is an alternative form, called the 'passive voice'.",
     },
     {
       key: 4,
       content:
-        "The passive voice shifts focus from the doer of the action, to the receiver of the action.",
+        "The passive voice shifts focus, from the doer of the action, to the receiver of the action.",
     },
     {
       key: 5,
