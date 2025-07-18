@@ -292,12 +292,12 @@ const PAGE_EXPLANATIONS = {
     {
       key: 1,
       content:
-        "In English grammar, every verb have five main forms, often labeled as V1 to V5.",
+        "In English grammar, every verb has five forms, often labeled as V1 to V5.",
     },
     {
       key: 2,
       content:
-        "These is one and only one exception to this pattern, the verb 'to be'.",
+        "These is one, and only one, exception to this pattern, the verb 'to be'.",
     },
     {
       key: 3,
@@ -328,12 +328,12 @@ const PAGE_EXPLANATIONS = {
     {
       key: 5,
       content:
-        "Following the green helper verb 'to have', will always be a Past Participle, V3, lower right corner form of verb.",
+        "Following the blue helper verb 'to be', will always be a Present Participle, V4, center heart form of verb.",
     },
     {
       key: 6,
       content:
-        "Following the blue helper verb 'to be', will always be a Present Participle, V4, center heart form of verb.",
+        "Following the green helper verb 'to have', will always be a Past Participle, V3, lower right corner form of verb.",
     },
   ],
   modals: [
@@ -382,32 +382,37 @@ const PAGE_EXPLANATIONS = {
     {
       key: 2,
       content:
-        "Notice how it is always the first verb in the sentence that changes with the subject and the past/present.",
+        "Try switching the sentence type between statement, negative and question.",
     },
     {
       key: 3,
       content:
-        "Notice how the helper verb 'do' is used in the simple tenses, to make negatives and questions.",
+        "Note how it is always the first verb in the sentence that changes with the subject and aspect.",
     },
     {
       key: 4,
       content:
-        "Notice how the 'not' always goes after the first verb when making negatives.",
+        "Note how the helper verb 'do' is used in the simple tenses, to make negatives and questions.",
     },
     {
       key: 5,
       content:
-        "Notice how the subject swaps with first verb when making questions.",
+        "Note how the 'not' always goes after the first verb when making negatives.",
     },
     {
       key: 6,
       content:
-        "Notice how the 'ing' heart verb form 4 always always follows the blue 'be' helper verb.",
+        "Note how the subject swaps with first verb when making questions.",
     },
     {
       key: 7,
       content:
-        "Notice how the bottom right past participle verb form 3 always always follows the green 'have' helper verb.",
+        "Note how the 'ing' heart verb form 4 always always follows the blue 'be' helper verb.",
+    },
+    {
+      key: 8,
+      content:
+        "Note how the bottom right past participle verb form 3 always always follows the green 'have' helper verb.",
     },
   ],
   passives: [
@@ -441,7 +446,7 @@ const PAGE_EXPLANATIONS = {
     },
     {
       key: 7,
-      content: "The passive voice can be used with any of the tenses.",
+      content: "The passive voice can be used with any of the 8 aspects.",
     },
     {
       key: 8,
