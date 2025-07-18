@@ -447,7 +447,7 @@ function Passives() {
       printableDiagramHeading={heading}
       printableDiagramContent={printableDiagramContent}
       explanationsContent={
-        <Explanations sentences={PAGE_EXPLANATIONS.tenses} />
+        <Explanations sentences={PAGE_EXPLANATIONS.passives} />
       }
       sentenceTypes={[SENTENCE_TYPES.active, SENTENCE_TYPES.passive]}
       allowShowPronouns={false}

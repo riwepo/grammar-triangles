@@ -377,7 +377,7 @@ const PAGE_EXPLANATIONS = {
     {
       key: 1,
       content:
-        "In the diagram above we can make statements, negative statements and questions for the 8 different tenses.",
+        "In the diagram above, we can make statements, negative statements and questions for the 8 different tenses.",
     },
     {
       key: 2,
@@ -408,6 +408,64 @@ const PAGE_EXPLANATIONS = {
       key: 7,
       content:
         "Notice how the bottom right past participle verb form 3 always always follows the green 'have' helper verb.",
+    },
+  ],
+  passives: [
+    {
+      key: 1,
+      content: "In English grammar, we normally use the 'active voice'.",
+    },
+    {
+      key: 2,
+      content:
+        "In the 'active voice', the subject of the sentence performs the verb.",
+    },
+    {
+      key: 3,
+      content: "However, there is an alternative form, called 'passive voice'.",
+    },
+    {
+      key: 4,
+      content:
+        "The passive voice shifts focus from the doer of the action, to the receiver of the action.",
+    },
+    {
+      key: 5,
+      content:
+        "The doer of the action may be left out entirely, or included as extra information, normally after the proposition 'by'.",
+    },
+    {
+      key: 6,
+      content:
+        "In passive voice, we always use the verb 'to be' (in the correct tense), followed by the past participle (bottom right corner, V3) of the verb.",
+    },
+    {
+      key: 7,
+      content: "The passive voice can be used with any of the tenses.",
+    },
+    {
+      key: 8,
+      content: "Try switching from active voice to passive voice above.",
+    },
+    {
+      key: 9,
+      content:
+        "Note that in passive voice, there is the appearance of an extra 'to be' verb.",
+    },
+    {
+      key: 10,
+      content:
+        "Note that in passive voice, the boss verb is always in past participle (bottom right corner, V3) form.",
+    },
+    {
+      key: 11,
+      content:
+        "Passive voice is used to emphasise the result, or receiver of the action.",
+    },
+    {
+      key: 12,
+      content:
+        "Typically the doer of the action is not known, or not important, or not desired to be mentioned.",
     },
   ],
 };
