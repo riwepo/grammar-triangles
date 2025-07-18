@@ -292,7 +292,7 @@ const PAGE_EXPLANATIONS = {
     {
       key: 1,
       content:
-        "In English grammar, every verb has five forms, often labeled as V1 to V5.",
+        "In English grammar, every verb has five forms, usually labeled V1 to V5.",
     },
     {
       key: 2,
